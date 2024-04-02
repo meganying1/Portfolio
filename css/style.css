@@ -322,6 +322,65 @@ textarea {
         .projects__row-content-desc {
           font-size: 1.7rem; } }
 
+.experiences__row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-gap: 5rem;
+  margin-bottom: 11rem; }
+  @media only screen and (max-width: 56.25em) {
+    .experiences__row {
+      grid-template-columns: 1fr;
+      grid-gap: 2rem;
+      margin-bottom: 8rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .experiencex__row {
+      text-align: center; } }
+  .experiences__row:last-child {
+    margin-bottom: 0; }
+  .experiences__row-img-cont {
+    overflow: hidden; }
+  .experiences__row-img {
+    width: 100%;
+    display: block;
+    object-fit: cover; }
+  .experiences__row-content {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start; }
+    @media only screen and (max-width: 56.25em) {
+      .experiences__row-content {
+        align-items: center; } }
+    .experiences__row-content-company {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 2rem; }
+      @media only screen and (max-width: 37.5em) {
+        .projects__row-content-title {
+          font-size: 2.4rem; } }
+    .experiences__row-content-role {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 2rem; }
+      @media only screen and (max-width: 37.5em) {
+        .projects__row-content-title {
+          font-size: 2.4rem; } }
+    .experiences__row-content-location {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 2rem; }
+      @media only screen and (max-width: 37.5em) {
+        .projects__row-content-title {
+          font-size: 2.4rem; } }
+    .experiences__row-content-dates {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 2rem; }
+      @media only screen and (max-width: 37.5em) {
+        .projects__row-content-title {
+          font-size: 2.4rem; } }
+
 .contact {
   background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
   background-size: cover;
