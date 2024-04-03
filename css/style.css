@@ -293,8 +293,7 @@ textarea {
   .projects__row-img-cont {
     overflow: hidden; }
   .projects__row-img {
-    width: 300px;
-    height: 300px;
+    width: 100%;
     display: block;
     object-fit: cover; }
   .projects__row-content {
@@ -341,8 +340,7 @@ textarea {
   .experiences__row-img-cont {
     overflow: hidden; }
   .experiences__row-img {
-    width: 300px;
-    height: 300px;
+    width: 100%;
     display: block;
     object-fit: cover; }
   .experiences__row-content {
