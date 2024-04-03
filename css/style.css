@@ -359,14 +359,14 @@ textarea {
       @media only screen and (max-width: 37.5em) {
         .experiences__row-content-company {
           font-size: 2.4rem; } }
-    .experiences__row-content-role {
+    .experiences__row-content-desc {
       font-size: 1.8rem;
       color: grey;
       max-width: 60rem;
       line-height: 1.7;
       margin-bottom: 1rem; }
       @media only screen and (max-width: 37.5em) {
-        .experiences__row-content-role {
+        .experiences__row-content-desc {
           font-size: 1.7rem; } }
 
 .contact {
