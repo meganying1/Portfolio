@@ -364,7 +364,7 @@ textarea {
       color: grey;
       max-width: 60rem;
       line-height: 1.7;
-      margin-bottom: 3rem; }
+      margin-bottom: 1rem; }
       @media only screen and (max-width: 37.5em) {
         .experiences__row-content-desc {
           font-size: 1.7rem; } }
