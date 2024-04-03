@@ -340,7 +340,7 @@ textarea {
   .experiences__row-img-cont {
     overflow: hidden; }
   .experiences__row-img {
-    width: 100%;
+    width: 50%;
     display: block;
     object-fit: cover; }
   .experiences__row-content {
@@ -367,24 +367,6 @@ textarea {
       margin-bottom: 1rem; }
       @media only screen and (max-width: 37.5em) {
         .experiences__row-content-role {
-          font-size: 1.7rem; } }
-    .experiences__row-content-location {
-      font-size: 1.8rem;
-      color: grey;
-      max-width: 60rem;
-      line-height: 1.7;
-      margin-bottom: 1rem; }
-      @media only screen and (max-width: 37.5em) {
-        .experiences__row-content-location {
-          font-size: 1.7rem; } }
-    .experiences__row-content-dates {
-      font-size: 1.8rem;
-      color: grey;
-      max-width: 60rem;
-      line-height: 1.7;
-      margin-bottom: 1rem; }
-      @media only screen and (max-width: 37.5em) {
-        .experiences__row-content-dates {
           font-size: 1.7rem; } }
 
 .contact {
