@@ -339,8 +339,8 @@ textarea {
     margin-bottom: 0; }
   .experiences__row-img-cont {
     overflow: hidden; }
-  .experiencess__row-img {
-    width: 50%;
+  .experiences__row-img {
+    width: 100%;
     display: block;
     object-fit: cover; }
   .experiences__row-content {
