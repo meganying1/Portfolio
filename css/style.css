@@ -339,11 +339,10 @@ textarea {
     margin-bottom: 0; }
   .experiences__row-img-cont {
     overflow: hidden; }
-  .experiences__logo {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px; }
+  .experiencess__row-img {
+    width: 50%;
+    display: block;
+    object-fit: cover; }
   .experiences__row-content {
     padding: 2rem 0;
     display: flex;
