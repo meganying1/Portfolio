@@ -277,7 +277,7 @@ textarea {
 
 .projects__row {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 0.5fr 1.5fr;
   grid-gap: 5rem;
   margin-bottom: 11rem; }
   @media only screen and (max-width: 56.25em) {
@@ -325,7 +325,7 @@ textarea {
 
 .experiences__row {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 0.5fr 1.5fr;
   grid-gap: 5rem;
   margin-bottom: 11rem; }
   @media only screen and (max-width: 56.25em) {
