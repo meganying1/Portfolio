@@ -360,10 +360,10 @@ textarea {
       color: grey;
       max-width: 60rem;
       line-height: 1.7;
-      margin-bottom: 2rem; }
+      margin-bottom: 1.7rem; }
       @media only screen and (max-width: 37.5em) {
         .experiences__row-content-desc {
-          font-size: 1.7rem; } }
+          font-size: 1.5rem; } }
 
 .contact {
   background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
