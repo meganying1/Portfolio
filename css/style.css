@@ -329,7 +329,7 @@ textarea {
       grid-gap: 2rem;
       margin-bottom: 2rem; } }
   @media only screen and (max-width: 56.25em) {
-    .experiencex__row {
+    .experiences__row {
       text-align: center; } }
   .experiences__row:last-child {
     margin-bottom: 0; }
@@ -360,7 +360,7 @@ textarea {
       color: grey;
       max-width: 60rem;
       line-height: 1.7;
-      margin-bottom: 1rem; }
+      margin-bottom: 3rem; }
       @media only screen and (max-width: 37.5em) {
         .experiences__row-content-desc {
           font-size: 1.7rem; } }
