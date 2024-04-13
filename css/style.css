@@ -295,6 +295,8 @@ figcaption {
     .projects__row-img-cont {
       overflow: hidden; }
     .projects__row-img {
+      width: 300px;
+      height: 300px;
       display: block;
       object-fit: contain; }
     .projects__row-content {
@@ -341,6 +343,8 @@ figcaption {
   .experiences__row-img-cont {
     overflow: hidden; }
   .experiences__row-img {
+      width: 300px;
+      height: 300px;
       display: block;
       object-fit: contain; }
   .experiences__row-content {
@@ -490,7 +494,8 @@ figcaption {
         font-size: 2.4rem; } }
 
 .project-details__showcase-img-cont {
-  width: 100%;
+  width: 300px;
+  height: 300px;
   margin-bottom: 6rem;
   object-fit: contain;
 }
