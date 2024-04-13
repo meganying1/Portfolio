@@ -62,6 +62,9 @@ button {
 textarea {
   resize: none; }
 
+figcaption {
+    font-size: small; }
+
 .heading-primary {
   font-size: 6rem;
   letter-spacing: 3px;
