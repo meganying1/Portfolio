@@ -326,7 +326,7 @@ figcaption {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 1rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 0; }
   @media only screen and (max-width: 56.25em) {
     .experiences__row {
       grid-template-columns: 1fr;
@@ -510,8 +510,17 @@ figcaption {
 .project-details__img-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem
   align-items: center;
 }
+  @media only screen and (max-width: 56.25em) {
+    .project-details__img-container {
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+      margin-bottom: 1rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .project-details__img-container {
+      text-align: center; } }
 
 .project-details__desc {
   margin: 0 0 7rem 0; }
