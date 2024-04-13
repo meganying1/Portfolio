@@ -297,7 +297,7 @@ figcaption {
     .projects__row-img {
       width: 100%;
       display: block;
-      object-fit: cover; }
+      object-fit: contain; }
     .projects__row-content {
       padding: 2rem 0;
       display: flex;
