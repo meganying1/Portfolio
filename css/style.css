@@ -280,7 +280,6 @@ figcaption {
   .projects__row {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 300px;
     grid-gap: 5rem;
     margin-bottom: 2rem; }
     @media only screen and (max-width: 56.25em) {
@@ -327,7 +326,6 @@ figcaption {
 .experiences__row {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 300px;
   grid-gap: 1rem;
   margin-bottom: -10px; }
   @media only screen and (max-width: 56.25em) {
@@ -513,7 +511,6 @@ figcaption {
 .project-details__img-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 300px;
   grid-gap: 1rem
   align-items: center;
 }
