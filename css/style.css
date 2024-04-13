@@ -295,7 +295,8 @@ figcaption {
     .projects__row-img-cont {
       overflow: hidden; }
     .projects__row-img {
-      width: 100%;
+      width: 150px;
+      height: 150px;
       display: block;
       object-fit: contain; }
     .projects__row-content {
@@ -342,9 +343,10 @@ figcaption {
   .experiences__row-img-cont {
     overflow: hidden; }
   .experiences__row-img {
-    width: 100%;
-    display: block;
-    object-fit: cover; }
+      width: 150px;
+      height: 150px;
+      display: block;
+      object-fit: contain; }
   .experiences__row-content {
     padding: 1rem 0;
     display: flex;
