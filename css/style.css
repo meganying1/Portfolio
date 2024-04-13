@@ -510,6 +510,7 @@ figcaption {
 .project-details__img-container {
   display: grid;
   grid-template-columns: 40% 40%;
+  align-items: center;
 }
 
 .project-details__desc {
