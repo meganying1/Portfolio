@@ -502,6 +502,7 @@ figcaption {
 .project-details__showcase-img-cont-three {
   width: 33.33%;
   margin-bottom: 6rem;
+  flex
 }
 
 .figcaption {
@@ -517,16 +518,10 @@ figcaption {
   max-width: 70rem;
   margin: auto; }
 
-.two_column::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.three_column::after {
-  content: "";
-  clear: both;
-  display: table;
+.project-details__img-container {
+  display: grid;
+  grid-template-columns: 20% 20% 20%;
+  align-items: center;
 }
 
 .project-details__desc {
