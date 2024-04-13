@@ -508,6 +508,24 @@ figcaption {
   max-width: 70rem;
   margin: auto; }
 
+.two_column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+.three_column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .project-details__desc {
   margin: 0 0 7rem 0; }
   .project-details__desc-para {
