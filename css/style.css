@@ -63,7 +63,8 @@ textarea {
   resize: none; }
 
 figcaption {
-  font-size: 1.8rem; }
+  font-size: 1.4rem; 
+  color: grey; }
 
 .heading-primary {
   font-size: 6rem;
