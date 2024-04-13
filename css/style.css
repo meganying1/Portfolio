@@ -276,6 +276,7 @@ figcaption {
         margin-bottom: 4rem; }
 
 .projects__row {
+  background: #fafafa; 
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 5rem;
