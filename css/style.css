@@ -509,8 +509,7 @@ figcaption {
 
 .project-details__img-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
+  grid-template-columns: 33% 33% 33%;
 }
 
 .project-details__desc {
