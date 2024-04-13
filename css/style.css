@@ -490,7 +490,8 @@ figcaption {
 
 .project-details__showcase-img-cont {
   width: 100%;
-  margin-bottom: 6rem; }
+  margin-bottom: 6rem; 
+  display: inline-block; }
 
 .project-details__showcase-img {
   width: 100%; }
