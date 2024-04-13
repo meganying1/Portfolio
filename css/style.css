@@ -499,12 +499,12 @@ figcaption {
   margin-bottom: 6rem;
 }
 
-.project-details__showcase-img-cont-two {
-  width: 33.3%;
+.project-details__showcase-img-cont-three {
+  width: 33.33%;
   margin-bottom: 6rem;
 }
 
-.caption figsize {
+.figcaption {
   font-size: 1.4rem;
   color: grey ;
 }
