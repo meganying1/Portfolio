@@ -494,6 +494,7 @@ figcaption {
 .project-details__showcase-img-cont {
   width: 100%;
   margin-bottom: 6rem;
+  object-fit: cover;
 }
 
 .figcaption {
@@ -512,6 +513,7 @@ figcaption {
 .project-details__img-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px;
   grid-gap: 1rem
   align-items: center;
 }
