@@ -71,7 +71,7 @@ figcaption {
 @keyframes blink {
   to { opacity: .0; } }
 
-.flex {
+.display-flex {
     display: flex; }
 
 .heading-primary {
