@@ -1,42 +1,3 @@
-<script>
-const words = ["Megan Ying", "an engineer", "a programmer", "a scientist", "a dancer, guitarist, singer, foodie"];
-let i = 0;
-let timer;
-
-function typingEffect() {
-	let word = words[i].split("");
-	var loopTyping = function() {
-		if (word.length > 0) {
-			document.getElementById('word').innerHTML += word.shift();
-		} else {
-			deletingEffect();
-			return false;
-		};
-		timer = setTimeout(loopTyping, 500);
-	};
-	loopTyping();
-};
-
-function deletingEffect() {
-	let word = words[i].split("");
-	var loopDeleting = function() {
-		if (word.length > 0) {
-			word.pop();
-			document.getElementById('word').innerHTML = word.join("");
-		} else {
-			if (words.length > (i + 1)) {
-				i++;
-			} else {
-				i = 0;
-			};
-			typingEffect();
-			return false;
-		};
-		timer = setTimeout(loopDeleting, 200);
-	};
-	loopDeleting();
-};
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -124,9 +85,7 @@ function deletingEffect() {
     </header>
     <section class="home-hero">
       <div class="home-hero__content">
-          <h1 class="heading-primary">Hi, I am<br>
-	    <p class="header-primary blink">|</p>
-	  </h1>
+          <h1 class="heading-primary">Hi, I am Megan Ying</h1>
         <div class="home-hero__info">
         </div>
     </section>
