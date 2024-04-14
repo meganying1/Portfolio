@@ -66,6 +66,12 @@ figcaption {
   font-size: 1.4rem; 
   color: grey; }
 
+.blink {
+  animation: blink 0.5s infinite;
+}
+@keyframes blink{
+  to { opacity: .0; }
+
 .heading-primary {
   font-size: 6rem;
   letter-spacing: 3px;
