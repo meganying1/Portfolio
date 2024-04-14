@@ -540,9 +540,7 @@ figcaption {
     margin-bottom: 2rem; }
 
 .project-details__tools-used {
-  margin: 0 0 7rem 0; 
-  background: #8ea5eb;
-  color: #fff; }
+  margin: 0 0 7rem 0; }
   .project-details__tools-used-list {
     display: flex;
     flex-wrap: wrap; }
