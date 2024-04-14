@@ -281,7 +281,9 @@ figcaption {
       margin-top: 2rem;
       height: 50px; }
     .about__content-icon {
-        margin-right: 1rem; }
+        margin-right: 1rem; 
+        height: 50px;
+        width: auto; }
         .about__content-icon--mr-none {
           margin-right: 0; }
 
