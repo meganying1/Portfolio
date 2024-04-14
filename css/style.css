@@ -257,24 +257,30 @@ figcaption {
     margin-top: 5rem;
     text-align: center; }
 
-.thanks-hero-title {
-    font-weight: 700;
-    font-size: 2.8rem;
-    margin-bottom: 3rem; }
+.thanks-hero {
+  color: #fff;
+  background: #8ea5eb;
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .thanks-hero {
+      height: unset;
+      min-height: unset; } }
+  .thanks-hero__content {
+    padding: 25rem 0 17rem 0;
+    max-width: 90rem;
+    width: 92%;
+    margin: auto; }
     @media only screen and (max-width: 37.5em) {
-       .thanks-hero-title {
-         font-size: 2.4rem; } }
-   .thanks-hero-para {
-     font-size: 1.8rem;
-     color: grey;
-     max-width: 60rem;
-    line-height: 1.7;
-    margin-bottom: 1rem; }
-    .thanks-hero-para--hl {
-      font-weight: 700;
-      margin: 0 3px; }
-      .thanks-hero-para:last-child {
-        margin-bottom: 4rem; }
+      .thanks-hero__content {
+        padding: 19rem 0 13rem 0;
+        margin: auto;
+        position: static;
+        transform: translate(0, 0); } }
+  .thanks-hero__info {
+    margin: 3rem auto 0 auto;
+    max-width: 80rem; }
 
 .about {
   background: #fafafa; }
