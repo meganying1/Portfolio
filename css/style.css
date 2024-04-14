@@ -185,7 +185,7 @@ figcaption {
 
 .home-hero {
   color: #fff;
-  background: #a2a8d3;
+  background: #8ea5eb;
   background-position: center;
   height: 100vh;
   min-height: 80rem;
@@ -374,7 +374,7 @@ figcaption {
             font-size: 1.5rem; } }
 
 .contact {
-  background: #a2a8d3;
+  background: #8ea5eb;
   background-size: cover;
   background-position: center; }
   .contact__form-container {
@@ -455,7 +455,7 @@ figcaption {
 
 .project-cs-hero {
   color: #fff;
-  background: #a2a8d3;
+  background: #8ea5eb;
   background-size: cover;
   background-position: center;
   position: relative; }
