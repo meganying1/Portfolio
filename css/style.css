@@ -194,8 +194,6 @@ figcaption {
 .home-hero {
   color: #fff;
   background: #8ea5eb;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
   background-position: center;
   height: 100vh;
   min-height: 80rem;
