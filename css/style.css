@@ -281,6 +281,17 @@ figcaption {
   .thanks-hero__info {
     margin: 3rem auto 0 auto;
     max-width: 80rem; }
+  .thanks-hero__content-details-para {
+      font-size: 1.8rem;
+      color: grey;
+      max-width: 60rem;
+      line-height: 1.7;
+      margin-bottom: 1rem; }
+      .thanks-hero__content-details-para--hl {
+        font-weight: 700;
+        margin: 0 3px; }
+      .thanks-hero__content-details-para:last-child {
+        margin-bottom: 4rem; }
   .thanks-hero__cta {
     margin-top: 5rem;
     text-align: center; }
