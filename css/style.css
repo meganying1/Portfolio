@@ -206,29 +206,6 @@ figcaption {
     .home-hero {
       height: unset;
       min-height: unset; } }
-  .home-hero__socials {
-    position: absolute;
-    top: 50%;
-    border: 2px solid #eee;
-    border-left: 2px solid #eee;
-    transform: translateY(-50%); }
-    @media only screen and (max-width: 56.25em) {
-      .home-hero__socials {
-        display: none; } }
-  .home-hero__social {
-    width: 5rem; }
-  .home-hero__social-icon-link {
-    width: 100%;
-    display: block;
-    padding: 1.2rem;
-    border-bottom: 2px solid #eee;
-    transition: background .3s; }
-    .home-hero__social-icon-link:hover {
-      background: rgba(255, 255, 255, 0.1); }
-    .home-hero__social-icon-link--bd-none {
-      border-bottom: 0; }
-  .home-hero__social-icon {
-    width: 100%; }
   .home-hero__content {
     position: absolute;
     top: 50%;
@@ -245,9 +222,6 @@ figcaption {
   .home-hero__info {
     margin: 3rem auto 0 auto;
     max-width: 80rem; }
-  .home-hero__cta {
-    margin-top: 5rem;
-    text-align: center; }
 
 .thanks-hero {
   color: #fff;
