@@ -277,6 +277,11 @@ figcaption {
         margin: 0 3px; }
       .about__content-details-para:last-child {
         margin-bottom: 4rem; }
+    .about__content-icon {
+        margin-right: 1rem;
+        width: 2.5rem; }
+        .about__content-icon--mr-none {
+          margin-right: 0; }
 
 .projects {
   background: #fafafa; }
