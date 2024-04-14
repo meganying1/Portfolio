@@ -1,4 +1,4 @@
-import './style.css';
+import './css/style.css';
 
 const words = ["Megan Ying", "an engineer", "a programmer", "a scientist", "a dancer, guitarist, singer, food lover"];
 let i = 0;
