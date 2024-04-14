@@ -283,9 +283,10 @@ figcaption {
     max-width: 80rem; }
   .thanks-hero__content-details-para {
       font-size: 1.8rem;
-      color: grey;
+      color: #fff;
       max-width: 60rem;
       line-height: 1.7;
+      text-align: center;
       margin-bottom: 1rem; }
       .thanks-hero__content-details-para--hl {
         font-weight: 700;
