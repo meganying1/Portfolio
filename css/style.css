@@ -198,6 +198,8 @@ figcaption {
   color: #fff;
   background: #8ea5eb;
   background-position: center;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
   height: 100vh;
   min-height: 80rem;
   max-height: 120rem;
@@ -209,7 +211,7 @@ figcaption {
   .home-hero__content {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 25%;
     transform: translate(-50%, -50%);
     max-width: 90rem;
     width: 92%; }
@@ -219,9 +221,20 @@ figcaption {
         margin: auto;
         position: static;
         transform: translate(0, 0); } }
-  .home-hero__info {
-    margin: 3rem auto 0 auto;
-    max-width: 80rem; }
+  .home-hero__logo-img-cont {
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1.5rem;
+    @media only screen and (max-width: 56.25em) {
+      .header__logo-img-cont {
+        margin-right: 1.2rem; } }
+  .home-hero__logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block; }
+
 
 .thanks-hero {
   color: #fff;
