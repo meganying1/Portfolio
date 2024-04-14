@@ -280,7 +280,8 @@ figcaption {
     .about__content-cont {
       margin-top: 2rem; }
     .about__content-icon {
-        margin-right: 1rem;}
+        margin-right: 1rem;
+        width: 10rem; }
         .about__content-icon--mr-none {
           margin-right: 0; }
 
