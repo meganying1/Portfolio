@@ -198,8 +198,7 @@ figcaption {
   color: #fff;
   background: #8ea5eb;
   background-position: center;
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  display: block-inline;
   height: 100vh;
   min-height: 80rem;
   max-height: 120rem;
@@ -223,12 +222,7 @@ figcaption {
         transform: translate(0, 0); } }
   .home-hero__logo-container {
     display: flex;
-    align-items: center;
-    cursor: pointer;
-    color: #333;
-    transition: color .3s; }
-    .header__logo-container:hover {
-      color: #0062b9; }
+    align-items: center;}
   .home-hero__logo-img-cont {
     border-radius: 50%;
     overflow: hidden;
