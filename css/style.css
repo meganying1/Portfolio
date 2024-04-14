@@ -69,10 +69,18 @@ figcaption {
 .display-flex {
     display: flex; }
 
-.heading-primary {
+.heading-primary-home {
   font-size: 6rem;
   letter-spacing: 3px;
   text-align: left; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-primary-home {
+      font-size: 4.5rem; } }
+
+.heading-primary {
+  font-size: 6rem;
+  letter-spacing: 3px;
+  text-align: center; }
   @media only screen and (max-width: 37.5em) {
     .heading-primary {
       font-size: 4.5rem; } }
