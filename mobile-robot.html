@@ -101,45 +101,43 @@
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Abstract</h3>
               <p class="project-details__desc-para">
-                In this project, I worked in a team to program a mobile robot using Arduino.
-                Our goal was to design a control algorithm to allow the robot to complete an
-                obstacle course as quickly as possible. The course involved follow a curved
-                line and avoiding a series of sliding walls. 
+               In this project, I worked in a team to program a mobile robot using Arduino. 
+                Our objective was to design a control algorithm to allow the robot to navigate 
+                through an obstacle course as quickly as possible. The course inovlved following 
+                a curved line and evading a series of sliding walls.
               </p>
               <h3 class="project-details__content-title">Code</h3>
               <p class="project-details__desc-para">
-                Our robot used a differential drive mechanism, meaning it had wheels on each
-                side that were attached to their own motors. Our program works by taking input 
-                from an ultrasonic sensor and an infrared sensor and using it to send desired 
-                voltages to each of the motors.  During the first stage of developing our code, 
-                my team tested which values we needed to use to determine whether the line 
-                tracking sensors detected the line. We created a program that would print the 
-                values from the sensors when it was directly placed on the line. Consequently, 
-                we were able to tune our program to recognize the robot was on the line when the 
-                sensors reported a value over a specific number. Additionally, our program would
-                turn off the motors of our robot when the ultrasonic sensor detected an object
-                within a certain distance.
+                Our robot utilized a differential drive mechanism, featuring wheels on each side 
+                attached to individual motors. Our program uses input from an ultrasonic sensor 
+                and an infrared sensor to determine the voltage that needs to be supplied to each
+                motor. In the initial phase of code development, our team focused on determining which 
+                values were needed to assess whether the line tracking sensors detected the line. We 
+                devised a program that would print the sensor values when placed directly on the line. 
+                This enabled us to fine-tune our program to recognize the robot was positioned on
+                the line when sensor readings surpassing a specific threshold. Furthermore, our program
+                would deactivate the robot's motors when the ultrasonic sensor detected an object within
+                a certain distance.
               </p>
               <p class="project-details__desc-para">
-                The loop section of our code includes several if statements that allows the program
-                to check whether the robot is on the line and whether there is an obstacle. 
-                One set of if statements allowed the algorithm to determine which infrared 
-                sensor, left, right, or middle, last detected once the robot no longer follows 
-                the line. If the line was last on the right side, our algorithm would set the motor
-                voltages so that the robot turns to the left, causing it to navigate back to the 
-                line. The same applies for if the line was last detected on the left side. 
+                Within the loop section of our code, we integrated several if statements to assess
+                whether the robot is on the line and whether there is a nearby obstacle. Specifically, 
+                one set of if statements allowed the algorithm to determine which infrared sensor
+                (left, right, or middle) last detected the line once the robot deviates from the path.
+                If the line was last detected on the right side, our algorithm adjusted the motor
+                voltages to prompt the robot to turn left, enabling it to realign with the line.
+                The same applies for if the line was last detected on the left side. 
               </p>
               <p class="project-details__desc-para">
-                We also used a series of if statements to control the speed at which our robot
-                navigated. If an object was detected by the ultrasonic sensor, the voltages sent
-                to both motors was 0 volts. If the middle infrared sensor is the only sensor on 
-                the line, the speed of both motors is equal. However, if the middle and left sensors
-                both detect the line the line, the left motor speed is set to a number slightly 
-                smaller than the right motor speed. This is to ensure that the robot does not turn 
-                too quickly in the opposite direction. The same applies if a line is detected by 
-                the middle and right sensors. If only the left or right sensor detects the line, 
-                the different between the speed of the right and left motors increases to turn the
-                robot more quickly.
+                We also used a series of if statements to regulate the speed of our robot. If 
+                an object is detected by the ultrasonic sensor, both motor voltages are set to 0 volts.
+                If only the middle infrared sensor detected the line, both motors operate at the same
+                speed. However, if both the middle and left sensors detect the line, the speed of the
+                left motor is adjusted to be slightly slower than the right motor. This prevent abrupt
+                turns in the opposite direction. The same adjustment is made if the middle and right
+                sensors both detect the line. Conversely, if only the left or right sensor
+                detected the line, the speed difference between the right and left motors increases
+                to facilitate quicker turns.
               </p>
               <div class="project-details__showcase-img-cont">
                 <img
@@ -151,12 +149,11 @@
               </div>
               <h3 class="project-details__content-title">Results</h3>
               <p class="project-details__desc-para">
-              During the testing of our program, our robot was able to avoid all the moving 
-                obstacles and finish the course in 26 seconds, which was quicker than 75% of 
-                other robots. It successfully steered itself back onto the line when it sensed
-                that it had left the line. This project allowed me to practice coding using 
-                Arduino and converting sensor readings to voltages. I was also able to study
-                the kinematics of differential drive robots.
+              During testing, our robot successfully evaded all moving obstacles and completed the
+                course in 26 seconds, outperforming 75% of other robots. It was able to steer itself
+                back onto the line when a deviation was detected. This project provided me with 
+                valuable experience in Arduino programming. Additionally, I gained insight into the
+                kinematics of differential drive robots.
               </p>
             </div>
             <div class="project-details__tools-used">
