@@ -247,7 +247,7 @@ figcaption {
     text-align: center; }
 
 .about {
-  background: #fafafa; }
+  background: #CDCDCD; }
   .about__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -376,7 +376,7 @@ figcaption {
             font-size: 1.5rem; } }
 
 .contact {
-  background: #CDCDCD;
+  background: #88BBD6;
   background-size: cover;
   background-position: center; }
   .contact__form-container {
