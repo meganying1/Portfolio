@@ -74,6 +74,27 @@ figcaption {
     .heading-primary {
       font-size: 4.5rem; } }
 
+.heading-primary {
+  font-size: 6rem;
+  letter-spacing: 3px;
+  text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-primary {
+      font-size: 4.5rem; } }
+
+.heading-primary-typed {
+  overflow: hidden;
+  border-right: .15em black;
+  width: 0;
+  font-size: 6rem;
+  letter-spacing: 3px;
+  text-align: center; 
+  animation: typing 1s forwards; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-primary {
+      font-size: 4.5rem; 
+      animation: typing 1s forwards; } }
+
 .heading-sec__mb-bg {
   margin-bottom: 11rem; }
   @media only screen and (max-width: 56.25em) {
