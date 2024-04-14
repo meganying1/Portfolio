@@ -278,12 +278,9 @@ figcaption {
       .about__content-details-para:last-child {
         margin-bottom: 4rem; }
     .about__content-cont {
-      margin-top: 2rem;
-      height: 50px; }
+      margin-top: 2rem; }
     .about__content-icon {
-        margin-right: 1rem; 
-        height: 50px;
-        width: auto; }
+        margin-right: 1rem; }
         .about__content-icon--mr-none {
           margin-right: 0; }
 
