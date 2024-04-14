@@ -87,7 +87,7 @@
       <div class="home-hero__content">
           <h1 class="heading-primary">Hi, I am
 	    <div class="display-flex">
-	      <p class="heading-primary" id="word">
+	      <p id="word" class="heading-primary">
 	      <p class="heading-primary blink">|</p>
 	  </h1>
        </div>
@@ -379,7 +379,44 @@
         </div>
       </div>
     </section>
-    <script async src="./main.js"></script>
+   <script>
+      const words = ["Megan Ying", "an engineer", "a programmer", "a scientist", "a dancer, guitarist, singer, food lover"];
+      let i = 0;
+      let counter;
+      function typeNow() {
+         let word = words[i].split("");
+         var loopTyping = function() {
+            if (word.length > 0) {
+               document.getElementById('word').innerHTML += word.shift();
+            } else {
+               deleteNow();
+               return false;
+            };
+            counter = setTimeout(loopTyping, 200);
+         };
+         loopTyping();
+      };
+      function deleteNow() {
+         let word = words[i].split("");
+         var loopDeleting = function() {
+            if (word.length > 0) {
+               word.pop();
+               document.getElementById('word').innerHTML = word.join("");
+            } else {
+               if (words.length > (i + 1)) {
+                  i++;
+               } else {
+                  i = 0;
+               };
+               typeNow();
+               return false;
+            };
+            counter = setTimeout(loopDeleting, 200);
+         };
+         loopDeleting();
+      };
+      typeNow();
+    </script>
     <script src="./index.js"></script>
   </body>
 </html>
