@@ -277,6 +277,8 @@ figcaption {
         margin: 0 3px; }
       .about__content-details-para:last-child {
         margin-bottom: 4rem; }
+    .about__content-cont {
+      margin-top: 2rem; }
     .about__content-icon {
         margin-right: 1rem;
         width: 2.5rem; }
