@@ -100,24 +100,24 @@
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Abstract</h3>
               <p class="project-details__desc-para">
-                Chinese Checkers was my final project for 15-112: Fundamentals of Programming
-                and Computer Science. I created it by implementing object-oriented programming
-                in Python. My program also used Tkinter, which is a part of Python’s standard
-                GUI. The program includes the basic gameplay of Chinese checkers, as well as
-                additional features. The user can play against an AI opponent or against friends
-                and can request for a hint. It also includes timed turns. You can view a
-                demonstration of my program here: <a href="https://youtu.be/EQbkK0stQs8"> 
-                https://youtu.be/EQbkK0stQs8.</a>
+                For my final project in 15-112: Fundamentals of Programming and Computer Science, 
+                I developed a Chinese Checkers game using object-oriented programming in Python. 
+                The program utilizes Tkinter, a standard GUI library in Python. It features the 
+                core gameplay of Chinese checkers along with several additional functionalities. 
+                Players have the option to play against an AI opponent or against friends, and 
+                they can request for hints during gameplay. It also includes timed turns for an added
+                challenge. You can view a demonstration of my program here: 
+                <a href="https://youtu.be/EQbkK0stQs8"> https://youtu.be/EQbkK0stQs8.</a>
               </p>
               <h3 class="project-details__content-title">Complex Features</h3>
               <p class="project-details__desc-para">
-                In Chinese checkers, the game board is not a perfect grid. The even and odd
-                rows are offset from each other. This made drawing the board, determining
-                row and column coordinates, and making the basic gameplay more complicated.
-                The function I used to get the x-y coordinates of a cell based on its row and
-                column, and vice versa, needed to add or subtract an offset. In addition, to
-                account for this offset when moving pieces, my program determines when the
-                change in column must be adjusted.
+                In Chinese checkers, the game board is not a perfect grid; the even and odd rows are
+                offset from each other. This non-conformity added complexity to tasks such as drawing 
+                the board, determining row and column coordinates, and implementing basic gameplay mechanics.
+                To address this, I developed a function that calculates the X-Y coordinates of a cell based 
+                on its row and column, and vice versa, by incorporating the necessary offset adjustments. 
+                In addition, to account for this offset when moving pieces on the board, my program determines
+                when the change in column must be adjusted.
               </p>
               <div class="project-details__img-container">
                 <div class="project-details__showcase-img-cont">
@@ -142,34 +142,33 @@
                 </div>
               </div>
               <p class="project-details__desc-para">
-                Another complex part of my code includes the algorithm for allowing the player
-                piece to continue jumping over other pieces once it has started. I used a variable
-                that was set to True when the current player was jumping and False otherwise. When
-                the variable is set to True, the user can only make jumping moves, and their turn
-                does not end until they click elsewhere on the board.
+                Another intricate aspect of my code involves the algorithm for enabling a player's 
+                piece to continue jumping over other pieces once it has begun. To implement this, I used
+                a variable that switches to True when the player is in the process of jumping, and False
+                otherwise. When the variable is set to True, the user can only execute jumping moves,
+                and their turn doees not end until they click elsewhere on the board.
               </p>
               <p class="project-details__desc-para">
-                Adding animations for the ball movements was also one of my more difficult tasks.
-                To implement this, I used a variable of each ball that states whether it is moving
-                or not. If this variable is set to True, my program will calculate the necessary 
-                change in the ball’s x-y coordinates needed over a set amount of time, redrawing 
-                the ball until it reaches its new location.
+                Incorporating animations for the ball movements also posed a challenge. To achieve this, 
+                I assigned a variable to each ball indicating whether it is currently in motion. When 
+                this variable is set to True, my program calculates the required change in the ball's
+                x-y coordinates over a set amount of time, continuously redrawing the ball until it reaches
+                its new location.
               </p>
               <p class="project-details__desc-para">
-                My code also uses minimax to allow for the user to play against an opponent AI.
-                I used object-oriented programming to create a data tree of all possible game states.
-                My program assigns a value to each state based on how beneficial it is for the AI.
-                It then goes through each branch of the data tree to find the optimal path. This
-                backtracking algorithm also allows the user to request for hints.
+                In my code, I implemented the minimax algorithm to enable users to play against an AI opponent
+                Utilizing object-oriented programming, I constructed a data tree representing all possible 
+                game states. Each state is assigned a value reflecting how beneficial it is for the AI. The 
+                program then traverses through each branch of the data tree to identify the optimal path. 
+                This backtracking algorithm also allows the user to request for hints.
               </p>
               <h3 class="project-details__content-title">Results</h3>
               <p class="project-details__desc-para">
-                My friends and I use my program to play Chinese checkers against each other.
-                This project taught me how to approach creating a piece of complex code with little
-                guidance. Through completing it, I learned more about different packages and features
-                that can be used in Python. I also became more comfortable with using recursive
-                functions and object-oriented programming. Lastly, I was able to improve my ability
-                to detect bugs in my code.
+                My friends and I regularly use my program to play Chinese checkers. This project provided 
+                me with invaluable experience in developing complex code with minimal guidance. Through 
+                its completion, I expanded my knowledge of various packages and functionalities available 
+                in Python. I also gained confidence in employing recursive functions and object-oriented 
+                programming techniques. Lastly, I was able to improve my ability to detect bugs within my code.
               </p>
             </div>
             <div class="project-details__tools-used">
