@@ -669,7 +669,7 @@ figcaption {
   color: #fff; }
   .main-footer__content {
     padding: 4rem 0;
-    border-top: 1px solid #444;
+    border-top: 1px solid #fff;
     color: #eee;
     font-size: 1.2rem;
     text-align: left;
