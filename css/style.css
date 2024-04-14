@@ -349,6 +349,7 @@ figcaption {
         width: 300px;
         height: 300px;
         display: flex;
+        text-align: center
         object-fit: contain; }
     .experiences__row-content {
       padding: 1rem 0;
