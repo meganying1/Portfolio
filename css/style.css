@@ -185,7 +185,7 @@ figcaption {
 
 .home-hero {
   color: #fff;
-  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
+  background: #88BBD6;
   background-position: center;
   height: 100vh;
   min-height: 80rem;
@@ -276,7 +276,7 @@ figcaption {
         margin-bottom: 4rem; }
 
 .projects {
-  background: #fafafa; }
+  background: #CDCDCD; }
   .projects__row {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -325,56 +325,58 @@ figcaption {
           .projects__row-content-desc {
             font-size: 1.7rem; } }
 
-.experiences__row {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-gap: 1rem;
-  margin-bottom: -50px; }
-  @media only screen and (max-width: 56.25em) {
-    .experiences__row {
-      grid-template-columns: 1fr;
-      grid-gap: 1rem;
-      margin-bottom: 1rem; } }
-  @media only screen and (max-width: 56.25em) {
-    .experiences__row {
-      text-align: center; } }
-  .experiences__row:last-child {
-    margin-bottom: 0; }
-  .experiences__row-img-cont {
-    overflow: hidden; }
-  .experiences__row-img {
-      width: 300px;
-      height: 300px;
-      display: block;
-      object-fit: contain; }
-  .experiences__row-content {
-    padding: 1rem 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start; }
+.experiences {
+  background: #E9E9E9; }
+  .experiences__row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1rem;
+    margin-bottom: -50px; }
     @media only screen and (max-width: 56.25em) {
-      .experiences__row-content {
-        align-items: center; } }
-    .experiences__row-content-company {
-      font-weight: 700;
-      font-size: 2.8rem;
-      margin-bottom: 1rem; }
-      @media only screen and (max-width: 37.5em) {
-        .experiences__row-content-company {
-          font-size: 2.4rem; } }
-    .experiences__row-content-desc {
-      font-size: 1.8rem;
-      color: grey;
-      max-width: 60rem;
-      line-height: 1.7;
-      margin-bottom: 1rem; }
-      @media only screen and (max-width: 37.5em) {
-        .experiences__row-content-desc {
-          font-size: 1.5rem; } }
+      .experiences__row {
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+        margin-bottom: 1rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .experiences__row {
+        text-align: center; } }
+    .experiences__row:last-child {
+      margin-bottom: 0; }
+    .experiences__row-img-cont {
+      overflow: hidden; }
+    .experiences__row-img {
+        width: 300px;
+        height: 300px;
+        display: block;
+        object-fit: contain; }
+    .experiences__row-content {
+      padding: 1rem 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start; }
+      @media only screen and (max-width: 56.25em) {
+        .experiences__row-content {
+          align-items: center; } }
+      .experiences__row-content-company {
+        font-weight: 700;
+        font-size: 2.8rem;
+        margin-bottom: 1rem; }
+        @media only screen and (max-width: 37.5em) {
+          .experiences__row-content-company {
+            font-size: 2.4rem; } }
+      .experiences__row-content-desc {
+        font-size: 1.8rem;
+        color: grey;
+        max-width: 60rem;
+        line-height: 1.7;
+        margin-bottom: 1rem; }
+        @media only screen and (max-width: 37.5em) {
+          .experiences__row-content-desc {
+            font-size: 1.5rem; } }
 
 .contact {
-  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
+  background: #CDCDCD;
   background-size: cover;
   background-position: center; }
   .contact__form-container {
