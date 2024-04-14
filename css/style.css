@@ -275,6 +275,8 @@ figcaption {
       .about__content-details-para:last-child {
         margin-bottom: 4rem; }
 
+.projects {
+  background: #FAFAFA; }
   .projects__row {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -323,8 +325,6 @@ figcaption {
           .projects__row-content-desc {
             font-size: 1.7rem; } }
 
-.experiences {
-  background: #FAFAFA; }
   .experiences__row {
     display: grid;
     grid-template-columns: 1fr 2fr;
