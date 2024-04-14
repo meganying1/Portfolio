@@ -346,10 +346,10 @@ figcaption {
     .experiences__row-img-cont {
       overflow: hidden; }
     .experiences__row-img {
-        width: 300px;
-        height: 300px;
+        width: 350px;
+        height: 350px;
         display: flex;
-        text-align: center
+        text-align: center;
         object-fit: contain; }
     .experiences__row-content {
       padding: 1rem 0;
