@@ -249,18 +249,6 @@ figcaption {
     margin-top: 5rem;
     text-align: center; }
 
-.thanks-hero {
-  color: #fff;
-  background: #8ea5eb;
-  background-position: center;
-  height: 100vh;
-  min-height: 80rem;
-  max-height: 120rem;
-  position: relative; }
-  @media only screen and (max-width: 37.5em) {
-    .home-hero {
-      height: unset;
-      min-height: unset; } }
 .thanks-hero-title {
     font-weight: 700;
     font-size: 2.8rem;
