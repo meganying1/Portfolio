@@ -37,3 +37,5 @@ function deletingEffect() {
 	};
 	loopDeleting();
 };
+
+typingEffect();
