@@ -185,7 +185,7 @@ figcaption {
 
 .home-hero {
   color: #fff;
-  background: #88BBD6;
+  background: #D3E3FC;
   background-position: center;
   height: 100vh;
   min-height: 80rem;
@@ -247,7 +247,7 @@ figcaption {
     text-align: center; }
 
 .about {
-  background: #CDCDCD; }
+  background: #FAFAFA; }
   .about__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -275,8 +275,6 @@ figcaption {
       .about__content-details-para:last-child {
         margin-bottom: 4rem; }
 
-.projects {
-  background: #CDCDCD; }
   .projects__row {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -326,7 +324,7 @@ figcaption {
             font-size: 1.7rem; } }
 
 .experiences {
-  background: #E9E9E9; }
+  background: #FAFAFA; }
   .experiences__row {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -376,7 +374,7 @@ figcaption {
             font-size: 1.5rem; } }
 
 .contact {
-  background: #88BBD6;
+  background: #D3E3FC;
   background-size: cover;
   background-position: center; }
   .contact__form-container {
