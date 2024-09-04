@@ -307,7 +307,7 @@ figcaption {
       width: 350px;
       height: 350px;
       display: block;
-      object-fit: scale-down; }
+      object-fit: contain; }
     .projects__row-content {
       padding: 2rem 0;
       display: flex;
@@ -356,7 +356,7 @@ figcaption {
         height: 350px;
         display: flex;
         text-align: center;
-        object-fit: contain; }
+        object-fit: scale-down; }
     .experiences__row-content {
       padding: 1rem 0;
       display: flex;
