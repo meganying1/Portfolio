@@ -354,6 +354,7 @@ figcaption {
     .experiences__row-img {
         width: 350px;
         height: 350px;
+        max-width: 100%;
         display: flex;
         text-align: center;
         object-fit: contain; }
