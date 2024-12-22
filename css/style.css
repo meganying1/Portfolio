@@ -150,7 +150,7 @@ figcaption {
 
 .btn {
   background: #fff;
-  color: #333;
+  color: #777777;
   letter-spacing: 2px;
   display: inline-block;
   font-weight: 700;
@@ -196,11 +196,11 @@ figcaption {
 
 .home-hero {
   color: #fff;
-  background: #333;
+  background: #777777;
   background-position: center;
   height: 100vh;
-  min-height: 80rem;
-  max-height: 120rem;
+  min-height: 40rem;
+  max-height: 80rem;
   position: relative; }
   @media only screen and (max-width: 37.5em) {
     .home-hero {
@@ -225,7 +225,7 @@ figcaption {
 
 .thanks-hero {
   color: #fff;
-  background: #333;
+  background: #777777;
   background-size: cover;
   background-position: center;
   position: relative; }
@@ -385,7 +385,7 @@ figcaption {
             font-size: 1.5rem; } }
 
 .contact {
-  background: #333;
+  background: #777777;
   background-size: cover;
   background-position: center; }
   .contact__form-container {
@@ -415,7 +415,7 @@ figcaption {
     display: block;
     text-align: left; }
   .contact__form-input {
-    color: #333;
+    color: #777777;
     padding: 2rem;
     width: 100%;
     border: 1px solid #ebebeb;
@@ -466,7 +466,7 @@ figcaption {
 
 .project-cs-hero {
   color: #fff;
-  background: #333;
+  background: #777777;
   background-size: cover;
   background-position: center;
   position: relative; }
@@ -581,7 +581,7 @@ figcaption {
     display: flex;
     align-items: center;
     cursor: pointer;
-    color: #333;
+    color: #777777;
     transition: color .3s; }
     .header__logo-container:hover {
       color: #0062b9; }
@@ -616,7 +616,7 @@ figcaption {
     padding: 2.2rem 3rem;
     display: inline-block;
     font-size: 1.6rem;
-    color: #333;
+    color: #777777;
     letter-spacing: 1px;
     font-weight: 700;
     transition: color .3s; }
@@ -660,7 +660,7 @@ figcaption {
     text-decoration: none;
     padding: 2.5rem 3rem;
     font-size: 1.6rem;
-    color: #333;
+    color: #777777;
     text-align: right;
     border-bottom: 1px solid #eee;
     font-weight: 700;
@@ -674,7 +674,7 @@ figcaption {
     border-bottom: 0; }
 
 .main-footer {
-  background: #333; }
+  background: #777777; }
   .main-footer__content {
     padding: 4rem 0;
     color: #fff;
