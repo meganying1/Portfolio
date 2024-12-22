@@ -195,7 +195,7 @@ figcaption {
 
 .home-hero {
   color: #fff;
-  background: #8ea5eb;
+  background: #333;
   background-position: center;
   height: 100vh;
   min-height: 80rem;
@@ -224,7 +224,7 @@ figcaption {
 
 .thanks-hero {
   color: #fff;
-  background: #8ea5eb;
+  background: #333;
   background-size: cover;
   background-position: center;
   position: relative; }
@@ -384,7 +384,7 @@ figcaption {
             font-size: 1.5rem; } }
 
 .contact {
-  background: #8ea5eb;
+  background: #333;
   background-size: cover;
   background-position: center; }
   .contact__form-container {
@@ -465,7 +465,7 @@ figcaption {
 
 .project-cs-hero {
   color: #fff;
-  background: #8ea5eb;
+  background: #333;
   background-size: cover;
   background-position: center;
   position: relative; }
@@ -673,7 +673,7 @@ figcaption {
     border-bottom: 0; }
 
 .main-footer {
-  background: #8ea5eb; }
+  background: #333; }
   .main-footer__content {
     padding: 4rem 0;
     color: #fff;
