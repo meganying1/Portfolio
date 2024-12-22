@@ -111,56 +111,169 @@
           </div>
         </div>
       </section>
-    </main>
-
-    <footer class="main-footer">
+      <section id="experiences" class="experiences sec-pad">
       <div class="main-container">
-        <div class="main-footer__content">
-          &copy; Copyright 2021. GitHub repository forked from
-          <a href="https://rammaheshwari.com" target="_blank" rel="noopener noreferrer">Ram Maheshwari</a>
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main">Experiences</span>
+        </h2>
+        <div class="experiences__content">
+          <div class="experiences__row">
+            <div class="experiences__row-img-cont">
+              <img  
+              src="./assets/photos/apple.jpg"
+              alt="Apple logo"
+              class="experiences__row-img"
+              loading="lazy" 
+              />
+            </div>
+            <div class="experiences__row-content">
+              <h3 class="experiences__row-content-company">Apple</h3>
+              <p class="experiences__row-content-desc">Interconnect Product Design Intern</p>
+              <p class="experiences__row-content-desc">Sept 2023 - Aug 2024</p>
+            </div>
+          </div>
+          <div class="experiences__row">
+            <div class="experiences__row-img-cont">
+              <img  
+              src="./assets/photos/ubs.png"
+              alt="UBS logo"
+              class="experiences__row-img"
+              loading="lazy" 
+              />
+            </div>
+            <div class="experiences__row-content">
+              <h3 class="experiences__row-content-company">UBS</h3>
+              <p class="experiences__row-content-desc">Quantitative Trading Summer Analyst</p>
+              <p class="experiences__row-content-desc">June 2023 - Aug 2023</p>
+            </div>
+          </div>
+          <div class="experiences__row">
+            <div class="experiences__row-img-cont">
+              <img  
+              src="./assets/photos/cat.jpg"
+              alt="Caterpillar logo"
+	      class="experiences__row-img"
+              loading="lazy" 
+              />
+            </div>
+            <div class="experiences__row-content">
+              <h3 class="experiences__row-content-company">Caterpillar</h3>
+              <p class="experiences__row-content-desc">Hydraulics and Controls Engineering Intern</p>
+              <p class="experiences__row-content-desc">May 2022 - Aug 2022</p>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
+    </section>
+    <section id="projects" class="projects sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-bg">
+          <span class="heading-sec__main">Projects</span>
+        </h2>
+        <div class="projects__content">
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/photos/tripod_phone1.jpg"
+                alt="Fabricated attachment holding iPhone"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Tripod Attachment</h3>
+              <p class="projects__row-content-desc">
+                Designing and manufacturing a tripod attachment to alleviate discomfort and enhance usability for
+                individuals with cerebral palsy and wrist tendonitis.
+              </p>
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/photos/final-display.jpg"
+                alt="Final physical mock-up of medical device"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Medical Device Prototype</h3>
+              <p class="projects__row-content-desc">
+                A medical device prototype for monitoring pressure changes in a mechanical heart valve assembly,
+                fabricated with FDM 3D printing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main">Contact</span>
+        </h2>
+        <div class="contact__form-container">
+          <form
+            action="https://formsubmit.co/meganying1@gmail.com"
+            method="POST"
+            class="contact__form"
+          >
+            <div class="contact__input-wrapper">
+              <input
+                class="contact__input"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div class="contact__input-wrapper">
+              <input
+                class="contact__input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="contact__input-wrapper">
+              <textarea
+                class="contact__input contact__input--textarea"
+                name="message"
+                id="message"
+                rows="4"
+                placeholder="Message"
+                required
+              ></textarea>
+            </div>
+            <div class="contact__input-wrapper">
+              <button type="submit" class="btn">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <script>
-      const words = ["Megan Ying", "an engineer", "a programmer", "a scientist"];
-      let i = 0;
-      let counter;
+  <footer class="footer">
+    <div class="footer__content">
+      <p>&copy; 2024 Megan Ying</p>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/in/ying-megan/" target="_blank" rel="noopener noreferrer">
+          <img class="footer__social-icon" src="./assets/icons/linkedin.png" alt="LinkedIn" height="30" />
+        </a>
+        <a href="https://github.com/meganying1" target="_blank" rel="noopener noreferrer">
+          <img class="footer__social-icon" src="./assets/icons/github.png" alt="GitHub" height="30" />
+        </a>
+      </div>
+    </div>
+  </footer>
 
-      function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-      }
-
-      async function typeNow() {
-        const word = words[i].split("");
-        const element = document.getElementById('word');
-        
-        for (let char of word) {
-          element.innerHTML += char;
-          await sleep(200);
-        }
-        
-        await sleep(3000);
-        await deleteNow();
-      }
-
-      async function deleteNow() {
-        const element = document.getElementById('word');
-        let word = element.innerHTML;
-        
-        while (word.length > 0) {
-          word = word.slice(0, -1);
-          element.innerHTML = word;
-          await sleep(100);
-        }
-        
-        i = (i + 1) % words.length;
-        typeNow();
-      }
-
-      typeNow();
-    </script>
-    <script src="https://web3forms.com/client/script.js" async defer></script>
-    <script src="./index.js"></script>
-  </body>
+  <script src="js/main.js"></script>
+</body>
 </html>
