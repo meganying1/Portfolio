@@ -37,10 +37,9 @@ body {
   box-sizing: border-box;
   position: relative;
   line-height: 1.5;
-  font-family: monospace;
   overflow-x: hidden;
   overflow-y: scroll;
-  font-family: "Courier New"; }
+  "Roboto", serif; }
 
 a {
   text-decoration: none;
