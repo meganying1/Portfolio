@@ -199,8 +199,8 @@ figcaption {
   background: #777777;
   background-position: center;
   height: 100vh;
-  min-height: 40rem;
-  max-height: 80rem;
+  min-height: 80rem;
+  max-height: 120rem;
   position: relative; }
   @media only screen and (max-width: 37.5em) {
     .home-hero {
@@ -215,7 +215,7 @@ figcaption {
     width: 92%; }
     @media only screen and (max-width: 37.5em) {
       .home-hero__content {
-        padding: 19rem 0 13rem 0;
+        padding: 8rem 0 8rem 0;
         margin: auto;
         position: static;
         transform: translate(0, 0); } }
