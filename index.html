@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,118 +6,181 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Megan Ying Portfolio</title>
-    <meta name="description" content="Megan Ying - Portfolio" />
+    <meta name="description" content="Portfolio Template" />
 
     <link rel="stylesheet" href="css/style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
       <div class="header__content">
-        <a href="/" class="header__logo-container">
+        <div class="header__logo-container">
           <div class="header__logo-img-cont">
-            <img src="./assets/photos/headshot.jpg" alt="Megan Ying" class="header__logo-img" />
+            <img
+              src="./assets/photos/headshot.jpg"
+              alt="Megan Ying Logo Image"
+              class="header__logo-img"
+            />
           </div>
           <span class="header__logo-sub">Megan Ying</span>
-        </a>
-        
-        <nav class="header__main">
-          <ul class="header__links">
-            <li><a href="./index.html" class="header__link">Home</a></li>
-            <li><a href="#about" class="header__link">About</a></li>
-            <li><a href="#experiences" class="header__link">Experiences</a></li>
-            <li><a href="#projects" class="header__link">Projects</a></li>
-            <li><a href="#contact" class="header__link">Contact</a></li>
-          </ul>
-          
-          <button class="header__main-ham-menu-cont" aria-label="Toggle menu">
-            <img src="./assets/svg/ham-menu.svg" alt="" class="header__main-ham-menu" />
-            <img src="./assets/svg/ham-menu-close.svg" alt="" class="header__main-ham-menu-close d-none" />
-          </button>
-        </nav>
-      </div>
-
-      <div class="header__sm-menu">
-        <nav class="header__sm-menu-content">
-          <ul class="header__sm-menu-links">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section class="home-hero">
-        <div class="home-hero__content">
-          <h1 class="heading-primary-home">
-            Hi, I am
-            <div class="display-flex">
-              <p id="word" class="heading-primary-home"></p>
-              <p class="heading-primary-home">|</p>
-            </div>
-          </h1>
         </div>
-      </section>
-
-      <section id="about" class="about sec-pad">
-        <div class="main-container">
-          <div class="about__content">
-            <div class="about__content-main">
-              <h2 class="about__content-title">About Me</h2>
-              <div class="about__content-details">
-                <p class="about__content-details-para">
-                  Hi! My name is Megan Ying and I'm a student at Carnegie Mellon University pursuing a Bachelor of Science in Mechanical Engineering. I am driven by a deep passion for using technology to improve the quality of life for others, particularly within the clean tech and healthcare sectors. While my foundation lies in mechanical engineering, my interests extend to software engineering and data science.
-                </p>
-                <p class="about__content-details-para">
-                  Whether it's through designing innovative products, leveraging data to drive informed decision-making, or pioneering cutting-edge software solutions, I am actively seeking full-time roles where I can apply my skills and knowledge to make a meaningful impact. Let's collaborate to create a cleaner, healthier future!
-                </p>
-              </div>
-            </div>
-
-            <div class="about__content-skills">
-              <h2 class="about__content-title">My Skills</h2>
-              <div class="skills">
-                <div class="skills__skill">Python</div>
-                <div class="skills__skill">C</div>
-                <div class="skills__skill">SolidWorks</div>
-                <div class="skills__skill">Siemens NX</div>
-                <div class="skills__skill">Ansys Mechanical</div>
-                <div class="skills__skill">JMP</div>
-                <div class="skills__skill">MATLAB</div>
-                <div class="skills__skill">SQL</div>
-                <div class="skills__skill">Instron</div>
-                <div class="skills__skill">Keyence</div>
-                <div class="skills__skill">3D Printer</div>
-                <div class="skills__skill">Laser Cutter</div>
-                <div class="skills__skill">Manual Mill</div>
-                <div class="skills__skill">Manual Lathe</div>
-                <div class="skills__skill">Band Saw</div>
-              </div>
-
-              <h2 class="about__content-title" style="margin-top:3rem;">Social</h2>
-              <div class="about__content-cont">
-                <a href="https://www.linkedin.com/in/ying-megan/" target="_blank" rel="noopener noreferrer">
-                  <img class="about__content-icon" src="./assets/icons/linkedin.png" alt="LinkedIn" height="50" />
-                </a>
-                <a href="https://github.com/meganying1" target="_blank" rel="noopener noreferrer">
-                  <img class="about__content-icon" src="./assets/icons/github.png" alt="GitHub" height="50" />
-                </a>
-              </div>
-            </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link"> About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#experiences" class="header__link"> Experiences </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link"> Projects </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
           </div>
         </div>
-      </section>
-      <section id="experiences" class="experiences sec-pad">
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="home-hero">
+      <div class="home-hero__content">
+          <h1 class="heading-primary-home">Hi, I am
+	    <div class="display-flex">
+	      <p id="word" class="heading-primary-home">
+	      <p class="heading-primary-home">|</p>
+	  </h1>
+       </div>
+      </div>
+    </section>
+    <section id="about" class="about sec-pad">
+      <div class="main-container">
+        <div class="about__content">
+          <div class="about__content-main">
+            <h3 class="about__content-title">About Me</h3>
+            <div class="about__content-details">
+              <p class="about__content-details-para">
+                Hi! My name is Megan Ying and I'm a student at Carnegie 
+                Mellon University pursuing a Bachelor of Science in Mechanical
+                Engineering. I am driven by a deep passion for using technology 
+                to improve the quality of life for others, particularly within the
+                clean tech and healthcare sectors. While my foundation lies in
+                mechanical engineering, my interests extend to software engineering
+                and data science. 
+              </p>
+              <p class="about__content-details-para">
+                Whether it's through designing innovative products, leveraging
+                data to drive informed decision-making, or pioneering cutting-edge
+                software solutions, I am actively seeking full-time roles where I can
+                apply my skills and knowledge to make a meaningful impact. Let's
+                collaborate to create a cleaner, healthier future! 
+              </p>
+            </div>
+          </div>
+          <div class="about__content-skills">
+            <h3 class="about__content-title">My Skills</h3>
+            <div class="skills">
+              <div class="skills__skill">Python</div>
+              <div class="skills__skill">C</div>
+              <div class="skills__skill">SolidWorks</div>
+              <div class="skills__skill">Siemens NX</div>
+              <div class="skills__skill">Ansys Mechanical</div>
+              <div class="skills__skill">JMP</div>
+              <div class="skills__skill">MATLAB</div>
+              <div class="skills__skill">SQL</div>
+              <div class="skills__skill">Instron</div>
+              <div class="skills__skill">Keyence</div>
+              <div class="skills__skill">3D Printer</div>
+              <div class="skills__skill">Laser Cutter</div>
+              <div class="skills__skill">Manual Mill</div>
+              <div class="skills__skill">Manual Lathe</div>
+              <div class="skills__skill">Band Saw</div>
+            </div>
+            <h3 class="about__content-title" style="margin-top:3rem;">Social</h3>
+	      <div class="about__content-cont">
+	        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ying-megan/">
+                  <img
+                    class="about__content-icon"
+                    src="./assets/icons/linkedin.png"
+		    alt="Linkedin icon"
+		    height="50"
+                  />
+		</a>
+	        <a target="_blank" rel="noreferrer" href="https://github.com/meganying1">
+                  <img
+                    class="about__content-icon"
+                    src="./assets/icons/github.png"
+		    alt="Github icon"
+		    height="50"
+                  />
+		</a>
+	      </div>
+          <div class="about__content-skills">
+        </div>
+      </div>
+    </section>
+    <section id="experiences" class="experiences sec-pad">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main">Experiences</span>
         </h2>
         <div class="experiences__content">
+<!--             <div class="experiences__row">
+	    <div class="experiences__row-img-cont">
+              <img  
+              src="./assets/photos/research.png"
+              alt="Design Research Collective logo"
+              class="experiences__row-img"
+              loading="lazy" 
+              />
+            </div>
+	    <div class="experiences__row-content">
+              <h3 class="experiences__row-content-company">Design Research Collective</h3>
+              <p class="experiences__row-content-desc">Research Assistant</p>
+              <p class="experiences__row-content-desc">Sept 2024 - Present</p>
+            </div>
+	  </div> -->
           <div class="experiences__row">
             <div class="experiences__row-img-cont">
               <img  
@@ -169,6 +233,7 @@
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-bg">
           <span class="heading-sec__main">Projects</span>
+          </span>
         </h2>
         <div class="projects__content">
           <div class="projects__row">
@@ -186,94 +251,231 @@
                 Designing and manufacturing a tripod attachment to alleviate discomfort and enhance usability for
                 individuals with cerebral palsy and wrist tendonitis.
               </p>
+              <a
+                href="./tripod-attachment.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                >Learn More</a
+              >
             </div>
           </div>
           <div class="projects__row">
             <div class="projects__row-img-cont">
               <img
-                src="./assets/photos/final-display.jpg"
-                alt="Final physical mock-up of medical device"
+                src="./assets/photos/final_linkage.png"
+                alt="CAD model of linkage system"
                 class="projects__row-img"
                 loading="lazy"
               />
             </div>
             <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Medical Device Prototype</h3>
+              <h3 class="projects__row-content-title">Linkage System</h3>
               <p class="projects__row-content-desc">
-                A medical device prototype for monitoring pressure changes in a mechanical heart valve assembly,
-                fabricated with FDM 3D printing.
+                Designing and assembling a linkage system capable of converting rotary motion of a motor
+                into linear motion of pressing a button.
               </p>
+              <a
+                href="./linkage-system.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                >Learn More</a
+              >
             </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/photos/driller_cad.png"
+                alt="CAD model of well driller"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Pedal-Powered Well Driller</h3>
+              <p class="projects__row-content-desc">
+                Developing a conceptual design of a well driller that relies on human-produced pedal power.
+              </p>
+              <a
+                href="./well-driller.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/photos/checker_board.png"
+                alt="Chinese checkers board"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Chinese Checkers</h3>
+              <p class="projects__row-content-desc">
+                Coding a multiplayer Chinese checkers game with the option of an opponent AI.
+              </p>
+              <a
+                href="./chinese-checkers.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/photos/mobile_robot.jpg"
+                alt="Mobile robot navigating course"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Mobile Robot</h3>
+              <p class="projects__row-content-desc">
+                Programming an Arduino robot to autonomously navigate an obstacle course by using infrared and
+                ultrasonic sensor input for motor control.
+              </p>
+              <a
+                href="./mobile-robot.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/photos/truss_cad.png"
+                alt="CAD model of truss"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Truss Structure</h3>
+              <p class="projects__row-content-desc">
+                Manufacturing and assembling a truss structure designed to fail under a 40 pound load.
+              </p>
+              <a
+                href="./truss-structure.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                >Learn More</a
+              >
           </div>
         </div>
       </div>
     </section>
-    <section id="contact" class="contact sec-pad">
+    <section id="contact" class="contact sec-pad dynamicBg">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main">Contact</span>
+          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
         </h2>
         <div class="contact__form-container">
-          <form
-            action="https://formsubmit.co/meganying1@gmail.com"
-            method="POST"
-            class="contact__form"
-          >
-            <div class="contact__input-wrapper">
+          <form action="https://api.web3forms.com/submit" method="POST">
+	    <input type="hidden" name="access_key" value="88b7514c-10de-4d6b-9df0-ceee8886ff2a">
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="name">Name</label>
               <input
-                class="contact__input"
+                required
+                placeholder="Enter Your Name"
                 type="text"
+                class="contact__form-input"
                 name="name"
                 id="name"
-                placeholder="Name"
-                required
               />
             </div>
-            <div class="contact__input-wrapper">
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email">Email</label>
               <input
-                class="contact__input"
-                type="email"
+                required
+                placeholder="Enter Your Email"
+                type="text"
+                class="contact__form-input"
                 name="email"
                 id="email"
-                placeholder="Email"
-                required
               />
             </div>
-            <div class="contact__input-wrapper">
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="message">Message</label>
               <textarea
-                class="contact__input contact__input--textarea"
+                required
+                cols="30"
+                rows="10"
+                class="contact__form-input"
+                placeholder="Enter Your Message"
                 name="message"
                 id="message"
-                rows="4"
-                placeholder="Message"
-                required
               ></textarea>
             </div>
-            <div class="contact__input-wrapper">
-              <button type="submit" class="btn">
-                Send Message
-              </button>
-            </div>
+	    <div class="h-captcha" data-captcha="true"></div>
+            <button type="submit" class="btn btn--theme contact__btn">
+              Submit
+            </button>
+	    <input type="hidden" name="redirect" value="https://meganying1.github.io/portfolio/thanks.html">
           </form>
         </div>
       </div>
     </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer__content">
-      <p>&copy; 2024 Megan Ying</p>
-      <div class="footer__social">
-        <a href="https://www.linkedin.com/in/ying-megan/" target="_blank" rel="noopener noreferrer">
-          <img class="footer__social-icon" src="./assets/icons/linkedin.png" alt="LinkedIn" height="30" />
-        </a>
-        <a href="https://github.com/meganying1" target="_blank" rel="noopener noreferrer">
-          <img class="footer__social-icon" src="./assets/icons/github.png" alt="GitHub" height="30" />
-        </a>
+   <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__content">
+          &copy; Copyright 2021. Github repository forked from
+          <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
+            >Ram Maheshwari</a
+          >
+        </div>
       </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-</body>
+    </footer>
+   <script>
+      const words = ["Megan Ying", "an engineer", "a programmer", "a scientist"];
+      let i = 0;
+      let counter;
+      function typeNow() {
+         let word = words[i].split("");
+         var loopTyping = function() {
+            if (word.length > 0) {
+               document.getElementById('word').innerHTML += word.shift();
+            } else {
+	       sleep(3000)
+               deleteNow();
+               return false;
+            };
+            counter = setTimeout(loopTyping, 200);
+         };
+         loopTyping();
+      };
+      function deleteNow() {
+         let word = words[i].split("");
+         var loopDeleting = function() {
+            if (word.length > 0) {
+               word.pop();
+               document.getElementById('word').innerHTML = word.join("");
+            } else {
+               if (words.length > (i + 1)) {
+                  i++;
+               } else {
+                  i = 0;
+               };
+               typeNow();
+               return false;
+            };
+            counter = setTimeout(loopDeleting, 100);
+         };
+         loopDeleting();
+      };
+      function sleep(milliseconds) {
+	 var start = new Date().getTime();
+	  for (var i = 0; i < 1e7; i++) {
+	     if ((new Date().getTime() - start) > milliseconds){
+	     break;
+	     }
+	  }
+      }
+      typeNow();
+    </script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script src="./index.js"></script>
+  </body>
 </html>
