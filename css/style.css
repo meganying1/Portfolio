@@ -338,8 +338,8 @@ figcaption {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 1rem;
-    margin-top: -10rem;
-    margin-bottom: -10rem; }
+    margin-top: -3rem;
+    margin-bottom: -3rem; }
     @media only screen and (max-width: 56.25em) {
       .experiences__row {
         grid-template-columns: 1fr;
