@@ -212,15 +212,16 @@ figcaption {
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 90rem;
-    width: 92%; }
+    width: 92%; 
+    padding: 0; }
     @media only screen and (max-width: 37.5em) {
       .home-hero__content {
-        padding: 8rem 0 8rem 0;
+        padding: 5rem 0;
         margin: auto;
         position: static;
         transform: translate(0, 0); } }
   .home-hero__info {
-    margin: 3rem auto 0 auto;
+    margin: 1rem auto 0 auto;
     max-width: 80rem; }
 
 .thanks-hero {
