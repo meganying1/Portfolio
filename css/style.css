@@ -210,25 +210,30 @@ figcaption {
   }
 }
 .home-hero__content {
-  position: absolute;
-  top: 40%; /* Position higher to reduce space above text */
+  position: relative; /* Keeps photo fixed within this container */
+  top: 40%; /* Position the text higher to reduce space above */
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 90rem;
   width: 92%;
-  text-align: left; /* Align text to the left */
+  text-align: left; /* Align the text to the left */
   display: flex;
-  align-items: center; /* Vertically center text and image */
+  flex-direction: row; /* Display text and photo in a row */
+  align-items: center; /* Center text and image vertically */
 }
 .display-flex {
   display: flex;
-  align-items: center; /* Center items vertically */
+  align-items: center; /* Vertically align the text */
 }
 .home-hero__photo {
-  width: 150px; /* Adjust the size as needed */
-  height: 150px;
-  border-radius: 50%; /* Circular image */
-  margin-left: 20px; /* Adds space between the text and the image */
+  position: absolute; /* Fix the photo to the right side of the container */
+  right: 0; /* Position the photo to the right */
+  top: 50%; /* Vertically center the photo */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+  width: 150px; /* Adjust the size of the photo */
+  height: 150px; /* Adjust the size of the photo */
+  border-radius: 50%; /* Make the photo circular */
+  margin-left: 20px; /* Optional space between text and image */
 }
 @media only screen and (max-width: 37.5em) {
   .home-hero__content {
@@ -236,11 +241,11 @@ figcaption {
     margin: auto;
     position: static;
     transform: translate(0, 0);
-    text-align: center; /* Center the text on smaller screens */
+    text-align: center; /* Center text on smaller screens */
   }
   .home-hero__photo {
-    margin-left: 0; /* Remove left margin on smaller screens */
-    margin-top: 10px; /* Add space above the image */
+    position: static; /* Change to static for small screens */
+    margin-top: 10px; /* Add some space above the image */
   }
 }
 .home-hero__info {
