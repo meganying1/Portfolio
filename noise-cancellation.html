@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Chinese Checkers</title>
+    <meta name="description" content="Case study page of Project" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/photos/headshot.jpg"
+              alt="Megan Ying Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Megan Ying</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link"> About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#experiences" class="header__link"> Experiences </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link"> Projects </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Noise Reduction</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            Coding the Least Mean Squares (LMS) algorithm to reduce background noise in audio recordings.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Overview</h3>
+              <p class="project-details__desc-para">
+                For this project, my team and I were tasked with performing numerical analysis on a problem of our 
+                choice,incorporating real-world data. We implemented the Least Mean Squares (LMS) algorithm to 
+                reduce noise amplitude in sound samples collected from various campus locations. The algorithm 
+                was designed to selectively filter background noise while preserving critical emergency sounds.
+              </p>
+              <h3 class="project-details__content-title">Algorithm Selection</h3>
+              <p class="project-details__desc-para">
+                We initially explored Destructive Interference, a common Active Noise Cancellation (ANC) method used 
+                in noise-canceling headphones. This approach relies on combining two waves of the same amplitude but 
+                opposite phase to cancel each other out. To demonstrate its effectiveness, we created a MATLAB script 
+                that completely canceled a noise wave by inverting its phase. While this method effectively eliminates 
+                noise, its limitations for real-time noise cancellation and lack of safety by blocking out certain 
+                sounds led us to explore alternative algorithms.
+              </p>
+              <div class="project-details__showcase-img-cont">
+                <img
+                  src="./assets/photos/noise_destructive.png"
+                  alt="Destructive interference"
+                  class="project-details__showcase-img"
+                />
+                <figcaption>Figure 1: Example of destructive interference</figcaption>
+              </div>
+              <p class="project-details__desc-para">
+                To address the limitations of Destructive Interference, we implemented the Least Mean Squares (LMS) 
+                algorithm. The LMS algorithm adapts dynamically to changes in the input signal, eliminating the need 
+                for real-time inversion of sound waves. Instead, it uses the steepest descent statistical analysis 
+                technique to iteratively update the coefficients of a digital filter. This minimizes the error between 
+                the output signal and the desired reference, enabling the LMS algorithm to "learn" and continuously 
+                improve its noise-filtering effectiveness over time.
+              </p>
+              <div class="project-details__showcase-img-cont">
+                <img
+                  src="./assets/photos/noise_lms.png"
+                  alt="Least Mean Squares Algorithm"
+                  class="project-details__showcase-img"
+                />
+                <figcaption>Figure 2: Convergence between desired signal and output signal using LMS</figcaption>
+              </div>
+            <h3 class="project-details__content-title">MATLAB Code</h3>
+              <p class="project-details__desc-para">
+                To implement our noise cancellation algorithm, we developed a MATLAB script that processes an audio 
+                file by converting it to mono-channel format, since the algorithm only supports single-channel audio. 
+                The script generates white noise with an amplitude matching the average amplitude of the original audio. 
+                The desired clean signal is obtained by subtracting the noise from the original audio. The LMS algorithm 
+                is then applied, where the filter’s complexity is determined by the filter length, and the step size 
+                influences the rate of convergence and stability. The code enables us to compare the original and cleaned 
+                signals both visually, through plotting the signals, and audibly, by playing the audio files. 
+              </p>
+             <h3 class="project-details__content-title">Analysis Process</h3>
+              <p class="project-details__desc-para">
+                We collected noise samples from various high-traffic locations on campus, such as the gym, the lawn, 
+                buses, and study spots. We then ran our MATLAB code on these samples, generating graphs of the original 
+                and cleaned audio signals. Finally, we were able to evaluate the effectiveness of our algorithm by measuring 
+                the reduction in noise amplitude, as well as by listening to our audio files.
+              </p>
+              <div class="project-details__showcase-img-cont">
+                <img
+                  src="./assets/photos/noise_samples.png"
+                  alt="Noise Samples"
+                  class="project-details__showcase-img"
+                />
+                <figcaption>Original and cleaned audio files from real-world audio samples</figcaption>
+              </div>
+              <h3 class="project-details__content-title">Results</h3>
+              <p class="project-details__desc-para">
+                My team and I found that our algorithm was capable of reducing sound by up to 95%, while still allowing 
+                emergency signals to be heard. Through this project, I gained hands-on experience with MATLAB scripting. 
+                I was also able to deepen my understanding of various algorithms and statistical techniques.
+              </p>
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Used</h3>
+              <div class="skills">
+                <div class="skills__skill">MATLAB</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__content">
+          &copy; Copyright 2021. Github repository forked from
+          <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
+            >Ram Maheshwari</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
