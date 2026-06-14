@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Linkage System</title>
+    <meta name="description" content="Case study page of Project" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/photos/headshot.jpg"
+              alt="Megan Ying Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Megan Ying</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link"> About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#experiences" class="header__link"> Experiences </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link"> Projects </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Linkage System</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            Designing and assembling a linkage system capable of converting rotary motion
+            of a motor into linear motion of pressing a button.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Overview</h3>
+              <p class="project-details__desc-para">
+                I collaborated with a group to design a linkage system capable of translating 
+                rotary motion of a motor into linear motion for pressing a button. Our primary 
+                bjective was to optimize the duration of button pressing, while also considering
+                geometric constraints, material properties, loading conditions, and workspace
+                limitations.
+              </p>
+              <div class="project-details__img-container">
+                <div class="project-details__showcase-img-cont">
+                  <img
+                    src="./assets/photos/initial_linkage.png"
+                    alt="Initial CAD"
+                    class="project-details__showcase-img"
+                    height=400
+                    width=auto
+                  />
+                  <figcaption>Figure 1: CAD model of initial design</figcaption>
+                </div>
+                <div class="project-details__showcase-img-cont">
+                   <img
+                    src="./assets/photos/linkage_fea.png"
+                    alt="FEA"
+                    class="project-details__showcase-img"
+                    height=400
+                    width=auto
+                   />
+                  <figcaption>Figure 2: FEA of system</figcaption>
+                </div>
+              </div>
+              <h3 class="project-details__content-title">Design and Analysis Process</h3>
+              <p class="project-details__desc-para">
+                My team began the design brainstorming process by drawing inspiration from the
+                crank rocker mechanism. We counsidered various mounting positions and link lengths, 
+                as well as experimented with incorporating slotted portions. After thorough consideration, 
+                we opted for a design featuring a slotted link, anticipating that it would enable the 
+                system to maintain a vertical position for an extended duration. Using 
+                Solidworks, my group members and I generated models and conducted motion simulations
+                of our designs, allowing us to select the one which would yield the longest button 
+                pressing time. Finally, we performed Finite Element Analysis (FEA) simulations and 
+                conducted hand calculations to size our links.
+              </p>
+              <div class="project-details__img-container">
+                <div class="project-details__showcase-img-cont">
+                 <img
+                  src="./assets/photos/final_linkage.png"
+                  alt="Final CAD"
+                  class="project-details__showcase-img"
+                  height=400
+                  width=auto
+                 />
+                  <figcaption>Figure 3: CAD model of final design</figcaption>
+                </div>
+                <div class="project-details__showcase-img-cont">
+                 <img
+                  src="./assets/photos/linkage_system.png"
+                  alt="System"
+                  class="project-details__showcase-img"
+                  height=400
+                  width=auto
+                 />
+                  <figcaption>Figure 4: System in testing rig</figcaption>
+                </div>
+              </div>
+              <h3 class="project-details__content-title">Iteration Process</h3>
+              <p class="project-details__desc-para">
+                On the first testing day, our assembly successfully pressed the button
+                without experiencing any failures or causing the motor to stall. However,
+                we encountered an issue with the slot mechanism, which resulted in the system 
+                descending sooner and more rapidly than anticipated. As a result, the button 
+                was only pressed for a total of 3 seconds during a 2-minute period. We then 
+                refined our design using our understanding of Grashof’s criterion, as well as
+                insights gained from testing. This involved elongating two of our links and 
+                repositioning the assembly mounting position. Despite our doubts regarding 
+                the functionality of the slot due to friction, we opted to keep it in our design
+                to minimize system weight. We then repeated the analysis process.
+              </p>
+              <h3 class="project-details__content-title">Results</h3>
+              <p class="project-details__desc-para">
+                During the final testing day, the system exhibited a gradual and steady descent 
+                without any sudden drops. Our assembly was able to successfully press the button for
+                over 41 seconds within the 2-minute timeframe, marking a significant improvement
+                of 38 seconds in button press time. This project demonstrated the importance of iteration
+                for continuous improvement in the design process. Through this experience, I learned how to 
+                use Solidworks motion simulations to visualize assembly behavior.
+            </div>
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Used</h3>
+              <div class="skills">
+                <div class="skills__skill">SolidWorks</div>
+                <div class="skills__skill">CAD</div>
+                <div class="skills__skill">FEA</div>
+                <div class="skills__skill">Laser Cutter</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__content">
+          &copy; Copyright 2021. Github repository forked from
+          <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
+            >Ram Maheshwari</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
