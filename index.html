@@ -82,11 +82,11 @@
     </header>
     <section class="home-hero">
       <div class="home-hero__content">
-          <h1 class="heading-primary-home">Hi, I am
-	    <div class="display-flex">
-	      <p id="word" class="heading-primary-home">
-	      <p class="heading-primary-home">|</p>
-	  </h1>
+        <h1 class="heading-primary-home">Hi, I am</h1>
+	      <div class="display-flex">
+	        <p id="word" class="heading-primary-home"></p>
+	        <p class="heading-primary-home">|</p>
+        </div>
       </div>
     </section>
     <section id="about" class="about sec-pad">
@@ -151,7 +151,6 @@
                   />
 		</a>
 	      </div>
-          <div class="about__content-skills">
         </div>
       </div>
     </section>
@@ -475,41 +474,26 @@
          var loopTyping = function() {
             if (word.length > 0) {
                document.getElementById('word').innerHTML += word.shift();
+               counter = setTimeout(loopTyping, 200);
             } else {
-	       sleep(3000)
-               deleteNow();
-               return false;
-            };
-            counter = setTimeout(loopTyping, 200);
+              setTimeout(deleteNow, 3000);
+            }
          };
          loopTyping();
-      };
+      }
       function deleteNow() {
          let word = words[i].split("");
          var loopDeleting = function() {
             if (word.length > 0) {
                word.pop();
                document.getElementById('word').innerHTML = word.join("");
+               setTimeout(loopDeleting, 100);
             } else {
-               if (words.length > (i + 1)) {
-                  i++;
-               } else {
-                  i = 0;
-               };
+               i = (words.length > (i + 1)) ? i + 1 : 0;
                typeNow();
-               return false;
-            };
-            counter = setTimeout(loopDeleting, 100);
+            }
          };
          loopDeleting();
-      };
-      function sleep(milliseconds) {
-	 var start = new Date().getTime();
-	  for (var i = 0; i < 1e7; i++) {
-	     if ((new Date().getTime() - start) > milliseconds){
-	     break;
-	     }
-	  }
       }
       typeNow();
     </script>
