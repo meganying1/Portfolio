@@ -393,8 +393,8 @@ figcaption {
     margin-top: 3rem; }
   .publications__row {
     display: grid;
-    grid-template-columns: auto 1fr;
-    grid-gap: 3rem;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 5rem;
     margin-bottom: 5rem; }
     @media only screen and (max-width: 56.25em) {
       .publications__row {
@@ -407,13 +407,15 @@ figcaption {
       display: flex;
       align-items: center; }
     .publications__row-img {
-      width: 80px;
-      height: 80px;
+      width: 150px;
+      height: 150px;
+      max-width: 100%;
       object-fit: contain; }
     .publications__row-content {
       display: flex;
       justify-content: center;
-      flex-direction: column; }
+      flex-direction: column; 
+      align-items: flex-start; }
       @media only screen and (max-width: 56.25em) {
         .publications__row-content {
           align-items: center; }
