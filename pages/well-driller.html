@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,9 +9,12 @@
 
     <link rel="stylesheet" href="../css/style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
@@ -35,10 +38,14 @@
               <a href="../index.html#about" class="header__link"> About </a>
             </li>
             <li class="header__link-wrapper">
-              <a href="../index.html#experiences" class="header__link"> Experiences </a>
+              <a href="../index.html#experiences" class="header__link">
+                Experiences
+              </a>
             </li>
             <li class="header__link-wrapper">
-              <a href="../index.html#projects" class="header__link"> Projects </a>
+              <a href="../index.html#projects" class="header__link">
+                Projects
+              </a>
             </li>
             <li class="header__link-wrapper">
               <a href="../index.html#contact" class="header__link"> Contact </a>
@@ -85,7 +92,8 @@
         <h1 class="heading-primary">Pedal-Powered Well Driller</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            Developing a conceptual design of a well driller that relies on human-produced pedal power.
+            Developing a conceptual design of a well driller that relies on
+            human-produced pedal power.
           </p>
         </div>
       </div>
@@ -97,79 +105,94 @@
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Overview</h3>
               <p class="project-details__desc-para">
-                This project involved collaborating with a team to develop a modification 
-                of the
-                <a href="https://villagedrill.com" style="text-decoration: underline; font-weight: bold;">Village Drill</a>
-                that relies on human-produced pedal power. Our objective was to develop the optimal design by considering such as equilibrium, 
-                ower transmission, failure criteria, and the unique requirements of the community.
+                This project involved collaborating with a team to develop a
+                modification of the
+                <a
+                  href="https://villagedrill.com"
+                  style="text-decoration: underline; font-weight: bold"
+                  >Village Drill</a
+                >
+                that relies on human-produced pedal power. Our objective was to
+                develop the optimal design by considering such as equilibrium,
+                ower transmission, failure criteria, and the unique requirements
+                of the community.
               </p>
               <h3 class="project-details__content-title">Design Process</h3>
               <p class="project-details__desc-para">
-                My team began our design process by brainstorming mechanisms for translating the 
-                rotational motion of pedaling into the vertical motion of the driller. We also 
-                discussed how these mechanisms would integrate into our system-level designs.
-                Our ideas included using a pile driver, a bevel gear, or a worm gear. After careful 
-                consideration of stakeholder input, specific customer needs, and the target 
-                specifications of our design, we chose to use the pile driver mechanism. The pile 
-                driver operates by lifting the driller up and dropping it.
+                My team began our design process by brainstorming mechanisms for
+                translating the rotational motion of pedaling into the vertical
+                motion of the driller. We also discussed how these mechanisms
+                would integrate into our system-level designs. Our ideas
+                included using a pile driver, a bevel gear, or a worm gear.
+                After careful consideration of stakeholder input, specific
+                customer needs, and the target specifications of our design, we
+                chose to use the pile driver mechanism. The pile driver operates
+                by lifting the driller up and dropping it.
               </p>
               <div class="project-details__showcase-img-cont">
-                  <img
-                    src="../assets/photos/projects/driller_mechanism.png"
-                    alt="Pile Driver Mechanism"
-                    class="project-details__showcase-img"
-                  />
-                <figcaption>Figure 1: Sketch of pile driver mechanism</figcaption>
+                <img
+                  src="../assets/photos/projects/driller_mechanism.png"
+                  alt="Pile Driver Mechanism"
+                  class="project-details__showcase-img"
+                />
+                <figcaption>
+                  Figure 1: Sketch of pile driver mechanism
+                </figcaption>
               </div>
               <h3 class="project-details__content-title">Analysis Process</h3>
               <p class="project-details__desc-para">
-                Once we finalized our design, we utilized SolidWorks to generate a Computer-Assisted
-                Design (CAD) model of the system. Based on the properties and dimensions of our model, 
-                we conducted calculations to determine crucial parameters such as cable tension, pedal 
-                force, and reaction forces at fixed points within the structure. Based on the forces
-                we identified, we determined the minimum pin diameters required to achieve a 
-                satisfactory factor of safety. Additionally, we conducted Finite Element Analysis (FEA) 
-                of the pedal to assess its structural integrity. Finally, we determined the power required 
-                to operate our design, and thus, the required pedal rotation rate.
+                Once we finalized our design, we utilized SolidWorks to generate
+                a Computer-Assisted Design (CAD) model of the system. Based on
+                the properties and dimensions of our model, we conducted
+                calculations to determine crucial parameters such as cable
+                tension, pedal force, and reaction forces at fixed points within
+                the structure. Based on the forces we identified, we determined
+                the minimum pin diameters required to achieve a satisfactory
+                factor of safety. Additionally, we conducted Finite Element
+                Analysis (FEA) of the pedal to assess its structural integrity.
+                Finally, we determined the power required to operate our design,
+                and thus, the required pedal rotation rate.
               </p>
               <div class="project-details__img-container">
                 <div class="project-details__showcase-img-cont">
-                    <img
-                      src="../assets/photos/projects/driller_cad.png"
-                      alt="System CAD Model"
-                      class="project-details__showcase-img"
-                      height=500
-                      width=auto
-                    />
+                  <img
+                    src="../assets/photos/projects/driller_cad.png"
+                    alt="System CAD Model"
+                    class="project-details__showcase-img"
+                    height="500"
+                    width="auto"
+                  />
                   <figcaption>Figure 2: CAD model of system</figcaption>
                 </div>
                 <div class="project-details__showcase-img-cont">
-                    <img
-                      src="../assets/photos/projects/driller_fea.png"
-                      alt="Pedal FEA"
-                      class="project-details__showcase-img"
-                      height=500
-                      width=auto
-                    />
+                  <img
+                    src="../assets/photos/projects/driller_fea.png"
+                    alt="Pedal FEA"
+                    class="project-details__showcase-img"
+                    height="500"
+                    width="auto"
+                  />
                   <figcaption>Figure 3: FEA of pedal</figcaption>
                 </div>
               </div>
               <div class="project-details__showcase-img-cont">
-                  <img
-                     src="../assets/photos/projects/driller_calc.jpg"
-                     alt="Reaction Force Calculations"
-                    class="project-details__showcase-img"
-                  />
+                <img
+                  src="../assets/photos/projects/driller_calc.jpg"
+                  alt="Reaction Force Calculations"
+                  class="project-details__showcase-img"
+                />
                 <figcaption>Figure 4: Calculating reaction forces</figcaption>
               </div>
               <h3 class="project-details__content-title">Results</h3>
               <p class="project-details__desc-para">
-                Upon analyzing our calculations, my team concluded that our final design was
-                reasonable and efficient. This project gave me the opportunity to apply fundamental
-                mechanical engineering principles, such as statics, stress analysis, and dynamics,
-                to a real-world challenge. Through its completion, I gained valuable insights into 
-                the factors that must be taken into consideration throughout the design process and 
-                learned how to utilize metrics to gauge the success of a product.
+                Upon analyzing our calculations, my team concluded that our
+                final design was reasonable and efficient. This project gave me
+                the opportunity to apply fundamental mechanical engineering
+                principles, such as statics, stress analysis, and dynamics, to a
+                real-world challenge. Through its completion, I gained valuable
+                insights into the factors that must be taken into consideration
+                throughout the design process and learned how to utilize metrics
+                to gauge the success of a product.
               </p>
             </div>
             <div class="project-details__tools-used">

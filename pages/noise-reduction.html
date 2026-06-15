@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,9 +9,12 @@
 
     <link rel="stylesheet" href="../css/style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
@@ -35,10 +38,14 @@
               <a href="../index.html#about" class="header__link"> About </a>
             </li>
             <li class="header__link-wrapper">
-              <a href="../index.html#experiences" class="header__link"> Experiences </a>
+              <a href="../index.html#experiences" class="header__link">
+                Experiences
+              </a>
             </li>
             <li class="header__link-wrapper">
-              <a href="../index.html#projects" class="header__link"> Projects </a>
+              <a href="../index.html#projects" class="header__link">
+                Projects
+              </a>
             </li>
             <li class="header__link-wrapper">
               <a href="../index.html#contact" class="header__link"> Contact </a>
@@ -85,7 +92,8 @@
         <h1 class="heading-primary">Noise Reduction</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            Implementing the Least Mean Squares (LMS) algorithm for noise reduction in audio recordings.
+            Implementing the Least Mean Squares (LMS) algorithm for noise
+            reduction in audio recordings.
           </p>
         </div>
       </div>
@@ -97,19 +105,27 @@
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Overview</h3>
               <p class="project-details__desc-para">
-                For this project, my team and I were tasked with performing numerical analysis on a problem of our 
-                choice,incorporating real-world data. We implemented the Least Mean Squares (LMS) algorithm to 
-                reduce noise amplitude in sound samples collected from various campus locations. The algorithm 
-                was designed to selectively filter background noise while preserving critical emergency sounds.
+                For this project, my team and I were tasked with performing
+                numerical analysis on a problem of our choice,incorporating
+                real-world data. We implemented the Least Mean Squares (LMS)
+                algorithm to reduce noise amplitude in sound samples collected
+                from various campus locations. The algorithm was designed to
+                selectively filter background noise while preserving critical
+                emergency sounds.
               </p>
-              <h3 class="project-details__content-title">Algorithm Selection</h3>
+              <h3 class="project-details__content-title">
+                Algorithm Selection
+              </h3>
               <p class="project-details__desc-para">
-                We initially explored Destructive Interference, a common Active Noise Cancellation (ANC) method used 
-                in noise-canceling headphones. This approach relies on combining two waves of the same amplitude but 
-                opposite phase to cancel each other out. To demonstrate its effectiveness, we created a MATLAB script 
-                that completely canceled a noise wave by inverting its phase. While this method effectively eliminates 
-                noise, its limitations for real-time noise cancellation and lack of safety by blocking out certain 
-                sounds led us to explore alternative algorithms.
+                We initially explored Destructive Interference, a common Active
+                Noise Cancellation (ANC) method used in noise-canceling
+                headphones. This approach relies on combining two waves of the
+                same amplitude but opposite phase to cancel each other out. To
+                demonstrate its effectiveness, we created a MATLAB script that
+                completely canceled a noise wave by inverting its phase. While
+                this method effectively eliminates noise, its limitations for
+                real-time noise cancellation and lack of safety by blocking out
+                certain sounds led us to explore alternative algorithms.
               </p>
               <div class="project-details__showcase-img-cont">
                 <img
@@ -117,15 +133,21 @@
                   alt="Destructive interference"
                   class="project-details__showcase-img"
                 />
-                <figcaption>Figure 1: Example of destructive interference</figcaption>
+                <figcaption>
+                  Figure 1: Example of destructive interference
+                </figcaption>
               </div>
               <p class="project-details__desc-para">
-                To address the limitations of Destructive Interference, we implemented the Least Mean Squares (LMS) 
-                algorithm. The LMS algorithm adapts dynamically to changes in the input signal, eliminating the need 
-                for real-time inversion of sound waves. Instead, it uses the steepest descent statistical analysis 
-                technique to iteratively update the coefficients of a digital filter. This minimizes the error between 
-                the output signal and the desired reference, enabling the LMS algorithm to "learn" and continuously 
-                improve its noise-filtering effectiveness over time.
+                To address the limitations of Destructive Interference, we
+                implemented the Least Mean Squares (LMS) algorithm. The LMS
+                algorithm adapts dynamically to changes in the input signal,
+                eliminating the need for real-time inversion of sound waves.
+                Instead, it uses the steepest descent statistical analysis
+                technique to iteratively update the coefficients of a digital
+                filter. This minimizes the error between the output signal and
+                the desired reference, enabling the LMS algorithm to "learn" and
+                continuously improve its noise-filtering effectiveness over
+                time.
               </p>
               <div class="project-details__showcase-img-cont">
                 <img
@@ -133,24 +155,35 @@
                   alt="Least Mean Squares Algorithm"
                   class="project-details__showcase-img"
                 />
-                <figcaption>Figure 2: Convergence between desired signal and output signal using LMS</figcaption>
+                <figcaption>
+                  Figure 2: Convergence between desired signal and output signal
+                  using LMS
+                </figcaption>
               </div>
-            <h3 class="project-details__content-title">MATLAB Code</h3>
+              <h3 class="project-details__content-title">MATLAB Code</h3>
               <p class="project-details__desc-para">
-                To implement our noise cancellation algorithm, we developed a MATLAB script that processes an audio 
-                file by converting it to mono-channel format, since the algorithm only supports single-channel audio. 
-                The script generates white noise with an amplitude matching the average amplitude of the original audio. 
-                The desired clean signal is obtained by subtracting the noise from the original audio. The LMS algorithm 
-                is then applied, where the filter’s complexity is determined by the filter length, and the step size 
-                influences the rate of convergence and stability. The code enables us to compare the original and cleaned 
-                signals both visually, through plotting the signals, and audibly, by playing the audio files. 
+                To implement our noise cancellation algorithm, we developed a
+                MATLAB script that processes an audio file by converting it to
+                mono-channel format, since the algorithm only supports
+                single-channel audio. The script generates white noise with an
+                amplitude matching the average amplitude of the original audio.
+                The desired clean signal is obtained by subtracting the noise
+                from the original audio. The LMS algorithm is then applied,
+                where the filter’s complexity is determined by the filter
+                length, and the step size influences the rate of convergence and
+                stability. The code enables us to compare the original and
+                cleaned signals both visually, through plotting the signals, and
+                audibly, by playing the audio files.
               </p>
-             <h3 class="project-details__content-title">Analysis Process</h3>
+              <h3 class="project-details__content-title">Analysis Process</h3>
               <p class="project-details__desc-para">
-                We collected noise samples from various high-traffic locations on campus, such as the gym, the lawn, 
-                buses, and study spots. We then ran our MATLAB code on these samples, generating graphs of the original 
-                and cleaned audio signals. Finally, we were able to evaluate the effectiveness of our algorithm by measuring 
-                the reduction in noise amplitude, as well as by listening to our audio files.
+                We collected noise samples from various high-traffic locations
+                on campus, such as the gym, the lawn, buses, and study spots. We
+                then ran our MATLAB code on these samples, generating graphs of
+                the original and cleaned audio signals. Finally, we were able to
+                evaluate the effectiveness of our algorithm by measuring the
+                reduction in noise amplitude, as well as by listening to our
+                audio files.
               </p>
               <div class="project-details__showcase-img-cont">
                 <img
@@ -158,13 +191,18 @@
                   alt="Noise Samples"
                   class="project-details__showcase-img"
                 />
-                <figcaption>Figure 3: Original and cleaned audio files from real-world audio samples</figcaption>
+                <figcaption>
+                  Figure 3: Original and cleaned audio files from real-world
+                  audio samples
+                </figcaption>
               </div>
               <h3 class="project-details__content-title">Results</h3>
               <p class="project-details__desc-para">
-                My team and I found that our algorithm was capable of reducing sound by up to 95%, while still allowing 
-                emergency signals to be heard. Through this project, I gained hands-on experience with MATLAB scripting. 
-                I was also able to deepen my understanding of various algorithms and statistical techniques.
+                My team and I found that our algorithm was capable of reducing
+                sound by up to 95%, while still allowing emergency signals to be
+                heard. Through this project, I gained hands-on experience with
+                MATLAB scripting. I was also able to deepen my understanding of
+                various algorithms and statistical techniques.
               </p>
             </div>
             <div class="project-details__tools-used">

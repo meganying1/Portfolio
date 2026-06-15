@@ -1,6 +1,7 @@
 .home-hero {
   color: #fff;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       to right,
       rgba($themeClrPrimary, 0.8),
       rgba($themeClrPrimary, 0.8)
@@ -49,10 +50,10 @@
     display: block;
     padding: 1.2rem;
     border-bottom: 2px solid #eee;
-    transition: background .3s;
+    transition: background 0.3s;
 
     &:hover {
-      background: rgba(#fff,.1);
+      background: rgba(#fff, 0.1);
     }
 
     &--bd-none {
@@ -188,7 +189,8 @@
 }
 
 .contact {
-  background: linear-gradient(
+  background:
+    linear-gradient(
       to right,
       rgba($themeClrPrimary, 0.8),
       rgba($themeClrPrimary, 0.8)
