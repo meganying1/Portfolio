@@ -1,8 +1,6 @@
-# Megan Ying Porfolio
+# [Megan Ying Porfolio](https://meganying.com)
 
 Personal portfolio website showcasing my experiences, publications, and projects.
-
-## [meganying1.github.io/portfolio](https://meganying1.github.io/portfiolio)
 
 ## Sections
 
