@@ -511,7 +511,7 @@ figcaption {
 }
 .publications__row {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
   grid-gap: 5rem;
   margin-bottom: 5rem;
 }
@@ -556,26 +556,25 @@ figcaption {
     font-size: 2.4rem;
   }
 }
-.publications__row-journal {
+.publications__row-authors {
   font-size: 1.8rem;
-  font-style: italic;
   color: grey;
   line-height: 1.7;
   margin-bottom: 0.5rem;
 }
 @media only screen and (max-width: 37.5em) {
-  .publications__row-journal {
+  .publications__row-authors {
     font-size: 1.7rem;
   }
 }
-.publications__row-authors {
+.publications__row-journal {
   font-size: 1.8rem;
   color: grey;
   line-height: 1.7;
   margin-bottom: 3rem;
 }
 @media only screen and (max-width: 37.5em) {
-  .publications__row-authors {
+  .publications__row-journal {
     font-size: 1.7rem;
   }
 }
