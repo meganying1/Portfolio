@@ -250,7 +250,7 @@ figcaption {
 
 .about {
   background: #fafafa; }
-  .about__content {
+    .about__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10rem; }
@@ -284,7 +284,7 @@ figcaption {
           margin-right: 0; }
 
 .projects {
-  background: #fafafa; }
+  background: #fff; }
   .projects__row {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -334,6 +334,8 @@ figcaption {
           .projects__row-content-desc {
             font-size: 1.7rem; } }
 
+.experiences {
+  background: #fff; }
   .experiences__row {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -384,6 +386,50 @@ figcaption {
         @media only screen and (max-width: 37.5em) {
           .experiences__row-content-desc {
             font-size: 1.5rem; } }
+
+.publications {
+  background: #fafafa; }
+  .publications__content {
+    margin-top: 3rem; }
+  .publications__row {
+    margin-bottom: 5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .publications__row {
+        text-align: center; } }
+    .publications__row:last-child {
+      margin-bottom: 0; }
+    .publications__row-title {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem; }
+      @media only screen and (max-width: 37.5em) {
+        .publications__row-title {
+          font-size: 2.4rem; } }
+    .publications__row-journal {
+      font-size: 1.8rem;
+      font-style: italic;
+      color: grey;
+      line-height: 1.7; 
+      margin-bottom: 0.5rem; }
+      @media only screen and (max-width: 37.5em) {
+        .publications__row-journal {
+          font-size: 1.7rem; } }
+    .publications__row-date {
+      font-size: 1.8rem;
+      color: grey;
+      line-height: 1.7; 
+      margin-bottom: 0.5rem; }
+      @media only screen and (max-width: 37.5em) {
+        .publications__row-date {
+          font-size: 1.7rem; } }
+    .publications__row-authors {
+      font-size: 1.8rem;
+      color: grey;
+      line-height: 1.7; 
+      margin-bottom: 3rem; }
+      @media only screen and (max-width: 37.5em) {
+        .publications__row-authors {
+          font-size: 1.7rem; } }
 
 .contact {
   background: #777777;
