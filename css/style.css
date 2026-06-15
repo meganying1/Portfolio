@@ -392,12 +392,32 @@ figcaption {
   .publications__content {
     margin-top: 3rem; }
   .publications__row {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 3rem;
     margin-bottom: 5rem; }
     @media only screen and (max-width: 56.25em) {
       .publications__row {
+        grid-template-columns: 1fr;
         text-align: center; } }
     .publications__row:last-child {
       margin-bottom: 0; }
+    .publications__row-img-cont {
+      overflow: hidden;
+      display: flex;
+      align-items: center; }
+    .publications__row-img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain; }
+    .publications__row-content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column; }
+      @media only screen and (max-width: 56.25em) {
+        .publications__row-content {
+          align-items: center; }
+    }
     .publications__row-title {
       font-weight: 700;
       font-size: 2.8rem;
