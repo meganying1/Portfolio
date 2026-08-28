@@ -843,6 +843,10 @@ textarea.field {
   border-top: 1px solid var(--rule);
 }
 
+.cs-hero .container--narrow {
+  display: flow-root; /* contains the floated image without a manual clearfix */
+}
+
 .cs-hero__back {
   display: inline-block;
   margin-bottom: var(--space-6);
@@ -854,7 +858,16 @@ textarea.field {
 
 .cs-hero__num {
   display: block;
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.cs-hero__image {
+  float: right;
+  width: clamp(9rem, 20vw, 14rem);
+  height: auto;
+  margin-left: var(--space-6);
+  margin-bottom: var(--space-4);
+  mix-blend-mode: multiply;
 }
 
 .cs-hero__title {
@@ -865,7 +878,6 @@ textarea.field {
   color: var(--ink);
   max-width: 18ch;
   text-wrap: balance;
-  margin-bottom: var(--space-5);
 }
 
 .cs-hero__deck {
@@ -873,6 +885,7 @@ textarea.field {
   line-height: 1.45;
   color: var(--muted);
   max-width: 46ch;
+  margin-top: var(--space-6);
 }
 
 .cs-hero__tools {
