@@ -40,8 +40,8 @@
             </li>
             <li class="header__link-wrapper">
               <a href="./index.html#publications" class="header__link"> Publications </a>
-           </li>
-           <li class="header__link-wrapper">
+            </li>
+            <li class="header__link-wrapper">
               <a href="./index.html#projects" class="header__link"> Projects </a>
             </li>
             <li class="header__link-wrapper">
@@ -549,37 +549,44 @@
         </div>
       </div>
     </footer>
-   <script>
+    <script>
       const words = ["Megan Ying", "an engineer", "a programmer", "a scientist"];
-      let i = 0;
-      let counter;
-      function typeNow() {
-         let word = words[i].split("");
-         var loopTyping = function() {
-            if (word.length > 0) {
-               document.getElementById('word').innerHTML += word.shift();
-               counter = setTimeout(loopTyping, 200);
-            } else {
-              setTimeout(deleteNow, 3000);
-            }
-         };
-         loopTyping();
+      const TYPE_DELAY = 200;
+      const DELETE_DELAY = 100;
+      const HOLD_DELAY = 3000;
+
+      const wordEl = document.getElementById("word");
+      let wordIndex = 0;
+
+      function typeWord() {
+        const chars = words[wordIndex].split("");
+        function typeNext() {
+          if (chars.length > 0) {
+            wordEl.textContent += chars.shift();
+            setTimeout(typeNext, TYPE_DELAY);
+          } else {
+            setTimeout(deleteWord, HOLD_DELAY);
+          }
+        }
+        typeNext();
       }
-      function deleteNow() {
-         let word = words[i].split("");
-         var loopDeleting = function() {
-            if (word.length > 0) {
-               word.pop();
-               document.getElementById('word').innerHTML = word.join("");
-               setTimeout(loopDeleting, 100);
-            } else {
-               i = (words.length > (i + 1)) ? i + 1 : 0;
-               typeNow();
-            }
-         };
-         loopDeleting();
+
+      function deleteWord() {
+        const chars = words[wordIndex].split("");
+        function deleteNext() {
+          if (chars.length > 0) {
+            chars.pop();
+            wordEl.textContent = chars.join("");
+            setTimeout(deleteNext, DELETE_DELAY);
+          } else {
+            wordIndex = (wordIndex + 1) % words.length;
+            typeWord();
+          }
+        }
+        deleteNext();
       }
-      typeNow();
+
+      typeWord();
     </script>
     <script src="https://web3forms.com/client/script.js" async defer></script>
     <script src="./js/index.js"></script>
