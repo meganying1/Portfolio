@@ -187,6 +187,12 @@ p {
   row-gap: var(--space-6);
 }
 
+/* Grid items default to min-width:auto, which lets a wide child (the fixed-width
+   hCaptcha iframe) push the whole track past the viewport on narrow screens. */
+.section__grid > * {
+  min-width: 0;
+}
+
 .section__rail {
   display: flex;
   flex-direction: column;
@@ -786,6 +792,8 @@ textarea.field {
 .h-captcha {
   min-height: 78px;
   margin-block: var(--space-6);
+  max-width: 100%;
+  overflow-x: auto; /* the iframe has a fixed intrinsic width and can't be styled */
 }
 
 .btn {
