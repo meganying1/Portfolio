@@ -609,6 +609,10 @@ body.nav-open {
   padding-block: var(--space-5);
 }
 
+.index_num {
+  flex-shrink: 0;
+}
+
 .index__thumb {
   flex-shrink: 0;
   width: 4rem;
