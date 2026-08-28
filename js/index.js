@@ -21,11 +21,11 @@ headerSmallMenuLinks.forEach((link) => {
   link.addEventListener("click", () => setMenuOpen(false));
 });
 
-// Clicking the log returns home. The URL is resolved against this script's own
+// Clicking the logo returns home. The URL is resolved against this script's own
 // location so it works from the site root and from subpages.
 const homeURL = new URL("../index.html", document.currentScript.src).href;
-const headerLogoConatainer = document.querySelector(".header__logo-container");
+const headerLogoContainer = document.querySelector(".header__logo-container");
 
-headerLogoConatainer.addEventListener("click", () => {
+headerLogoContainer.addEventListener("click", () => {
   location.href = homeURL;
 });
