@@ -1,4 +1,4 @@
-# [Megan Ying Porfolio](https://meganying.com)
+# [Megan Ying Portfolio](https://meganying.com)
 
 Personal portfolio website showcasing my experiences, publications, and projects.
 
