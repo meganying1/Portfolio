@@ -1,295 +1,303 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Tripod Attachment</title>
-    <meta name="description" content="Case study page of Project" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <title>Tripod Attachment — Megan Ying</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='0' fill='%2323395B'/><text x='50' y='72' font-family='Arial,sans-serif' font-size='56' font-weight='bold' fill='white' text-anchor='middle'>MY</text></svg>"
+    />
+    <link rel="canonical" href="https://www.meganying.com/pages/tripod-attachment.html" />
+    <meta
+      name="description"
+      content="Designing and manufacturing a tripod attachment to alleviate discomfort and enhance usability for individuals with cerebral palsy and wrist tendonitis."
+    />
 
     <link rel="stylesheet" href="../css/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:opsz,wght@14..32,400..600&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <header class="header">
-      <div class="header__content">
-        <div class="header__logo-container">
-          <div class="header__logo-img-cont">
-            <img
-              src="../assets/photos/headshot.jpg"
-              alt="Megan Ying Logo Image"
-              class="header__logo-img"
-            />
-          </div>
-          <span class="header__logo-sub">Megan Ying</span>
-        </div>
-        <div class="header__main">
-          <ul class="header__links">
-            <li class="header__link-wrapper">
-              <a href="../index.html" class="header__link"> Home </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="../index.html#about" class="header__link"> About </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="../index.html#experiences" class="header__link">
-                Experiences
-              </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="../index.html#publications" class="header__link">
-                Publications
-              </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="../index.html#projects" class="header__link">
-                Projects
-              </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="../index.html#contact" class="header__link"> Contact </a>
-            </li>
-          </ul>
-          <div class="header__main-ham-menu-cont">
-            <img
-              src="../assets/svg/ham-menu.svg"
-              alt="hamburger menu"
-              class="header__main-ham-menu"
-            />
-            <img
-              src="../assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
-              class="header__main-ham-menu-close d-none"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="header__sm-menu">
-        <div class="header__sm-menu-content">
-          <ul class="header__sm-menu-links">
-            <li class="header__sm-menu-link">
-              <a href="../index.html"> Home </a>
-            </li>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-            <li class="header__sm-menu-link">
-              <a href="../index.html#about"> About </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="../index.html#experiences"> Experiences </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="../index.html#publications"> Publications </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="../index.html#projects"> Projects </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="../index.html#contact"> Contact </a>
-            </li>
-          </ul>
-        </div>
+    <!-- #header:start -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="wordmark" href="../index.html">Megan Ying</a>
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="../index.html">Home</a>
+          <a class="nav__link" href="../index.html#about">About</a>
+          <a class="nav__link" href="../index.html#experiences">Experiences</a>
+          <a class="nav__link" href="../index.html#publications">Publications</a>
+          <a class="nav__link" href="../index.html#projects">Projects</a>
+          <a class="nav__link" href="../index.html#contact">Contact</a>
+        </nav>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="sr-only">Menu</span>
+        </button>
       </div>
     </header>
-    <section class="project-cs-hero">
-      <div class="project-cs-hero__content">
-        <h1 class="heading-primary">Tripod Attachment</h1>
-        <div class="project-cs-hero__info">
-          <p class="text-primary">
-            Designing and manufacturing a tripod attachment to alleviate
-            discomfort and enhance usability for individuals with cerebral palsy
-            and wrist tendonitis.
+    <nav class="mobile-nav" id="mobile-nav" data-open="false" aria-label="Mobile">
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="../index.html">
+            <span class="label label__num">(01)</span>Home
+          </a>
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="../index.html#about">
+            <span class="label label__num">(02)</span>About
+          </a>
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="../index.html#experiences">
+            <span class="label label__num">(03)</span>Experiences
+          </a>
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="../index.html#publications">
+            <span class="label label__num">(04)</span>Publications
+          </a>
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="../index.html#projects">
+            <span class="label label__num">(05)</span>Projects
+          </a>
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="../index.html#contact">
+            <span class="label label__num">(06)</span>Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- #header:end -->
+
+    <main id="main">
+      <section class="cs-hero">
+        <div class="container container--narrow">
+          <a class="label cs-hero__back" href="../index.html#projects">← Projects</a>
+          <p class="label cs-hero__num">(03)</p>
+          <h1 class="cs-hero__title">Tripod Attachment</h1>
+          <p class="cs-hero__deck">
+            Designing and manufacturing a tripod attachment to alleviate discomfort and enhance
+            usability for individuals with cerebral palsy and wrist tendonitis.
           </p>
         </div>
-      </div>
-    </section>
-    <section class="project-details">
-      <div class="main-container">
-        <div class="project-details__content">
-          <div class="project-details__content-main">
-            <div class="project-details__desc">
-              <h3 class="project-details__content-title">Overview</h3>
-              <p class="project-details__desc-para">
-                During this project, I collaborated with a team to develop
-                assistive technology tailored to a particular user group. We
-                focused on designing a tripod attachment for individuals with
-                cerebral palsy or wrist tendonitis, enabling them to take photos
-                with ease. Our objective was to manufacture a prototype of the
-                product within a budget of $200, while also ensuring that our
-                design could be mass-manufactured efficiently.
-              </p>
-              <h3 class="project-details__content-title">Design Process</h3>
-              <p class="project-details__desc-para">
-                We began our design process by crafting a user survey. Our
-                interviews revealed that small components of the tripod, like
-                wheels and levers, posed significant challenges for our target
-                population. Consequently, we made it a priority to eliminate the
-                need to screw a camera onto the tripod, as well as to adjust
-                knobs for swivel and tilt. We brainstormed potential mechanisms
-                for each function and utilized metrics to guide our final design
-                selection.
-              </p>
-              <h3 class="project-details__content-title">Product Features</h3>
-              <p class="project-details__desc-para">
-                Our final product is an attachment designed to seamlessly
-                integrate with any tripod. It automates the process of securing
-                a phone within a tripod, preventing the user from needing to
-                apply any additional force and reducing the need for steady
-                hands. The base of our product is made from ABS, a rigid
-                material, and houses an IR sensor. When the sensor detects the
-                presense of phone, a pair of wings, which are powered by micro
-                servos, a nano board, and a 9V battery, open and close to secure
-                the phone within the slot. To remove the phone after use, users
-                can simply pull it out of the subassembly. The base slot is
-                lined with foam and the wings are made from a flexible material
-                called TPU, allowing the attachment to accommodate phones of
-                varying sizes.
-              </p>
-              <div class="project-details__showcase-img-cont">
-                <img
-                  src="../assets/photos/projects/tripod_cad.png"
-                  alt="System CAD"
-                  class="project-details__showcase-img"
-                />
-                <figcaption>
-                  Figure 1: CAD model of attachment with electronics
-                </figcaption>
-              </div>
-              <p class="project-details__desc-para">
-                In addition, our design incorporates an interface piece attached
-                beneath the base. The inner interface is made from TPU, while
-                the outer portion is made from ABS. Both components feature
-                rounded gear teeth for easier swiveling and locking. As a
-                result, users can twist the subassembly without needing to
-                loosen any knobs. Furthermore, we integrated magnet holes into
-                our design. These magnets enable the inner and outer pieces to
-                snap together securely, while also allowing the parts to be
-                easily dismantled.
-              </p>
-              <div class="project-details__img-container">
-                <div class="project-details__showcase-img-cont">
-                  <img
-                    src="../assets/photos/projects/interface_cad1.png"
-                    alt="Interface CAD"
-                    class="project-details__showcase-img"
-                    width="auto"
-                    height="400"
-                  />
-                  <figcaption>
-                    Figure 2: CAD model of interface piece
-                  </figcaption>
-                </div>
-                <div class="project-details__showcase-img-cont">
-                  <img
-                    src="../assets/photos/projects/interface_cad2.png"
-                    alt="Interface CAD"
-                    class="project-details__showcase-img"
-                    width="auto"
-                    height="400"
-                  />
-                </div>
-              </div>
-              <h3 class="project-details__content-title">Analysis Process</h3>
-              <p class="project-details__desc-para">
-                Our team conducted both hand calculations and a Finite Element
-                Analysis (FEA) simulation on the wings of our product. We opted
-                for a high factor of safety to ensure durability, allowing the
-                product to undergo many opening and closing cycles before needed
-                to be replaced. After finalizing our design, we estimated the
-                cost of our product by obtaining a quote for components from
-                Protolabs, based on a sample quantity of 50. Although our
-                prototype was fabricated using 3D printing, we determined that
-                injection molding would be the preferred manufacturing method
-                due to its efficiency, enabling more parts to be produced at a
-                lower cost pepr unit. According to our calculations, the total
-                cost of manufacturing and assembling our product would be
-                approximately $58. Thus, we set the price of our attachment at
-                around $62, allowing for a 7% profit margin.
-              </p>
-              <div class="project-details__img-container">
-                <div class="project-details__showcase-img-cont">
-                  <img
-                    src="../assets/photos/projects/tripod_calc.png"
-                    alt="Force calculations"
-                    class="project-details__showcase-img"
-                    height="350"
-                    width="auto"
-                  />
-                  <figcaption>
-                    Figure 3: Calculating forces on subassembly
-                  </figcaption>
-                </div>
-                <div class="project-details__showcase-img-cont">
-                  <img
-                    src="../assets/photos/projects/tripod_fea.png"
-                    alt="Wing FEA"
-                    class="project-details__showcase-img"
-                    height="350"
-                    width="auto"
-                  />
-                  <figcaption>Figure 4: FEA of wing</figcaption>
-                </div>
-              </div>
-              <h3 class="project-details__content-title">Results</h3>
-              <p class="project-details__desc-para">
-                My team successfully fabricated a fully functional model of our
-                tripod attachment. Through this project, I developed a better
-                understanding of the various aspects of mass manufacturing, such
-                as material selection and manufacturing processes. Additionally,
-                I gained hands-on experience with integrating electronics into
-                mechanical systems, further enhancing my skill set.
-              </p>
-              <div class="project-details__img-container">
-                <div class="project-details__showcase-img-cont">
-                  <img
-                    src="../assets/photos/projects/tripod_phone1.jpg"
-                    alt="Tripod with phone"
-                    class="project-details__showcase-img"
-                  />
-                  <figcaption>Figure 5: Attachment holding iPhone</figcaption>
-                </div>
-                <div class="project-details__showcase-img-cont">
-                  <img
-                    src="../assets/photos/projects/tripod_phone2.jpg"
-                    alt="Tripod with phone"
-                    class="project-details__showcase-img"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Tools Used</h3>
-              <div class="skills">
-                <div class="skills__skill">SolidWorks</div>
-                <div class="skills__skill">CAD</div>
-                <div class="skills__skill">FEA</div>
-                <div class="skills__skill">3D Printer</div>
-                <div class="skills__skill">Arduino</div>
-              </div>
+      </section>
+
+      <section class="cs-body">
+        <div class="container container--narrow">
+          <h2>Overview</h2>
+          <p>
+            During this project, I collaborated with a team to develop assistive technology
+            tailored to a particular user group. We focused on designing a tripod attachment for
+            individuals with cerebral palsy or wrist tendonitis, enabling them to take photos with
+            ease. Our objective was to manufacture a prototype of the product within a budget of
+            $200, while also ensuring that our design could be mass-manufactured efficiently.
+          </p>
+
+          <h2>Design Process</h2>
+          <p>
+            We began our design process by crafting a user survey. Our interviews revealed that
+            small components of the tripod, like wheels and levers, posed significant challenges
+            for our target population. Consequently, we made it a priority to eliminate the need
+            to screw a camera onto the tripod, as well as to adjust knobs for swivel and tilt. We
+            brainstormed potential mechanisms for each function and utilized metrics to guide our
+            final design selection.
+          </p>
+
+          <h2>Product Features</h2>
+          <p>
+            Our final product is an attachment designed to seamlessly integrate with any tripod.
+            It automates the process of securing a phone within a tripod, preventing the user from
+            needing to apply any additional force and reducing the need for steady hands. The base
+            of our product is made from ABS, a rigid material, and houses an IR sensor. When the
+            sensor detects the presence of phone, a pair of wings, which are powered by micro
+            servos, a nano board, and a 9V battery, open and close to secure the phone within the
+            slot. To remove the phone after use, users can simply pull it out of the subassembly.
+            The base slot is lined with foam and the wings are made from a flexible material
+            called TPU, allowing the attachment to accommodate phones of varying sizes.
+          </p>
+          <figure class="fig">
+            <img
+              src="../assets/photos/projects/tripod_cad.png"
+              alt="CAD model of the tripod attachment showing internal electronics"
+              width="415"
+              height="458"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption><span class="fig__num">Fig. 1</span>CAD model of attachment with electronics</figcaption>
+          </figure>
+          <p>
+            In addition, our design incorporates an interface piece attached beneath the base. The
+            inner interface is made from TPU, while the outer portion is made from ABS. Both
+            components feature rounded gear teeth for easier swiveling and locking. As a result,
+            users can twist the subassembly without needing to loosen any knobs. Furthermore, we
+            integrated magnet holes into our design. These magnets enable the inner and outer
+            pieces to snap together securely, while also allowing the parts to be easily
+            dismantled.
+          </p>
+          <div class="fig-pair">
+            <figure class="fig">
+              <img
+                src="../assets/photos/projects/interface_cad1.png"
+                alt="CAD model of the interface piece"
+                width="287"
+                height="287"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption><span class="fig__num">Fig. 2</span>CAD model of interface piece</figcaption>
+            </figure>
+            <figure class="fig">
+              <img
+                src="../assets/photos/projects/interface_cad2.png"
+                alt="CAD model of the interface piece, opposite view"
+                width="238"
+                height="290"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </div>
+
+          <h2>Analysis Process</h2>
+          <p>
+            Our team conducted both hand calculations and a Finite Element Analysis (FEA)
+            simulation on the wings of our product. We opted for a high factor of safety to ensure
+            durability, allowing the product to undergo many opening and closing cycles before
+            needed to be replaced. After finalizing our design, we estimated the cost of our
+            product by obtaining a quote for components from Protolabs, based on a sample quantity
+            of 50. Although our prototype was fabricated using 3D printing, we determined that
+            injection molding would be the preferred manufacturing method due to its efficiency,
+            enabling more parts to be produced at a lower cost per unit. According to our
+            calculations, the total cost of manufacturing and assembling our product would be
+            approximately $58. Thus, we set the price of our attachment at around $62, allowing
+            for a 7% profit margin.
+          </p>
+          <div class="fig-pair">
+            <figure class="fig">
+              <img
+                src="../assets/photos/projects/tripod_calc.png"
+                alt="Hand calculations for forces on the subassembly"
+                width="436"
+                height="330"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption><span class="fig__num">Fig. 3</span>Calculating forces on subassembly</figcaption>
+            </figure>
+            <figure class="fig">
+              <img
+                src="../assets/photos/projects/tripod_fea.png"
+                alt="Finite element analysis of the tripod wing"
+                width="241"
+                height="372"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption><span class="fig__num">Fig. 4</span>FEA of wing</figcaption>
+            </figure>
+          </div>
+
+          <h2>Results</h2>
+          <p>
+            My team successfully fabricated a fully functional model of our tripod attachment.
+            Through this project, I developed a better understanding of the various aspects of
+            mass manufacturing, such as material selection and manufacturing processes.
+            Additionally, I gained hands-on experience with integrating electronics into
+            mechanical systems, further enhancing my skill set.
+          </p>
+          <div class="fig-pair">
+            <figure class="fig">
+              <img
+                src="../assets/photos/projects/tripod_phone1.jpg"
+                alt="Tripod attachment holding an iPhone"
+                width="458"
+                height="345"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption><span class="fig__num">Fig. 5</span>Attachment holding iPhone</figcaption>
+            </figure>
+            <figure class="fig">
+              <img
+                src="../assets/photos/projects/tripod_phone2.jpg"
+                alt="Tripod attachment holding an iPhone, alternate angle"
+                width="458"
+                height="345"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </div>
+
+          <div class="tools">
+            <h3 class="label">tools</h3>
+            <div class="tools__list">
+              <span class="chip">SolidWorks</span>
+              <span class="chip">CAD</span>
+              <span class="chip">FEA</span>
+              <span class="chip">3D Printer</span>
+              <span class="chip">Arduino</span>
             </div>
           </div>
+
+          <nav class="pager" aria-label="Project">
+            <a class="pager__link pager__prev" href="./noise-reduction.html">← Noise Reduction</a>
+            <a class="pager__link pager__next" href="./linkage-system.html">Linkage System →</a>
+          </nav>
         </div>
-      </div>
-    </section>
-    <script src="../js/index.js"></script>
-    <footer class="main-footer">
-      <div class="main-container">
-        <div class="main-footer__content">
-          &copy; 2026 Megan Ying. Forked from
-          <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
-            >Ram Maheshwari</a
-          >
+      </section>
+    </main>
+
+    <!-- #footer:start -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <nav class="footer__nav" aria-label="Footer">
+            <a href="../index.html">Home</a>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#experiences">Experiences</a>
+            <a href="../index.html#publications">Publications</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#contact">Contact</a>
+          </nav>
+          <div>
+            <div class="footer__social">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ying-megan/"
+                >LinkedIn ↗</a
+              >
+              <a target="_blank" rel="noreferrer" href="https://github.com/meganying1"
+                >GitHub ↗</a
+              >
+            </div>
+            <p class="footer__meta">
+              © 2026 Megan Ying. Forked from
+              <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
+                >Ram Maheshwari</a
+              >
+            </p>
+          </div>
         </div>
       </div>
     </footer>
+    <!-- #footer:end -->
+
+    <script src="../js/main.js" defer></script>
   </body>
 </html>
