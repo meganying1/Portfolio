@@ -1,4 +1,4 @@
-// ---
+// Mobile navigation: the hamburger button opens and closes the small-screen menu
 const hamMenuBtn = document.querySelector(".header__main-ham-menu-cont");
 const smallMenu = document.querySelector(".header__sm-menu");
 const headerHamMenuBtn = document.querySelector(".header__main-ham-menu");
@@ -7,32 +7,25 @@ const headerHamMenuCloseBtn = document.querySelector(
 );
 const headerSmallMenuLinks = document.querySelectorAll(".header__sm-menu-link");
 
-hamMenuBtn.addEventListener("click", () => {
-  if (smallMenu.classList.contains("header__sm-menu--active")) {
-    smallMenu.classList.remove("header__sm-menu--active");
-  } else {
-    smallMenu.classList.add("header__sm-menu--active");
-  }
-  if (headerHamMenuBtn.classList.contains("d-none")) {
-    headerHamMenuBtn.classList.remove("d-none");
-    headerHamMenuCloseBtn.classList.add("d-none");
-  } else {
-    headerHamMenuBtn.classList.add("d-none");
-    headerHamMenuCloseBtn.classList.remove("d-none");
-  }
-});
-
-for (let i = 0; i < headerSmallMenuLinks.length; i++) {
-  headerSmallMenuLinks[i].addEventListener("click", () => {
-    smallMenu.classList.remove("header__sm-menu--active");
-    headerHamMenuBtn.classList.remove("d-none");
-    headerHamMenuCloseBtn.classList.add("d-none");
-  });
+function setMenuOpen(isOpen) {
+  smallMenu.classList.toggle("header__sm-menu--active", isOpen);
+  headerHamMenuBtn.classList.toggle("d-none", isOpen);
+  headerHamMenuCloseBtn.classList.toggle("d-none", !isOpen);
 }
 
-// ---
-const headerLogoConatiner = document.querySelector(".header__logo-container");
+hamMenuBtn.addEventListener("click", () => {
+  setMenuOpen(!smallMenu.classList.contains("header__sm-menu--active"));
+});
 
-headerLogoConatiner.addEventListener("click", () => {
-  location.href = "index.html";
+headerSmallMenuLinks.forEach((link) => {
+  link.addEventListener("click", () => setMenuOpen(false));
+});
+
+// Clicking the log returns home. The URL is resolved against this script's own
+// location so it works from the site root and from subpages.
+const homeURL = new URL("../index.html", document.currentScript.src).href;
+const headerLogoConatainer = document.querySelector(".header__logo-container");
+
+headerLogoConatainer.addEventListener("click", () => {
+  location.href = homeURL;
 });
