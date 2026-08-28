@@ -1,3 +1,4 @@
+
 /*
   Breakpoints (em-based, mobile-first — respect text zoom):
     30em / 480px   skills 1→2 col, fig-pair 1→2 col
@@ -843,10 +844,6 @@ textarea.field {
   border-top: 1px solid var(--rule);
 }
 
-.cs-hero .container--narrow {
-  display: flow-root; /* contains the floated image without a manual clearfix */
-}
-
 .cs-hero__back {
   display: inline-block;
   margin-bottom: var(--space-6);
@@ -859,15 +856,6 @@ textarea.field {
 .cs-hero__num {
   display: block;
   margin-bottom: var(--space-5);
-}
-
-.cs-hero__image {
-  float: right;
-  width: clamp(9rem, 20vw, 14rem);
-  height: auto;
-  margin-left: var(--space-6);
-  margin-bottom: var(--space-4);
-  mix-blend-mode: multiply;
 }
 
 .cs-hero__title {
