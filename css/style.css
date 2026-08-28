@@ -916,6 +916,17 @@ textarea.field {
   margin-top: var(--space-5);
 }
 
+.cs-body p a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.cs-body p a:hover {
+  color: var(--accent);
+}
+
 .chip {
   display: inline-block;
   padding: 0.4em 0.9em;
