@@ -3,592 +3,595 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Megan Ying Portfolio</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230062b9'/><text x='50' y='72' font-family='Arial,sans-serif' font-size='56' font-weight='bold' fill='white' text-anchor='middle'>MY</text></svg>" />
-    <meta name="description" content="Megan Ying - Mechanical Engineer | CMU '25" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <title>Megan Ying</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='0' fill='%2323395B'/><text x='50' y='72' font-family='Arial,sans-serif' font-size='56' font-weight='bold' fill='white' text-anchor='middle'>MY</text></svg>"
+    />
+    <link rel="canonical" href="https://www.meganying.com/" />
+    <meta name="description" content="Megan Ying — Mechanical Engineer, CMU '25" />
 
     <link rel="stylesheet" href="css/style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:opsz,wght@14..32,400..600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header class="header">
-      <div class="header__content">
-        <div class="header__logo-container">
-          <div class="header__logo-img-cont">
-            <img
-              src="./assets/photos/headshot.jpg"
-              alt="Megan Ying Logo Image"
-              class="header__logo-img"
-            />
-          </div>
-          <span class="header__logo-sub">Megan Ying</span>
-        </div>
-        <div class="header__main">
-          <ul class="header__links">
-            <li class="header__link-wrapper">
-              <a href="./index.html" class="header__link"> Home </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#about" class="header__link"> About </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#experiences" class="header__link"> Experiences </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#publications" class="header__link"> Publications </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#projects" class="header__link"> Projects </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#contact" class="header__link"> Contact </a>
-            </li>
-          </ul>
-          <div class="header__main-ham-menu-cont">
-            <img
-              src="./assets/svg/ham-menu.svg"
-              alt="hamburger menu"
-              class="header__main-ham-menu"
-            />
-            <img
-              src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
-              class="header__main-ham-menu-close d-none"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="header__sm-menu">
-        <div class="header__sm-menu-content">
-          <ul class="header__sm-menu-links">
-            <li class="header__sm-menu-link">
-              <a href="./index.html"> Home </a>
-            </li>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-            <li class="header__sm-menu-link">
-              <a href="./index.html#about"> About </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./index.html#experiences"> Experiences </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./index.html#publications"> Publications </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./index.html#projects"> Projects </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./index.html#contact"> Contact </a>
-            </li>
-          </ul>
-        </div>
+    <!-- #header:start -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="wordmark" href="./index.html">Megan Ying</a>
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="./index.html">Home</a>
+          <a class="nav__link" href="./index.html#about">About</a>
+          <a class="nav__link" href="./index.html#experiences">Experiences</a>
+          <a class="nav__link" href="./index.html#publications">Publications</a>
+          <a class="nav__link" href="./index.html#projects">Projects</a>
+          <a class="nav__link" href="./index.html#contact">Contact</a>
+        </nav>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="sr-only">Menu</span>
+        </button>
       </div>
     </header>
-    <section class="home-hero">
-      <div class="home-hero__content">
-        <h1 class="heading-primary-home">Hi, I am</h1>
-        <div class="display-flex">
-          <p id="word" class="heading-primary-home"></p>
-          <p class="heading-primary-home">|</p>
+    <nav class="mobile-nav" id="mobile-nav" data-open="false" aria-label="Mobile">
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="./index.html">
+            <span class="label label__num">(01)</span>Home
+          </a>
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="./index.html#about">
+            <span class="label label__num">(02)</span>About
+          </a>
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="./index.html#experiences">
+            <span class="label label__num">(03)</span>Experiences
+          </a>
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="./index.html#publications">
+            <span class="label label__num">(04)</span>Publications
+          </a>
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="./index.html#projects">
+            <span class="label label__num">(05)</span>Projects
+          </a>
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="./index.html#contact">
+            <span class="label label__num">(06)</span>Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- #header:end -->
+
+    <main id="main">
+      <section class="hero">
+        <div class="container">
+          <p class="label hero__eyebrow">B.S. Mechanical Engineering — Carnegie Mellon</p>
+          <h1 class="hero__name">Megan Ying</h1>
+          <p class="hero__typed">
+            <span aria-hidden="true">I am </span>
+            <span class="typewriter" aria-hidden="true">
+              <span class="typewriter__ghost">a programmer</span>
+              <span class="typewriter__live" id="typewriter"></span><span class="caret"></span>
+            </span>
+            <span class="sr-only">I am an engineer, a programmer, and a scientist.</span>
+          </p>
         </div>
-      </div>
-    </section>
-    <section id="about" class="about sec-pad">
-      <div class="main-container">
-        <div class="about__content">
-          <div class="about__content-main">
-            <h3 class="about__content-title">About Me</h3>
-            <div class="about__content-details">
-              <p class="about__content-details-para">
-                Hi! My name is Megan Ying and I graduated from Carnegie Mellon
-                University in May 2026 with a Bachelor of Science in Mechanical
-                Engineering. I am driven by a deep passion for using technology
-                to improve the quality of life for others, particularly within
-                the clean tech and healthcare sectors. While my foundation lies
-                in mechanical engineering, my interests extend to software
-                engineering and data science.
+      </section>
+
+      <section id="about" class="section reveal" style="--i: 0">
+        <div class="container">
+          <div class="section__grid">
+            <div class="section__rail">
+              <p class="label"><span class="label__num">(01)</span>about</p>
+              <img
+                class="about__portrait"
+                src="./assets/photos/headshot.jpg"
+                alt="Portrait of Megan Ying"
+                width="1779"
+                height="1375"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <p class="about__lede">
+                Hi! My name is Megan Ying and I graduated from Carnegie Mellon University in May
+                2025 with a Bachelor of Science in Mechanical Engineering. I am driven by a deep
+                passion for using technology to improve the quality of life for others,
+                particularly within the clean tech and healthcare sectors. While my foundation
+                lies in mechanical engineering, my interests extend to software engineering and
+                data science.
               </p>
-              <p class="about__content-details-para">
-                Whether it's designing innovative products, leveraging data to
-                drive informed decision-making, or building software solutions,
-                I love applying my skills to make a meaningful impact. Feel free
-                to reach out if you'd like to collaborate or connect!
+              <p class="about__body">
+                Whether it's designing innovative products, leveraging data to drive informed
+                decision-making, or building software solutions, I love applying my skills to
+                make a meaningful impact. Feel free to reach out if you'd like to collaborate or
+                connect!
               </p>
+              <div class="skills">
+                <div class="skills__group">
+                  <h3 class="label">software</h3>
+                  <ul class="skills__list">
+                    <li>Python</li>
+                    <li>C</li>
+                    <li>MATLAB</li>
+                    <li>SQL</li>
+                  </ul>
+                </div>
+                <div class="skills__group">
+                  <h3 class="label">infrastructure</h3>
+                  <ul class="skills__list">
+                    <li>Cassandra</li>
+                    <li>Argo Workflows</li>
+                    <li>CI/CD</li>
+                    <li>Git</li>
+                    <li>Linux</li>
+                    <li>Docker</li>
+                  </ul>
+                </div>
+                <div class="skills__group">
+                  <h3 class="label">ai systems</h3>
+                  <ul class="skills__list">
+                    <li>LLM Systems</li>
+                    <li>Agentic AI</li>
+                  </ul>
+                </div>
+                <div class="skills__group">
+                  <h3 class="label">cad &amp; simulation</h3>
+                  <ul class="skills__list">
+                    <li>SolidWorks</li>
+                    <li>Siemens NX</li>
+                    <li>Ansys Mechanical</li>
+                    <li>JMP</li>
+                  </ul>
+                </div>
+                <div class="skills__group">
+                  <h3 class="label">lab &amp; fabrication</h3>
+                  <ul class="skills__list">
+                    <li>Instron</li>
+                    <li>Keyence</li>
+                    <li>3D Printer</li>
+                    <li>Laser Cutter</li>
+                    <li>Manual Mill</li>
+                    <li>Manual Lathe</li>
+                    <li>Band Saw</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="social">
+                <a
+                  class="social__link"
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.linkedin.com/in/ying-megan/"
+                  >LinkedIn ↗</a
+                >
+                <a
+                  class="social__link"
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://github.com/meganying1"
+                  >GitHub ↗</a
+                >
+              </div>
             </div>
           </div>
-          <div class="about__content-skills">
-            <h3 class="about__content-title">My Skills</h3>
-            <div class="skills">
-              <div class="skills__skill">Python</div>
-              <div class="skills__skill">C</div>
-              <div class="skills__skill">MATLAB</div>
-              <div class="skills__skill">Cassandra</div>
-              <div class="skills__skill">Argo Workflows</div>
-              <div class="skills__skill">CI/CD</div>
-              <div class="skills__skill">Git</div>
-              <div class="skills__skill">Linux</div>
-              <div class="skills__skill">Docker</div>
-              <div class="skills__skill">LLM Systems</div>
-              <div class="skills__skill">Agentic AI</div>
-              <div class="skills__skill">SQL</div>
-              <div class="skills__skill">SolidWorks</div>
-              <div class="skills__skill">Siemens NX</div>
-              <div class="skills__skill">Ansys Mechanical</div>
-              <div class="skills__skill">JMP</div>
-              <div class="skills__skill">Instron</div>
-              <div class="skills__skill">Keyence</div>
-              <div class="skills__skill">3D Printer</div>
-              <div class="skills__skill">Laser Cutter</div>
-              <div class="skills__skill">Manual Mill</div>
-              <div class="skills__skill">Manual Lathe</div>
-              <div class="skills__skill">Band Saw</div>
+        </div>
+      </section>
+
+      <section id="experiences" class="section reveal" style="--i: 1">
+        <div class="container">
+          <div class="section__grid">
+            <div class="section__rail">
+              <p class="label"><span class="label__num">(02)</span>experiences</p>
             </div>
-            <h3 class="about__content-title" style="margin-top:3rem;">Social</h3>
-            <div class="about__content-cont">
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.linkedin.com/in/ying-megan/"
+            <div>
+              <ol class="cv">
+                <li class="cv__row">
+                  <h3 class="cv__org">Bloomberg</h3>
+                  <p class="cv__role">Software Engineer</p>
+                  <p class="cv__dates">Oct 2025 — Present</p>
+                </li>
+                <li class="cv__row">
+                  <h3 class="cv__org">Design Research Collective</h3>
+                  <p class="cv__role">Research Assistant</p>
+                  <p class="cv__dates">Sep 2024 — Present</p>
+                </li>
+                <li class="cv__row">
+                  <h3 class="cv__org">Apple</h3>
+                  <p class="cv__role">Interconnect Product Design Co-op</p>
+                  <p class="cv__dates">Sep 2023 — Aug 2024</p>
+                </li>
+                <li class="cv__row">
+                  <h3 class="cv__org">UBS</h3>
+                  <p class="cv__role">Quantitative Trading Summer Analyst</p>
+                  <p class="cv__dates">Jun 2023 — Aug 2023</p>
+                </li>
+                <li class="cv__row">
+                  <h3 class="cv__org">Caterpillar</h3>
+                  <p class="cv__role">Hydraulics and Controls Engineering Intern</p>
+                  <p class="cv__dates">May 2022 — Aug 2022</p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="publications" class="section reveal" style="--i: 2">
+        <div class="container">
+          <div class="section__grid">
+            <div class="section__rail">
+              <p class="label"><span class="label__num">(03)</span>publications</p>
+            </div>
+            <div>
+              <ul class="pub-list">
+                <li class="pub">
+                  <p class="pub__meta label">JCISE — March 2026</p>
+                  <h3 class="pub__title">
+                    <a target="_blank" rel="noreferrer" href="https://doi.org/10.1115/1.4071467">
+                      Aligning Agents With Experts in Material Selection: Prompting, Size, and
+                      Reasoning
+                      <span aria-hidden="true">↗</span
+                      ><span class="sr-only">(opens in a new tab)</span>
+                    </a>
+                  </h3>
+                  <p class="pub__authors">
+                    <strong>Megan Ying</strong>, Daniele Grandi, Allin Groom, Christopher McComb
+                  </p>
+                </li>
+                <li class="pub">
+                  <p class="pub__meta label">ASME IDETC/CIE — October 2025</p>
+                  <h3 class="pub__title">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://doi.org/10.1115/DETC2025-168873"
+                    >
+                      Evaluating the Role of Model Size in Agentic AI for Expert-Like Material
+                      Selection
+                      <span aria-hidden="true">↗</span
+                      ><span class="sr-only">(opens in a new tab)</span>
+                    </a>
+                  </h3>
+                  <p class="pub__authors">
+                    <strong>Megan Ying</strong>, Daniele Grandi, Allin Groom, Christopher McComb
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section reveal" style="--i: 3">
+        <div class="container">
+          <div class="section__grid">
+            <div class="section__rail">
+              <p class="label"><span class="label__num">(04)</span>projects</p>
+            </div>
+            <div>
+              <ol class="index">
+                <li class="index__item">
+                  <a class="index__link" href="./pages/trash-compactor.html">
+                    <span class="index__num label">(01)</span>
+                    <img
+                      class="index__thumb"
+                      src="./assets/photos/projects/compactor_final.jpg"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      width="258"
+                      height="380"
+                    />
+                    <span class="index__title">Trash Compactor</span>
+                    <span class="index__meta">Product Design · Mechatronics</span>
+                    <span class="index__arrow" aria-hidden="true">↗</span>
+                  </a>
+                  <img
+                    class="index__peek"
+                    src="./assets/photos/projects/compactor_final.jpg"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    width="258"
+                    height="380"
+                  />
+                </li>
+                <li class="index__item">
+                  <a class="index__link" href="./pages/noise-reduction.html">
+                    <span class="index__num label">(02)</span>
+                    <img
+                      class="index__thumb"
+                      src="./assets/photos/projects/noise_signal.png"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      width="780"
+                      height="700"
+                    />
+                    <span class="index__title">Noise Reduction</span>
+                    <span class="index__meta">Signal Processing · MATLAB</span>
+                    <span class="index__arrow" aria-hidden="true">↗</span>
+                  </a>
+                  <img
+                    class="index__peek"
+                    src="./assets/photos/projects/noise_signal.png"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    width="780"
+                    height="700"
+                  />
+                </li>
+                <li class="index__item">
+                  <a class="index__link" href="./pages/tripod-attachment.html">
+                    <span class="index__num label">(03)</span>
+                    <img
+                      class="index__thumb"
+                      src="./assets/photos/projects/tripod_phone1.jpg"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      width="458"
+                      height="345"
+                    />
+                    <span class="index__title">Tripod Attachment</span>
+                    <span class="index__meta">Assistive Design · DFM</span>
+                    <span class="index__arrow" aria-hidden="true">↗</span>
+                  </a>
+                  <img
+                    class="index__peek"
+                    src="./assets/photos/projects/tripod_phone1.jpg"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    width="458"
+                    height="345"
+                  />
+                </li>
+                <li class="index__item">
+                  <a class="index__link" href="./pages/linkage-system.html">
+                    <span class="index__num label">(04)</span>
+                    <img
+                      class="index__thumb"
+                      src="./assets/photos/projects/final_linkage.png"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      width="424"
+                      height="409"
+                    />
+                    <span class="index__title">Linkage System</span>
+                    <span class="index__meta">Mechanism Design · FEA</span>
+                    <span class="index__arrow" aria-hidden="true">↗</span>
+                  </a>
+                  <img
+                    class="index__peek"
+                    src="./assets/photos/projects/final_linkage.png"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    width="424"
+                    height="409"
+                  />
+                </li>
+                <li class="index__item">
+                  <a class="index__link" href="./pages/well-driller.html">
+                    <span class="index__num label">(05)</span>
+                    <img
+                      class="index__thumb"
+                      src="./assets/photos/projects/driller_cad.png"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      width="252"
+                      height="388"
+                    />
+                    <span class="index__title">Pedal-Powered Well Driller</span>
+                    <span class="index__meta">Conceptual Design · Analysis</span>
+                    <span class="index__arrow" aria-hidden="true">↗</span>
+                  </a>
+                  <img
+                    class="index__peek"
+                    src="./assets/photos/projects/driller_cad.png"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    width="252"
+                    height="388"
+                  />
+                </li>
+                <li class="index__item">
+                  <a class="index__link" href="./pages/chinese-checkers.html">
+                    <span class="index__num label">(06)</span>
+                    <img
+                      class="index__thumb"
+                      src="./assets/photos/projects/checker_board.png"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      width="300"
+                      height="340"
+                    />
+                    <span class="index__title">Chinese Checkers</span>
+                    <span class="index__meta">Software · Game AI</span>
+                    <span class="index__arrow" aria-hidden="true">↗</span>
+                  </a>
+                  <img
+                    class="index__peek"
+                    src="./assets/photos/projects/checker_board.png"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    width="300"
+                    height="340"
+                  />
+                </li>
+                <li class="index__item">
+                  <a class="index__link" href="./pages/mobile-robot.html">
+                    <span class="index__num label">(07)</span>
+                    <img
+                      class="index__thumb"
+                      src="./assets/photos/projects/mobile_robot.jpg"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      width="715"
+                      height="482"
+                    />
+                    <span class="index__title">Mobile Robot</span>
+                    <span class="index__meta">Embedded · Controls</span>
+                    <span class="index__arrow" aria-hidden="true">↗</span>
+                  </a>
+                  <img
+                    class="index__peek"
+                    src="./assets/photos/projects/mobile_robot.jpg"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    width="715"
+                    height="482"
+                  />
+                </li>
+                <li class="index__item">
+                  <a class="index__link" href="./pages/truss-structure.html">
+                    <span class="index__num label">(08)</span>
+                    <img
+                      class="index__thumb"
+                      src="./assets/photos/projects/truss_cad.png"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      width="460"
+                      height="298"
+                    />
+                    <span class="index__title">Truss Structure</span>
+                    <span class="index__meta">Structural Analysis · Fabrication</span>
+                    <span class="index__arrow" aria-hidden="true">↗</span>
+                  </a>
+                  <img
+                    class="index__peek"
+                    src="./assets/photos/projects/truss_cad.png"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    width="460"
+                    height="298"
+                  />
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section reveal" style="--i: 4">
+        <div class="container">
+          <div class="section__grid">
+            <div class="section__rail">
+              <p class="label"><span class="label__num">(05)</span>contact</p>
+            </div>
+            <div>
+              <form
+                class="contact__form"
+                action="https://api.web3forms.com/submit"
+                method="POST"
               >
-                <img
-                  class="about__content-icon"
-                  src="./assets/icons/linkedin.png"
-                  alt="Linkedin icon"
-                  height="50"
+                <input type="hidden" name="access_key" value="88b7514c-10de-4d6b-9df0-ceee8886ff2a" />
+                <div class="field-group">
+                  <label class="label" for="name">Name</label>
+                  <input
+                    class="field"
+                    type="text"
+                    name="name"
+                    id="name"
+                    autocomplete="name"
+                    required
+                  />
+                </div>
+                <div class="field-group">
+                  <label class="label" for="email">Email</label>
+                  <input
+                    class="field"
+                    type="email"
+                    name="email"
+                    id="email"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+                <div class="field-group">
+                  <label class="label" for="message">Message</label>
+                  <textarea class="field" name="message" id="message" rows="6" required></textarea>
+                </div>
+                <div class="h-captcha" data-captcha="true"></div>
+                <button type="submit" class="btn">Submit</button>
+                <input
+                  type="hidden"
+                  name="redirect"
+                  value="https://www.meganying.com/pages/thanks.html"
                 />
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://github.com/meganying1"
-              >
-                <img
-                  class="about__content-icon"
-                  src="./assets/icons/github.png"
-                  alt="Github icon"
-                  height="50"
-                />
-              </a>
+              </form>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="experiences" class="experiences sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main">Experiences</span>
-        </h2>
-        <div class="experiences__content">
-          <div class="experiences__row">
-            <div class="experiences__row-img-cont">
-              <img
-                src="./assets/photos/experiences/bloomberg.png"
-                alt="Bloomberg logo"
-                class="experiences__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="experiences__row-content">
-              <h3 class="experiences__row-content-company">Bloomberg</h3>
-              <p class="experiences__row-content-desc">Software Engineer</p>
-              <p class="experiences__row-content-desc">October 2025 - Present</p>
-            </div>
-          </div>
-          <div class="experiences__row">
-            <div class="experiences__row-img-cont">
-              <img
-                src="./assets/photos/experiences/research.png"
-                alt="Design Research Collective logo"
-                class="experiences__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="experiences__row-content">
-              <h3 class="experiences__row-content-company">Design Research Collective</h3>
-              <p class="experiences__row-content-desc">Research Assistant</p>
-              <p class="experiences__row-content-desc">Sept 2024 - Present</p>
-            </div>
-          </div>
-          <div class="experiences__row">
-            <div class="experiences__row-img-cont">
-              <img
-                src="./assets/photos/experiences/apple.jpg"
-                alt="Apple logo"
-                class="experiences__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="experiences__row-content">
-              <h3 class="experiences__row-content-company">Apple</h3>
-              <p class="experiences__row-content-desc">Interconnect Product Design Co-op</p>
-              <p class="experiences__row-content-desc">Sept 2023 - Aug 2024</p>
-            </div>
-          </div>
-          <div class="experiences__row">
-            <div class="experiences__row-img-cont">
-              <img
-                src="./assets/photos/experiences/ubs.png"
-                alt="UBS logo"
-                class="experiences__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="experiences__row-content">
-              <h3 class="experiences__row-content-company">UBS</h3>
-              <p class="experiences__row-content-desc">Quantitative Trading Summer Analyst</p>
-              <p class="experiences__row-content-desc">June 2023 - Aug 2023</p>
-            </div>
-          </div>
-          <div class="experiences__row">
-            <div class="experiences__row-img-cont">
-              <img
-                src="./assets/photos/experiences/cat.jpg"
-                alt="Caterpillar logo"
-                class="experiences__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="experiences__row-content">
-              <h3 class="experiences__row-content-company">Caterpillar</h3>
-              <p class="experiences__row-content-desc">Hydraulics and Controls Engineering Intern</p>
-              <p class="experiences__row-content-desc">May 2022 - Aug 2022</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="publications" class="publications sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main">Publications</span>
-        </h2>
-        <div class="publications__content">
-          <div class="publications__row">
-            <div class="publications__row-img-cont">
-              <img
-                src="./assets/icons/paper.png"
-                alt="Paper icon"
-                class="publications__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="publications__row-content">
-              <h3 class="publications__row-title">Aligning Agents With Experts in Material Selection:<br>Prompting, Size, and Reasoning</h3>
-              <p class="publications__row-authors">Megan Ying, Daniele Grandi, Allin Groom, Christopher McComb</p>
-              <p class="publications__row-journal">JCISE | March 2026</p>
-              <a target="_blank" rel="noreferrer" href="https://doi.org/10.1115/1.4071467" class="btn btn--med btn--theme dynamicBgClr">View Paper</a>
-            </div>
-          </div>
-          <div class="publications__row">
-            <div class="publications__row-img-cont">
-              <img
-                src="./assets/icons/paper.png"
-                alt="Paper icon"
-                class="publications__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="publications__row-content">
-              <h3 class="publications__row-title">Evaluating the Role of Model Size in Agentic AI<br>for Expert-Like Material Selection</h3>
-              <p class="publications__row-authors">Megan Ying, Daniele Grandi, Allin Groom, Christopher McComb</p>
-              <p class="publications__row-journal">ASME IDETC/CIE | October 2025</p>
-              <a target="_blank" rel="noreferrer" href="https://doi.org/10.1115/DETC2025-168873" class="btn btn--med btn--theme dynamicBgClr">View Paper</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="projects" class="projects sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-bg">
-          <span class="heading-sec__main">Projects</span>
-        </h2>
-        <div class="projects__content">
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/photos/projects/compactor_final.jpg"
-                alt="Trash Compactor Prototype"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Trash Compactor</h3>
-              <p class="projects__row-content-desc">
-                Designing and fabricating a home trash compactor system for reducing waste volume and plastic bag usage.
-              </p>
-              <a
-                href="./pages/trash-compactor.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                >Learn More</a
+      </section>
+    </main>
+
+    <!-- #footer:start -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <nav class="footer__nav" aria-label="Footer">
+            <a href="./index.html">Home</a>
+            <a href="./index.html#about">About</a>
+            <a href="./index.html#experiences">Experiences</a>
+            <a href="./index.html#publications">Publications</a>
+            <a href="./index.html#projects">Projects</a>
+            <a href="./index.html#contact">Contact</a>
+          </nav>
+          <div>
+            <div class="footer__social">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ying-megan/"
+                >LinkedIn ↗</a
+              >
+              <a target="_blank" rel="noreferrer" href="https://github.com/meganying1"
+                >GitHub ↗</a
               >
             </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/photos/projects/noise_signal.png"
-                alt="Original and clean audio signal"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Noise Reduction</h3>
-              <p class="projects__row-content-desc">
-                Implementing the Least Mean Squares (LMS) algorithm for noise reduction in audio recordings.
-              </p>
-              <a
-                href="./pages/noise-reduction.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                >Learn More</a
+            <p class="footer__meta">
+              © 2026 Megan Ying. Forked from
+              <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
+                >Ram Maheshwari</a
               >
-            </div>
+            </p>
           </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/photos/projects/tripod_phone1.jpg"
-                alt="Fabricated attachment holding iPhone"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Tripod Attachment</h3>
-              <p class="projects__row-content-desc">
-                Designing and manufacturing a tripod attachment to alleviate discomfort and enhance usability for
-                individuals with cerebral palsy and wrist tendonitis.
-              </p>
-              <a
-                href="./pages/tripod-attachment.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                >Learn More</a
-              >
-            </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/photos/projects/final_linkage.png"
-                alt="CAD model of linkage system"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Linkage System</h3>
-              <p class="projects__row-content-desc">
-                Designing and assembling a linkage system capable of converting rotary motion of a motor
-                into linear motion of pressing a button.
-              </p>
-              <a
-                href="./pages/linkage-system.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                >Learn More</a
-              >
-            </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/photos/projects/driller_cad.png"
-                alt="CAD model of well driller"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Pedal-Powered Well Driller</h3>
-              <p class="projects__row-content-desc">
-                Developing a conceptual design of a well driller that relies on human-produced pedal power.
-              </p>
-              <a
-                href="./pages/well-driller.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                >Learn More</a
-              >
-            </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/photos/projects/checker_board.png"
-                alt="Chinese checkers board"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Chinese Checkers</h3>
-              <p class="projects__row-content-desc">
-                Coding a multiplayer Chinese checkers game with the option of an opponent AI.
-              </p>
-              <a
-                href="./pages/chinese-checkers.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                >Learn More</a
-              >
-            </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/photos/projects/mobile_robot.jpg"
-                alt="Mobile robot navigating course"
-                class="projects__row-img"
-                loading="lazy"
-                height="400"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Mobile Robot</h3>
-              <p class="projects__row-content-desc">
-                Programming an Arduino robot to autonomously navigate an obstacle course by using infrared and
-                ultrasonic sensor input for motor control.
-              </p>
-              <a
-                href="./pages/mobile-robot.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                >Learn More</a
-              >
-            </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/photos/projects/truss_cad.png"
-                alt="CAD model of truss"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Truss Structure</h3>
-              <p class="projects__row-content-desc">
-                Manufacturing and assembling a truss structure designed to fail under a 40 pound load.
-              </p>
-              <a
-                href="./pages/truss-structure.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                >Learn More</a
-              >
-          </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="contact" class="contact sec-pad dynamicBg">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
-        </h2>
-        <div class="contact__form-container">
-          <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="88b7514c-10de-4d6b-9df0-ceee8886ff2a">
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="name">Name</label>
-              <input
-                required
-                placeholder="Enter Your Name"
-                type="text"
-                class="contact__form-input"
-                name="name"
-                id="name"
-              />
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="email">Email</label>
-              <input
-                required
-                placeholder="Enter Your Email"
-                type="text"
-                class="contact__form-input"
-                name="email"
-                id="email"
-              />
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="message">Message</label>
-              <textarea
-                required
-                cols="30"
-                rows="10"
-                class="contact__form-input"
-                placeholder="Enter Your Message"
-                name="message"
-                id="message"
-              ></textarea>
-            </div>
-	          <div class="h-captcha" data-captcha="true"></div>
-            <button type="submit" class="btn btn--theme contact__btn">
-              Submit
-            </button>
-            <input type="hidden" name="redirect" value="https://www.meganying.com/pages/thanks.html">
-          </form>
-        </div>
-      </div>
-    </section>
-    <footer class="main-footer">
-      <div class="main-container">
-        <div class="main-footer__content">
-          &copy; 2026 Megan Ying. Forked from
-          <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
-            >Ram Maheshwari</a
-          >
         </div>
       </div>
     </footer>
-    <script>
-      const words = ["Megan Ying", "an engineer", "a programmer", "a scientist"];
-      const TYPE_DELAY = 200;
-      const DELETE_DELAY = 100;
-      const HOLD_DELAY = 3000;
+    <!-- #footer:end -->
 
-      const wordEl = document.getElementById("word");
-      let wordIndex = 0;
-
-      function typeWord() {
-        const chars = words[wordIndex].split("");
-        function typeNext() {
-          if (chars.length > 0) {
-            wordEl.textContent += chars.shift();
-            setTimeout(typeNext, TYPE_DELAY);
-          } else {
-            setTimeout(deleteWord, HOLD_DELAY);
-          }
-        }
-        typeNext();
-      }
-
-      function deleteWord() {
-        const chars = words[wordIndex].split("");
-        function deleteNext() {
-          if (chars.length > 0) {
-            chars.pop();
-            wordEl.textContent = chars.join("");
-            setTimeout(deleteNext, DELETE_DELAY);
-          } else {
-            wordIndex = (wordIndex + 1) % words.length;
-            typeWord();
-          }
-        }
-        deleteNext();
-      }
-
-      typeWord();
-    </script>
     <script src="https://web3forms.com/client/script.js" async defer></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/main.js" defer></script>
   </body>
 </html>
