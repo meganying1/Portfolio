@@ -1,4 +1,3 @@
-
 /*
   Breakpoints (em-based, mobile-first — respect text zoom):
     30em / 480px   skills 1→2 col, fig-pair 1→2 col
@@ -215,16 +214,17 @@ p {
 .skip-link {
   position: absolute;
   left: var(--space-4);
-  top: -3rem;
+  top: 0;
   z-index: 100;
   background: var(--ink);
   color: var(--white);
   padding: 0.75em 1.25em;
-  transition: top var(--dur-fast) var(--ease);
+  transform: translateY(-100%);
+  transition: transform var(--dur-fast) var(--ease);
 }
 
 .skip-link:focus {
-  top: var(--space-4);
+  transform: translateY(var(--space-4));
 }
 
 /* --- header --- */
@@ -320,6 +320,7 @@ p {
 .mobile-nav {
   position: fixed;
   inset: var(--header-h) 0 0 0;
+  z-index: 60;
   height: calc(100dvh - var(--header-h));
   background: var(--ground);
   padding: var(--space-6) var(--gutter);
@@ -609,7 +610,7 @@ body.nav-open {
   padding-block: var(--space-5);
 }
 
-.index_num {
+.index__num {
   flex-shrink: 0;
 }
 
@@ -1018,7 +1019,7 @@ html.js .reveal {
   transition-delay: calc(var(--i, 0) * 60ms);
 }
 
-.reveal.is-visible {
+html.js .reveal.is-visible {
   opacity: 1;
   transform: none;
 }
