@@ -92,8 +92,9 @@
           <p class="label cs-hero__num">(03)</p>
           <h1 class="cs-hero__title">Tripod Attachment</h1>
           <p class="cs-hero__deck">
-            Designing and manufacturing a tripod attachment to alleviate discomfort and enhance
-            usability for individuals with cerebral palsy and wrist tendonitis.
+            Designing and manufacturing an assistive tripod attachment that automates phone 
+            mounting and simplifies camera positioning for users with limited wrist strength and 
+            dexterity.
           </p>
         </div>
       </section>
@@ -101,36 +102,60 @@
       <section class="cs-body">
         <div class="container container--narrow">
           <h2>Overview</h2>
+
           <p>
-            During this project, I collaborated with a team to develop assistive technology
-            tailored to a particular user group. We focused on designing a tripod attachment for
-            individuals with cerebral palsy or wrist tendonitis, enabling them to take photos with
-            ease. Our objective was to manufacture a prototype of the product within a budget of
-            $200, while also ensuring that our design could be mass-manufactured efficiently.
+            Existing tripods often require users to perform small, high-precision movements, such as
+            tightening mounting screws and adjusting knobs. These interactions can be difficult for
+            users with limited wrist strength or dexterity. Our goal was to develop an assistive tripod
+            attachment that simplifies phone mounting and positioning while remaining compatible with
+            standard tripods.
+          </p>
+          
+          <p>
+            My team designed and fabricated a functional prototype within a $200 budget, while also
+            considering materials, manufacturing processes, and cost for eventual mass production.
           </p>
 
-          <h2>Design Process</h2>
+          <h2>User-Centered Design</h2>
+    
           <p>
-            We began our design process by crafting a user survey. Our interviews revealed that
-            small components of the tripod, like wheels and levers, posed significant challenges
-            for our target population. Consequently, we made it a priority to eliminate the need
-            to screw a camera onto the tripod, as well as to adjust knobs for swivel and tilt. We
-            brainstormed potential mechanisms for each function and utilized metrics to guide our
-            final design selection.
+            We began by conducting user interviews and developing a survey to identify the most
+            challenging interactions with existing tripods. Users identified small components such as
+            mounting screws, wheels, and adjustment levers as significant barriers.
+          </p>
+          
+          <p>
+            Based on these findings, we established three primary design requirements:
+          </p>
+          
+          <ul>
+            <li>Secure a phone without requiring the user to tighten a screw or clamp</li>
+            <li>Minimize the force and dexterity required to operate the attachment</li>
+            <li>Allow the phone to be positioned and removed easily</li>
+          </ul>
+          
+          <p>
+            We brainstormed mechanisms for each function and used weighted design criteria to compare
+            concepts. The final design combined an automated phone-gripping mechanism with a
+            low-force tripod positioning interface.
+          </p>
+          
+          <h2>Mechanical Design</h2>
+          
+          <p>
+            The attachment automatically secures a phone when it is inserted into the base. An IR
+            sensor detects the phone and triggers a pair of flexible TPU wings driven by micro servos.
+            The wings open to accommodate the phone and close around it to provide a secure grip,
+            eliminating the need for manual tightening.
+          </p>
+          
+          <p>
+            We designed the mechanical components in SolidWorks, including the phone slot, gripping
+            wings, servo interfaces, and tripod interface. The base is made from ABS and incorporates
+            foam padding to accommodate phones of different sizes, while the flexible TPU wings provide
+            compliant contact with the phone.
           </p>
 
-          <h2>Product Features</h2>
-          <p>
-            Our final product is an attachment designed to seamlessly integrate with any tripod.
-            It automates the process of securing a phone within a tripod, preventing the user from
-            needing to apply any additional force and reducing the need for steady hands. The base
-            of our product is made from ABS, a rigid material, and houses an IR sensor. When the
-            sensor detects the presence of phone, a pair of wings, which are powered by micro
-            servos, a nano board, and a 9V battery, open and close to secure the phone within the
-            slot. To remove the phone after use, users can simply pull it out of the subassembly.
-            The base slot is lined with foam and the wings are made from a flexible material
-            called TPU, allowing the attachment to accommodate phones of varying sizes.
-          </p>
           <figure class="fig">
             <img
               src="../assets/photos/projects/tripod_cad.png"
@@ -142,15 +167,19 @@
             />
             <figcaption><span class="fig__num">Fig. 1</span>CAD model of attachment with electronics</figcaption>
           </figure>
+          
           <p>
-            In addition, our design incorporates an interface piece attached beneath the base. The
-            inner interface is made from TPU, while the outer portion is made from ABS. Both
-            components feature rounded gear teeth for easier swiveling and locking. As a result,
-            users can twist the subassembly without needing to loosen any knobs. Furthermore, we
-            integrated magnet holes into our design. These magnets enable the inner and outer
-            pieces to snap together securely, while also allowing the parts to be easily
-            dismantled.
+            To simplify tripod adjustment, we designed a two-piece interface beneath the attachment.
+            The interface uses rounded gear teeth to provide discrete angular positioning without
+            requiring the user to loosen a knob. The inner component is made from TPU and the outer
+            component from ABS.
           </p>
+          
+          <p>
+            We also incorporated magnets into the interface to allow the two components to snap together
+            securely while remaining easy to separate for assembly and maintenance.
+          </p>
+          
           <div class="fig-pair">
             <figure class="fig">
               <img
@@ -175,20 +204,15 @@
             </figure>
           </div>
 
-          <h2>Analysis Process</h2>
+          <h2>Engineering Analysis</h2>
+          
           <p>
-            Our team conducted both hand calculations and a Finite Element Analysis (FEA)
-            simulation on the wings of our product. We opted for a high factor of safety to ensure
-            durability, allowing the product to undergo many opening and closing cycles before
-            needed to be replaced. After finalizing our design, we estimated the cost of our
-            product by obtaining a quote for components from Protolabs, based on a sample quantity
-            of 50. Although our prototype was fabricated using 3D printing, we determined that
-            injection molding would be the preferred manufacturing method due to its efficiency,
-            enabling more parts to be produced at a lower cost per unit. According to our
-            calculations, the total cost of manufacturing and assembling our product would be
-            approximately $58. Thus, we set the price of our attachment at around $62, allowing
-            for a 7% profit margin.
+            I performed hand calculations and Finite Element Analysis (FEA) on the gripping wings to
+            evaluate structural performance under expected loading. We targeted a high factor of safety
+            to ensure the wings could withstand repeated opening and closing cycles without permanent
+            deformation or failure.
           </p>
+          
           <div class="fig-pair">
             <figure class="fig">
               <img
@@ -214,14 +238,36 @@
             </figure>
           </div>
 
-          <h2>Results</h2>
+          <h2>Manufacturing & Cost</h2>
+
           <p>
-            My team successfully fabricated a fully functional model of our tripod attachment.
-            Through this project, I developed a better understanding of the various aspects of
-            mass manufacturing, such as material selection and manufacturing processes.
-            Additionally, I gained hands-on experience with integrating electronics into
-            mechanical systems, further enhancing my skill set.
+            The prototype components were fabricated using 3D printing, allowing us to rapidly iterate
+            on the geometry and test different configurations. For production, we evaluated alternative
+            manufacturing methods based on expected volume, material selection, and unit cost.
           </p>
+          
+          <p>
+            Using a Protolabs quotation for a sample production quantity of 50 units, we estimated a
+            manufacturing and assembly cost of approximately $58 per unit. Based on this estimate, we 
+            established a target selling price of approximately $62. We identified injection molding as 
+            the preferred production process due to its potential to reduce per-unit cost and support 
+            higher production volumes.
+          </p>
+          
+          <h2>Results</h2>
+          
+          <p>
+            We successfully fabricated and demonstrated a functional prototype that automatically
+            secured an iPhone and integrated with a standard tripod. The final design reduced the need
+            for fine motor control while maintaining a secure phone grip and adjustable positioning.
+          </p>
+
+          <p>
+            This project gave me experience translating user needs into mechanical requirements and
+            carrying those requirements through CAD, FEA, prototyping, material selection, and
+            manufacturing analysis.
+          </p>
+          
           <div class="fig-pair">
             <figure class="fig">
               <img
@@ -252,8 +298,10 @@
               <span class="chip">SolidWorks</span>
               <span class="chip">CAD</span>
               <span class="chip">FEA</span>
-              <span class="chip">3D Printer</span>
-              <span class="chip">Arduino</span>
+              <span>Material Selection</span>
+              <span>Injection Molding</span>
+              <span>Arduino</span>
+              <span>3D Printing</span>
             </div>
           </div>
 
