@@ -15,7 +15,7 @@
     <link rel="canonical" href="https://www.meganying.com/pages/linkage-system.html" />
     <meta
       name="description"
-      content="Designing and assembling a linkage system capable of converting rotary motion of a motor into linear motion of pressing a button."
+      content="Designing and iterating a linkage mechanism to convert rotary motor motion into controlled linear motion and maximize button actuation time."
     />
 
     <link rel="stylesheet" href="../css/style.css" />
@@ -92,21 +92,24 @@
           <p class="label cs-hero__num">(04)</p>
           <h1 class="cs-hero__title">Linkage System</h1>
           <p class="cs-hero__deck">
-            Designing and assembling a linkage system capable of converting rotary motion of a
-            motor into linear motion of pressing a button.
+            Designing and iterating a linkage mechanism to convert rotary motor motion into 
+            controlled linear motion and maximize button actuation time.
           </p>
         </div>
       </section>
 
       <section class="cs-body">
         <div class="container container--narrow">
+          
           <h2>Overview</h2>
+
           <p>
-            I collaborated with a group to design a linkage system capable of translating rotary
-            motion of a motor into linear motion for pressing a button. Our primary objective was
-            to optimize the duration of button pressing, while also considering geometric
-            constraints, material properties, loading conditions, and workspace limitations.
+            I worked with a team to design a linkage mechanism that converts the rotary motion of a
+            motor into linear motion for pressing a button. The primary objective was to maximize the
+            amount of time the button remained pressed within a two-minute operating cycle, while
+            satisfying constraints on workspace, geometry, material strength, and motor loading.
           </p>
+          
           <div class="fig-pair">
             <figure class="fig">
               <img
@@ -131,19 +134,36 @@
               <figcaption><span class="fig__num">Fig. 2</span>FEA of system</figcaption>
             </figure>
           </div>
+          
+          <h2>Concept Development</h2>
 
-          <h2>Design and Analysis Process</h2>
           <p>
-            My team began the design brainstorming process by drawing inspiration from the crank
-            rocker mechanism. We considered various mounting positions and link lengths, as well
-            as experimented with incorporating slotted portions. After thorough consideration, we
-            opted for a design featuring a slotted link, anticipating that it would enable the
-            system to maintain a vertical position for an extended duration. Using Solidworks, my
-            group members and I generated models and conducted motion simulations of our designs,
-            allowing us to select the one which would yield the longest button pressing time.
-            Finally, we performed Finite Element Analysis (FEA) simulations and conducted hand
-            calculations to size our links.
+            We began by exploring several mechanisms inspired by the crank-rocker linkage. We varied
+            link lengths, mounting locations, and slot geometry to control the motion of the output
+            link.
           </p>
+          
+          <p>
+            We ultimately selected a slotted-link design because it allowed the mechanism to remain
+            near a vertical position for an extended portion of its motion, increasing the duration
+            for which the button could remain depressed.
+          </p>
+
+          <h2>Design & Analysis</h2>
+
+          <p>
+            We modeled the candidate mechanisms in SolidWorks and used motion simulations to evaluate
+            their kinematic behavior. By comparing the position and velocity of the output link over
+            time, we identified the geometry that provided the longest button actuation period.
+          </p>
+          
+          <p>
+            We also applied Grashof's criterion to evaluate the range of motion of the linkage and
+            performed hand calculations to determine the loads transmitted through the links.
+            Finite Element Analysis (FEA) was then used to verify that the selected link dimensions
+            could withstand the expected loading.
+          </p>
+          
           <div class="fig-pair">
             <figure class="fig">
               <img
@@ -169,27 +189,38 @@
             </figure>
           </div>
 
-          <h2>Iteration Process</h2>
+          <h2>Iteration & Testing</h2>
+
           <p>
-            On the first testing day, our assembly successfully pressed the button without
-            experiencing any failures or causing the motor to stall. However, we encountered an
-            issue with the slot mechanism, which resulted in the system descending sooner and more
-            rapidly than anticipated. As a result, the button was only pressed for a total of 3
-            seconds during a 2-minute period. We then refined our design using our understanding
-            of Grashof's criterion, as well as insights gained from testing. This involved
-            elongating two of our links and repositioning the assembly mounting position. Despite
-            our doubts regarding the functionality of the slot due to friction, we opted to keep
-            it in our design to minimize system weight. We then repeated the analysis process.
+            Initial testing confirmed that the mechanism could press the button without stalling the
+            motor, but the slot mechanism caused the assembly to descend much faster than predicted.
+            As a result, the button remained pressed for only 3 seconds during a two-minute test.
+          </p>
+          
+          <p>
+            We used the test results to refine the linkage geometry. I helped evaluate how changing
+            the link lengths and mounting position would affect the mechanism's range of motion and
+            dwell time. We elongated two links and repositioned the assembly mounting point while
+            retaining the slotted link to minimize system weight.
+          </p>
+          
+          <p>
+            After updating the design, we repeated the motion analysis and physical testing to validate
+            the revised geometry.
           </p>
 
           <h2>Results</h2>
+
           <p>
-            During the final testing day, the system exhibited a gradual and steady descent
-            without any sudden drops. Our assembly was able to successfully press the button for
-            over 41 seconds within the 2-minute timeframe, marking a significant improvement of 38
-            seconds in button press time. This project demonstrated the importance of iteration
-            for continuous improvement in the design process. Through this experience, I learned
-            how to use Solidworks motion simulations to visualize assembly behavior.
+            The revised mechanism produced a gradual, controlled descent and successfully held the
+            button for over 41 seconds during the same two-minute test. This represented a 38-second 
+            improvement over the initial design.
+          </p>
+          
+          <p>
+            The project demonstrated the value of combining kinematic analysis, simulation, physical
+            testing, and iterative mechanical design. It also gave me hands-on experience using
+            SolidWorks motion simulation to evaluate mechanism behavior before and after fabrication.
           </p>
 
           <div class="tools">
@@ -198,7 +229,7 @@
               <span class="chip">SolidWorks</span>
               <span class="chip">CAD</span>
               <span class="chip">FEA</span>
-              <span class="chip">Laser Cutter</span>
+              <span>Laser Cutting</span>
             </div>
           </div>
 
