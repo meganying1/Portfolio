@@ -15,7 +15,7 @@
     <link rel="canonical" href="https://www.meganying.com/pages/mobile-robot.html" />
     <meta
       name="description"
-      content="Programming an Arduino robot to autonomously navigate an obstacle course by using infrared and ultrasonic sensor input for motor control."
+      content="Programming an autonomous differential-drive robot to follow a curved path and avoid moving obstacles using infrared and ultrasonic sensors."
     />
 
     <link rel="stylesheet" href="../css/style.css" />
@@ -40,7 +40,6 @@
           <a class="nav__link" href="../index.html#experiences">Experiences</a>
           <a class="nav__link" href="../index.html#publications">Publications</a>
           <a class="nav__link" href="../index.html#projects">Projects</a>
-          <a class="nav__link" href="../index.html#contact">Contact</a>
         </nav>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
           <span class="nav-toggle__bar" aria-hidden="true"></span>
@@ -76,11 +75,6 @@
             <span class="label label__num">(05)</span>Projects
           </a>
         </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#contact">
-            <span class="label label__num">(06)</span>Contact
-          </a>
-        </li>
       </ul>
     </nav>
     <!-- #header:end -->
@@ -92,8 +86,8 @@
           <p class="label cs-hero__num">(07)</p>
           <h1 class="cs-hero__title">Mobile Robot</h1>
           <p class="cs-hero__deck">
-            Programming an Arduino robot to autonomously navigate an obstacle course by using
-            infrared and ultrasonic sensor input for motor control.
+            Programming an autonomous differential-drive robot to follow a curved path and avoid 
+            moving obstacles using infrared and ultrasonic sensors.
           </p>
         </div>
       </section>
@@ -101,46 +95,56 @@
       <section class="cs-body">
         <div class="container container--narrow">
           <h2>Overview</h2>
+
           <p>
-            In this project, I worked in a team to program a mobile robot using Arduino. Our
-            objective was to design a control algorithm to allow the robot to navigate through an
-            obstacle course as quickly as possible. The course involved following a curved line
-            and evading a series of sliding walls.
+            I worked with a team to develop an Arduino-based mobile robot capable of autonomously
+            navigating an obstacle course. The robot needed to follow a curved line while detecting
+            and avoiding a series of moving walls.
+          </p>
+          
+          <p>
+            We developed a sensor-driven control algorithm that continuously translated infrared and
+            ultrasonic sensor measurements into independent motor commands for the robot's
+            differential-drive system.
           </p>
 
-          <h2>Code</h2>
+          <h2>Sensor Integration</h2>
+
           <p>
-            Our robot utilized a differential drive mechanism, featuring wheels on each side
-            attached to individual motors. Our program uses input from an ultrasonic sensor and an
-            infrared sensor to determine the voltage that needs to be supplied to each motor. In
-            the initial phase of code development, our team focused on determining which values
-            were needed to assess whether the line tracking sensors detected the line. We devised
-            a program that would print the sensor values when placed directly on the line. This
-            enabled us to fine-tune our program to recognize the robot was positioned on the line
-            when sensor readings surpassing a specific threshold. Furthermore, our program would
-            deactivate the robot's motors when the ultrasonic sensor detected an object within a
-            certain distance.
+            The robot used three infrared sensors for line detection and an ultrasonic sensor for
+            obstacle detection. We characterized the infrared sensor response and established
+            thresholds for reliably determining when each sensor was positioned over the line.
           </p>
+          
           <p>
-            Within the loop section of our code, we integrated several if statements to assess
-            whether the robot is on the line and whether there is a nearby obstacle. Specifically,
-            one set of if statements allowed the algorithm to determine which infrared sensor
-            (left, right, or middle) last detected the line once the robot deviates from the path.
-            If the line was last detected on the right side, our algorithm adjusted the motor
-            voltages to prompt the robot to turn left, enabling it to realign with the line. The
-            same applies for if the line was last detected on the left side.
+            The ultrasonic sensor provided a separate obstacle-detection input. When an obstacle
+            was detected within a specified distance, the controller stopped both motors to prevent
+            the robot from colliding with the moving wall.
           </p>
+          
+          <h2>Control Algorithm</h2>
+          
           <p>
-            We also used a series of if statements to regulate the speed of our robot. If an
-            object is detected by the ultrasonic sensor, both motor voltages are set to 0 volts. If
-            only the middle infrared sensor detected the line, both motors operate at the same
-            speed. However, if both the middle and left sensors detect the line, the speed of the
-            left motor is adjusted to be slightly slower than the right motor. This prevents abrupt
-            turns in the opposite direction. The same adjustment is made if the middle and right
-            sensors both detect the line. Conversely, if only the left or right sensor detected the
-            line, the speed difference between the right and left motors increases to facilitate
-            quicker turns.
+            The control algorithm adjusted the speed of the left and right motors based on the
+            combination of infrared sensor readings. When the center sensor detected the line,
+            both motors operated at approximately the same speed. When the robot began to deviate
+            from the path, the controller adjusted the relative motor speeds to steer it back toward
+            the line.
           </p>
+          
+          <p>
+            The algorithm also tracked which side of the robot had most recently detected the line.
+            This allowed the robot to determine the appropriate direction of correction even when
+            all three sensors temporarily lost the line.
+          </p>
+          
+          <p>
+            We tuned the magnitude of the motor-speed difference based on the robot's position
+            relative to the line. Small deviations produced gradual corrections, while larger
+            deviations triggered more aggressive turns. This helped balance rapid recovery with
+            smooth path following.
+          </p>
+
           <figure class="fig">
             <img
               src="../assets/photos/projects/mobile_robot.jpg"
@@ -153,19 +157,39 @@
             <figcaption><span class="fig__num">Fig. 1</span>Robot navigating obstacle course</figcaption>
           </figure>
 
-          <h2>Results</h2>
+          <h2>Testing & Iteration</h2>
+
           <p>
-            During testing, our robot successfully evaded all moving obstacles and completed the
-            course in 26 seconds, outperforming 75% of other robots. It was able to steer itself
-            back onto the line when a deviation was detected. This project provided me with
-            valuable experience in Arduino programming. Additionally, I gained insight into the
-            kinematics of differential drive robots.
+            We tested the robot repeatedly on the course to tune sensor thresholds and motor speeds.
+            Testing allowed us to identify how different motor-speed combinations affected turning
+            behavior and line tracking performance.
+          </p>
+          
+          <p>
+            We iteratively adjusted the control logic to improve recovery when the robot deviated
+            from the line while maintaining sufficient speed to complete the course efficiently.
+          </p>
+          
+          <h2>Results</h2>
+          
+          <p>
+            The final robot successfully followed the course, avoided all moving obstacles, and
+            completed the challenge in 26 seconds, outperforming 75% of competing robots.
+          </p>
+          
+          <p>
+            This project gave me hands-on experience developing sensor-driven control logic and
+            integrating sensors, motors, and embedded software into a physical robotic system. It
+            also introduced me to the kinematics and control behavior of differential-drive robots.
           </p>
 
           <div class="tools">
             <h3 class="label">tools</h3>
             <div class="tools__list">
               <span class="chip">Arduino</span>
+              <span class="chip">Sensor Integration</span>
+              <span class="chip">Motor Control</span>
+              <span class="chip">Differential Drive</span>
             </div>
           </div>
 
@@ -187,7 +211,6 @@
             <a href="../index.html#experiences">Experiences</a>
             <a href="../index.html#publications">Publications</a>
             <a href="../index.html#projects">Projects</a>
-            <a href="../index.html#contact">Contact</a>
           </nav>
           <div>
             <div class="footer__social">

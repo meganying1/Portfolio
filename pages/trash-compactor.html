@@ -15,7 +15,7 @@
     <link rel="canonical" href="https://www.meganying.com/pages/trash-compactor.html" />
     <meta
       name="description"
-      content="Designing and fabricating a home trash compactor system for reducing waste volume and plastic bag usage."
+      content="Designing and fabricating an automated household trash compactor to reduce waste volume and plastic bag consumption."
     />
 
     <link rel="stylesheet" href="../css/style.css" />
@@ -40,7 +40,6 @@
           <a class="nav__link" href="../index.html#experiences">Experiences</a>
           <a class="nav__link" href="../index.html#publications">Publications</a>
           <a class="nav__link" href="../index.html#projects">Projects</a>
-          <a class="nav__link" href="../index.html#contact">Contact</a>
         </nav>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
           <span class="nav-toggle__bar" aria-hidden="true"></span>
@@ -76,11 +75,6 @@
             <span class="label label__num">(05)</span>Projects
           </a>
         </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#contact">
-            <span class="label label__num">(06)</span>Contact
-          </a>
-        </li>
       </ul>
     </nav>
     <!-- #header:end -->
@@ -92,48 +86,77 @@
           <p class="label cs-hero__num">(01)</p>
           <h1 class="cs-hero__title">Trash Compactor</h1>
           <p class="cs-hero__deck">
-            Designing and fabricating a home trash compactor system for reducing waste volume and
-            plastic bag usage.
+            Designing and fabricating an automated household trash compactor to reduce waste 
+            volume and plastic bag consumption.
           </p>
         </div>
       </section>
 
       <section class="cs-body">
         <div class="container container--narrow">
+          
           <h2>Overview</h2>
+          
           <p>
-            For our MechE Capstone course, 24-441: Product design, my team and I were tasked with
-            designing and fabricating a product with a significant mechanical component, given a
-            budget of $800. We chose to develop a trash compactor for reducing trash volume and
-            minimizing bag consumption. Our product targets homeowners, particularly in
-            pay-as-you-throw communities, where residents are charged based on the amount of waste
-            they generate.
+            Residential trash compactors are often expensive built-in appliances that require 
+            permanent installation, while lower-cost alternatives rely on manual compression and 
+            significant user effort. Our goal was to develop a compact, standalone trash compactor 
+            that automatically compresses household waste while remaining affordable, easy to use, 
+            and suitable for manufacturing at a consumer price point.
+          </p>
+          <p>
+            Over the course of a semester, my team designed, analyzed, fabricated, and tested a 
+            fully functional prototype within an $800 budget. The project ended with a live 
+            demonstration at the Carnegie Mellon Mechanical Engineering Design Expo, where it 
+            received the Best Overall Project award.
           </p>
 
-          <h2>Design Process</h2>
+          <h2>Concept Development</h2>
+
           <p>
-            We began by analyzing competitor products, evaluating their strengths and weaknesses.
-            Many options required manual user force or were expensive and required professional
-            installation. We were inspired to develop an affordable, compact, and user-friendly
-            product, brainstorming potential designs ideas. After ranking them based on
-            effectiveness, durability, feasibility, and ease of use, we selected our final design.
-            Throughout the design process, we applied Design for Manufacturing and Assembly
-            (DFMA), Failure Mode and Effects Analysis (FMEA), and Design for Environment (DFE)
-            principles.
+            We began by benchmarking commercially available trash compactors to understand existing
+            solutions and identify opportunities for improvement. Many products were either very
+            expensive, required permanent installation, or depended on manual user force to compress
+            waste. From this research, we established the primary design objectives:
+          </p>
+          
+          <ul>
+            <li>Reduce household trash volume with minimal user effort</li>
+            <li>Fit within the footprint of a standard kitchen trash bin</li>
+            <li>Operate safely with a simple user interface</li>
+            <li>Minimize manufacturing complexity and cost</li>
+          </ul>
+          
+          <p>
+            After brainstorming multiple concepts, we evaluated each using weighted design criteria
+            including performance, manufacturability, durability, ease of use, and cost. The final
+            concept combined a scissor-lift mechanism with a linear actuator, providing a compact
+            package while generating sufficient mechanical advantage to compress typical household
+            waste.
+          </p>
+          
+          <p>
+            Throughout the design process, we considered Design for Manufacturing and Assembly (DFMA),
+            Failure Mode and Effects Analysis (FMEA), and Design for Environment (DFE) principles to
+            guide design decisions.
           </p>
 
-          <h2>Product Features</h2>
+          <h2>Mechanical Design</h2>
+
           <p>
-            Our prototype features a compacting system housed inside a wooden trash bin, designed
-            to be fully operational with no user assembly required. The system utilizes a scissor
-            lift mechanism to compress household trash. When the user presses a button, the
-            linkage system pushes a plate upward to compress the trash against the lid, holds the
-            position for 10 seconds, and then retracts. The base of the compactor contains a box
-            housing the system's key electrical components: a linear actuator, a stepper motor,
-            and an Arduino board. The motor is powered by a standard outlet, while the Arduino is
-            powered by a battery pack. The compactor also features a latching system to allow the
-            user to securely lock the lid in place.
+            The final prototype integrates a motorized compaction system inside a wooden trash bin and
+            requires no user assembly. When activated, a linear actuator drives a scissor-lift linkage
+            that raises a compression plate against the underside of the lid, compacting the trash.
+            The controller maintains the compression force for approximately ten seconds before
+            automatically retracting the mechanism.
           </p>
+          
+          <p>
+            An enclosure beneath the bin houses the actuator, stepper motor, and Arduino-based control
+            system, while a latching mechanism secures the lid throughout the compression cycle to
+            ensure safe operation.
+          </p>
+          
           <div class="fig-pair">
             <figure class="fig">
               <img
@@ -148,6 +171,7 @@
                 <span class="fig__num">Fig. 1</span>Final prototype of trash compactor system
               </figcaption>
             </figure>
+            
             <figure class="fig">
               <img
                 src="../assets/photos/projects/compactor-linkage.jpg"
@@ -160,17 +184,21 @@
               <figcaption><span class="fig__num">Fig. 2</span>Linkage system of trash compactor</figcaption>
             </figure>
           </div>
+          
           <p>
-            Our linkage system is constructed from aluminum bars and rods, which we machined using
-            a manual lathe and mill. To connect the linkage system to the compactor plate, my team
-            and I used aluminum L-brackets, which were also machined with a mill. For attaching
-            the linkage system to the linear actuator, we designed custom attachments in
-            SolidWorks and fabricated them out of PLA using 3D printing. Additionally, we cut and
-            assembled the wood for the trash bin receptacle, securing the panels, hinges, and
-            locking mechanism in place with screws. While the prototype closely resembles the
-            final design, mass production would use different materials and methods for
-            scalability.
+            The linkage assembly was fabricated from machined aluminum bars and rods. We manufactured
+            the links and L-brackets using manual milling and turning operations, then designed custom
+            actuator interfaces in SolidWorks and produced them with additive manufacturing for rapid
+            iteration. The wooden enclosure was cut, assembled, and integrated with the mechanical
+            system, electronics, hinges, and locking hardware to create a fully functional prototype.
           </p>
+          
+          <p>
+            Although the prototype emphasized rapid fabrication and testing, we also considered how the
+            design would transition to mass production through alternative materials and manufacturing
+            processes.
+          </p>
+          
           <figure class="fig">
             <img
               src="../assets/photos/projects/compactor_cad.png"
@@ -183,21 +211,36 @@
             <figcaption><span class="fig__num">Fig. 3</span>CAD model of linkage system</figcaption>
           </figure>
 
-          <h2>Analysis Process</h2>
+          <h2>Engineering Analysis</h2>
+          
           <p>
-            To aid prototyping, we developed detailed CAD models of the system, which allowed us
-            to determine the correct dimensions for our linkage system and wooden bin. We also
-            performed hand calculations to estimate the motor's strength and the weight the
-            linkage system could support, considering both worst-case and best-case scenarios. In
-            the worst-case scenario, we assumed the roller as the only support point, while the
-            best-case scenario assumed an even distribution of force between the pin and roller.
-            These calculations suggested the system could support a load between 6.4 to 12.8 lbs
-            without stalling. Further analysis revealed a Factor of Safety (FOS) of 1160 for a
-            6.4-lb load and 124 for a 60-lb load, which we determined was ideal for compressing
-            trash through testing. Based on these findings, we identified that the motor's load
-            capacity was the limiting factor in the system's strength. As a result, we plan to
-            include a stronger motor in the final design for mass production.
+            Before fabrication, we developed CAD models and performed engineering calculations to size
+            the linkage system and verify that the selected actuator could generate sufficient
+            compaction force.
           </p>
+
+          <p>
+            Using free-body diagrams and static force analysis, we evaluated the load transmitted
+            through the linkage under both worst-case and best-case loading conditions. These
+            calculations predicted that the mechanism could support approximately
+            6.4 to 12.8 lb before the actuator stalled, depending on the
+            distribution of reaction forces.
+          </p>
+
+          <p>
+            We also evaluated the structural capacity of the linkage members through factor-of-safety
+            calculations. The analysis showed that the aluminum linkage had significantly greater
+            strength than required for expected operating loads, indicating that actuator capacity, not 
+            structural failure, would ultimately limit system performance.
+          </p>
+          
+          <p>
+            Physical testing confirmed this prediction. During testing, the linkage remained well within
+            its structural limits while the actuator became the limiting component when compressing
+            heavier loads. Based on these results, we identified a higher-capacity actuator as the
+            primary improvement for a production-ready design.
+          </p>=
+          
           <div class="fig-pair">
             <figure class="fig">
               <img
@@ -210,6 +253,7 @@
               />
               <figcaption><span class="fig__num">Fig. 4</span>Force transmission calculations</figcaption>
             </figure>
+            
             <figure class="fig">
               <img
                 src="../assets/photos/projects/compactor_fos.jpg"
@@ -224,24 +268,29 @@
           </div>
 
           <h2>Results</h2>
+
           <p>
-            Our team was able to successfully fabricate a functioning prototype of our trash
-            compactor. We presented it at the CMU Fall 2024 MechE Design Expo, where we won Best
-            Overall Project. This project provided me with valuable hands-on experience in
-            mechatronics, Arduino programming, and machining.
+            The completed prototype successfully demonstrated automated household waste compaction
+            using a fully integrated mechanical and electrical system. The project was recognized with
+            the Best Overall Project Award at the 2025 Carnegie Mellon Mechanical
+            Engineering Design Expo.
+          </p>
+          
+          <p>
+            This project strengthened my experience in product design, mechanism design, CAD,
+            engineering analysis, fabrication, and mechatronic system integration. It provided 
+            experience taking a product from early concept generation through prototyping, testing, 
+            and iterative refinement.
           </p>
 
           <div class="tools">
             <h3 class="label">tools</h3>
             <div class="tools__list">
               <span class="chip">SolidWorks</span>
-              <span class="chip">CAD</span>
+              <span class="chip">Mechanism Design</span>
               <span class="chip">Arduino</span>
-              <span class="chip">Laser Cutter</span>
-              <span class="chip">3D Printer</span>
-              <span class="chip">Manual Mill</span>
-              <span class="chip">Manual Lathe</span>
-              <span class="chip">Band Saw</span>
+              <span class="chip">Machining</span>
+              <span class="chip">3D Printing</span>
             </div>
           </div>
 
@@ -262,7 +311,6 @@
             <a href="../index.html#experiences">Experiences</a>
             <a href="../index.html#publications">Publications</a>
             <a href="../index.html#projects">Projects</a>
-            <a href="../index.html#contact">Contact</a>
           </nav>
           <div>
             <div class="footer__social">

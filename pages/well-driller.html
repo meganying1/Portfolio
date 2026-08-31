@@ -15,7 +15,7 @@
     <link rel="canonical" href="https://www.meganying.com/pages/well-driller.html" />
     <meta
       name="description"
-      content="Developing a conceptual design of a well driller that relies on human-produced pedal power."
+      content="Developing a human-powered well drilling system that converts pedal input into vertical drilling motion through mechanical power transmission."
     />
 
     <link rel="stylesheet" href="../css/style.css" />
@@ -40,7 +40,6 @@
           <a class="nav__link" href="../index.html#experiences">Experiences</a>
           <a class="nav__link" href="../index.html#publications">Publications</a>
           <a class="nav__link" href="../index.html#projects">Projects</a>
-          <a class="nav__link" href="../index.html#contact">Contact</a>
         </nav>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
           <span class="nav-toggle__bar" aria-hidden="true"></span>
@@ -76,11 +75,6 @@
             <span class="label label__num">(05)</span>Projects
           </a>
         </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#contact">
-            <span class="label label__num">(06)</span>Contact
-          </a>
-        </li>
       </ul>
     </nav>
     <!-- #header:end -->
@@ -100,25 +94,38 @@
 
       <section class="cs-body">
         <div class="container container--narrow">
-          <h2>Overview</h2>
+          
+          <h>Overview</h>
+          
           <p>
-            This project involved collaborating with a team to develop a modification of the
-            <a href="https://villagedrill.com" target="_blank" rel="noreferrer">Village Drill</a>
-            that relies on human-produced pedal power. Our objective was to develop the optimal
-            design by considering such as equilibrium, power transmission, failure criteria, and
-            the unique requirements of the community.
+            I worked with a team to develop a modification to the
+            <a href="https://villagedrill.com" target="_blank" rel="noreferrer">Village Drill</a> 
+            that replaces conventional power input with human-generated pedal power. The goal was 
+            to create a mechanically feasible drilling system that could be operated through 
+            sustained pedaling while meeting the structural and power requirements of the drilling 
+            process.
+          </p>
+          
+          <p>
+            Our design process required us to balance mechanism complexity, mechanical advantage,
+            structural loading, power transmission, and the physical capabilities of the user.
           </p>
 
-          <h2>Design Process</h2>
+          <h2>Concept Development</h2>
+
           <p>
-            My team began our design process by brainstorming mechanisms for translating the
-            rotational motion of pedaling into the vertical motion of the driller. We also
-            discussed how these mechanisms would integrate into our system-level designs. Our
-            ideas included using a pile driver, a bevel gear, or a worm gear. After careful
-            consideration of stakeholder input, specific customer needs, and the target
-            specifications of our design, we chose to use the pile driver mechanism. The pile
-            driver operates by lifting the driller up and dropping it.
+            We explored several mechanisms for converting the rotational motion of the pedals into
+            the vertical motion required to drive the drill. Concepts included bevel gears, worm
+            gears, and a pile-driver mechanism.
           </p>
+          
+          <p>
+            After evaluating the concepts against stakeholder requirements and system-level
+            constraints, we selected a pile-driver architecture. Rather than continuously driving
+            the drill downward, the mechanism uses pedal input to lift the drill and then releases it,
+            allowing the drill to fall under its own weight.
+          </p>
+          
           <figure class="fig">
             <img
               src="../assets/photos/projects/driller_mechanism.png"
@@ -131,17 +138,31 @@
             <figcaption><span class="fig__num">Fig. 1</span>Sketch of pile driver mechanism</figcaption>
           </figure>
 
-          <h2>Analysis Process</h2>
+          <h2>Engineering Analysis</h2>
+
           <p>
-            Once we finalized our design, we utilized SolidWorks to generate a Computer-Assisted
-            Design (CAD) model of the system. Based on the properties and dimensions of our model,
-            we conducted calculations to determine crucial parameters such as cable tension, pedal
-            force, and reaction forces at fixed points within the structure. Based on the forces
-            we identified, we determined the minimum pin diameters required to achieve a
-            satisfactory factor of safety. Additionally, we conducted Finite Element Analysis
-            (FEA) of the pedal to assess its structural integrity. Finally, we determined the
-            power required to operate our design, and thus, the required pedal rotation rate.
+            We developed the system geometry in SolidWorks and used the resulting model to evaluate
+            the mechanical relationships between the pedal input, cable system, lifting mechanism,
+            and drill assembly.
           </p>
+          
+          <p>
+            The design was sized around the forces and motion required to repeatedly lift the drill
+            while keeping the required pedal force within a practical range for the operator.
+          </p>
+
+          <p>
+            We performed static force analysis to determine cable tension, pedal force, and reaction
+            forces at the structural mounting points. These loads were then used to determine the
+            minimum required pin diameters based on the target factor of safety.
+          </p>
+          
+          <p>
+            We also evaluated the structural integrity of the pedal using Finite Element Analysis
+            (FEA), identifying regions of higher stress and verifying that the proposed geometry
+            could withstand the expected loading.
+          </p>
+          
           <div class="fig-pair">
             <figure class="fig">
               <img
@@ -154,6 +175,7 @@
               />
               <figcaption><span class="fig__num">Fig. 2</span>CAD model of system</figcaption>
             </figure>
+            
             <figure class="fig">
               <img
                 src="../assets/photos/projects/driller_fea.png"
@@ -178,21 +200,30 @@
             <figcaption><span class="fig__num">Fig. 4</span>Calculating reaction forces</figcaption>
           </figure>
 
-          <h2>Results</h2>
           <p>
-            Upon analyzing our calculations, my team concluded that our final design was
-            reasonable and efficient. This project gave me the opportunity to apply fundamental
-            mechanical engineering principles, such as statics, stress analysis, and dynamics, to
-            a real-world challenge. Through its completion, I gained valuable insights into the
-            factors that must be taken into consideration throughout the design process and
-            learned how to utilize metrics to gauge the success of a product.
+            Finally, we calculated the mechanical power required to operate the drilling mechanism.
+            This allowed us to determine the approximate pedal rotation rate needed to achieve the
+            required drilling cycle and assess whether the system was practical for human operation.
+          </p>
+
+          <h2>Results</h2>
+
+          <p>
+            Our analysis indicated that the proposed design was mechanically feasible and could
+            satisfy the identified structural and power requirements.
+          </p>
+          
+          <p>
+            This project allowed me to apply statics, stress analysis, dynamics, and power
+            transmission to a system-level mechanical design. It also reinforced the importance of
+            evaluating a mechanism not only for whether it works mechanically, but also for whether
+            its force and power requirements are practical for the intended user.
           </p>
 
           <div class="tools">
             <h3 class="label">tools</h3>
             <div class="tools__list">
               <span class="chip">SolidWorks</span>
-              <span class="chip">CAD</span>
               <span class="chip">FEA</span>
             </div>
           </div>
@@ -215,7 +246,6 @@
             <a href="../index.html#experiences">Experiences</a>
             <a href="../index.html#publications">Publications</a>
             <a href="../index.html#projects">Projects</a>
-            <a href="../index.html#contact">Contact</a>
           </nav>
           <div>
             <div class="footer__social">

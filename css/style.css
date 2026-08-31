@@ -84,11 +84,9 @@ p {
   --ink: #111111;
   --muted: #6b6b6b;
   --rule: #e2e0dc; /* hairlines, dividers — decorative only */
-  --rule-strong: #8c877f; /* form field borders only */
   --chip: #efede8;
   --white: #ffffff;
   --accent: #23395b;
-  --accent-hover: #35527d;
   --accent-wash: rgba(35, 57, 91, 0.05);
 
   --font-display: "Instrument Serif", Georgia, serif;
@@ -750,71 +748,6 @@ body.nav-open {
   .index__peek-wrap {
     display: none;
   }
-}
-
-/* --- contact form --- */
-
-.contact__form {
-  max-width: 34rem;
-}
-
-.field-group {
-  margin-bottom: var(--space-6);
-}
-
-.field-group label {
-  display: block;
-  margin-bottom: var(--space-2);
-}
-
-.field {
-  width: 100%;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  border-bottom: 1px solid var(--rule-strong); /* NOT --rule — 1.25:1 fails 1.4.11 */
-  font: inherit;
-  font-size: var(--fs-body);
-  color: var(--ink);
-  padding: 0.75rem 0;
-}
-
-.field:focus-visible {
-  outline: none;
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: calc(0.75rem - 1px); /* prevents a 1px jump */
-}
-
-textarea.field {
-  resize: vertical;
-}
-
-.h-captcha {
-  min-height: 78px;
-  margin-block: var(--space-6);
-  max-width: 100%;
-  overflow-x: auto; /* the iframe has a fixed intrinsic width and can't be styled */
-}
-
-.btn {
-  display: inline-block;
-  width: auto;
-  border: 0;
-  border-radius: 0;
-  background: var(--accent);
-  color: #fff;
-  padding: 0.875rem 2rem;
-  font-family: var(--font-ui);
-  font-size: var(--fs-small);
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background var(--dur) var(--ease);
-}
-
-.btn:hover {
-  background: var(--accent-hover);
 }
 
 /* --- footer --- */
