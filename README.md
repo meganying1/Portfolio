@@ -8,7 +8,6 @@ Personal portfolio website showcasing my experiences, publications, and projects
 - **Experiences** - Professional roles
 - **Publications** - Academic papers
 - **Projects** - Engineering and software projects
-- **Contact** - Reach out via form
 
 ## Built With
 
@@ -16,7 +15,6 @@ Personal portfolio website showcasing my experiences, publications, and projects
 - CSS
 - JavaScript
 - [Instrument Serif](https://fonts.google.com/specimen/Instrument+Serif) + [Inter](https://fonts.google.com/specimen/Inter) via Google Fonts
-- [Web3Forms](https://web3forms.com) for the contact form
 - GitHub Pages for hosting
 
 ## Credits
