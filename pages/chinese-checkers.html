@@ -15,7 +15,7 @@
     <link rel="canonical" href="https://www.meganying.com/pages/chinese-checkers.html" />
     <meta
       name="description"
-      content="Coding a multiplayer Chinese checkers game with the option of an opponent AI."
+      content="Building a Chinese Checkers game with AI decision-making, multiplayer support, and an interactive graphical interface."
     />
 
     <link rel="stylesheet" href="../css/style.css" />
@@ -92,7 +92,8 @@
           <p class="label cs-hero__num">(06)</p>
           <h1 class="cs-hero__title">Chinese Checkers</h1>
           <p class="cs-hero__deck">
-            Coding a multiplayer Chinese checkers game with the option of an opponent AI.
+            Building a Chinese Checkers game with AI decision-making, multiplayer support, and 
+            an interactive graphical interface.
           </p>
         </div>
       </section>
@@ -100,27 +101,36 @@
       <section class="cs-body">
         <div class="container container--narrow">
           <h2>Overview</h2>
-          <p>
-            For my final project in 15-112: Fundamentals of Programming and Computer Science, I
-            developed a Chinese Checkers game using object-oriented programming in Python. The
-            program utilizes Tkinter, a standard GUI library in Python. It features the core
-            gameplay of Chinese checkers along with several additional functionalities. Players
-            have the option to play against an AI opponent or against friends, and they can
-            request for hints during gameplay. It also includes timed turns for an added
-            challenge. You can view a demonstration of my program
-            <a href="https://youtu.be/EQbkK0stQs8" target="_blank" rel="noreferrer">here</a>.
-          </p>
 
-          <h2>Complex Features</h2>
           <p>
-            In Chinese checkers, the game board is not a perfect grid; the even and odd rows are
-            offset from each other. This non-conformity added complexity to tasks such as drawing
-            the board, determining row and column coordinates, and implementing basic gameplay
-            mechanics. To address this, I developed a function that calculates the X-Y coordinates
-            of a cell based on its row and column, and vice versa, by incorporating the necessary
-            offset adjustments. In addition, to account for this offset when moving pieces on the
-            board, my program determines when the change in column must be adjusted.
+            As the final project for Carnegie Mellon's introductory computer science course, I
+            developed a complete implementation of Chinese Checkers in Python using Tkinter.
+            The project included local multiplayer gameplay, an AI opponent, move hints,
+            animations, and timed turns, requiring the design of both the game engine and the
+            graphical user interface.
           </p>
+          
+          <p>
+            The project emphasized object-oriented software design, algorithm development, and
+            interactive application programming.
+          </p>
+          
+          <h2>Software Design</h2>
+          
+          <p>
+            I designed the application using an object-oriented architecture to separate the game
+            state, user interface, and gameplay logic. Because the Chinese Checkers board is not a
+            rectangular grid, one of the primary challenges was representing the board and mapping
+            between board coordinates and screen coordinates.
+          </p>
+          
+          <p>
+            I developed coordinate conversion functions that accounted for the offset between
+            alternating rows, enabling accurate rendering, mouse interaction, and move validation.
+            I also implemented the complete game logic, including legal move generation,
+            multi-jump sequences, turn management, win detection, and animated piece movement.
+          </p>
+          
           <div class="fig-pair">
             <figure class="fig">
               <img
@@ -133,6 +143,7 @@
               />
               <figcaption><span class="fig__num">Fig. 1</span>Chinese checkers board</figcaption>
             </figure>
+            
             <figure class="fig">
               <img
                 src="../assets/photos/projects/checker_highlight.png"
@@ -145,43 +156,53 @@
               <figcaption><span class="fig__num">Fig. 2</span>Highlighting possible moves</figcaption>
             </figure>
           </div>
+          
           <p>
-            Another intricate aspect of my code involves the algorithm for enabling a player's
-            piece to continue jumping over other pieces once it has begun. To implement this, I
-            used a variable that switches to True when the player is in the process of jumping,
-            and False otherwise. When the variable is set to True, the user can only execute
-            jumping moves, and their turn does not end until they click elsewhere on the board.
-          </p>
-          <p>
-            Incorporating animations for the ball movements also posed a challenge. To achieve
-            this, I assigned a variable to each ball indicating whether it is currently in motion.
-            When this variable is set to True, my program calculates the required change in the
-            ball's x-y coordinates over a set amount of time, continuously redrawing the ball
-            until it reaches its new location.
-          </p>
-          <p>
-            In my code, I implemented the minimax algorithm to enable users to play against an AI
-            opponent. Utilizing object-oriented programming, I constructed a data tree
-            representing all possible game states. Each state is assigned a value reflecting how
-            beneficial it is for the AI. The program then traverses through each branch of the
-            data tree to identify the optimal path. This backtracking algorithm also allows the
-            user to request for hints.
+            To support smooth gameplay, I implemented animated piece movement by continuously
+            updating the position of moving pieces over time, creating a more responsive and
+            intuitive user experience.
           </p>
 
-          <h2>Results</h2>
+          <h2>AI & Algorithms</h2>
+
           <p>
-            My friends and I regularly use my program to play Chinese checkers. This project
-            provided me with invaluable experience in developing complex code with minimal
-            guidance. Through its completion, I expanded my knowledge of various packages and
-            functionalities available in Python. I also gained confidence in employing recursive
-            functions and object-oriented programming techniques. Lastly, I was able to improve my
-            ability to detect bugs within my code.
+            I implemented a Minimax search algorithm to enable single-player gameplay against an AI
+            opponent. The AI evaluates future game states by recursively exploring possible move
+            sequences and selecting the move with the highest evaluation score.
+          </p>
+          
+          <p>
+            The same search framework also powers the game's hint system by identifying strong
+            candidate moves for the player. Implementing the AI required building a tree of game
+            states and efficiently traversing it using recursive search.
+          </p>
+          
+          <p>
+            Additional game logic was developed to correctly enforce chained jump sequences,
+            ensuring that players completed all available jumps before ending their turn.
+          </p>
+          
+          <h2>Results</h2>
+          
+          <p>
+            The completed application supports multiplayer gameplay, AI opponents, move hints,
+            animations, and timed turns within a fully interactive graphical interface.
+          </p>
+          
+          <p>
+            This project strengthened my understanding of object-oriented programming, recursion,
+            algorithm design, event-driven programming, and GUI development. It also provided
+            experience designing a moderately complex software system from the ground up.
           </p>
 
           <div class="tools">
             <h3 class="label">tools</h3>
             <div class="tools__list">
-              <span class="chip">Python</span>
+              <span>Python</span>
+              <span>Object-Oriented Programming</span>
+              <span>Minimax</span>
+              <span>Recursion</span>
+              <span>Tkinter</span>
             </div>
           </div>
 
