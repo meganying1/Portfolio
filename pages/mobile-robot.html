@@ -83,10 +83,10 @@
       <section class="cs-hero">
         <div class="container container--narrow">
           <a class="label cs-hero__back" href="../index.html#projects">← Projects</a>
-          <p class="label cs-hero__num">(07)</p>
+          <p class="label cs-hero__num">(08)</p>
           <h1 class="cs-hero__title">Mobile Robot</h1>
           <p class="cs-hero__deck">
-            Programming an autonomous differential-drive robot to follow a curved path and avoid 
+            Programming an autonomous differential-drive robot to follow a curved path and avoid
             moving obstacles using infrared and ultrasonic sensors.
           </p>
         </div>
@@ -101,7 +101,7 @@
             navigating an obstacle course. The robot needed to follow a curved line while detecting
             and avoiding a series of moving walls.
           </p>
-          
+
           <p>
             We developed a sensor-driven control algorithm that continuously translated infrared and
             ultrasonic sensor measurements into independent motor commands for the robot's
@@ -115,15 +115,15 @@
             obstacle detection. We characterized the infrared sensor response and established
             thresholds for reliably determining when each sensor was positioned over the line.
           </p>
-          
+
           <p>
             The ultrasonic sensor provided a separate obstacle-detection input. When an obstacle
             was detected within a specified distance, the controller stopped both motors to prevent
             the robot from colliding with the moving wall.
           </p>
-          
+
           <h2>Control Algorithm</h2>
-          
+
           <p>
             The control algorithm adjusted the speed of the left and right motors based on the
             combination of infrared sensor readings. When the center sensor detected the line,
@@ -131,13 +131,13 @@
             from the path, the controller adjusted the relative motor speeds to steer it back toward
             the line.
           </p>
-          
+
           <p>
             The algorithm also tracked which side of the robot had most recently detected the line.
             This allowed the robot to determine the appropriate direction of correction even when
             all three sensors temporarily lost the line.
           </p>
-          
+
           <p>
             We tuned the magnitude of the motor-speed difference based on the robot's position
             relative to the line. Small deviations produced gradual corrections, while larger
@@ -164,19 +164,19 @@
             Testing allowed us to identify how different motor-speed combinations affected turning
             behavior and line tracking performance.
           </p>
-          
+
           <p>
             We iteratively adjusted the control logic to improve recovery when the robot deviated
             from the line while maintaining sufficient speed to complete the course efficiently.
           </p>
-          
+
           <h2>Results</h2>
-          
+
           <p>
             The final robot successfully followed the course, avoided all moving obstacles, and
             completed the challenge in 26 seconds, outperforming 75% of competing robots.
           </p>
-          
+
           <p>
             This project gave me hands-on experience developing sensor-driven control logic and
             integrating sensors, motors, and embedded software into a physical robotic system. It
