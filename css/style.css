@@ -663,9 +663,10 @@ body.nav-open {
 .index__meta {
   display: none;
   flex-shrink: 0;
-  width: 14rem;
+  width: 18rem;
   font-size: var(--fs-small);
   color: var(--muted);
+  white-space: nowrap;
 }
 
 .index__arrow {
@@ -716,8 +717,8 @@ body.nav-open {
   opacity: 0;
   overflow: hidden;
   padding-block: 0;
-  transition: max-height var(--dur-slow) var(--ease), opacity var(--dur) var(--ease),
-    padding-block var(--dur-slow) var(--ease);
+  transition: max-height var(--dur) var(--ease), opacity var(--dur) var(--ease),
+    padding-block var(--dur) var(--ease);
 }
 
 .index__peek {
@@ -738,7 +739,7 @@ body.nav-open {
 @media (hover: hover) and (min-width: 48em) {
   .index__item:hover .index__peek-wrap,
   .index__item:focus-within .index__peek-wrap {
-    max-height: 18rem;
+    max-height: 11rem;
     opacity: 1;
     padding-block: var(--space-4);
   }
@@ -945,6 +946,35 @@ body.nav-open {
   margin-top: var(--space-4);
 }
 
+.files {
+  margin-top: var(--space-9);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-6);
+}
+
+.files__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.files__list .chip {
+  transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+
+.files__list .chip:hover {
+  background: var(--ink);
+  color: var(--white);
+}
+
+/* files and tools read as one grouped foot under a single rule */
+.files + .tools {
+  margin-top: var(--space-6);
+  border-top: 0;
+  padding-top: 0;
+}
+
 .pager {
   display: flex;
   justify-content: space-between;
@@ -977,7 +1007,8 @@ body.nav-open {
   margin-top: var(--space-8);
 }
 
-.fig img {
+.fig img,
+.fig video {
   display: block;
   width: 100%;
   height: auto;
@@ -1009,6 +1040,98 @@ body.nav-open {
   .fig-pair {
     grid-template-columns: 1fr;
   }
+}
+
+/* --- data tables --- */
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-caption);
+  line-height: 1.5;
+  text-align: left;
+}
+
+.data-table th,
+.data-table td {
+  padding: var(--space-3) var(--space-4) var(--space-3) 0;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+.data-table thead th {
+  border-bottom-color: var(--ink);
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.data-table tbody th {
+  font-weight: 400;
+}
+
+.data-table .num {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.data-table tfoot td,
+.data-table tfoot th {
+  border-bottom: 0;
+  font-weight: 600;
+}
+
+.data-table .is-chosen {
+  background: var(--chip);
+}
+
+/* --- embedded presentation --- */
+
+.deck {
+  margin-top: var(--space-9);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-6);
+}
+
+.deck__frame {
+  margin-top: var(--space-4);
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--rule);
+  background: var(--white);
+  overflow: hidden;
+}
+
+.deck__frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.deck__fallback {
+  margin-top: var(--space-3);
+  font-size: var(--fs-caption);
+  color: var(--muted);
+}
+
+.deck__fallback a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.deck__fallback a:hover {
+  color: var(--accent);
+}
+
+/* deck sits directly above files, so group them under one rule */
+.deck + .files {
+  margin-top: var(--space-6);
+  border-top: 0;
+  padding-top: 0;
 }
 
 /* ===== 06 UTILITIES ===== */
