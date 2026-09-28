@@ -409,30 +409,6 @@ body.nav-open {
   color: var(--ink);
 }
 
-.hero__typed {
-  font-family: var(--font-ui);
-  font-size: var(--fs-lede);
-  line-height: 1.45;
-  letter-spacing: -0.01em;
-  color: var(--muted);
-}
-
-.caret {
-  display: inline-block;
-  width: 2px;
-  height: 1.1em;
-  background: var(--accent);
-  vertical-align: -0.15em;
-  margin-left: 0.1em;
-  animation: blink 1.06s steps(1) infinite;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
 /* --- about --- */
 
 .about__lede {

@@ -27,63 +27,6 @@ function nav() {
   });
 }
 
-// Hero typewriter: cycles role strings without reflowing the line (ghost span
-// reserves width) and pauses while the tab is hidden.
-function typewriter() {
-  const liveEl = document.getElementById("typewriter");
-  if (!liveEl) return;
-
-  const words = ["an engineer", "a programmer", "a scientist"];
-  const TYPE_DELAY = 55;
-  const DELETE_DELAY = 30;
-  const HOLD_DELAY = 2600;
-  const PAUSE_DELAY = 400;
-
-  let wordIndex = 0;
-
-  function waitIfHidden(next, delay) {
-    if (document.visibilityState !== "visible") {
-      setTimeout(() => waitIfHidden(next, delay), delay);
-      return;
-    }
-    next();
-  }
-
-  function typeWord() {
-    const chars = words[wordIndex].split("");
-    function typeNext() {
-      waitIfHidden(() => {
-        if (chars.length > 0) {
-          liveEl.textContent += chars.shift();
-          setTimeout(typeNext, TYPE_DELAY);
-        } else {
-          setTimeout(deleteWord, HOLD_DELAY);
-        }
-      }, TYPE_DELAY);
-    }
-    typeNext();
-  }
-
-  function deleteWord() {
-    const chars = words[wordIndex].split("");
-    function deleteNext() {
-      waitIfHidden(() => {
-        if (chars.length > 0) {
-          chars.pop();
-          liveEl.textContent = chars.join("");
-          setTimeout(deleteNext, DELETE_DELAY);
-        } else {
-          wordIndex = (wordIndex + 1) % words.length;
-          setTimeout(typeWord, PAUSE_DELAY);
-        }
-      }, DELETE_DELAY);
-    }
-    deleteNext();
-  }
-
-  typeWord();
-}
-
 // Scroll reveals: fade/rise each .reveal into view once, then stop observing it
 function reveal() {
   const items = document.querySelectorAll(".reveal");
@@ -150,6 +93,5 @@ function deck() {
 }
 
 nav();
-typewriter();
 reveal();
 deck();
