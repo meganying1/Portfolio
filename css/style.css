@@ -409,30 +409,6 @@ body.nav-open {
   color: var(--ink);
 }
 
-.hero__typed {
-  font-family: var(--font-ui);
-  font-size: var(--fs-lede);
-  line-height: 1.45;
-  letter-spacing: -0.01em;
-  color: var(--muted);
-}
-
-.caret {
-  display: inline-block;
-  width: 2px;
-  height: 1.1em;
-  background: var(--accent);
-  vertical-align: -0.15em;
-  margin-left: 0.1em;
-  animation: blink 1.06s steps(1) infinite;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
 /* --- about --- */
 
 .about__lede {
@@ -1088,7 +1064,7 @@ body.nav-open {
   background: var(--chip);
 }
 
-/* --- embedded presentation --- */
+/* --- slide deck --- */
 
 .deck {
   margin-top: var(--space-9);
@@ -1098,33 +1074,67 @@ body.nav-open {
 
 .deck__frame {
   margin-top: var(--space-4);
-  aspect-ratio: 16 / 9;
   border: 1px solid var(--rule);
   background: var(--white);
-  overflow: hidden;
 }
 
-.deck__frame iframe {
+.deck__slide {
   display: block;
   width: 100%;
-  height: 100%;
-  border: 0;
+  height: auto;
 }
 
-.deck__fallback {
+/* without JS every slide stacks; the script shows one at a time */
+.deck__frame[data-enhanced="true"] .deck__slide {
+  display: none;
+}
+
+.deck__frame[data-enhanced="true"] .deck__slide.is-active {
+  display: block;
+}
+
+.deck__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
   margin-top: var(--space-3);
+}
+
+.deck__controls[hidden] {
+  display: none;
+}
+
+.deck__nav {
+  padding: 0.3em 0.8em;
+  border: 1px solid var(--rule);
+  background: var(--white);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: var(--fs-small);
+  line-height: 1.4;
+  cursor: pointer;
+  transition:
+    border-color var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+
+.deck__nav:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.deck__nav:disabled {
+  color: var(--muted);
+  cursor: default;
+  opacity: 0.5;
+}
+
+/* .deck scopes the selector so it outranks `.cs-body p`'s top margin */
+.deck .deck__count {
+  margin: 0 0 0 var(--space-2);
   font-size: var(--fs-caption);
   color: var(--muted);
-}
-
-.deck__fallback a {
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
-}
-
-.deck__fallback a:hover {
-  color: var(--accent);
+  font-variant-numeric: tabular-nums;
 }
 
 /* deck sits directly above files, so group them under one rule */

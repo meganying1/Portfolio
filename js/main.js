@@ -27,63 +27,6 @@ function nav() {
   });
 }
 
-// Hero typewriter: cycles role strings without reflowing the line (ghost span
-// reserves width) and pauses while the tab is hidden.
-function typewriter() {
-  const liveEl = document.getElementById("typewriter");
-  if (!liveEl) return;
-
-  const words = ["an engineer", "a programmer", "a scientist"];
-  const TYPE_DELAY = 55;
-  const DELETE_DELAY = 30;
-  const HOLD_DELAY = 2600;
-  const PAUSE_DELAY = 400;
-
-  let wordIndex = 0;
-
-  function waitIfHidden(next, delay) {
-    if (document.visibilityState !== "visible") {
-      setTimeout(() => waitIfHidden(next, delay), delay);
-      return;
-    }
-    next();
-  }
-
-  function typeWord() {
-    const chars = words[wordIndex].split("");
-    function typeNext() {
-      waitIfHidden(() => {
-        if (chars.length > 0) {
-          liveEl.textContent += chars.shift();
-          setTimeout(typeNext, TYPE_DELAY);
-        } else {
-          setTimeout(deleteWord, HOLD_DELAY);
-        }
-      }, TYPE_DELAY);
-    }
-    typeNext();
-  }
-
-  function deleteWord() {
-    const chars = words[wordIndex].split("");
-    function deleteNext() {
-      waitIfHidden(() => {
-        if (chars.length > 0) {
-          chars.pop();
-          liveEl.textContent = chars.join("");
-          setTimeout(deleteNext, DELETE_DELAY);
-        } else {
-          wordIndex = (wordIndex + 1) % words.length;
-          setTimeout(typeWord, PAUSE_DELAY);
-        }
-      }, DELETE_DELAY);
-    }
-    deleteNext();
-  }
-
-  typeWord();
-}
-
 // Scroll reveals: fade/rise each .reveal into view once, then stop observing it
 function reveal() {
   const items = document.querySelectorAll(".reveal");
@@ -109,6 +52,46 @@ function reveal() {
   items.forEach((item) => observer.observe(item));
 }
 
+// Slide deck: steps through the exported slides one at a time
+function deck() {
+  const frame = document.querySelector("[data-deck]");
+  if (!frame) return;
+
+  const slides = frame.querySelectorAll(".deck__slide");
+  if (slides.length === 0) return;
+
+  const controls = document.querySelector("[data-deck-controls]");
+  const prev = document.querySelector("[data-deck-prev]");
+  const next = document.querySelector("[data-deck-next]");
+  const count = document.querySelector("[data-deck-count]");
+
+  let index = 0;
+
+  function show(nextIndex) {
+    index = Math.min(Math.max(nextIndex, 0), slides.length - 1);
+    slides.forEach((slide, i) => slide.classList.toggle("is-active", i === index));
+    // preload the neighbour so stepping forward does not flash an empty frame
+    slides[index + 1]?.removeAttribute("loading");
+    if (count) count.textContent = `${index + 1} / ${slides.length}`;
+    if (prev) prev.disabled = index === 0;
+    if (next) next.disabled = index === slides.length - 1;
+  }
+
+  frame.setAttribute("data-enhanced", "true");
+  controls?.removeAttribute("hidden");
+
+  prev?.addEventListener("click", () => show(index - 1));
+  next?.addEventListener("click", () => show(index + 1));
+
+  // arrow keys work once either button has focus
+  controls?.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") show(index - 1);
+    if (event.key === "ArrowRight") show(index + 1);
+  });
+
+  show(0);
+}
+
 nav();
-typewriter();
 reveal();
+deck();
