@@ -109,6 +109,47 @@ function reveal() {
   items.forEach((item) => observer.observe(item));
 }
 
+// Slide deck: steps through the exported slides one at a time
+function deck() {
+  const frame = document.querySelector("[data-deck]");
+  if (!frame) return;
+
+  const slides = frame.querySelectorAll(".deck__slide");
+  if (slides.length === 0) return;
+
+  const controls = document.querySelector("[data-deck-controls]");
+  const prev = document.querySelector("[data-deck-prev]");
+  const next = document.querySelector("[data-deck-next]");
+  const count = document.querySelector("[data-deck-count]");
+
+  let index = 0;
+
+  function show(nextIndex) {
+    index = Math.min(Math.max(nextIndex, 0), slides.length - 1);
+    slides.forEach((slide, i) => slide.classList.toggle("is-active", i === index));
+    // preload the neighbour so stepping forward does not flash an empty frame
+    slides[index + 1]?.removeAttribute("loading");
+    if (count) count.textContent = `${index + 1} / ${slides.length}`;
+    if (prev) prev.disabled = index === 0;
+    if (next) next.disabled = index === slides.length - 1;
+  }
+
+  frame.setAttribute("data-enhanced", "true");
+  controls?.removeAttribute("hidden");
+
+  prev?.addEventListener("click", () => show(index - 1));
+  next?.addEventListener("click", () => show(index + 1));
+
+  // arrow keys work once either button has focus
+  controls?.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") show(index - 1);
+    if (event.key === "ArrowRight") show(index + 1);
+  });
+
+  show(0);
+}
+
 nav();
 typewriter();
 reveal();
+deck();
