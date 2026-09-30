@@ -849,7 +849,7 @@ body.nav-open {
     align-self: end;
     margin-left: 0.3em;
     position: relative;
-    bottom: 0.29em;
+    bottom: 0.45em;
   }
 
   /* disable hover transforms on mobile */
