@@ -847,7 +847,7 @@ body.nav-open {
     grid-column: 3;
     grid-row: 1;
     align-self: end;
-    margin-left: 0.3em;
+    margin-left: 0.4em;
     position: relative;
     bottom: 0.45em;
   }
