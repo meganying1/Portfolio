@@ -18,6 +18,20 @@
       content="Implementing an adaptive LMS filter in MATLAB to reduce background noise in real-world audio while preserving important signals."
     />
 
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Megan Ying" />
+    <meta property="og:url" content="https://www.meganying.com/pages/noise-reduction.html" />
+    <meta property="og:title" content="Noise Reduction — Megan Ying" />
+    <meta property="og:description" content="Implementing an adaptive LMS filter in MATLAB to reduce background noise in real-world audio while preserving important signals." />
+    <meta property="og:image" content="https://www.meganying.com/assets/photos/share-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Megan Ying" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Noise Reduction — Megan Ying" />
+    <meta name="twitter:description" content="Implementing an adaptive LMS filter in MATLAB to reduce background noise in real-world audio while preserving important signals." />
+    <meta name="twitter:image" content="https://www.meganying.com/assets/photos/share-card.png" />
+
     <link rel="stylesheet" href="../css/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,8 +52,8 @@
           <a class="nav__link" href="../index.html">Home</a>
           <a class="nav__link" href="../index.html#about">About</a>
           <a class="nav__link" href="../index.html#experiences">Experiences</a>
-          <a class="nav__link" href="../index.html#publications">Publications</a>
           <a class="nav__link" href="../index.html#projects">Projects</a>
+          <a class="nav__link" href="../index.html#publications">Publications</a>
         </nav>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
           <span class="nav-toggle__bar" aria-hidden="true"></span>
@@ -52,27 +66,27 @@
       <ul class="mobile-nav__list">
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="../index.html">
-            <span class="label label__num">(01)</span>Home
+            Home
           </a>
         </li>
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="../index.html#about">
-            <span class="label label__num">(02)</span>About
+            About
           </a>
         </li>
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="../index.html#experiences">
-            <span class="label label__num">(03)</span>Experiences
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#publications">
-            <span class="label label__num">(04)</span>Publications
+            Experiences
           </a>
         </li>
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="../index.html#projects">
-            <span class="label label__num">(05)</span>Projects
+            Projects
+          </a>
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="../index.html#publications">
+            Publications
           </a>
         </li>
       </ul>
@@ -82,11 +96,10 @@
     <main id="main">
       <section class="cs-hero">
         <div class="container container--narrow">
-          <a class="label cs-hero__back" href="../index.html#projects">← Projects</a>
-          <p class="label cs-hero__num">(03)</p>
+          <a class="label cs-hero__back" href="../index.html#other-projects">← Other Projects</a>
           <h1 class="cs-hero__title">Noise Reduction</h1>
           <p class="cs-hero__deck">
-            Implementing an adaptive LMS filter in MATLAB to reduce background noise in real-world 
+            Implementing an adaptive LMS filter in MATLAB to reduce background noise in real-world
             audio while preserving important signals.
           </p>
         </div>
@@ -102,7 +115,7 @@
             Our goal was to reduce background noise while preserving important sounds, including
             emergency signals.
           </p>
-          
+
           <p>
             We implemented and evaluated a Least Mean Squares (LMS) adaptive filter in MATLAB,
             using recorded audio to assess how effectively the algorithm could distinguish unwanted
@@ -135,13 +148,13 @@
             />
             <figcaption><span class="fig__num">Fig. 1</span>Example of destructive interference</figcaption>
           </figure>
-          
+
           <p>
             The LMS filter iteratively updates its coefficients to minimize the error between the
             filtered output and the desired reference signal. This allows the filter to continuously
             adapt as the characteristics of the noise change.
           </p>
-          
+
           <figure class="fig">
             <img
               src="../assets/photos/projects/noise_lms.png"
@@ -164,7 +177,7 @@
             audio to a single-channel signal, generates a representative noise signal, and applies
             the LMS filter to produce a cleaned output.
           </p>
-          
+
           <p>
             The implementation allows the filter length and step size to be varied, providing control
             over the tradeoff between convergence speed, stability, and filtering performance.
@@ -179,14 +192,14 @@
             several high-traffic locations on campus, including the gym, buses, lawn, and study
             areas.
           </p>
-          
+
           <p>
             We processed these recordings through the MATLAB implementation and compared the original
             and filtered signals both visually and audibly. We used the change in signal amplitude
             as a quantitative measure of noise reduction while listening to the output to verify
             that important sounds remained perceptible.
           </p>
-          
+
           <figure class="fig">
             <img
               src="../assets/photos/projects/noise_samples.png"
@@ -205,10 +218,10 @@
           <h2>Results</h2>
 
           <p>
-            The LMS implementation reduced measured noise amplitude by up to 95% while preserving 
+            The LMS implementation reduced measured noise amplitude by up to 95% while preserving
             emergency signals in the tested recordings.
           </p>
-          
+
           <p>
             This project gave me experience translating a mathematical algorithm into working
             MATLAB code and evaluating its performance using real-world data. It also strengthened
@@ -220,15 +233,11 @@
             <h3 class="label">tools</h3>
             <div class="tools__list">
               <span class="chip">MATLAB</span>
-              <span class="chip">Signal Processing</span>
-              <span class="chip">Numerical Analysis</span>
-              <span class="chip">Adaptive Filtering</span>
             </div>
           </div>
 
           <nav class="pager" aria-label="Project">
-            <a class="pager__link pager__prev" href="./trash-compactor.html">← Trash Compactor</a>
-            <a class="pager__link pager__next" href="./tripod-attachment.html">Tripod Attachment →</a>
+            <a class="pager__link pager__next" href="./chinese-checkers.html">Chinese Checkers →</a>
           </nav>
         </div>
       </section>
@@ -242,8 +251,8 @@
             <a href="../index.html">Home</a>
             <a href="../index.html#about">About</a>
             <a href="../index.html#experiences">Experiences</a>
-            <a href="../index.html#publications">Publications</a>
             <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#publications">Publications</a>
           </nav>
           <div>
             <div class="footer__social">

@@ -18,6 +18,20 @@
       content="Designing and iterating a linkage mechanism to convert rotary motor motion into controlled linear motion and maximize button actuation time."
     />
 
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Megan Ying" />
+    <meta property="og:url" content="https://www.meganying.com/pages/linkage-system.html" />
+    <meta property="og:title" content="Linkage System — Megan Ying" />
+    <meta property="og:description" content="Designing and iterating a linkage mechanism to convert rotary motor motion into controlled linear motion and maximize button actuation time." />
+    <meta property="og:image" content="https://www.meganying.com/assets/photos/share-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Megan Ying" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Linkage System — Megan Ying" />
+    <meta name="twitter:description" content="Designing and iterating a linkage mechanism to convert rotary motor motion into controlled linear motion and maximize button actuation time." />
+    <meta name="twitter:image" content="https://www.meganying.com/assets/photos/share-card.png" />
+
     <link rel="stylesheet" href="../css/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,8 +52,8 @@
           <a class="nav__link" href="../index.html">Home</a>
           <a class="nav__link" href="../index.html#about">About</a>
           <a class="nav__link" href="../index.html#experiences">Experiences</a>
-          <a class="nav__link" href="../index.html#publications">Publications</a>
           <a class="nav__link" href="../index.html#projects">Projects</a>
+          <a class="nav__link" href="../index.html#publications">Publications</a>
         </nav>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
           <span class="nav-toggle__bar" aria-hidden="true"></span>
@@ -52,27 +66,27 @@
       <ul class="mobile-nav__list">
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="../index.html">
-            <span class="label label__num">(01)</span>Home
+            Home
           </a>
         </li>
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="../index.html#about">
-            <span class="label label__num">(02)</span>About
+            About
           </a>
         </li>
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="../index.html#experiences">
-            <span class="label label__num">(03)</span>Experiences
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#publications">
-            <span class="label label__num">(04)</span>Publications
+            Experiences
           </a>
         </li>
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="../index.html#projects">
-            <span class="label label__num">(05)</span>Projects
+            Projects
+          </a>
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="../index.html#publications">
+            Publications
           </a>
         </li>
       </ul>
@@ -82,11 +96,10 @@
     <main id="main">
       <section class="cs-hero">
         <div class="container container--narrow">
-          <a class="label cs-hero__back" href="../index.html#projects">← Projects</a>
-          <p class="label cs-hero__num">(05)</p>
+          <a class="label cs-hero__back" href="../index.html#projects">← MechE Projects</a>
           <h1 class="cs-hero__title">Linkage System</h1>
           <p class="cs-hero__deck">
-            Designing and iterating a linkage mechanism to convert rotary motor motion into 
+            Designing and iterating a linkage mechanism to convert rotary motor motion into
             controlled linear motion and maximize button actuation time.
           </p>
         </div>
@@ -94,7 +107,7 @@
 
       <section class="cs-body">
         <div class="container container--narrow">
-          
+
           <h2>Overview</h2>
 
           <p>
@@ -103,7 +116,7 @@
             amount of time the button remained pressed within a two-minute operating cycle, while
             satisfying constraints on workspace, geometry, material strength, and motor loading.
           </p>
-          
+
           <div class="fig-pair">
             <figure class="fig">
               <img
@@ -116,7 +129,7 @@
               />
               <figcaption><span class="fig__num">Fig. 1</span>CAD model of initial design</figcaption>
             </figure>
-            
+
             <figure class="fig">
               <img
                 src="../assets/photos/projects/linkage_fea.png"
@@ -129,7 +142,7 @@
               <figcaption><span class="fig__num">Fig. 2</span>FEA of system</figcaption>
             </figure>
           </div>
-          
+
           <h2>Concept Development</h2>
 
           <p>
@@ -137,7 +150,7 @@
             link lengths, mounting locations, and slot geometry to control the motion of the output
             link.
           </p>
-          
+
           <p>
             We ultimately selected a slotted-link design because it allowed the mechanism to remain
             near a vertical position for an extended portion of its motion, increasing the duration
@@ -151,14 +164,14 @@
             their kinematic behavior. By comparing the position and velocity of the output link over
             time, we identified the geometry that provided the longest button actuation period.
           </p>
-          
+
           <p>
             We also applied Grashof's criterion to evaluate the range of motion of the linkage and
             performed hand calculations to determine the loads transmitted through the links.
             Finite Element Analysis (FEA) was then used to verify that the selected link dimensions
             could withstand the expected loading.
           </p>
-          
+
           <div class="fig-pair">
             <figure class="fig">
               <img
@@ -171,7 +184,7 @@
               />
               <figcaption><span class="fig__num">Fig. 3</span>CAD model of final design</figcaption>
             </figure>
-            
+
             <figure class="fig">
               <img
                 src="../assets/photos/projects/linkage_system.png"
@@ -192,14 +205,14 @@
             motor, but the slot mechanism caused the assembly to descend much faster than predicted.
             As a result, the button remained pressed for only 3 seconds during a two-minute test.
           </p>
-          
+
           <p>
             We used the test results to refine the linkage geometry. I helped evaluate how changing
             the link lengths and mounting position would affect the mechanism's range of motion and
             dwell time. We elongated two links and repositioned the assembly mounting point while
             retaining the slotted link to minimize system weight.
           </p>
-          
+
           <p>
             After updating the design, we repeated the motion analysis and physical testing to validate
             the revised geometry.
@@ -209,10 +222,10 @@
 
           <p>
             The revised mechanism produced a gradual, controlled descent and successfully held the
-            button for over 41 seconds during the same two-minute test. This represented a 38-second 
+            button for over 41 seconds during the same two-minute test. This represented a 38-second
             improvement over the initial design.
           </p>
-          
+
           <p>
             The project demonstrated the value of combining kinematic analysis, simulation, physical
             testing, and iterative mechanical design. It also gave me hands-on experience using
@@ -223,9 +236,6 @@
             <h3 class="label">tools</h3>
             <div class="tools__list">
               <span class="chip">SolidWorks</span>
-              <span class="chip">Motion Simulation</span>
-              <span class="chip">FEA</span>
-              <span class="chip">Mechanism Design</span>
               <span class="chip">Laser Cutting</span>
             </div>
           </div>
@@ -246,8 +256,8 @@
             <a href="../index.html">Home</a>
             <a href="../index.html#about">About</a>
             <a href="../index.html#experiences">Experiences</a>
-            <a href="../index.html#publications">Publications</a>
             <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#publications">Publications</a>
           </nav>
           <div>
             <div class="footer__social">
