@@ -602,6 +602,7 @@ body.nav-open {
 .pub__title span[aria-hidden="true"] {
   font-family: var(--font-ui);
   font-size: 0.68em;
+  margin-left: 0.3em;
   vertical-align: 0.1em;
 }
 
@@ -669,7 +670,10 @@ body.nav-open {
   /* Match the type treatment of company names in the experience list. */
   font-weight: 700;
   color: var(--ink);
-  transition: color var(--dur) var(--ease), transform var(--dur) var(--ease);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.2em;
+  transition: color var(--dur) var(--ease), text-decoration-color var(--dur) var(--ease), transform var(--dur) var(--ease);
 }
 
 .index__meta {
@@ -695,8 +699,11 @@ body.nav-open {
 .index__arrow {
   display: none;
   flex-shrink: 0;
-  font-size: var(--fs-small);
-  color: var(--muted);
+  font-family: var(--font-ui);
+  font-size: clamp(0.8925rem, 0.7888rem + 0.4488vw, 1.19rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
   transition: color var(--dur) var(--ease), transform var(--dur) var(--ease);
 }
 
@@ -722,8 +729,6 @@ body.nav-open {
   }
 }
 
-
-
 @media (min-width: 75em) {
   .index__meta {
     width: 28rem;
@@ -745,6 +750,7 @@ body.nav-open {
 .index__item:hover .index__title,
 .index__item:focus-within .index__title {
   color: var(--accent);
+  text-decoration-color: var(--accent);
 }
 
 .index__item:hover .index__arrow,
@@ -794,9 +800,9 @@ body.nav-open {
 @media (max-width: 47.99em) {
   .index__link {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto minmax(0, max-content) auto minmax(0, 1fr);
     grid-template-rows: auto auto;
-    gap: var(--space-5);
+    column-gap: 0;
     row-gap: var(--space-2);
     align-items: center;
   }
@@ -812,6 +818,7 @@ body.nav-open {
     height: 4.5rem;
     object-fit: contain;
     flex-shrink: 0;
+    margin-right: var(--space-5);
   }
 
   .index__title {
@@ -828,11 +835,21 @@ body.nav-open {
   }
 
   .index__date {
-    grid-column: 2;
+    grid-column: 2 / -1;
     grid-row: 2;
     margin-left: 0;
     margin-right: 0;
     text-align: left;
+  }
+
+  .index__arrow {
+    display: block;
+    grid-column: 3;
+    grid-row: 1;
+    align-self: end;
+    margin-left: 0.4em;
+    position: relative;
+    bottom: 0.45em;
   }
 
   /* disable hover transforms on mobile */
@@ -841,7 +858,9 @@ body.nav-open {
   .index__item:hover .index__thumb,
   .index__item:focus-within .index__thumb,
   .index__item:hover .index__date,
-  .index__item:focus-within .index__date {
+  .index__item:focus-within .index__date,
+  .index__item:hover .index__arrow,
+  .index__item:focus-within .index__arrow {
     transform: none;
   }
 }
@@ -849,13 +868,10 @@ body.nav-open {
 /* phone widths: image, title and date only just fit on one line, so tighten
    the image, the gaps and the date type to keep the row intact */
 @media (max-width: 32em) {
-  .index__link {
-    column-gap: var(--space-6);
-  }
-
   .index__thumb {
     width: 3.5rem;
     height: 3.5rem;
+    margin-right: var(--space-6);
   }
 
   .index__date {
