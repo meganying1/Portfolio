@@ -18,6 +18,20 @@
       content="Building a Chinese Checkers game with AI decision-making, multiplayer support, and an interactive graphical interface."
     />
 
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Megan Ying" />
+    <meta property="og:url" content="https://www.meganying.com/pages/chinese-checkers.html" />
+    <meta property="og:title" content="Chinese Checkers — Megan Ying" />
+    <meta property="og:description" content="Building a Chinese Checkers game with AI decision-making, multiplayer support, and an interactive graphical interface." />
+    <meta property="og:image" content="https://www.meganying.com/assets/photos/share-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Megan Ying" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Chinese Checkers — Megan Ying" />
+    <meta name="twitter:description" content="Building a Chinese Checkers game with AI decision-making, multiplayer support, and an interactive graphical interface." />
+    <meta name="twitter:image" content="https://www.meganying.com/assets/photos/share-card.png" />
+
     <link rel="stylesheet" href="../css/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,8 +52,8 @@
           <a class="nav__link" href="../index.html">Home</a>
           <a class="nav__link" href="../index.html#about">About</a>
           <a class="nav__link" href="../index.html#experiences">Experiences</a>
-          <a class="nav__link" href="../index.html#publications">Publications</a>
           <a class="nav__link" href="../index.html#projects">Projects</a>
+          <a class="nav__link" href="../index.html#publications">Publications</a>
         </nav>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
           <span class="nav-toggle__bar" aria-hidden="true"></span>
@@ -52,27 +66,27 @@
       <ul class="mobile-nav__list">
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="../index.html">
-            <span class="label label__num">(01)</span>Home
+            Home
           </a>
         </li>
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="../index.html#about">
-            <span class="label label__num">(02)</span>About
+            About
           </a>
         </li>
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="../index.html#experiences">
-            <span class="label label__num">(03)</span>Experiences
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#publications">
-            <span class="label label__num">(04)</span>Publications
+            Experiences
           </a>
         </li>
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="../index.html#projects">
-            <span class="label label__num">(05)</span>Projects
+            Projects
+          </a>
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="../index.html#publications">
+            Publications
           </a>
         </li>
       </ul>
@@ -82,11 +96,10 @@
     <main id="main">
       <section class="cs-hero">
         <div class="container container--narrow">
-          <a class="label cs-hero__back" href="../index.html#projects">← Projects</a>
-          <p class="label cs-hero__num">(07)</p>
+          <a class="label cs-hero__back" href="../index.html#other-projects">← Other Projects</a>
           <h1 class="cs-hero__title">Chinese Checkers</h1>
           <p class="cs-hero__deck">
-            Building a Chinese Checkers game with AI decision-making, multiplayer support, and 
+            Building a Chinese Checkers game with AI decision-making, multiplayer support, and
             an interactive graphical interface.
           </p>
         </div>
@@ -103,28 +116,28 @@
             animations, and timed turns, requiring the design of both the game engine and the
             graphical user interface.
           </p>
-          
+
           <p>
             The project emphasized object-oriented software design, algorithm development, and
             interactive application programming.
           </p>
-          
+
           <h2>Software Design</h2>
-          
+
           <p>
             I designed the application using an object-oriented architecture to separate the game
             state, user interface, and gameplay logic. Because the Chinese Checkers board is not a
             rectangular grid, one of the primary challenges was representing the board and mapping
             between board coordinates and screen coordinates.
           </p>
-          
+
           <p>
             I developed coordinate conversion functions that accounted for the offset between
             alternating rows, enabling accurate rendering, mouse interaction, and move validation.
             I also implemented the complete game logic, including legal move generation,
             multi-jump sequences, turn management, win detection, and animated piece movement.
           </p>
-          
+
           <div class="fig-pair">
             <figure class="fig">
               <img
@@ -137,7 +150,7 @@
               />
               <figcaption><span class="fig__num">Fig. 1</span>Chinese checkers board</figcaption>
             </figure>
-            
+
             <figure class="fig">
               <img
                 src="../assets/photos/projects/checker_highlight.png"
@@ -150,7 +163,7 @@
               <figcaption><span class="fig__num">Fig. 2</span>Highlighting possible moves</figcaption>
             </figure>
           </div>
-          
+
           <p>
             To support smooth gameplay, I implemented animated piece movement by continuously
             updating the position of moving pieces over time, creating a more responsive and
@@ -164,25 +177,25 @@
             opponent. The AI evaluates future game states by recursively exploring possible move
             sequences and selecting the move with the highest evaluation score.
           </p>
-          
+
           <p>
             The same search framework also powers the game's hint system by identifying strong
             candidate moves for the player. Implementing the AI required building a tree of game
             states and efficiently traversing it using recursive search.
           </p>
-          
+
           <p>
             Additional game logic was developed to correctly enforce chained jump sequences,
             ensuring that players completed all available jumps before ending their turn.
           </p>
-          
+
           <h2>Results</h2>
-          
+
           <p>
             The completed application supports multiplayer gameplay, AI opponents, move hints,
             animations, and timed turns within a fully interactive graphical interface.
           </p>
-          
+
           <p>
             This project strengthened my understanding of object-oriented programming, recursion,
             algorithm design, event-driven programming, and GUI development. It also provided
@@ -193,16 +206,11 @@
             <h3 class="label">tools</h3>
             <div class="tools__list">
               <span class="chip">Python</span>
-              <span class="chip">Object-Oriented Programming</span>
-              <span class="chip">Minimax</span>
-              <span class="chip">Recursion</span>
-              <span class="chip">Tkinter</span>
             </div>
           </div>
 
           <nav class="pager" aria-label="Project">
-            <a class="pager__link pager__prev" href="./well-driller.html">← Well Driller</a>
-            <a class="pager__link pager__next" href="./mobile-robot.html">Mobile Robot →</a>
+            <a class="pager__link pager__prev" href="./noise-reduction.html">← Noise Reduction</a>
           </nav>
         </div>
       </section>
@@ -216,8 +224,8 @@
             <a href="../index.html">Home</a>
             <a href="../index.html#about">About</a>
             <a href="../index.html#experiences">Experiences</a>
-            <a href="../index.html#publications">Publications</a>
             <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#publications">Publications</a>
           </nav>
           <div>
             <div class="footer__social">

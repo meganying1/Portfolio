@@ -18,6 +18,20 @@
       content="Developing a human-powered well drilling system that converts pedal input into vertical drilling motion through mechanical power transmission."
     />
 
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Megan Ying" />
+    <meta property="og:url" content="https://www.meganying.com/pages/well-driller.html" />
+    <meta property="og:title" content="Well Driller — Megan Ying" />
+    <meta property="og:description" content="Developing a human-powered well drilling system that converts pedal input into vertical drilling motion through mechanical power transmission." />
+    <meta property="og:image" content="https://www.meganying.com/assets/photos/share-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Megan Ying" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Well Driller — Megan Ying" />
+    <meta name="twitter:description" content="Developing a human-powered well drilling system that converts pedal input into vertical drilling motion through mechanical power transmission." />
+    <meta name="twitter:image" content="https://www.meganying.com/assets/photos/share-card.png" />
+
     <link rel="stylesheet" href="../css/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,8 +52,8 @@
           <a class="nav__link" href="../index.html">Home</a>
           <a class="nav__link" href="../index.html#about">About</a>
           <a class="nav__link" href="../index.html#experiences">Experiences</a>
-          <a class="nav__link" href="../index.html#publications">Publications</a>
           <a class="nav__link" href="../index.html#projects">Projects</a>
+          <a class="nav__link" href="../index.html#publications">Publications</a>
         </nav>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
           <span class="nav-toggle__bar" aria-hidden="true"></span>
@@ -52,27 +66,27 @@
       <ul class="mobile-nav__list">
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="../index.html">
-            <span class="label label__num">(01)</span>Home
+            Home
           </a>
         </li>
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="../index.html#about">
-            <span class="label label__num">(02)</span>About
+            About
           </a>
         </li>
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="../index.html#experiences">
-            <span class="label label__num">(03)</span>Experiences
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#publications">
-            <span class="label label__num">(04)</span>Publications
+            Experiences
           </a>
         </li>
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="../index.html#projects">
-            <span class="label label__num">(05)</span>Projects
+            Projects
+          </a>
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="../index.html#publications">
+            Publications
           </a>
         </li>
       </ul>
@@ -82,8 +96,7 @@
     <main id="main">
       <section class="cs-hero">
         <div class="container container--narrow">
-          <a class="label cs-hero__back" href="../index.html#projects">← Projects</a>
-          <p class="label cs-hero__num">(06)</p>
+          <a class="label cs-hero__back" href="../index.html#projects">← MechE Projects</a>
           <h1 class="cs-hero__title">Well Driller</h1>
           <p class="cs-hero__deck">
             Developing a conceptual design of a well driller that relies on human-produced pedal
@@ -94,18 +107,18 @@
 
       <section class="cs-body">
         <div class="container container--narrow">
-          
+
           <h>Overview</h>
-          
+
           <p>
             I worked with a team to develop a modification to the
-            <a href="https://villagedrill.com" target="_blank" rel="noreferrer">Village Drill</a> 
-            that replaces conventional power input with human-generated pedal power. The goal was 
-            to create a mechanically feasible drilling system that could be operated through 
-            sustained pedaling while meeting the structural and power requirements of the drilling 
+            <a href="https://villagedrill.com" target="_blank" rel="noreferrer">Village Drill</a>
+            that replaces conventional power input with human-generated pedal power. The goal was
+            to create a mechanically feasible drilling system that could be operated through
+            sustained pedaling while meeting the structural and power requirements of the drilling
             process.
           </p>
-          
+
           <p>
             Our design process required us to balance mechanism complexity, mechanical advantage,
             structural loading, power transmission, and the physical capabilities of the user.
@@ -118,14 +131,14 @@
             the vertical motion required to drive the drill. Concepts included bevel gears, worm
             gears, and a pile-driver mechanism.
           </p>
-          
+
           <p>
             After evaluating the concepts against stakeholder requirements and system-level
             constraints, we selected a pile-driver architecture. Rather than continuously driving
             the drill downward, the mechanism uses pedal input to lift the drill and then releases it,
             allowing the drill to fall under its own weight.
           </p>
-          
+
           <figure class="fig">
             <img
               src="../assets/photos/projects/driller_mechanism.png"
@@ -145,7 +158,7 @@
             the mechanical relationships between the pedal input, cable system, lifting mechanism,
             and drill assembly.
           </p>
-          
+
           <p>
             The design was sized around the forces and motion required to repeatedly lift the drill
             while keeping the required pedal force within a practical range for the operator.
@@ -156,13 +169,13 @@
             forces at the structural mounting points. These loads were then used to determine the
             minimum required pin diameters based on the target factor of safety.
           </p>
-          
+
           <p>
             We also evaluated the structural integrity of the pedal using Finite Element Analysis
             (FEA), identifying regions of higher stress and verifying that the proposed geometry
             could withstand the expected loading.
           </p>
-          
+
           <div class="fig-pair">
             <figure class="fig">
               <img
@@ -175,7 +188,7 @@
               />
               <figcaption><span class="fig__num">Fig. 2</span>CAD model of system</figcaption>
             </figure>
-            
+
             <figure class="fig">
               <img
                 src="../assets/photos/projects/driller_fea.png"
@@ -212,7 +225,7 @@
             Our analysis indicated that the proposed design was mechanically feasible and could
             satisfy the identified structural and power requirements.
           </p>
-          
+
           <p>
             This project allowed me to apply statics, stress analysis, dynamics, and power
             transmission to a system-level mechanical design. It also reinforced the importance of
@@ -224,13 +237,12 @@
             <h3 class="label">tools</h3>
             <div class="tools__list">
               <span class="chip">SolidWorks</span>
-              <span class="chip">FEA</span>
             </div>
           </div>
 
           <nav class="pager" aria-label="Project">
             <a class="pager__link pager__prev" href="./linkage-system.html">← Linkage System</a>
-            <a class="pager__link pager__next" href="./chinese-checkers.html">Chinese Checkers →</a>
+            <a class="pager__link pager__next" href="./mobile-robot.html">Mobile Robot →</a>
           </nav>
         </div>
       </section>
@@ -244,8 +256,8 @@
             <a href="../index.html">Home</a>
             <a href="../index.html#about">About</a>
             <a href="../index.html#experiences">Experiences</a>
-            <a href="../index.html#publications">Publications</a>
             <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#publications">Publications</a>
           </nav>
           <div>
             <div class="footer__social">

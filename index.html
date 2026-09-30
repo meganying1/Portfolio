@@ -15,6 +15,20 @@
     <link rel="canonical" href="https://www.meganying.com/" />
     <meta name="description" content="Megan Ying — Mechanical Engineer, CMU '25" />
 
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Megan Ying" />
+    <meta property="og:url" content="https://www.meganying.com/" />
+    <meta property="og:title" content="Megan Ying" />
+    <meta property="og:description" content="Megan Ying — Mechanical Engineer, CMU &#x27;25" />
+    <meta property="og:image" content="https://www.meganying.com/assets/photos/share-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Megan Ying" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Megan Ying" />
+    <meta name="twitter:description" content="Megan Ying — Mechanical Engineer, CMU &#x27;25" />
+    <meta name="twitter:image" content="https://www.meganying.com/assets/photos/share-card.png" />
+
     <link rel="stylesheet" href="css/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,8 +49,8 @@
           <a class="nav__link" href="./index.html#">Home</a>
           <a class="nav__link" href="./index.html#about">About</a>
           <a class="nav__link" href="./index.html#experiences">Experiences</a>
-          <a class="nav__link" href="./index.html#publications">Publications</a>
           <a class="nav__link" href="./index.html#projects">Projects</a>
+          <a class="nav__link" href="./index.html#publications">Publications</a>
         </nav>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
           <span class="nav-toggle__bar" aria-hidden="true"></span>
@@ -49,27 +63,27 @@
       <ul class="mobile-nav__list">
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="./index.html#">
-            <span class="label label__num">(01)</span>Home
+            Home
           </a>
         </li>
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="./index.html#about">
-            <span class="label label__num">(02)</span>About
+            About
           </a>
         </li>
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="./index.html#experiences">
-            <span class="label label__num">(03)</span>Experiences
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="./index.html#publications">
-            <span class="label label__num">(04)</span>Publications
+            Experiences
           </a>
         </li>
         <li class="mobile-nav__item">
           <a class="mobile-nav__link" href="./index.html#projects">
-            <span class="label label__num">(05)</span>Projects
+            Projects
+          </a>
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="./index.html#publications">
+            Publications
           </a>
         </li>
       </ul>
@@ -79,20 +93,13 @@
     <main id="main">
       <section class="hero">
         <div class="container">
-          <p class="label hero__eyebrow">B.S. Mechanical Engineering — Carnegie Mellon</p>
+          <p class="label hero__eyebrow">Portfolio</p>
           <div class="hero__identity">
             <h1 class="hero__name">Megan Ying</h1>
-            <div class="hero__portrait-slot">
-              <img
-                class="hero__portrait"
-                src="./assets/photos/headshot.jpg"
-                alt="Portrait of Megan Ying"
-                width="1779"
-                height="1375"
-                loading="eager"
-              />
-            </div>
           </div>
+          <p class="label hero__credentials">
+            Carnegie Mellon University — B.S. Mechanical Engineering
+          </p>
         </div>
       </section>
 
@@ -120,62 +127,6 @@
                 connect!
               </p>
 
-              <div class="skills">
-                <div class="skills__group">
-                  <h3 class="label">mechanical design</h3>
-                  <ul class="skills__list">
-                    <li>Siemens NX</li>
-                    <li>SolidWorks</li>
-                    <li>Ansys Mechanical</li>
-                    <li>GD&amp;T</li>
-                    <li>Tolerance Analysis</li>
-                    <li>DFMA</li>
-                    <li>FEA</li>
-                  </ul>
-                </div>
-
-                <div class="skills__group">
-                  <h3 class="label">fabrication &amp; testing</h3>
-                  <ul class="skills__list">
-                    <li>Machining</li>
-                    <li>3D Printing</li>
-                    <li>Laser Cutting</li>
-                    <li>Instron</li>
-                    <li>Keyence</li>
-                  </ul>
-                </div>
-
-                <div class="skills__group">
-                  <h3 class="label">programming &amp; analysis</h3>
-                  <ul class="skills__list">
-                    <li>Python</li>
-                    <li>MATLAB</li>
-                    <li>C</li>
-                    <li>SQL</li>
-                  </ul>
-                </div>
-
-                <div class="skills__group">
-                  <h3 class="label">software &amp; infrastructure</h3>
-                  <ul class="skills__list">
-                    <li>Git</li>
-                    <li>Linux</li>
-                    <li>Docker</li>
-                    <li>CI/CD</li>
-                    <li>Argo Workflows</li>
-                    <li>Cassandra</li>
-                  </ul>
-                </div>
-
-                <div class="skills__group">
-                  <h3 class="label">ai systems</h3>
-                  <ul class="skills__list">
-                    <li>LLM Systems</li>
-                    <li>Agentic AI</li>
-                  </ul>
-                </div>
-              </div>
-
               <div class="social">
                 <a
                   class="social__link"
@@ -191,6 +142,58 @@
                   href="https://github.com/meganying1"
                   >GitHub ↗</a
                 >
+              </div>
+
+              <div class="skills">
+                <div class="skills__group">
+                  <h3 class="label">product design &amp; cad</h3>
+                  <ul class="skills__list">
+                    <li>Siemens NX</li>
+                    <li>SolidWorks</li>
+                    <li>GD&amp;T</li>
+                    <li>DFM</li>
+                    <li>PLM</li>
+                  </ul>
+                </div>
+
+                <div class="skills__group">
+                  <h3 class="label">analysis &amp; validation</h3>
+                  <ul class="skills__list">
+                    <li>FEA</li>
+                    <li>ANSYS</li>
+                    <li>Tolerance Analysis</li>
+                    <li>DOE</li>
+                    <li>Failure Analysis</li>
+                  </ul>
+                </div>
+
+                <div class="skills__group">
+                  <h3 class="label">manufacturing &amp; prototyping</h3>
+                  <ul class="skills__list">
+                    <li>Machining</li>
+                    <li>3D Printing</li>
+                    <li>Stamping</li>
+                    <li>Injection Molding</li>
+                    <li>Rapid Prototyping</li>
+                  </ul>
+                </div>
+
+                <div class="skills__group">
+                  <h3 class="label">mechatronics &amp; controls</h3>
+                  <ul class="skills__list">
+                    <li>Arduino</li>
+                    <li>Control Systems</li>
+                    <li>Sensor Integration</li>
+                  </ul>
+                </div>
+
+                <div class="skills__group">
+                  <h3 class="label">engineering software</h3>
+                  <ul class="skills__list">
+                    <li>Python</li>
+                    <li>MATLAB</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -234,7 +237,7 @@
                     />Design Research Collective
                   </h3>
                   <p class="cv__role">Research Assistant</p>
-                  <p class="cv__dates">Sep 2024 — Present</p>
+                  <p class="cv__dates">Sep 2024 — Jul 2026</p>
                 </li>
 
                 <li class="cv__row">
@@ -290,16 +293,267 @@
         </div>
       </section>
 
-      <section id="publications" class="section reveal" style="--i: 2">
+      <section id="projects" class="section reveal" style="--i: 2">
         <div class="container">
           <div class="section__grid">
             <div class="section__rail">
-              <h2 class="label"><span class="label__num">(03)</span>publications</h2>
+              <h2 class="label"><span class="label__num">(03)</span>meche projects</h2>
+            </div>
+            <div>
+              <ol class="index">
+                <li class="index__item">
+                  <a class="index__link" href="./pages/battery-door.html">
+                    <span class="index__head">
+
+                      <img
+                      class="index__thumb"
+                      src="./assets/photos/projects/battery_exploded.png"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      width="1285"
+                      height="838"
+                    />
+                      <span class="index__title">Battery<br class="index__brk" /> Door</span>
+                    </span>
+                    <span class="index__meta">Product Design · DFM</span>
+                    <span class="index__date">Mon 20XX — Mon 20XX</span>
+                    <span class="index__arrow" aria-hidden="true">↗</span>
+                  </a>
+
+                  <div class="index__peek-wrap">
+                    <p class="index__peek-desc">Designing a one-touch battery door release mechanism with the button seamlessly integrated into the door geometry.</p>
+                  </div>
+                </li>
+
+                <li class="index__item">
+                  <a class="index__link" href="./pages/trash-compactor.html">
+                    <span class="index__head">
+
+                      <img
+                      class="index__thumb"
+                      src="./assets/photos/projects/compactor_final.jpg"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      width="258"
+                      height="380"
+                    />
+                      <span class="index__title">Trash<br class="index__brk" /> Compactor</span>
+                    </span>
+                    <span class="index__meta">Mechatronics · Manufacturing</span>
+                    <span class="index__date">Mon 20XX — Mon 20XX</span>
+                    <span class="index__arrow" aria-hidden="true">↗</span>
+                  </a>
+
+                  <div class="index__peek-wrap">
+                    <p class="index__peek-desc">Designing and fabricating an automated household trash compactor to reduce waste volume and plastic bag consumption.</p>
+                  </div>
+                </li>
+
+                <li class="index__item">
+                  <a class="index__link" href="./pages/tripod-attachment.html">
+                    <span class="index__head">
+
+                      <img
+                      class="index__thumb"
+                      src="./assets/photos/projects/tripod_phone1.jpg"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      width="458"
+                      height="345"
+                    />
+                      <span class="index__title">Tripod<br class="index__brk" /> Attachment</span>
+                    </span>
+                    <span class="index__meta">User-Centered Design · Mechatronics</span>
+                    <span class="index__date">Mon 20XX — Mon 20XX</span>
+                    <span class="index__arrow" aria-hidden="true">↗</span>
+                  </a>
+
+                  <div class="index__peek-wrap">
+                    <p class="index__peek-desc">Designing and manufacturing an assistive tripod attachment that automates phone mounting and simplifies camera positioning for users with limited wrist strength and dexterity.</p>
+                  </div>
+                </li>
+
+                <li class="index__item">
+                  <a class="index__link" href="./pages/linkage-system.html">
+                    <span class="index__head">
+
+                      <img
+                      class="index__thumb"
+                      src="./assets/photos/projects/final_linkage.png"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      width="424"
+                      height="409"
+                    />
+                      <span class="index__title">Linkage<br class="index__brk" /> System</span>
+                    </span>
+                    <span class="index__meta">Mechanism Design · Motion Simulation</span>
+                    <span class="index__date">Mon 20XX — Mon 20XX</span>
+                    <span class="index__arrow" aria-hidden="true">↗</span>
+                  </a>
+
+                  <div class="index__peek-wrap">
+                    <p class="index__peek-desc">Designing and iterating a linkage mechanism to convert rotary motor motion into controlled linear motion and maximize button actuation time.</p>
+                  </div>
+                </li>
+
+                <li class="index__item">
+                  <a class="index__link" href="./pages/well-driller.html">
+                    <span class="index__head">
+
+                      <img
+                      class="index__thumb"
+                      src="./assets/photos/projects/driller_cad.png"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      width="252"
+                      height="388"
+                    />
+                      <span class="index__title">Well<br class="index__brk" /> Driller</span>
+                    </span>
+                    <span class="index__meta">Structural Design · Power Transmission</span>
+                    <span class="index__date">Mon 20XX — Mon 20XX</span>
+                    <span class="index__arrow" aria-hidden="true">↗</span>
+                  </a>
+
+                  <div class="index__peek-wrap">
+                    <p class="index__peek-desc">Developing a human-powered well drilling system that converts pedal input into vertical drilling motion through mechanical power transmission.</p>
+                  </div>
+                </li>
+
+                <li class="index__item">
+                  <a class="index__link" href="./pages/mobile-robot.html">
+                    <span class="index__head">
+
+                      <img
+                      class="index__thumb"
+                      src="./assets/photos/projects/mobile_robot.jpg"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      width="715"
+                      height="482"
+                    />
+                      <span class="index__title">Mobile<br class="index__brk" /> Robot</span>
+                    </span>
+                    <span class="index__meta">Mechatronics · Robotics</span>
+                    <span class="index__date">Mon 20XX — Mon 20XX</span>
+                    <span class="index__arrow" aria-hidden="true">↗</span>
+                  </a>
+
+                  <div class="index__peek-wrap">
+                    <p class="index__peek-desc">Programming an autonomous differential-drive robot to follow a curved path and avoid moving obstacles using infrared and ultrasonic sensors.</p>
+                  </div>
+                </li>
+
+                <li class="index__item">
+                  <a class="index__link" href="./pages/truss-structure.html">
+                    <span class="index__head">
+
+                      <img
+                      class="index__thumb"
+                      src="./assets/photos/projects/truss_cad.png"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      width="460"
+                      height="298"
+                    />
+                      <span class="index__title">Truss<br class="index__brk" /> Structure</span>
+                    </span>
+                    <span class="index__meta">Structural Design · Experimental Testing</span>
+                    <span class="index__date">Mon 20XX — Mon 20XX</span>
+                    <span class="index__arrow" aria-hidden="true">↗</span>
+                  </a>
+
+                  <div class="index__peek-wrap">
+                    <p class="index__peek-desc">Designing and fabricating a lightweight truss structure to withstand a 40-pound load.</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="other-projects" class="section reveal" style="--i: 3">
+        <div class="container">
+          <div class="section__grid">
+            <div class="section__rail">
+              <h2 class="label"><span class="label__num">(04)</span>other projects</h2>
+            </div>
+            <div>
+              <ol class="index">
+                <li class="index__item">
+                  <a class="index__link" href="./pages/noise-reduction.html">
+                    <span class="index__head">
+
+                      <img
+                      class="index__thumb"
+                      src="./assets/photos/projects/noise_signal.png"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      width="780"
+                      height="700"
+                    />
+                      <span class="index__title">Noise<br class="index__brk" /> Reduction</span>
+                    </span>
+                    <span class="index__meta">Adaptive Filtering · MATLAB</span>
+                    <span class="index__date">Mon 20XX — Mon 20XX</span>
+                    <span class="index__arrow" aria-hidden="true">↗</span>
+                  </a>
+
+                  <div class="index__peek-wrap">
+                    <p class="index__peek-desc">Implementing an adaptive LMS filter in MATLAB to reduce background noise in real-world audio while preserving important signals.</p>
+                  </div>
+                </li>
+
+                <li class="index__item">
+                  <a class="index__link" href="./pages/chinese-checkers.html">
+                    <span class="index__head">
+
+                      <img
+                      class="index__thumb"
+                      src="./assets/photos/projects/checker_board.png"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      width="300"
+                      height="340"
+                    />
+                      <span class="index__title">Chinese<br class="index__brk" /> Checkers</span>
+                    </span>
+                    <span class="index__meta">Software Design · Game AI</span>
+                    <span class="index__date">Mon 20XX — Mon 20XX</span>
+                    <span class="index__arrow" aria-hidden="true">↗</span>
+                  </a>
+
+                  <div class="index__peek-wrap">
+                    <p class="index__peek-desc">Building a Chinese Checkers game with AI decision-making, multiplayer support, and an interactive graphical interface.</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="publications" class="section reveal" style="--i: 4">
+        <div class="container">
+          <div class="section__grid">
+            <div class="section__rail">
+              <h2 class="label"><span class="label__num">(05)</span>publications</h2>
             </div>
             <div>
               <ul class="pub-list">
                 <li class="pub">
-                  <p class="pub__meta label">JCISE — March 2026</p>
+                  <p class="pub__meta label">JCISE — Mar 2026</p>
                   <h3 class="pub__title">
                     <a target="_blank" rel="noreferrer" href="https://doi.org/10.1115/1.4071467">
                       Aligning Agents With Experts in Material Selection: Prompting, Size, and
@@ -314,7 +568,7 @@
                 </li>
 
                 <li class="pub">
-                  <p class="pub__meta label">ASME IDETC/CIE — October 2025</p>
+                  <p class="pub__meta label">ASME IDETC/CIE — Oct 2025</p>
                   <h3 class="pub__title">
                     <a
                       target="_blank"
@@ -336,298 +590,6 @@
           </div>
         </div>
       </section>
-
-      <section id="projects" class="section reveal" style="--i: 3">
-        <div class="container">
-          <div class="section__grid">
-            <div class="section__rail">
-              <h2 class="label"><span class="label__num">(04)</span>projects</h2>
-            </div>
-            <div>
-              <ol class="index">
-                <li class="index__item">
-                  <a class="index__link" href="./pages/battery-door.html">
-                    <span class="index__num label">(01)</span>
-                    <img
-                      class="index__thumb"
-                      src="./assets/photos/projects/battery_exploded.png"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="1285"
-                      height="838"
-                    />
-                    <span class="index__title">Battery Door</span>
-                    <span class="index__meta">Mechanical Design · DFM</span>
-                    <span class="index__arrow" aria-hidden="true">↗</span>
-                  </a>
-
-                  <div class="index__peek-wrap">
-                    <img
-                    class="index__peek"
-                    src="./assets/photos/projects/battery_exploded.png"
-                    alt=""
-                    aria-hidden="true"
-                    loading="lazy"
-                    width="1285"
-                    height="838"
-                    />
-                    <p class="index__peek-desc">Designing a one-touch battery door release mechanism with the button seamlessly integrated into the door geometry.</p>
-                  </div>
-                </li>
-
-                <li class="index__item">
-                  <a class="index__link" href="./pages/trash-compactor.html">
-                    <span class="index__num label">(02)</span>
-                    <img
-                      class="index__thumb"
-                      src="./assets/photos/projects/compactor_final.jpg"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="258"
-                      height="380"
-                    />
-                    <span class="index__title">Trash Compactor</span>
-                    <span class="index__meta">Mechanical Design · Mechatronics</span>
-                    <span class="index__arrow" aria-hidden="true">↗</span>
-                  </a>
-
-                  <div class="index__peek-wrap">
-                    <img
-                    class="index__peek"
-                    src="./assets/photos/projects/compactor_final.jpg"
-                    alt=""
-                    aria-hidden="true"
-                    loading="lazy"
-                    width="258"
-                    height="380"
-                    />
-                    <p class="index__peek-desc">Designing and fabricating an automated household trash compactor to reduce waste volume and plastic bag consumption.</p>
-                  </div>
-                </li>
-
-                <li class="index__item">
-                  <a class="index__link" href="./pages/noise-reduction.html">
-                    <span class="index__num label">(03)</span>
-                    <img
-                      class="index__thumb"
-                      src="./assets/photos/projects/noise_signal.png"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="780"
-                      height="700"
-                    />
-                    <span class="index__title">Noise Reduction</span>
-                    <span class="index__meta">Signal Processing · MATLAB</span>
-                    <span class="index__arrow" aria-hidden="true">↗</span>
-                  </a>
-
-                  <div class="index__peek-wrap">
-                    <img
-                    class="index__peek"
-                    src="./assets/photos/projects/noise_signal.png"
-                    alt=""
-                    aria-hidden="true"
-                    loading="lazy"
-                    width="780"
-                    height="700"
-                    />
-                    <p class="index__peek-desc">Implementing an adaptive LMS filter in MATLAB to reduce background noise in real-world audio while preserving important signals.</p>
-                  </div>
-                </li>
-
-                <li class="index__item">
-                  <a class="index__link" href="./pages/tripod-attachment.html">
-                    <span class="index__num label">(04)</span>
-                    <img
-                      class="index__thumb"
-                      src="./assets/photos/projects/tripod_phone1.jpg"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="458"
-                      height="345"
-                    />
-                    <span class="index__title">Tripod Attachment</span>
-                    <span class="index__meta">Mechanical Design · Mechatronics</span>
-                    <span class="index__arrow" aria-hidden="true">↗</span>
-                  </a>
-
-                  <div class="index__peek-wrap">
-                    <img
-                    class="index__peek"
-                    src="./assets/photos/projects/tripod_phone1.jpg"
-                    alt=""
-                    aria-hidden="true"
-                    loading="lazy"
-                    width="458"
-                    height="345"
-                    />
-                    <p class="index__peek-desc">Designing and manufacturing an assistive tripod attachment that automates phone mounting and simplifies camera positioning for users with limited wrist strength and dexterity.</p>
-                  </div>
-                </li>
-
-                <li class="index__item">
-                  <a class="index__link" href="./pages/linkage-system.html">
-                    <span class="index__num label">(05)</span>
-                    <img
-                      class="index__thumb"
-                      src="./assets/photos/projects/final_linkage.png"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="424"
-                      height="409"
-                    />
-                    <span class="index__title">Linkage System</span>
-                    <span class="index__meta">Mechanical Design · Motion Simulation</span>
-                    <span class="index__arrow" aria-hidden="true">↗</span>
-                  </a>
-
-                  <div class="index__peek-wrap">
-                    <img
-                    class="index__peek"
-                    src="./assets/photos/projects/final_linkage.png"
-                    alt=""
-                    aria-hidden="true"
-                    loading="lazy"
-                    width="424"
-                    height="409"
-                    />
-                    <p class="index__peek-desc">Designing and iterating a linkage mechanism to convert rotary motor motion into controlled linear motion and maximize button actuation time.</p>
-                  </div>
-                </li>
-
-                <li class="index__item">
-                  <a class="index__link" href="./pages/well-driller.html">
-                    <span class="index__num label">(06)</span>
-                    <img
-                      class="index__thumb"
-                      src="./assets/photos/projects/driller_cad.png"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="252"
-                      height="388"
-                    />
-                    <span class="index__title">Well Driller</span>
-                    <span class="index__meta">Mechanical Design · Structural Analysis</span>
-                    <span class="index__arrow" aria-hidden="true">↗</span>
-                  </a>
-
-                  <div class="index__peek-wrap">
-                    <img
-                    class="index__peek"
-                    src="./assets/photos/projects/driller_cad.png"
-                    alt=""
-                    aria-hidden="true"
-                    loading="lazy"
-                    width="252"
-                    height="388"
-                    />
-                    <p class="index__peek-desc">Developing a human-powered well drilling system that converts pedal input into vertical drilling motion through mechanical power transmission.</p>
-                  </div>
-                </li>
-
-                <li class="index__item">
-                  <a class="index__link" href="./pages/chinese-checkers.html">
-                    <span class="index__num label">(07)</span>
-                    <img
-                      class="index__thumb"
-                      src="./assets/photos/projects/checker_board.png"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="300"
-                      height="340"
-                    />
-                    <span class="index__title">Chinese Checkers</span>
-                    <span class="index__meta">Software · Game AI</span>
-                    <span class="index__arrow" aria-hidden="true">↗</span>
-                  </a>
-
-                  <div class="index__peek-wrap">
-                    <img
-                    class="index__peek"
-                    src="./assets/photos/projects/checker_board.png"
-                    alt=""
-                    aria-hidden="true"
-                    loading="lazy"
-                    width="300"
-                    height="340"
-                    />
-                    <p class="index__peek-desc">Building a Chinese Checkers game with AI decision-making, multiplayer support, and an interactive graphical interface.</p>
-                  </div>
-                </li>
-
-                <li class="index__item">
-                  <a class="index__link" href="./pages/mobile-robot.html">
-                    <span class="index__num label">(08)</span>
-                    <img
-                      class="index__thumb"
-                      src="./assets/photos/projects/mobile_robot.jpg"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="715"
-                      height="482"
-                    />
-                    <span class="index__title">Mobile Robot</span>
-                    <span class="index__meta">Embedded Systems · Controls</span>
-                    <span class="index__arrow" aria-hidden="true">↗</span>
-                  </a>
-
-                  <div class="index__peek-wrap">
-                    <img
-                    class="index__peek"
-                    src="./assets/photos/projects/mobile_robot.jpg"
-                    alt=""
-                    aria-hidden="true"
-                    loading="lazy"
-                    width="715"
-                    height="482"
-                    />
-                    <p class="index__peek-desc">Programming an autonomous differential-drive robot to follow a curved path and avoid moving obstacles using infrared and ultrasonic sensors.</p>
-                  </div>
-                </li>
-
-                <li class="index__item">
-                  <a class="index__link" href="./pages/truss-structure.html">
-                    <span class="index__num label">(09)</span>
-                    <img
-                      class="index__thumb"
-                      src="./assets/photos/projects/truss_cad.png"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="460"
-                      height="298"
-                    />
-                    <span class="index__title">Truss Structure</span>
-                    <span class="index__meta">Structural Analysis · Fabrication</span>
-                    <span class="index__arrow" aria-hidden="true">↗</span>
-                  </a>
-
-                  <div class="index__peek-wrap">
-                    <img
-                    class="index__peek"
-                    src="./assets/photos/projects/truss_cad.png"
-                    alt=""
-                    aria-hidden="true"
-                    loading="lazy"
-                    width="460"
-                    height="298"
-                    />
-                    <p class="index__peek-desc">Designing and fabricating a lightweight truss structure to withstand a 40-pound load.</p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
 
     <!-- #footer:start -->
@@ -638,8 +600,8 @@
             <a href="./index.html#">Home</a>
             <a href="./index.html#about">About</a>
             <a href="./index.html#experiences">Experiences</a>
-            <a href="./index.html#publications">Publications</a>
             <a href="./index.html#projects">Projects</a>
+            <a href="./index.html#publications">Publications</a>
           </nav>
           <div>
             <div class="footer__social">
