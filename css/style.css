@@ -701,6 +701,7 @@ body.nav-open {
   flex-shrink: 0;
   font-family: var(--font-ui);
   font-size: clamp(0.8925rem, 0.7888rem + 0.4488vw, 1.19rem);
+  font-weight: 700;
   line-height: 1.25;
   color: var(--ink);
   transition: color var(--dur) var(--ease), transform var(--dur) var(--ease);
