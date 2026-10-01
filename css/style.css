@@ -498,9 +498,9 @@ body.nav-open {
 
 .cv__row {
   display: grid;
-  grid-template-columns: minmax(0, auto) minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr) 10rem;
   align-items: center;
-  column-gap: var(--space-8);
+  column-gap: var(--space-6);
   border-top: 1px solid var(--rule);
   padding-block: var(--space-5);
 }
@@ -514,7 +514,9 @@ body.nav-open {
   @media (min-width: 48em) {
     .cv {
       display: grid;
-      grid-template-columns: minmax(0, auto) minmax(0, 1fr) auto;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr) 10rem;
+      column-gap: var(--space-6);
+      padding-right: var(--space-4);
     }
 
     .cv__row {
@@ -529,7 +531,7 @@ body.nav-open {
   align-items: center;
   gap: var(--space-3);
   font-family: var(--font-display);
-  font-size: var(--fs-h3);
+  font-size: var(--fs-lede);
   color: var(--ink);
   white-space: nowrap;
 }
@@ -543,18 +545,50 @@ body.nav-open {
 }
 
 .cv__role {
-  padding-left: var(--space-5);
+  margin-left: var(--space-2);
   font-size: var(--fs-small);
   color: var(--ink);
   text-wrap: balance;
 }
 
+.cv__role--wide {
+  white-space: nowrap;
+}
+
 .cv__dates {
+  margin-right: 0;
   font-size: var(--fs-caption);
   color: var(--muted);
   text-align: right;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
+}
+
+@media (min-width: 48em) {
+  .cv__org,
+  .cv__role,
+  .cv__dates {
+    grid-row: 1;
+  }
+
+  .cv__org {
+    grid-column: 1;
+  }
+
+  .cv__role {
+    grid-column: 2;
+  }
+
+  .cv__dates {
+    grid-column: 3;
+  }
+}
+
+@media (min-width: 48em) and (max-width: 74.99em) {
+  .cv__role--wide {
+    grid-column: 2 / -1;
+    grid-row: 2;
+  }
 }
 
 @media (max-width: 47.99em) {
@@ -565,10 +599,11 @@ body.nav-open {
 
   /* the desktop indent would leave the role out of line with the org and date */
   .cv__role {
-    padding-left: 0;
+    margin-left: 0;
   }
 
   .cv__dates {
+    margin-right: 0;
     text-align: left;
   }
 }
@@ -608,14 +643,21 @@ body.nav-open {
 
 .pub__title a {
   color: var(--ink);
+  transition: color var(--dur) var(--ease);
+}
+
+.pub__link-text {
   text-decoration: underline;
   text-decoration-color: transparent;
   text-underline-offset: 0.2em;
-  transition: color var(--dur) var(--ease), text-decoration-color var(--dur) var(--ease);
+  transition: text-decoration-color var(--dur) var(--ease);
 }
 
 .pub__title a:hover {
   color: var(--accent);
+}
+
+.pub__title a:hover .pub__link-text {
   text-decoration-color: var(--accent);
 }
 
@@ -650,23 +692,23 @@ body.nav-open {
 .index__head {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
   min-width: 0;
   flex: 1 1 auto;
+  transition: transform var(--dur) var(--ease);
 }
 
 .index__thumb {
   flex-shrink: 0;
-  transition: transform var(--dur) var(--ease);
   width: 4rem;
   height: 4rem;
   object-fit: cover;
   mix-blend-mode: multiply;
+  margin-right: var(--space-4);
 }
 
 .index__title {
   font-family: var(--font-display);
-  font-size: var(--fs-h3);
+  font-size: var(--fs-lede);
   /* Match the type treatment of company names in the experience list. */
   font-weight: 700;
   color: var(--ink);
@@ -679,16 +721,13 @@ body.nav-open {
 .index__meta {
   display: none;
   min-width: 0;
-  margin-left: calc(-1 * var(--space-2));
+  margin-left: var(--space-2);
   font-size: var(--fs-small);
   color: var(--ink);
 }
 
-/* always visible so the rows read as links; hover promotes it to the accent
-   colour and nudges it, matching the title's hover shift */
 .index__date {
-  margin-right: calc(-1 * var(--space-4));
-  margin-left: calc(-1 * var(--space-4));
+  margin: 0;
   font-size: var(--fs-caption);
   color: var(--muted);
   text-align: right;
@@ -700,14 +739,32 @@ body.nav-open {
   display: none;
   flex-shrink: 0;
   font-family: var(--font-ui);
-  font-size: clamp(0.8925rem, 0.7888rem + 0.4488vw, 1.19rem);
+  font-size: clamp(0.8075rem, 0.733rem + 0.3196vw, 1.02rem);
   font-weight: 700;
   line-height: 1.25;
+  margin-left: 0.4em;
   color: var(--ink);
-  transition: color var(--dur) var(--ease), transform var(--dur) var(--ease);
+  transition: color var(--dur) var(--ease);
 }
 
 @media (min-width: 48em) {
+  .index__head {
+    min-height: 4rem;
+  }
+
+  .index__thumb {
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-right: var(--space-3);
+    transition: width var(--dur) var(--ease), height var(--dur) var(--ease);
+  }
+
+  .index__item:hover .index__thumb,
+  .index__item:focus-within .index__thumb {
+    width: 4rem;
+    height: 4rem;
+  }
+
   .index__meta {
     display: block;
   }
@@ -724,8 +781,9 @@ body.nav-open {
   /* same three tracks as the experiences rows: title -> tags -> date */
   .index__link {
     display: grid;
-    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr) auto auto;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr) 10rem;
     column-gap: var(--space-6);
+    padding-right: var(--space-4);
   }
 }
 
@@ -740,30 +798,28 @@ body.nav-open {
   background: var(--accent-wash);
 }
 
-.index__item:hover .index__title,
-.index__item:focus-within .index__title,
-.index__item:hover .index__thumb,
-.index__item:focus-within .index__thumb {
+.index__item:hover .index__head,
+.index__item:focus-within .index__head {
   transform: translateX(0.5rem);
 }
 
-.index__item:hover .index__title,
-.index__item:focus-within .index__title {
+.index__link:hover .index__title,
+.index__link:focus-visible .index__title {
   color: var(--accent);
   text-decoration-color: var(--accent);
 }
 
-.index__item:hover .index__arrow,
-.index__item:focus-within .index__arrow {
+.index__link:hover .index__arrow,
+.index__link:focus-visible .index__arrow {
   color: var(--accent);
-  transform: translateX(-0.5rem);
 }
 
 .index__peek-wrap {
   display: flex;
   align-items: center;
   gap: var(--space-5);
-  padding-inline: var(--space-6);
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
   isolation: isolate;
   max-height: 0;
   opacity: 0;
@@ -785,7 +841,7 @@ body.nav-open {
   .index__item:focus-within .index__peek-wrap {
     max-height: 11rem;
     opacity: 1;
-    padding-block: var(--space-4);
+    padding-block: 0 var(--space-4);
   }
 }
 
@@ -849,7 +905,7 @@ body.nav-open {
     align-self: end;
     margin-left: 0.4em;
     position: relative;
-    bottom: 0.45em;
+    bottom: 0.5em;
   }
 
   /* disable hover transforms on mobile */
