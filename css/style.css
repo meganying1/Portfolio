@@ -424,20 +424,14 @@ body.nav-open {
   line-height: 1.45;
   letter-spacing: -0.01em;
   color: var(--ink);
-  margin-bottom: var(--space-5);
 }
 
-.about__body {
-  padding-right: var(--space-8);
-  font-size: var(--fs-small);
-  line-height: 1.75;
-  letter-spacing: -0.005em;
-  color: var(--muted);
+.about__lede + .about__lede {
+  margin-top: var(--space-5);
 }
 
 @media (max-width: 47.99em) {
-  .about__lede,
-  .about__body {
+  .about__lede {
     padding-right: 0;
   }
 }
