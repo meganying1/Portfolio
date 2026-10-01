@@ -15,21 +15,21 @@
     <link rel="canonical" href="https://www.meganying.com/pages/battery-door.html" />
     <meta
       name="description"
-      content="Designing a one-touch battery door release mechanism with the button seamlessly integrated into the door geometry."
+      content="Designing a one-touch battery door mechanism that releases with a downward button press and automatically re-latches when closed."
     />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Megan Ying" />
     <meta property="og:url" content="https://www.meganying.com/pages/battery-door.html" />
     <meta property="og:title" content="Battery Door — Megan Ying" />
-    <meta property="og:description" content="Designing a one-touch battery door release mechanism with the button seamlessly integrated into the door geometry." />
+    <meta property="og:description" content="Designing a one-touch battery door mechanism that releases with a downward button press and automatically re-latches when closed." />
     <meta property="og:image" content="https://www.meganying.com/assets/photos/share-card.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Megan Ying" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Battery Door — Megan Ying" />
-    <meta name="twitter:description" content="Designing a one-touch battery door release mechanism with the button seamlessly integrated into the door geometry." />
+    <meta name="twitter:description" content="Designing a one-touch battery door mechanism that releases with a downward button press and automatically re-latches when closed." />
     <meta name="twitter:image" content="https://www.meganying.com/assets/photos/share-card.png" />
 
     <link rel="stylesheet" href="../css/style.css" />
@@ -99,8 +99,8 @@
           <a class="label cs-hero__back" href="../index.html#projects">← MechE Projects</a>
           <h1 class="cs-hero__title">Battery Door</h1>
           <p class="cs-hero__deck">
-            Designing a one-touch battery door release mechanism with the button seamlessly integrated
-            into the door geometry.
+            Designing a one-touch battery door mechanism that releases with a downward button press 
+            and automatically re-latches when closed.
           </p>
         </div>
       </section>
@@ -110,23 +110,26 @@
           <h2>Overview</h2>
 
           <p>
-            As part of an Apple interview, I was asked to design a battery door mechanism that pops
-            open when the user presses a button within the perimeter of the door. The mechanism needed
-            to be compact, reliable, manufacturable, and intuitive to use.
+            For an Apple mechanical design interview, I developed a battery door mechanism that opens 
+            with a button integrated within the door perimeter. I began by defining the mechanical and 
+            packaging requirements, then explored multiple release architectures before selecting and 
+            refining a spring-loaded sliding latch.
           </p>
 
           <p>
-            I developed the design from initial concepts through detailed CAD, using decision matrices,
-            mechanical calculations, tolerance analysis, and FEA to evaluate and validate the final
-            mechanism. I also considered how each component would be manufactured, what materials
-            would best meet its functional requirements, and how the mechanism would be assembled.
+            I developed the final design in Siemens NX and sized the mechanism around the required 
+            latch travel and button motion. I then evaluated the design through mechanical 
+            calculations, tolerance analysis, FEA, material selection, and manufacturing planning. The
+            final nine-component mechanism provides one-touch release and automatically re-latches when
+            the door is closed.
           </p>
 
           <h2>Concept Development</h2>
 
           <p>
-            I began by defining the assumptions I was designing around and the key requirements the
-            mechanism had to meet.
+            I began by defining the design requirements and assumptions, including packaging 
+            constraints, button force and travel, opening and closing forces, durability, cost, and 
+            production volume.
           </p>
 
           <figure class="fig">
@@ -144,16 +147,11 @@
           </figure>
 
           <p>
-            I then researched existing mechanisms that could translate a downward button press into
-            the motion needed to release the door. I identified four potential approaches:
+            I then developed four release concepts based on moving snap fits, push-release latches, 
+            rotating cam mechanisms, and sliding latches. I evaluated each through its complete 
+            release and reset sequence, comparing mechanical complexity, tolerance sensitivity, 
+            accidental actuation risk, packaging, and user interaction.
           </p>
-
-          <ul>
-            <li>Moving snap fits</li>
-            <li>Push release latches</li>
-            <li>Rotating cam bodies</li>
-            <li>Sliding latches</li>
-          </ul>
 
           <figure class="fig">
             <img
@@ -207,21 +205,7 @@
               <span class="fig__num">Fig. 5</span>Sliding latch inspiration and concept
             </figcaption>
           </figure>
-
-          <p>
-            For each concept, I sketched how the mechanism could be integrated into the battery door
-            and walked through its full motion from button press to release and reset. This helped me
-            identify potential failure modes and compare trade-offs in reliability, tolerance sensitivity,
-            accidental actuation, complexity, and user experience.
-          </p>
-
-          <p>
-            I ultimately chose the moving snap fit as the strongest starting point. Its primary drawback
-            was user experience: because the button remained attached to the housing, the user would need
-            to press it through an opening in the door. However, the design was less sensitive to
-            tolerances, less prone to accidental actuation, and mechanically simpler. I decided these
-            advantages outweighed the less seamless interaction.
-          </p>
+          
           <figure class="fig">
             <img
               src="../assets/photos/projects/battery_comparison.png"
@@ -237,11 +221,10 @@
           </figure>
 
           <p>
-            I then developed two implementations of the moving snap fit based on different methods of
-            converting the button press into latch motion. In the sliding design, pegs on the button
-            travel through angled slots in the latch, converting vertical button travel into horizontal
-            motion that pulls the latch away from the door. In the rotating design, the button pushes
-            against the end of the latch, rotating it out of engagement.
+            A moving snap fit provided the simplest and most tolerance-robust architecture, so 
+            I developed two implementations around it. The first used angled slots to translate
+            vertical button travel into horizontal latch motion. The second rotated the latch 
+            out of engagement.
           </p>
 
           <figure class="fig">
@@ -272,11 +255,10 @@
           </figure>
 
           <p>
-            I modeled both designs in Siemens NX and compared them using a weighted decision matrix.
-            The two concepts scored closely: the rotating mechanism was more compact and lower-cost,
-            while the sliding mechanism performed better in effectiveness and user experience. Because
-            these were the highest-priority criteria, I selected the sliding snap fit for further
-            development.
+            After modeling both in Siemens NX, I compared them using a weighted decision matrix. The 
+            rotating design offered lower cost and a smaller package, while the sliding design performed 
+            better in the highest-weighted criteria of effectiveness and user experience. I selected the 
+            sliding architecture for detailed development.
           </p>
 
           <figure class="fig">
@@ -366,15 +348,10 @@
           <h2>Mechanical Design</h2>
 
           <p>
-            The release mechanism is contained between a top and bottom chassis, with the bottom
-            chassis fixed to the main housing. The latch sits above the bottom chassis and slides
-            horizontally, while the button sits above the latch and moves vertically. Pegs extending
-            from the button fit into angled slots in the latch, coupling the motion of the two
-            components. Springs sit between the bottom chassis and latch, pushing the latch upward
-            along the angled interface and toward the door. The top chassis snaps onto the bottom
-            chassis using snap fit features to contain the mechanism and constrain each component
-            to its intended motion.
+            The release mechanism consists of a vertically translating button, horizontally 
+            translating latch, return springs, and top and bottom chassis.
           </p>
+
           <figure class="fig">
             <img
               src="../assets/photos/projects/battery_assembly.png"
@@ -390,25 +367,23 @@
           </figure>
 
           <p>
-            In the default latched state, the springs hold the latch forward so that it engages
-            with the snap-fit feature on the door. The button pegs rest at the top of the latch
-            slots, leaving the button in its raised position and the door securely engaged.
+            Pegs on the button engage angled slots in the latch. Pressing the button drives the 
+            pegs downward through these slots, translating the latch away from the door until it 
+            clears the door's snap-fit feature. Spring-loaded hinges then lift the released door.
           </p>
 
           <p>
-            When the user presses the button, the pegs travel downward through the angled slots.
-            The slot geometry converts this vertical button motion into horizontal latch motion,
-            pulling the latch backward until it clears the door. Once disengaged, spring-loaded
-            hinges lift the door open.
+            Releasing the button allows the springs to return both components to their latched 
+            positions. During closing, a ramp on the door's snap fit drives the latch backward 
+            until the feature passes beneath it. The springs then push the latch forward to 
+            re-engage automatically. A flat locking surface prevents upward force on the closed 
+            door from retracting the latch.
           </p>
 
           <p>
-            Once the user releases the button, the springs return the latch and button to their
-            default positions. When the user pushes down on the door, the ramp on the door's
-            snap-fit feature pushes the latch backward as the door moves downward. Once the feature
-            passes the latch, the springs push the button up and the latch forward again to
-            re-engage it. A flat face above the ramp prevents the door from driving the latch
-            backward when pulled upward, keeping the door securely closed.
+            I designed the top chassis to snap onto the bottom chassis, capturing the internal 
+            components while constraining the button and latch to their intended directions of 
+            motion.
           </p>
 
           <figure class="fig">
@@ -428,9 +403,9 @@
           <h2>Engineering Analysis</h2>
 
           <p>
-            I sized the mechanism by working backward from the latch travel required to release
-            the door. From this constraint, I determined the required button travel, slot
-            geometry, and spring stiffness.
+            I sized the mechanism by working backward from the latch travel required for full 
+            door release. This determined the button travel, angled-slot geometry, and spring 
+            requirements.
           </p>
 
           <figure class="fig">
@@ -448,15 +423,12 @@
           </figure>
 
           <p>
-            I then evaluated the components most susceptible to repeated loading over the
-            required 1,000-cycle lifespan. Hand calculations showed that the button peg and door
-            snap-fit stresses remain below the fatigue strengths of their respective materials,
-            while snap-fit strain remains within the allowable range.
-          </p>
-
-          <p>
-            I also calculated the force required to deflect the snap fit while closing the door
-            to ensure that the mechanism remained within the maximum allowable closing force.
+            I then analyzed the components most susceptible to repeated loading over the 
+            1,000-cycle durability requirement. Hand calculations showed that stresses in 
+            the button pegs and door snap fit remained below the relevant material limits, 
+            while snap-fit strain stayed within the allowable range. I also calculated the 
+            snap-fit deflection force to verify that the required door-closing force remained 
+            within the design requirement.
           </p>
 
           <figure class="fig">
@@ -474,10 +446,12 @@
           </figure>
 
           <p>
-            Because reliable operation depends on sufficient overlap between the latch and
-            door, I performed a tolerance stack-up across the mechanism. The analysis confirmed
-            that the latch maintains sufficient engagement under worst-case dimensional variation.
+            Because latch engagement depends on the accumulated dimensions of several 
+            components, I performed a worst-case tolerance stack-up across the mechanism. 
+            The analysis confirmed that sufficient latch overlap remained at the dimensional 
+            extremes.
           </p>
+
           <figure class="fig">
             <img
               src="../assets/photos/projects/battery_tolerance.png"
@@ -493,11 +467,12 @@
           </figure>
 
           <p>
-            Finally, I used FEA to validate the hand calculations for the mechanism's two primary
-            contact events: the button pegs driving the sliding latch and the door snap fit
-            deflecting past the latch during closing. I evaluated deformation, stress, and strain
-            to verify that the components remained within acceptable limits.
+            Finally, I used FEA to evaluate the two primary loading events: contact between
+            the button pegs and sliding latch during release, and snap-fit deflection as the
+            door closes. I compared stress, strain, and deformation against the hand 
+            calculations and material limits to verify the final geometry.
           </p>
+
           <figure class="fig">
             <video
               src="../assets/video/battery_fea_latch.mp4"
@@ -555,19 +530,21 @@
           <h2>Manufacturing &amp; Cost</h2>
 
           <p>
-            I selected materials and manufacturing processes for components based on mechanical
-            performance, geometry, production volume, and user experience. The chassis, latch,
-            and door are made of ABS, which provides the flexibility needed for the snap-fit
-            features to deflect without permanent deformation, while also being well-suited for
-            low-cost, high-volume injection molding.
+            I selected materials and manufacturing processes based on geometry, mechanical 
+            requirements, production volume, and surface requirements.
           </p>
 
           <p>
-            The button and exterior door cover are made of aluminum, providing lightweight, durable
-            surfaces with a higher-quality tactile finish required for a handheld electronic
-            device. The remaining components, including the springs, screws, and spring-loaded
-            hinges, are purchased rather than custom manufactured. Based on the proposed materials
-            and manufacturing processes, I estimated the total cost at approximately $3.30 per unit.
+            The chassis, latch, and structural portion of the door use injection-molded ABS,
+            providing both the compliance required by the snap-fit features and compatibility
+            with high-volume production. The exposed button and door cover use aluminum for
+            lightweight, durable user-contact surfaces. Springs, screws, and spring-loaded
+            hinges are purchased components rather than custom parts.
+          </p>
+
+          <p>
+            Based on the proposed materials, processes, and purchased hardware, I estimated
+            a production cost of approximately $3.30 per assembly.
           </p>
 
           <figure class="fig">
@@ -691,18 +668,11 @@
           <h2>Results</h2>
 
           <p>
-            The final design met the requirements of the challenge with a nine-component mechanism
-            estimated at $3.30 per unit. The sliding snap fit provides one-touch release and
-            automatic re-latching, while accounting for reliability, manufacturability, assembly,
-            and user experience.
-          </p>
-
-          <p>
-            This project gave me the opportunity to take an open-ended mechanical design from
-            early concept exploration through a fully developed solution, while balancing design
-            trade-offs. Throughout the process, I demonstrated my skills in CAD, FEA, and tolerance
-            analysis, as well as my understanding of Design for Manufacturing and Assembly (DFMA)
-            principles.
+            The final design uses nine components to provide one-touch release and automatic 
+            re-latching within the required package. Mechanical calculations, tolerance 
+            analysis, and FEA verified operation across dimensional variation and repeated 
+            loading, while the proposed material and manufacturing strategy resulted in an 
+            estimated unit cost of $3.30.
           </p>
 
           <div class="deck">
