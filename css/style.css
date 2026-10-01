@@ -748,6 +748,23 @@ body.nav-open {
 }
 
 @media (min-width: 48em) {
+  .index__head {
+    min-height: 4rem;
+  }
+
+  .index__thumb {
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-right: var(--space-3);
+    transition: width var(--dur) var(--ease), height var(--dur) var(--ease);
+  }
+
+  .index__item:hover .index__thumb,
+  .index__item:focus-within .index__thumb {
+    width: 4rem;
+    height: 4rem;
+  }
+
   .index__meta {
     display: block;
   }
