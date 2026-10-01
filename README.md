@@ -1,13 +1,13 @@
 # [Megan Ying Portfolio](https://meganying.com)
 
-Personal portfolio website showcasing my experiences, publications, and projects.
+Personal portfolio website showcasing my experiences, projects, and publications.
 
 ## Sections
 
 - **About** - Background and skills
 - **Experiences** - Professional roles
+- **Projects** - MechE and other projects
 - **Publications** - Academic papers
-- **Projects** - Engineering and software projects
 
 ## Built With
 
