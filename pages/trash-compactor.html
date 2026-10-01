@@ -15,21 +15,21 @@
     <link rel="canonical" href="https://www.meganying.com/pages/trash-compactor.html" />
     <meta
       name="description"
-      content="Designing and fabricating an automated household trash compactor to reduce waste volume and plastic bag consumption."
+      content="Designing and building a standalone trash compactor that automatically compresses household waste."
     />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Megan Ying" />
     <meta property="og:url" content="https://www.meganying.com/pages/trash-compactor.html" />
     <meta property="og:title" content="Trash Compactor — Megan Ying" />
-    <meta property="og:description" content="Designing and fabricating an automated household trash compactor to reduce waste volume and plastic bag consumption." />
+    <meta property="og:description" content="Designing and building a standalone trash compactor that automatically compresses household waste." />
     <meta property="og:image" content="https://www.meganying.com/assets/photos/share-card.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Megan Ying" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Trash Compactor — Megan Ying" />
-    <meta name="twitter:description" content="Designing and fabricating an automated household trash compactor to reduce waste volume and plastic bag consumption." />
+    <meta name="twitter:description" content="Designing and building a standalone trash compactor that automatically compresses household waste." />
     <meta name="twitter:image" content="https://www.meganying.com/assets/photos/share-card.png" />
 
     <link rel="stylesheet" href="../css/style.css" />
@@ -111,63 +111,57 @@
           <h2>Overview</h2>
 
           <p>
-            Residential trash compactors are often expensive built-in appliances that require
-            permanent installation, while lower-cost alternatives rely on manual compression and
-            significant user effort. Our goal was to develop a compact, standalone trash compactor
-            that automatically compresses household waste while remaining affordable, easy to use,
-            and suitable for manufacturing at a consumer price point.
+            In a team of five, I helped develop a compact trash compactor from early concept 
+            development through engineering analysis, fabrication, assembly, and testing.
           </p>
+
           <p>
-            Over the course of a semester, my team designed, analyzed, fabricated, and tested a
-            fully functional prototype within an $800 budget. The project ended with a live
-            demonstration at the Carnegie Mellon Mechanical Engineering Design Expo, where it
-            received the Best Overall Project award.
+            The final design uses a linear actuator to drive a scissor-lift mechanism that raises 
+            a compression plate through the bin. I developed the assembly CAD and designed the 
+            custom actuator mounts used to integrate the linkage into the surrounding structure.
+          </p>
+
+          <p>
+            The completed prototype was demonstrated at the Carnegie Mellon Mechanical Engineering 
+            Design Expo, where the project received the Best Overall Project Award.
           </p>
 
           <h2>Concept Development</h2>
 
           <p>
-            We began by benchmarking commercially available trash compactors to understand existing
-            solutions and identify opportunities for improvement. Many products were either very
-            expensive, required permanent installation, or depended on manual user force to compress
-            waste. From this research, we established the primary design objectives:
-          </p>
-
-          <ul>
-            <li>Reduce household trash volume with minimal user effort</li>
-            <li>Fit within the footprint of a standard kitchen trash bin</li>
-            <li>Operate safely with a simple user interface</li>
-            <li>Minimize manufacturing complexity and cost</li>
-          </ul>
-
-          <p>
-            After brainstorming multiple concepts, we evaluated each using weighted design criteria
-            including performance, manufacturability, durability, ease of use, and cost. The final
-            concept combined a scissor-lift mechanism with a linear actuator, providing a compact
-            package while generating sufficient mechanical advantage to compress typical household
-            waste.
+            We began by benchmarking existing trash compactors and identifying limitations in 
+            available products. Built-in models were expensive and required permanent installation, 
+            while lower-cost alternatives relied heavily on manual force. From this research, we 
+            defined the primary design requirements around compaction performance, packaging, ease 
+            of use, safety, manufacturability, and cost.
           </p>
 
           <p>
-            Throughout the design process, we considered Design for Manufacturing and Assembly (DFMA),
-            Failure Mode and Effects Analysis (FMEA), and Design for Environment (DFE) principles to
-            guide design decisions.
+            We generated several concepts and compared them using weighted design criteria. We 
+            selected a scissor-lift mechanism driven by a linear actuator because it fit within the 
+            available footprint while providing the mechanical advantage needed for compression.
+          </p>
+
+          <p>
+            Throughout concept development, we also considered DFMA, FMEA, and DFE principles to 
+            identify manufacturing, assembly, reliability, and environmental considerations before 
+            fabrication.
           </p>
 
           <h2>Mechanical Design</h2>
 
           <p>
-            The final prototype integrates a motorized compaction system inside a wooden trash bin and
-            requires no user assembly. When activated, a linear actuator drives a scissor-lift linkage
-            that raises a compression plate against the underside of the lid, compacting the trash.
-            The controller maintains the compression force for approximately ten seconds before
-            automatically retracting the mechanism.
+            The compaction mechanism sits beneath the trash compartment. A linear actuator drives a 
+            scissor linkage that raises a compression plate vertically through the bin. During 
+            operation, the plate compresses the waste against the underside of the lid, holds the load 
+            for approximately ten seconds, then retracts automatically.
           </p>
 
           <p>
-            An enclosure beneath the bin houses the actuator, stepper motor, and Arduino-based control
-            system, while a latching mechanism secures the lid throughout the compression cycle to
-            ensure safe operation.
+            One of the main design challenges was integrating the actuator with the linkage. The actuator 
+            had a fixed hole pattern and limited mounting locations, so the interface had to accommodate 
+            those constraints while positioning the actuator correctly and transferring load into the 
+            mechanism.
           </p>
 
           <div class="fig-pair">
@@ -181,7 +175,7 @@
                 decoding="async"
               />
               <figcaption>
-                <span class="fig__num">Fig. 1</span>Final prototype of trash compactor system
+                <span class="fig__num">Fig. 2</span>Final prototype of trash compactor system
               </figcaption>
             </figure>
 
@@ -194,22 +188,14 @@
                 loading="lazy"
                 decoding="async"
               />
-              <figcaption><span class="fig__num">Fig. 2</span>Linkage system of trash compactor</figcaption>
+              <figcaption><span class="fig__num">Fig. 1</span>Linkage system of trash compactor</figcaption>
             </figure>
           </div>
 
           <p>
-            The linkage assembly was fabricated from machined aluminum bars and rods. We manufactured
-            the links and L-brackets using manual milling and turning operations, then designed custom
-            actuator interfaces in SolidWorks and produced them with additive manufacturing for rapid
-            iteration. The wooden enclosure was cut, assembled, and integrated with the mechanical
-            system, electronics, hinges, and locking hardware to create a fully functional prototype.
-          </p>
-
-          <p>
-            Although the prototype emphasized rapid fabrication and testing, we also considered how the
-            design would transition to mass production through alternative materials and manufacturing
-            processes.
+            I developed the assembly CAD in SolidWorks and designed custom actuator mounts around the 
+            existing hole locations. The mounts secured the actuator within the available packaging space
+            and created the interface between the actuator and linkage.
           </p>
 
           <figure class="fig">
@@ -227,31 +213,22 @@
           <h2>Engineering Analysis</h2>
 
           <p>
-            Before fabrication, we developed CAD models and performed engineering calculations to size
-            the linkage system and verify that the selected actuator could generate sufficient
-            compaction force.
+            We analyzed the linkage before fabrication to determine whether the selected actuator 
+            could generate sufficient compaction force.
           </p>
 
           <p>
-            Using free-body diagrams and static force analysis, we evaluated the load transmitted
-            through the linkage under both worst-case and best-case loading conditions. These
-            calculations predicted that the mechanism could support approximately
-            6.4 to 12.8 lb before the actuator stalled, depending on the
-            distribution of reaction forces.
+            Using free-body diagrams and static force analysis, we evaluated how actuator force 
+            propagated through the scissor mechanism under different loading conditions. The analysis 
+            predicted that the mechanism could support approximately 6.4 to 12.8 lb before the actuator 
+            stalled, depending on the distribution of reaction forces.
           </p>
 
           <p>
-            We also evaluated the structural capacity of the linkage members through factor-of-safety
-            calculations. The analysis showed that the aluminum linkage had significantly greater
-            strength than required for expected operating loads, indicating that actuator capacity, not
-            structural failure, would ultimately limit system performance.
-          </p>
-
-          <p>
-            Physical testing confirmed this prediction. During testing, the linkage remained well within
-            its structural limits while the actuator became the limiting component when compressing
-            heavier loads. Based on these results, we identified a higher-capacity actuator as the
-            primary improvement for a production-ready design.
+            We also evaluated the structural capacity of the aluminum linkage using factor-of-safety 
+            calculations. The results showed that the linkage could withstand loads well above the 
+            actuator's output, indicating that actuator capacity would limit performance before structural 
+            failure occurred. Physical testing later confirmed this prediction.
           </p>
 
           <div class="fig-pair">
@@ -280,20 +257,42 @@
             </figure>
           </div>
 
-          <h2>Results</h2>
+          <h2>Fabrication & Testing</h2>
 
           <p>
-            The completed prototype successfully demonstrated automated household waste compaction
-            using a fully integrated mechanical and electrical system. The project was recognized with
-            the Best Overall Project Award at the 2025 Carnegie Mellon Mechanical
-            Engineering Design Expo.
+            The team shared responsibility for milling, turning, 3D printing, assembly, and testing. 
+            The linkage was fabricated from aluminum bars and rods using manual machining, while the 
+            custom actuator mounts were 3D printed. We assembled the linkage, actuator, compression 
+            plate, enclosure, electronics, hinges, and lid-locking hardware into a complete working
+            prototype.
           </p>
 
           <p>
-            This project strengthened my experience in product design, mechanism design, CAD,
-            engineering analysis, fabrication, and mechatronic system integration. It provided
-            experience taking a product from early concept generation through prototyping, testing,
-            and iterative refinement.
+            Testing showed that the linkage remained structurally intact while the actuator reached 
+            its force limit under heavier loads. This matched the analytical results and identified 
+            a higher-capacity actuator as the clearest improvement for a future iteration.
+          </p>
+
+          <h2>Manufacturing Considerations</h2>
+
+          <p>
+            Although the prototype used machining, 3D printing, and a wooden enclosure for rapid 
+            fabrication, we also planned for higher-volume production. I contributed DFM input by
+            selecting manufacturing processes for each component and refining part geometry to 
+            support those methods and simplify assembly.
+          </p>
+
+          <h2>Results</h2>
+
+          <p>
+            The final prototype successfully completed an automated compaction cycle within a 
+            standalone trash-bin form factor. Testing confirmed that actuator capacity, rather 
+            than linkage strength, limited the achievable compression force.
+          </p>
+
+          <p>
+            The project received the Best Overall Project Award at the Carnegie Mellon Mechanical 
+            Engineering Design Expo.
           </p>
 
           <div class="tools">
