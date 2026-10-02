@@ -15,21 +15,21 @@
     <link rel="canonical" href="https://www.meganying.com/pages/noise-reduction.html" />
     <meta
       name="description"
-      content="Implementing an adaptive LMS filter in MATLAB to reduce background noise in real-world audio while preserving important signals."
+      content="Developing an adaptive noise-reduction algorithm in MATLAB to reduce background noise while preserving important environmental sounds."
     />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Megan Ying" />
     <meta property="og:url" content="https://www.meganying.com/pages/noise-reduction.html" />
     <meta property="og:title" content="Noise Reduction — Megan Ying" />
-    <meta property="og:description" content="Implementing an adaptive LMS filter in MATLAB to reduce background noise in real-world audio while preserving important signals." />
+    <meta property="og:description" content="Developing an adaptive noise-reduction algorithm in MATLAB to reduce background noise while preserving important environmental sounds." />
     <meta property="og:image" content="https://www.meganying.com/assets/photos/share-card.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Megan Ying" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Noise Reduction — Megan Ying" />
-    <meta name="twitter:description" content="Implementing an adaptive LMS filter in MATLAB to reduce background noise in real-world audio while preserving important signals." />
+    <meta name="twitter:description" content="Developing an adaptive noise-reduction algorithm in MATLAB to reduce background noise while preserving important environmental sounds." />
     <meta name="twitter:image" content="https://www.meganying.com/assets/photos/share-card.png" />
 
     <link rel="stylesheet" href="../css/style.css" />
@@ -99,8 +99,8 @@
           <a class="label cs-hero__back" href="../index.html#other-projects">← Other Projects</a>
           <h1 class="cs-hero__title">Noise Reduction</h1>
           <p class="cs-hero__deck">
-            Implementing an adaptive LMS filter in MATLAB to reduce background noise in real-world
-            audio while preserving important signals.
+            Developing an adaptive noise-reduction algorithm in MATLAB to reduce background noise 
+            while preserving important environmental sounds.
           </p>
         </div>
       </section>
@@ -110,31 +110,18 @@
           <h2>Overview</h2>
 
           <p>
-            For this numerical analysis project, my team developed an adaptive noise-reduction algorithm
-            using real-world audio recordings collected across Carnegie Mellon University's campus.
-            Our goal was to reduce background noise while preserving important sounds, including
-            emergency signals.
+            In a team of four, I helped develop and evaluate an adaptive noise-reduction algorithm 
+            using audio recorded across Carnegie Mellon’s campus. We collected real-world noise 
+            samples and implemented a Least Mean Squares adaptive filter in MATLAB to reduce 
+            background noise while preserving important environmental soundsm.
           </p>
 
-          <p>
-            We implemented and evaluated a Least Mean Squares (LMS) adaptive filter in MATLAB,
-            using recorded audio to assess how effectively the algorithm could distinguish unwanted
-            background noise from the desired signal.
-          </p>
-
-          <h2>Algorithm Selection</h2>
+          <h2>Algorithm Development</h2>
 
           <p>
-            We initially investigated destructive interference, a common approach to active noise
-            cancellation. We created a MATLAB model demonstrating how two equal-amplitude signals
-            with opposite phase could theoretically cancel one another.
-          </p>
-
-          <p>
-            While this approach can effectively cancel a known noise signal, it is less practical for
-            changing real-world environments and can unintentionally suppress sounds that should remain
-            audible. We therefore selected the Least Mean Squares (LMS) algorithm, which adapts its
-            filter coefficients based on the incoming signal.
+            We initially considered generating an inverted waveform to cancel recorded noise through 
+            destructive interference. While effective for a known, repeatable signal, this approach 
+            was less suitable for environments where the acoustic conditions changed over time.
           </p>
 
           <figure class="fig">
@@ -150,9 +137,10 @@
           </figure>
 
           <p>
-            The LMS filter iteratively updates its coefficients to minimize the error between the
-            filtered output and the desired reference signal. This allows the filter to continuously
-            adapt as the characteristics of the noise change.
+            We instead implemented a Least Mean Squares adaptive filter, which continuously updates 
+            its filter coefficients based on the error between the filtered output and the desired 
+            signal. This allowed the algorithm to adapt to changing background noise rather than 
+            relying on a fixed cancellation waveform.
           </p>
 
           <figure class="fig">
@@ -173,31 +161,30 @@
           <h2>MATLAB Implementation</h2>
 
           <p>
-            We implemented the signal-processing pipeline in MATLAB. The program converts recorded
-            audio to a single-channel signal, generates a representative noise signal, and applies
-            the LMS filter to produce a cleaned output.
+            We implemented the signal-processing pipeline in MATLAB by converting recorded audio 
+            to a single-channel signal, generating a representative noise signal, and applying the 
+            LMS filter to produce a cleaned output.
           </p>
 
           <p>
-            The implementation allows the filter length and step size to be varied, providing control
-            over the tradeoff between convergence speed, stability, and filtering performance.
-            The program also generates plots comparing the original and filtered signals and allows
-            the resulting audio to be evaluated by listening to the recordings.
+            We varied the filter length and step size to evaluate the tradeoff between convergence 
+            speed, stability, and filtering performance. The program also generated plots comparing 
+            the original and filtered signals and allowed us to listen to the processed recordings 
+            during evaluation.
           </p>
 
-          <h2>Real-World Testing</h2>
+          <h2>Testing</h2>
 
           <p>
-            To evaluate the algorithm under realistic conditions, we collected audio samples from
-            several high-traffic locations on campus, including the gym, buses, lawn, and study
-            areas.
-          </p>
-
+            We evaluated the algorithm using recordings from several high-traffic campus environments, 
+            including the gym, buses, lawn, and study areas.
+            </p>
+            
           <p>
-            We processed these recordings through the MATLAB implementation and compared the original
-            and filtered signals both visually and audibly. We used the change in signal amplitude
-            as a quantitative measure of noise reduction while listening to the output to verify
-            that important sounds remained perceptible.
+            We processed each recording through the MATLAB implementation and compared the original 
+            and filtered signals visually and audibly. We used the change in signal amplitude as a 
+            quantitative measure of noise reduction and listened to the processed recordings to 
+            verify that important sounds remained distinguishable.
           </p>
 
           <figure class="fig">
@@ -218,15 +205,9 @@
           <h2>Results</h2>
 
           <p>
-            The LMS implementation reduced measured noise amplitude by up to 95% while preserving
-            emergency signals in the tested recordings.
-          </p>
-
-          <p>
-            This project gave me experience translating a mathematical algorithm into working
-            MATLAB code and evaluating its performance using real-world data. It also strengthened
-            my understanding of numerical methods, adaptive filtering, and signal-processing
-            techniques.
+            The LMS filter reduced measured noise amplitude by up to 95% across the test recordings.
+            Qualitative listening checks also confirmed that important sounds, including emergency 
+            signals, remained distinguishable after filtering.
           </p>
 
           <div class="tools">
