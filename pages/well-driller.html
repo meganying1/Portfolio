@@ -15,21 +15,21 @@
     <link rel="canonical" href="https://www.meganying.com/pages/well-driller.html" />
     <meta
       name="description"
-      content="Developing a human-powered well drilling system that converts pedal input into vertical drilling motion through mechanical power transmission."
+      content="Designing a pedal-powered well drilling system that converts human input into repeated impact."
     />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Megan Ying" />
     <meta property="og:url" content="https://www.meganying.com/pages/well-driller.html" />
     <meta property="og:title" content="Well Driller — Megan Ying" />
-    <meta property="og:description" content="Developing a human-powered well drilling system that converts pedal input into vertical drilling motion through mechanical power transmission." />
+    <meta property="og:description" content="Designing a pedal-powered well drilling system that converts human input into repeated impact." />
     <meta property="og:image" content="https://www.meganying.com/assets/photos/share-card.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Megan Ying" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Well Driller — Megan Ying" />
-    <meta name="twitter:description" content="Developing a human-powered well drilling system that converts pedal input into vertical drilling motion through mechanical power transmission." />
+    <meta name="twitter:description" content="Designing a pedal-powered well drilling system that converts human input into repeated impact." />
     <meta name="twitter:image" content="https://www.meganying.com/assets/photos/share-card.png" />
 
     <link rel="stylesheet" href="../css/style.css" />
@@ -99,8 +99,8 @@
           <a class="label cs-hero__back" href="../index.html#projects">← MechE Projects</a>
           <h1 class="cs-hero__title">Well Driller</h1>
           <p class="cs-hero__deck">
-            Developing a conceptual design of a well driller that relies on human-produced pedal
-            power.
+            Designing a pedal-powered well drilling system that converts human input into 
+            repeated impact.
           </p>
         </div>
       </section>
@@ -111,32 +111,39 @@
           <h>Overview</h>
 
           <p>
-            I worked with a team to develop a modification to the
+            In a team of three, I helped redesign the
             <a href="https://villagedrill.com" target="_blank" rel="noreferrer">Village Drill</a>
-            that replaces conventional power input with human-generated pedal power. The goal was
-            to create a mechanically feasible drilling system that could be operated through
-            sustained pedaling while meeting the structural and power requirements of the drilling
-            process.
+            to replace its existing power input with a pedal-driven system for use in Baalbek-Hermel,
+            Lebanon. We developed the system from concept selection through mechanical design, 
+            structural analysis, FEA, and power calculations.
           </p>
 
           <p>
-            Our design process required us to balance mechanism complexity, mechanical advantage,
-            structural loading, power transmission, and the physical capabilities of the user.
+            I focused on how different gear mechanisms could integrate with the existing drill 
+            architecture and performed the hand calculations used to size and evaluate the final 
+            system. The selected design uses a pedal-driven pile-driver mechanism that lifts the 
+            drill through a geared cable system, then releases it to fall under its own weight.
           </p>
 
           <h2>Concept Development</h2>
 
           <p>
-            We explored several mechanisms for converting the rotational motion of the pedals into
-            the vertical motion required to drive the drill. Concepts included bevel gears, worm
-            gears, and a pile-driver mechanism.
+            We began by defining requirements around drilling performance, durability, ease of 
+            assembly, transportability, safety, and power efficiency. The design also needed to 
+            retain as much of the existing Village Drill architecture as possible.
           </p>
 
           <p>
-            After evaluating the concepts against stakeholder requirements and system-level
-            constraints, we selected a pile-driver architecture. Rather than continuously driving
-            the drill downward, the mechanism uses pedal input to lift the drill and then releases it,
-            allowing the drill to fall under its own weight.
+            I researched how different gear mechanisms could convert pedal rotation into the 
+            motion required by the drill and considered how each could be packaged within the 
+            existing system. We developed three concepts using worm gears, bevel gears, and a 
+            pile-driver mechanism.
+          </p>
+
+          <p>
+            We selected the pile-driver architecture because it uses pedal input to raise the 
+            drill, then converts its gravitational potential energy into impact when released. 
+            This was well suited to the rocky ground conditions identified for the target region.
           </p>
 
           <figure class="fig">
@@ -151,29 +158,48 @@
             <figcaption><span class="fig__num">Fig. 1</span>Sketch of pile driver mechanism</figcaption>
           </figure>
 
+          <h2>Mechanical Design</h2>
+
+          <p>
+            Pedal rotation is transmitted through a chain and gear system to a cable pulley that 
+            raises the drill. One gear includes a section without teeth. When this section reaches 
+            the mating gear, the drivetrain disengages and allows the drill to fall freely. The 
+            gears then re-engage and repeat the cycle.
+          </p>
+
+          <p>
+            The design retained much of the Village Drill frame while integrating the pedal system,
+            gearbox, cable drive, and drill-lifting mechanism into the existing architecture.
+          </p>
+
           <h2>Engineering Analysis</h2>
 
           <p>
-            We developed the system geometry in SolidWorks and used the resulting model to evaluate
-            the mechanical relationships between the pedal input, cable system, lifting mechanism,
-            and drill assembly.
+            I performed the hand calculations used to determine the cable tension, pedal force, 
+            frame reactions, pin sizes, and power requirements of the system. Working backward from 
+            the drill weight and drivetrain geometry, I calculated a required pedal force of 
+            approximately 4.41 N to lift the drill.
           </p>
 
           <p>
-            The design was sized around the forces and motion required to repeatedly lift the drill
-            while keeping the required pedal force within a practical range for the operator.
+            I then calculated the reaction forces at the frame supports and sized critical pins 
+            based on the resulting shear loads. I used a factor of safety of 4 for the primary 
+            structural connection, where failure could destabilize the frame, and a factor of safety 
+            of 2 for the lower-risk pedal connection. The resulting minimum pin diameters were
+            approximately 4.16 mm for the main structural connection and 0.233 mm for the pedal-
+            force connection.
           </p>
 
           <p>
-            We performed static force analysis to determine cable tension, pedal force, and reaction
-            forces at the structural mounting points. These loads were then used to determine the
-            minimum required pin diameters based on the target factor of safety.
+            I also calculated the system power requirements and relationship between pedal speed 
+            and drill motion. At the analyzed operating point, the user supplies approximately 
+            4.4 W, while the gearing produces an output rotational speed about five times the pedal
+            input speed.
           </p>
 
           <p>
-            We also evaluated the structural integrity of the pedal using Finite Element Analysis
-            (FEA), identifying regions of higher stress and verifying that the proposed geometry
-            could withstand the expected loading.
+            The team used FEA to evaluate stress and deformation in the titanium pedal under the 
+            calculated operating load.
           </p>
 
           <div class="fig-pair">
@@ -222,15 +248,16 @@
           <h2>Results</h2>
 
           <p>
-            Our analysis indicated that the proposed design was mechanically feasible and could
-            satisfy the identified structural and power requirements.
+            The analysis indicated that the pedal-powered concept was mechanically feasible under 
+            the assumed operating conditions. The required pedal force remained practical for 
+            human operation, and the calculated structural connections met the selected safety 
+            factors.
           </p>
 
           <p>
-            This project allowed me to apply statics, stress analysis, dynamics, and power
-            transmission to a system-level mechanical design. It also reinforced the importance of
-            evaluating a mechanism not only for whether it works mechanically, but also for whether
-            its force and power requirements are practical for the intended user.
+            The design process also identified areas for further development, particularly the 
+            effects of repeated impact loading on system durability and the need to integrate the 
+            gearbox earlier in the overall architecture.
           </p>
 
           <div class="tools">
