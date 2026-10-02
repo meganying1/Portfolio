@@ -3,9 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      document.documentElement.classList.add("js");
-    </script>
     <title>Truss Structure — Megan Ying</title>
     <link
       rel="icon"
@@ -32,71 +29,16 @@
     <meta name="twitter:description" content="Designing and fabricating a lightweight truss structure to withstand a 40-pound load." />
     <meta name="twitter:image" content="https://www.meganying.com/assets/photos/share-card.png" />
 
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style.css?v=20261002-5" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:opsz,wght@14..32,400..600&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- #header:start -->
-    <header class="site-header">
-      <div class="site-header__inner">
-        <a class="wordmark" href="../index.html">Megan Ying</a>
-        <nav class="nav" aria-label="Primary">
-          <a class="nav__link" href="../index.html">Home</a>
-          <a class="nav__link" href="../index.html#about">About</a>
-          <a class="nav__link" href="../index.html#experiences">Experiences</a>
-          <a class="nav__link" href="../index.html#projects">Projects</a>
-          <a class="nav__link" href="../index.html#publications">Publications</a>
-        </nav>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
-          <span class="nav-toggle__bar" aria-hidden="true"></span>
-          <span class="nav-toggle__bar" aria-hidden="true"></span>
-          <span class="sr-only">Menu</span>
-        </button>
-      </div>
-    </header>
-    <nav class="mobile-nav" id="mobile-nav" data-open="false" aria-label="Mobile">
-      <ul class="mobile-nav__list">
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html">
-            Home
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#about">
-            About
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#experiences">
-            Experiences
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#projects">
-            Projects
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#publications">
-            Publications
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <!-- #header:end -->
-
     <main id="main">
       <section class="cs-hero">
         <div class="container container--narrow">
-          <a class="label cs-hero__back" href="../index.html#projects">← MechE Projects</a>
+          <a class="label cs-hero__back" href="../index.html#projects">← All projects</a>
           <h1 class="cs-hero__title">Truss Structure</h1>
           <p class="cs-hero__deck">
             Designing and fabricating a lightweight truss structure to withstand a 40-pound load.
@@ -109,79 +51,15 @@
           <h2>Overview</h2>
 
           <p>
-            In a team of three, I helped design and fabricate a lightweight acrylic truss for 
-            a 40-pound center load. We developed the structure through concept generation, 
-            structural analysis, CAD, fabrication, and destructive testing.
+            In a team of three, we designed and laser-cut an acrylic truss targeting failure
+            near a 40-pound center load. I developed candidate geometries and calculated
+            member forces and predicted strength-to-weight performance for my concepts.
           </p>
 
           <p>
-            Each team member developed three candidate designs and performed member-force 
-            calculations for their own concepts. We then compared the strongest candidates and 
-            selected the geometry with the best predicted strength-to-weight performance for 
-            further development.
-          </p>
-
-          <h2>Concept Development</h2>
-
-          <p>
-            We began by having each team member develop three candidate truss configurations. We 
-            compared the nine concepts based on geometry, expected load paths, and structural 
-            efficiency, then selected the configuration that provided the best balance between load 
-            capacity and material usage.
-          </p>
-
-          <p>
-            After selecting the final geometry, we modeled the complete assembly in SolidWorks to 
-            verify dimensions and prepare the design for fabrication.
-          </p>
-
-          <h2>Engineering Analysis</h2>
-
-          <p>
-            For the selected design, we used static equilibrium to calculate the internal forces 
-            in each member under the 40-pound center load. The highest calculated loads were 
-            approximately 28.3 lb in compression in the outer diagonal members. We used these 
-            forces and the acrylic material properties to determine the required member dimensions
-            and estimate the total weight of the structure.
-          </p>
-
-          <figure class="fig">
-            <img
-              src="../assets/photos/projects/truss_cad.png"
-              alt="CAD model of the truss structure mounted on the testing rig"
-              width="460"
-              height="298"
-              loading="lazy"
-              decoding="async"
-            />
-            <figcaption><span class="fig__num">Fig. 1</span>CAD model of truss structure on testing rig</figcaption>
-          </figure>
-
-          <figure class="fig">
-            <img
-              src="../assets/photos/projects/truss_calc.jpg"
-              alt="Hand calculations for the force in each truss member"
-              width="740"
-              height="242"
-              loading="lazy"
-              decoding="async"
-            />
-            <figcaption><span class="fig__num">Fig. 2</span>Calculating forces in each member</figcaption>
-          </figure>
-
-          <h2>Fabrication & Testing</h2>
-
-          <p>
-            After finalizing the design, we generated DXF files from the CAD model and prepared 
-            the parts for laser cutting in CorelDRAW. We then fabricated the acrylic members 
-            and assembled the truss using screws and bolts.
-          </p>
-
-          <p>
-            Our first prototype used 1/16-inch-thick members and failed at approximately 20 lb, 
-            well below the target. We increased the thickness to 5/32 inch, after which the next 
-            prototype supported more than 50 lb without failing. We then reduced the thickness 
-            to 3/32 inch to move the failure load closer to the 40-pound target.
+            We used destructive testing to adjust member thickness. The final truss failed at
+            the predicted member location but below the target load, exposing a gap between
+            the analytical model and fabricated structure.
           </p>
 
           <figure class="fig">
@@ -193,14 +71,77 @@
               loading="lazy"
               decoding="async"
             />
-            <figcaption><span class="fig__num">Fig. 3</span>Front view of assembled truss on testing rig</figcaption>
+            <figcaption><span class="fig__num">Fig. 1</span>Laser-cut acrylic truss assembled on the load fixture</figcaption>
           </figure>
+
+          <h2>Design</h2>
+
+          <p>
+            Each team member developed three concepts. We compared the strongest candidates
+            using predicted strength-to-weight performance and selected a geometry for
+            fabrication.
+          </p>
+
+          <p>
+            We modeled the assembly in SolidWorks and used the member-force calculations to
+            select dimensions and estimate weight.
+          </p>
+
+          <h2>Analysis &amp; Validation</h2>
+
+          <p>
+            We used static equilibrium to calculate member forces under the 40-pound center
+            load. The outer diagonal members carried approximately 28.3 lb in compression. We
+            compared these loads with the assumed acrylic properties to size the members and
+            predict the failure location.
+          </p>
+
+          <figure class="fig">
+            <img
+              src="../assets/photos/projects/truss_cad.png"
+              alt="CAD model of the truss structure mounted on the testing rig"
+              width="460"
+              height="298"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption><span class="fig__num">Fig. 2</span>CAD model of truss structure on testing rig</figcaption>
+          </figure>
+
+          <figure class="fig">
+            <img
+              src="../assets/photos/projects/truss_calc.jpg"
+              alt="Hand calculations for the force in each truss member"
+              width="740"
+              height="242"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption><span class="fig__num">Fig. 3</span>Calculating forces in each member</figcaption>
+          </figure>
+
+          <h2>Fabrication &amp; Iteration</h2>
+
+          <p>
+            We generated DXF files from CAD, prepared them in CorelDRAW, laser-cut the acrylic
+            members, and assembled them with screws and bolts.
+          </p>
+
+          <p>
+            The 1/16-inch prototype failed near 20 lb. Increasing thickness to 5/32 inch
+            supported more than 50 lb without failure; reducing it to 3/32 inch produced a
+            prototype failure near 42 lb. The final test specimen used 3/32-inch members but
+            failed at 32 lb.
+          </p>
 
           <h2>Results</h2>
 
           <p>
-            The final truss failed at approximately 38 lb, close to the 40-pound design target, 
-            and failed in the member location predicted by our structural analysis.
+            The final truss failed at the predicted member location at 32 lb, below the
+            40-pound target. The report identified a change in laser cutter as a possible
+            contributor to the difference from the 42-pound prototype result. Measuring cut
+            dimensions and testing additional specimens would help separate fabrication
+            variation from modeling error.
           </p>
 
           <div class="tools">
@@ -218,39 +159,7 @@
       </section>
     </main>
 
-    <!-- #footer:start -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <nav class="footer__nav" aria-label="Footer">
-            <a href="../index.html">Home</a>
-            <a href="../index.html#about">About</a>
-            <a href="../index.html#experiences">Experiences</a>
-            <a href="../index.html#projects">Projects</a>
-            <a href="../index.html#publications">Publications</a>
-          </nav>
-          <div>
-            <div class="footer__social">
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ying-megan/"
-                >LinkedIn ↗</a
-              >
-              <a target="_blank" rel="noreferrer" href="https://github.com/meganying1"
-                >GitHub ↗</a
-              >
-            </div>
-            <p class="footer__meta">
-              © 2026 Megan Ying. Forked from
-              <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
-                >Ram Maheshwari</a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- #footer:end -->
-
-    <script src="../js/main.js" defer></script>
+    <script src="../js/main.js?v=20261002-5" defer></script>
   </body>
 </html>
 

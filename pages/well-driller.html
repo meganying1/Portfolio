@@ -3,9 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      document.documentElement.classList.add("js");
-    </script>
     <title>Well Driller — Megan Ying</title>
     <link
       rel="icon"
@@ -32,71 +29,16 @@
     <meta name="twitter:description" content="Designing a pedal-powered well drilling system that converts human input into repeated impact." />
     <meta name="twitter:image" content="https://www.meganying.com/assets/photos/share-card.png" />
 
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style.css?v=20261002-5" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:opsz,wght@14..32,400..600&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- #header:start -->
-    <header class="site-header">
-      <div class="site-header__inner">
-        <a class="wordmark" href="../index.html">Megan Ying</a>
-        <nav class="nav" aria-label="Primary">
-          <a class="nav__link" href="../index.html">Home</a>
-          <a class="nav__link" href="../index.html#about">About</a>
-          <a class="nav__link" href="../index.html#experiences">Experiences</a>
-          <a class="nav__link" href="../index.html#projects">Projects</a>
-          <a class="nav__link" href="../index.html#publications">Publications</a>
-        </nav>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
-          <span class="nav-toggle__bar" aria-hidden="true"></span>
-          <span class="nav-toggle__bar" aria-hidden="true"></span>
-          <span class="sr-only">Menu</span>
-        </button>
-      </div>
-    </header>
-    <nav class="mobile-nav" id="mobile-nav" data-open="false" aria-label="Mobile">
-      <ul class="mobile-nav__list">
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html">
-            Home
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#about">
-            About
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#experiences">
-            Experiences
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#projects">
-            Projects
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#publications">
-            Publications
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <!-- #header:end -->
-
     <main id="main">
       <section class="cs-hero">
         <div class="container container--narrow">
-          <a class="label cs-hero__back" href="../index.html#projects">← MechE Projects</a>
+          <a class="label cs-hero__back" href="../index.html#projects">← All projects</a>
           <h1 class="cs-hero__title">Well Driller</h1>
           <p class="cs-hero__deck">
             Designing a pedal-powered well drilling system that converts human input into 
@@ -108,42 +50,32 @@
       <section class="cs-body">
         <div class="container container--narrow">
 
-          <h>Overview</h>
+          <h2>Overview</h2>
 
           <p>
-            In a team of three, I helped redesign the
-            <a href="https://villagedrill.com" target="_blank" rel="noreferrer">Village Drill</a>
-            to replace its existing power input with a pedal-driven system for use in Baalbek-Hermel,
-            Lebanon. We developed the system from concept selection through mechanical design, 
-            structural analysis, FEA, and power calculations.
+            In a team of three, we developed a pedal-powered redesign of the <a
+            href="https://villagedrill.com" target="_blank" rel="noreferrer">Village Drill</a>
+            for Baalbek-Hermel, Lebanon. The concept uses a geared cable drive to lift the
+            drill, then releases it to deliver an impact under its own weight.
           </p>
 
           <p>
-            I focused on how different gear mechanisms could integrate with the existing drill 
-            architecture and performed the hand calculations used to size and evaluate the final 
-            system. The selected design uses a pedal-driven pile-driver mechanism that lifts the 
-            drill through a geared cable system, then releases it to fall under its own weight.
+            I researched gear mechanisms that could integrate with the existing drill and
+            performed hand calculations for cable tension, pedal force, frame reactions, pin
+            sizing, and power requirements. The project produced a CAD concept and analytical
+            evaluation rather than a physical drilling prototype.
           </p>
 
-          <h2>Concept Development</h2>
+          <h2>Design</h2>
 
           <p>
-            We began by defining requirements around drilling performance, durability, ease of 
-            assembly, transportability, safety, and power efficiency. The design also needed to 
-            retain as much of the existing Village Drill architecture as possible.
-          </p>
-
-          <p>
-            I researched how different gear mechanisms could convert pedal rotation into the 
-            motion required by the drill and considered how each could be packaged within the 
-            existing system. We developed three concepts using worm gears, bevel gears, and a 
-            pile-driver mechanism.
+            We prioritized retaining the existing frame while addressing drilling performance,
+            transport, assembly, safety, and power input.
           </p>
 
           <p>
-            We selected the pile-driver architecture because it uses pedal input to raise the 
-            drill, then converts its gravitational potential energy into impact when released. 
-            This was well suited to the rocky ground conditions identified for the target region.
+            I evaluated ways to convert pedal rotation into drill motion. We compared worm-gear, bevel-gear, and pile-driver concepts and selected the lift-and-release
+            architecture for the rocky conditions identified in the regional research.
           </p>
 
           <figure class="fig">
@@ -158,48 +90,43 @@
             <figcaption><span class="fig__num">Fig. 1</span>Sketch of pile driver mechanism</figcaption>
           </figure>
 
-          <h2>Mechanical Design</h2>
-
           <p>
-            Pedal rotation is transmitted through a chain and gear system to a cable pulley that 
-            raises the drill. One gear includes a section without teeth. When this section reaches 
-            the mating gear, the drivetrain disengages and allows the drill to fall freely. The 
-            gears then re-engage and repeat the cycle.
+            Pedal rotation passes through a chain and gear system to a cable pulley that lifts
+            the drill. A toothless section of one gear disengages the drive so the drill can
+            fall; re-engagement begins the next lift.
           </p>
 
           <p>
-            The design retained much of the Village Drill frame while integrating the pedal system,
-            gearbox, cable drive, and drill-lifting mechanism into the existing architecture.
+            We packaged the pedal drive, gearbox, and cable mechanism around the retained
+            frame. Controlled release and gear re-engagement are key interfaces to evaluate in
+            a prototype.
           </p>
 
-          <h2>Engineering Analysis</h2>
+          <h2>Analysis &amp; Validation</h2>
 
           <p>
-            I performed the hand calculations used to determine the cable tension, pedal force, 
-            frame reactions, pin sizes, and power requirements of the system. Working backward from 
-            the drill weight and drivetrain geometry, I calculated a required pedal force of 
-            approximately 4.41 N to lift the drill.
-          </p>
-
-          <p>
-            I then calculated the reaction forces at the frame supports and sized critical pins 
-            based on the resulting shear loads. I used a factor of safety of 4 for the primary 
-            structural connection, where failure could destabilize the frame, and a factor of safety 
-            of 2 for the lower-risk pedal connection. The resulting minimum pin diameters were
-            approximately 4.16 mm for the main structural connection and 0.233 mm for the pedal-
-            force connection.
+            I worked backward from the modeled drill load and drivetrain geometry to estimate
+            cable tension and pedal force, then calculated frame reactions and connection
+            loads.
           </p>
 
           <p>
-            I also calculated the system power requirements and relationship between pedal speed 
-            and drill motion. At the analyzed operating point, the user supplies approximately 
-            4.4 W, while the gearing produces an output rotational speed about five times the pedal
-            input speed.
+            I used a factor of safety of 4 for the primary structural connection and 2 for the
+            lower-risk pedal connection to calculate minimum pin sizes. These analytical
+            minima would need to be translated into practical hardware sizes with allowances
+            for bearing, wear, and repeated loading.
           </p>
 
           <p>
-            The team used FEA to evaluate stress and deformation in the titanium pedal under the 
-            calculated operating load.
+            I also calculated the relationship between pedal speed, gearing, and drill motion
+            to evaluate the assumed operating point. These estimates depend on the selected
+            drill load, geometry, and operating assumptions.
+          </p>
+
+          <p>
+            The team used FEA to estimate pedal stress and deformation under the calculated
+            load. This static loading assessment did not address the mechanism’s repeated
+            impact or engagement behavior.
           </p>
 
           <div class="fig-pair">
@@ -239,25 +166,18 @@
             <figcaption><span class="fig__num">Fig. 4</span>Calculating reaction forces</figcaption>
           </figure>
 
-          <p>
-            Finally, we calculated the mechanical power required to operate the drilling mechanism.
-            This allowed us to determine the approximate pedal rotation rate needed to achieve the
-            required drilling cycle and assess whether the system was practical for human operation.
-          </p>
-
           <h2>Results</h2>
 
           <p>
-            The analysis indicated that the pedal-powered concept was mechanically feasible under 
-            the assumed operating conditions. The required pedal force remained practical for 
-            human operation, and the calculated structural connections met the selected safety 
-            factors.
+            We completed a pedal-powered lift-and-release concept with CAD, drivetrain
+            calculations, connection sizing, and pedal FEA. The analysis supported further
+            development under the modeled conditions.
           </p>
 
           <p>
-            The design process also identified areas for further development, particularly the 
-            effects of repeated impact loading on system durability and the need to integrate the 
-            gearbox earlier in the overall architecture.
+            A physical prototype would be needed to evaluate drivetrain losses, release and
+            re-engagement, impact durability, and drilling performance before establishing
+            practical feasibility.
           </p>
 
           <div class="tools">
@@ -275,38 +195,6 @@
       </section>
     </main>
 
-    <!-- #footer:start -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <nav class="footer__nav" aria-label="Footer">
-            <a href="../index.html">Home</a>
-            <a href="../index.html#about">About</a>
-            <a href="../index.html#experiences">Experiences</a>
-            <a href="../index.html#projects">Projects</a>
-            <a href="../index.html#publications">Publications</a>
-          </nav>
-          <div>
-            <div class="footer__social">
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ying-megan/"
-                >LinkedIn ↗</a
-              >
-              <a target="_blank" rel="noreferrer" href="https://github.com/meganying1"
-                >GitHub ↗</a
-              >
-            </div>
-            <p class="footer__meta">
-              © 2026 Megan Ying. Forked from
-              <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
-                >Ram Maheshwari</a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- #footer:end -->
-
-    <script src="../js/main.js" defer></script>
+    <script src="../js/main.js?v=20261002-5" defer></script>
   </body>
 </html>

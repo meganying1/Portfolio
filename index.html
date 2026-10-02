@@ -3,9 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      document.documentElement.classList.add("js");
-    </script>
     <title>Megan Ying</title>
     <link
       rel="icon"
@@ -16,7 +13,7 @@
     <meta name="description" content="Megan Ying — Mechanical Engineer, CMU '25" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" conxtent="Megan Ying" />
+    <meta property="og:site_name" content="Megan Ying" />
     <meta property="og:url" content="https://www.meganying.com/" />
     <meta property="og:title" content="Megan Ying" />
     <meta property="og:description" content="Megan Ying — Mechanical Engineer, CMU &#x27;25" />
@@ -29,605 +26,117 @@
     <meta name="twitter:description" content="Megan Ying — Mechanical Engineer, CMU &#x27;25" />
     <meta name="twitter:image" content="https://www.meganying.com/assets/photos/share-card.png" />
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css?v=20261002-5" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:opsz,wght@14..32,400..600&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-
-    <!-- #header:start -->
-    <header class="site-header">
-      <div class="site-header__inner">
-        <a class="wordmark" href="./index.html#">Megan Ying</a>
-        <nav class="nav" aria-label="Primary">
-          <a class="nav__link" href="./index.html#">Home</a>
-          <a class="nav__link" href="./index.html#about">About</a>
-          <a class="nav__link" href="./index.html#experiences">Experiences</a>
-          <a class="nav__link" href="./index.html#projects">Projects</a>
-          <a class="nav__link" href="./index.html#publications">Publications</a>
-        </nav>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
-          <span class="nav-toggle__bar" aria-hidden="true"></span>
-          <span class="nav-toggle__bar" aria-hidden="true"></span>
-          <span class="sr-only">Menu</span>
-        </button>
-      </div>
-    </header>
-    <nav class="mobile-nav" id="mobile-nav" data-open="false" aria-label="Mobile">
-      <ul class="mobile-nav__list">
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="./index.html#">
-            Home
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="./index.html#about">
-            About
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="./index.html#experiences">
-            Experiences
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="./index.html#projects">
-            Projects
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="./index.html#publications">
-            Publications
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <!-- #header:end -->
-
-    <main id="main">
-      <section class="hero">
-        <div class="container">
-          <p class="label hero__eyebrow">Portfolio</p>
-          <div class="hero__identity">
-            <h1 class="hero__name">Megan Ying</h1>
-          </div>
-          <p class="label hero__credentials">
-            Carnegie Mellon University — B.S. Mechanical Engineering
-          </p>
+    <main id="main" class="portfolio">
+      <section id="about" class="intro" aria-labelledby="intro-title">
+        <h1 id="intro-title">Megan Ying</h1>
+        <p class="intro__credential">Mechanical engineer · Carnegie Mellon ’25</p>
+        <div class="intro__copy">
+          <p>I design mechanical systems from concept to production hardware, using CAD, simulation, and testing. I’m interested in robotics and physical AI.</p>
+          <p>Currently a software engineer at Bloomberg. Previously, I worked on interconnect product design at Apple and hydraulics and controls at Caterpillar.</p>
+        </div>
+        <div class="contact-links" aria-label="Find me online">
+          <a href="https://www.linkedin.com/in/ying-megan/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+          <a href="https://github.com/meganying1" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
         </div>
       </section>
 
-      <section id="about" class="section reveal" style="--i: 0">
-        <div class="container">
-          <div class="section__grid">
-            <div class="section__rail">
-              <h2 class="label"><span class="label__num">(01)</span>about</h2>
-            </div>
-            <div>
-
-              <p class="about__lede">
-                Hi! I'm Megan Ying, a mechanical engineer and Carnegie Mellon graduate with 
-                experience taking mechanical designs from early concepts and prototypes to 
-                production hardware. I enjoy combining creative design with analytical 
-                problem-solving, using math, simulation, and testing to predict performance, 
-                evaluate trade-offs, and guide design iteration.
-              </p>
-
-              <p class="about__lede">
-                My background also spans software engineering and data analytics, which I use 
-                to complement my mechanical design work through test-data analysis, automation,
-                and design optimization. I'm particularly interested in robotics and physical AI 
-                because of their interdisciplinary nature and the way they bring together 
-                mechanical design, electronics, and software.
-              </p>
-
-              <div class="social">
-                <a
-                  class="social__link"
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://www.linkedin.com/in/ying-megan/"
-                  >LinkedIn ↗</a
-                >
-                <a
-                  class="social__link"
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://github.com/meganying1"
-                  >GitHub ↗</a
-                >
-              </div>
-
-              <div class="skills">
-                <div class="skills__group">
-                  <h3 class="label">product design &amp; cad</h3>
-                  <ul class="skills__list">
-                    <li>Siemens NX</li>
-                    <li>SolidWorks</li>
-                    <li>GD&amp;T</li>
-                    <li>DFM</li>
-                    <li>PLM</li>
-                  </ul>
-                </div>
-
-                <div class="skills__group">
-                  <h3 class="label">analysis &amp; validation</h3>
-                  <ul class="skills__list">
-                    <li>FEA</li>
-                    <li>ANSYS</li>
-                    <li>Tolerance Analysis</li>
-                    <li>DOE</li>
-                    <li>Failure Analysis</li>
-                  </ul>
-                </div>
-
-                <div class="skills__group">
-                  <h3 class="label">manufacturing &amp; prototyping</h3>
-                  <ul class="skills__list">
-                    <li>Machining</li>
-                    <li>3D Printing</li>
-                    <li>Stamping</li>
-                    <li>Injection Molding</li>
-                    <li>Rapid Prototyping</li>
-                  </ul>
-                </div>
-
-                <div class="skills__group">
-                  <h3 class="label">mechatronics &amp; controls</h3>
-                  <ul class="skills__list">
-                    <li>Arduino</li>
-                    <li>Control Systems</li>
-                    <li>Sensor Integration</li>
-                  </ul>
-                </div>
-
-                <div class="skills__group">
-                  <h3 class="label">engineering software</h3>
-                  <ul class="skills__list">
-                    <li>Python</li>
-                    <li>MATLAB</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <section id="projects" class="portfolio-section" aria-labelledby="projects-title">
+        <h2 id="projects-title" class="section-title">Selected projects</h2>
+        <ul class="project-list">
+          <li>
+            <a class="project-link" href="./pages/battery-door.html">
+              <img class="project-thumb" src="./assets/photos/projects/battery_exploded.png" alt="" width="1285" height="838" />
+              <span><span class="project-name">Battery door</span><span class="project-description">A push-button release mechanism, designed for manufacture and evaluated with FEA.</span></span>
+              <span class="date">Nov 2024 – Dec 2024</span>
+            </a>
+          </li>
+          <li>
+            <a class="project-link" href="./pages/trash-compactor.html">
+              <img class="project-thumb" src="./assets/photos/projects/compactor_final.jpg" alt="" width="258" height="380" />
+              <span><span class="project-name">Trash compactor</span><span class="project-description">An automated compaction prototype. Best Overall Project at CMU’s design expo.</span></span>
+              <span class="date">Sep 2024 – Dec 2024</span>
+            </a>
+          </li>
+          <li>
+            <a class="project-link" href="./pages/tripod-attachment.html">
+              <img class="project-thumb" src="./assets/photos/projects/tripod_phone1.jpg" alt="" width="458" height="345" loading="lazy" />
+              <span><span class="project-name">Tripod attachment</span><span class="project-description">An assistive phone mount that reduces the force and dexterity needed for positioning.</span></span>
+              <span class="date">Nov 2022 – Dec 2022</span>
+            </a>
+          </li>
+        </ul>
+        <details class="disclosure" id="other-projects">
+          <summary>More projects<span class="disclosure__count">6</span></summary>
+          <ul class="project-list project-list--more">
+            <li><a class="project-link" href="./pages/linkage-system.html">
+              <img class="project-thumb" src="./assets/photos/projects/final_linkage.png" alt="" width="424" height="409" loading="lazy" />
+              <span><span class="project-name">Linkage system</span><span class="project-description">A motor-driven linkage that turns rotary motion into linear button actuation.</span></span><span class="date">Oct 2022 – Nov 2022</span>
+            </a></li>
+            <li><a class="project-link" href="./pages/well-driller.html">
+              <img class="project-thumb" src="./assets/photos/projects/driller_cad.png" alt="" width="252" height="388" loading="lazy" />
+              <span><span class="project-name">Well driller</span><span class="project-description">A pedal-powered drilling system that converts human input into repeated impact.</span></span><span class="date">Nov 2021 – Dec 2021</span>
+            </a></li>
+            <li><a class="project-link" href="./pages/mobile-robot.html">
+              <img class="project-thumb" src="./assets/photos/projects/mobile_robot.jpg" alt="" width="715" height="482" loading="lazy" />
+              <span><span class="project-name">Mobile robot</span><span class="project-description">An autonomous robot with path following and obstacle avoidance.</span></span><span class="date">Oct 2021 – Nov 2021</span>
+            </a></li>
+            <li><a class="project-link" href="./pages/truss-structure.html">
+              <img class="project-thumb" src="./assets/photos/projects/truss_cad.png" alt="" width="460" height="298" loading="lazy" />
+              <span><span class="project-name">Truss structure</span><span class="project-description">A lightweight, fabricated truss designed to support a 40-pound load.</span></span><span class="date">Sep 2021 – Oct 2021</span>
+            </a></li>
+            <li><a class="project-link" href="./pages/noise-reduction.html">
+              <img class="project-thumb" src="./assets/photos/projects/noise_signal.png" alt="" width="780" height="700" loading="lazy" />
+              <span><span class="project-name">Noise reduction</span><span class="project-description">Adaptive filtering in MATLAB to reduce unwanted background sound.</span></span><span class="date">Feb 2023 – Mar 2023</span>
+            </a></li>
+            <li><a class="project-link" href="./pages/chinese-checkers.html">
+              <img class="project-thumb" src="./assets/photos/projects/checker_board.png" alt="" width="300" height="340" loading="lazy" />
+              <span><span class="project-name">Chinese Checkers</span><span class="project-description">A Python game with AI decision-making and multiplayer support.</span></span><span class="date">Oct 2021 – Nov 2021</span>
+            </a></li>
+          </ul>
+        </details>
       </section>
 
-      <section id="experiences" class="section reveal" style="--i: 1">
-        <div class="container">
-          <div class="section__grid">
-            <div class="section__rail">
-              <h2 class="label"><span class="label__num">(02)</span>experiences</h2>
-            </div>
-            <div>
-              <ol class="cv">
-                <li class="cv__row">
-                  <h3 class="cv__org">
-                    <img
-                      class="cv__logo"
-                      src="./assets/photos/experiences/bloomberg.png"
-                      alt=""
-                      aria-hidden="true"
-                      width="640"
-                      height="480"
-                      loading="lazy"
-                    />Bloomberg
-                  </h3>
-                  <p class="cv__role">Software Engineer</p>
-                  <p class="cv__dates">Oct 2025 — Present</p>
-                </li>
-
-                <li class="cv__row">
-                  <h3 class="cv__org">
-                    <img
-                      class="cv__logo"
-                      src="./assets/photos/experiences/research.png"
-                      alt=""
-                      aria-hidden="true"
-                      width="330"
-                      height="330"
-                      loading="lazy"
-                    />Design Research Collective
-                  </h3>
-                  <p class="cv__role">Research Assistant</p>
-                  <p class="cv__dates">Sep 2024 — Jul 2026</p>
-                </li>
-
-                <li class="cv__row">
-                  <h3 class="cv__org">
-                    <img
-                      class="cv__logo"
-                      src="./assets/photos/experiences/apple.jpg"
-                      alt=""
-                      aria-hidden="true"
-                      width="400"
-                      height="400"
-                      loading="lazy"
-                    />Apple
-                  </h3>
-                  <p class="cv__role">Interconnect Product Design Co-op</p>
-                  <p class="cv__dates">Sep 2023 — Aug 2024</p>
-                </li>
-
-                <li class="cv__row">
-                  <h3 class="cv__org">
-                    <img
-                      class="cv__logo"
-                      src="./assets/photos/experiences/ubs.png"
-                      alt=""
-                      aria-hidden="true"
-                      width="453"
-                      height="422"
-                      loading="lazy"
-                    />UBS
-                  </h3>
-                  <p class="cv__role">Quantitative Trading Summer Analyst</p>
-                  <p class="cv__dates">Jun 2023 — Aug 2023</p>
-                </li>
-
-                <li class="cv__row">
-                  <h3 class="cv__org">
-                    <img
-                      class="cv__logo"
-                      src="./assets/photos/experiences/cat.jpg"
-                      alt=""
-                      aria-hidden="true"
-                      width="440"
-                      height="440"
-                      loading="lazy"
-                    />Caterpillar
-                  </h3>
-                  <p class="cv__role cv__role--wide">Hydraulics &amp; Controls Engineering Intern</p>
-                  <p class="cv__dates">May 2022 — Aug 2022</p>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
+      <section id="experiences" class="portfolio-section" aria-labelledby="experience-title">
+        <h2 id="experience-title" class="section-title">Experience</h2>
+        <ol>
+          <li class="experience-row"><span class="experience-logo experience-logo--bloomberg" aria-hidden="true"><img src="./assets/photos/experiences/bloomberg.png" alt="" width="640" height="480" loading="lazy" /></span><div><h3>Bloomberg</h3><p class="experience-role">Software Engineer</p></div><p class="date">Oct 2025 – Present</p></li>
+          <li class="experience-row"><span class="experience-logo experience-logo--research" aria-hidden="true"><img src="./assets/photos/experiences/research.png" alt="" width="330" height="330" loading="lazy" /></span><div><h3>Design Research Collective</h3><p class="experience-role">Research Assistant</p></div><p class="date">Sep 2024 – Jul 2026</p></li>
+          <li class="experience-row"><span class="experience-logo experience-logo--apple" aria-hidden="true"><img src="./assets/photos/experiences/apple.jpg" alt="" width="400" height="400" loading="lazy" /></span><div><h3>Apple</h3><p class="experience-role">Interconnect Product Design Co-op</p></div><p class="date">Sep 2023 – Aug 2024</p></li>
+          <li class="experience-row"><span class="experience-logo experience-logo--ubs" aria-hidden="true"><img src="./assets/photos/experiences/ubs.png" alt="" width="453" height="422" loading="lazy" /></span><div><h3>UBS</h3><p class="experience-role">Quantitative Trading Summer Analyst</p></div><p class="date">Jun 2023 – Aug 2023</p></li>
+          <li class="experience-row"><span class="experience-logo experience-logo--cat" aria-hidden="true"><img src="./assets/photos/experiences/cat.jpg" alt="" width="440" height="440" loading="lazy" /></span><div><h3>Caterpillar</h3><p class="experience-role">Hydraulics &amp; Controls Engineering Intern</p></div><p class="date">May 2022 – Aug 2022</p></li>
+        </ol>
+        <details class="disclosure">
+          <summary>Technical skills</summary>
+          <dl class="skills-list">
+            <div><dt>Product design &amp; CAD</dt><dd>Siemens NX, SolidWorks, GD&amp;T, DFM, PLM</dd></div>
+            <div><dt>Analysis &amp; validation</dt><dd>FEA, ANSYS, tolerance analysis, DOE, failure analysis</dd></div>
+            <div><dt>Manufacturing &amp; prototyping</dt><dd>Machining, 3D printing, stamping, injection molding, rapid prototyping</dd></div>
+            <div><dt>Mechatronics &amp; controls</dt><dd>Arduino, control systems, sensor integration</dd></div>
+            <div><dt>Engineering software</dt><dd>Python, MATLAB</dd></div>
+          </dl>
+        </details>
       </section>
 
-      <section id="projects" class="section reveal" style="--i: 2">
-        <div class="container">
-          <div class="section__grid">
-            <div class="section__rail">
-              <h2 class="label"><span class="label__num">(03)</span>meche projects</h2>
-            </div>
-            <div>
-              <ol class="index">
-                <li class="index__item">
-                  <a class="index__link" href="./pages/battery-door.html">
-                    <span class="index__head">
-
-                      <img
-                      class="index__thumb"
-                      src="./assets/photos/projects/battery_exploded.png"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="1285"
-                      height="838"
-                    />
-                      <span class="index__title">Battery<br class="index__brk" /> Door</span>
-                      <span class="index__arrow" aria-hidden="true">↗</span>
-                    </span>
-                    <span class="index__meta">Product Design · DFM</span>
-                    <span class="index__date">Nov 2024 — Dec 2024</span>
-                  </a>
-
-                  <div class="index__peek-wrap">
-                    <p class="index__peek-desc">Designing a one-touch battery door mechanism that releases with a downward button press and automatically re-latches when closed.</p>
-                  </div>
-                </li>
-
-                <li class="index__item">
-                  <a class="index__link" href="./pages/trash-compactor.html">
-                    <span class="index__head">
-
-                      <img
-                      class="index__thumb"
-                      src="./assets/photos/projects/compactor_final.jpg"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="258"
-                      height="380"
-                    />
-                      <span class="index__title">Trash<br class="index__brk" /> Compactor</span>
-                      <span class="index__arrow" aria-hidden="true">↗</span>
-                    </span>
-                    <span class="index__meta">Mechatronics · Manufacturing</span>
-                    <span class="index__date">Sep 2024 — Dec 2024</span>
-                  </a>
-
-                  <div class="index__peek-wrap">
-                    <p class="index__peek-desc">Designing and building a standalone trash compactor that automatically compresses household waste.</p>
-                  </div>
-                </li>
-
-                <li class="index__item">
-                  <a class="index__link" href="./pages/tripod-attachment.html">
-                    <span class="index__head">
-
-                      <img
-                      class="index__thumb"
-                      src="./assets/photos/projects/tripod_phone1.jpg"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="458"
-                      height="345"
-                    />
-                      <span class="index__title">Tripod<br class="index__brk" /> Attachment</span>
-                      <span class="index__arrow" aria-hidden="true">↗</span>
-                    </span>
-                    <span class="index__meta">User-Centered Design · Mechatronics</span>
-                    <span class="index__date">Nov 2022 — Dec 2022</span>
-                  </a>
-
-                  <div class="index__peek-wrap">
-                    <p class="index__peek-desc">Designing an assistive tripod attachment that automates phone mounting and reduces force and dexterity needed for positioning.</p>
-                  </div>
-                </li>
-
-                <li class="index__item">
-                  <a class="index__link" href="./pages/linkage-system.html">
-                    <span class="index__head">
-
-                      <img
-                      class="index__thumb"
-                      src="./assets/photos/projects/final_linkage.png"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="424"
-                      height="409"
-                    />
-                      <span class="index__title">Linkage<br class="index__brk" /> System</span>
-                      <span class="index__arrow" aria-hidden="true">↗</span>
-                    </span>
-                    <span class="index__meta">Mechanism Design · Motion Simulation</span>
-                    <span class="index__date">Oct 2022 — Nov 2022</span>
-                  </a>
-
-                  <div class="index__peek-wrap">
-                    <p class="index__peek-desc">Designing and iterating a motor-driven linkage that converts rotary motion into extended linear button actuation.</p>
-                  </div>
-                </li>
-
-                <li class="index__item">
-                  <a class="index__link" href="./pages/well-driller.html">
-                    <span class="index__head">
-
-                      <img
-                      class="index__thumb"
-                      src="./assets/photos/projects/driller_cad.png"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="252"
-                      height="388"
-                    />
-                      <span class="index__title">Well<br class="index__brk" /> Driller</span>
-                      <span class="index__arrow" aria-hidden="true">↗</span>
-                    </span>
-                    <span class="index__meta">Structural Design · Power Transmission</span>
-                    <span class="index__date">Nov 2021 — Dec 2021</span>
-                  </a>
-
-                  <div class="index__peek-wrap">
-                    <p class="index__peek-desc">Designing a pedal-powered well drilling system that converts human input into repeated impact.</p>
-                  </div>
-                </li>
-
-                <li class="index__item">
-                  <a class="index__link" href="./pages/mobile-robot.html">
-                    <span class="index__head">
-
-                      <img
-                      class="index__thumb"
-                      src="./assets/photos/projects/mobile_robot.jpg"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="715"
-                      height="482"
-                    />
-                      <span class="index__title">Mobile<br class="index__brk" /> Robot</span>
-                      <span class="index__arrow" aria-hidden="true">↗</span>
-                    </span>
-                    <span class="index__meta">Mechatronics · Robotics</span>
-                    <span class="index__date">Oct 2021 — Nov 2021</span>
-                  </a>
-
-                  <div class="index__peek-wrap">
-                    <p class="index__peek-desc">Developing an autonomous mobile robot to follow a curved path and avoid moving obstacles using infrared and ultrasonic sensors.</p>
-                  </div>
-                </li>
-
-                <li class="index__item">
-                  <a class="index__link" href="./pages/truss-structure.html">
-                    <span class="index__head">
-
-                      <img
-                      class="index__thumb"
-                      src="./assets/photos/projects/truss_cad.png"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="460"
-                      height="298"
-                    />
-                      <span class="index__title">Truss<br class="index__brk" /> Structure</span>
-                      <span class="index__arrow" aria-hidden="true">↗</span>
-                    </span>
-                    <span class="index__meta">Structural Design · Experimental Testing</span>
-                    <span class="index__date">Sep 2021 — Oct 2021</span>
-                  </a>
-
-                  <div class="index__peek-wrap">
-                    <p class="index__peek-desc">Designing and fabricating a lightweight truss structure to withstand a 40-pound load.</p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="other-projects" class="section reveal" style="--i: 3">
-        <div class="container">
-          <div class="section__grid">
-            <div class="section__rail">
-              <h2 class="label"><span class="label__num">(04)</span>other projects</h2>
-            </div>
-            <div>
-              <ol class="index">
-                <li class="index__item">
-                  <a class="index__link" href="./pages/noise-reduction.html">
-                    <span class="index__head">
-
-                      <img
-                      class="index__thumb"
-                      src="./assets/photos/projects/noise_signal.png"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="780"
-                      height="700"
-                    />
-                      <span class="index__title">Noise<br class="index__brk" /> Reduction</span>
-                      <span class="index__arrow" aria-hidden="true">↗</span>
-                    </span>
-                    <span class="index__meta">Adaptive Filtering · MATLAB</span>
-                    <span class="index__date">Feb 2023 — Mar 2023</span>
-                  </a>
-
-                  <div class="index__peek-wrap">
-                    <p class="index__peek-desc">Developing an adaptive noise-reduction algorithm in MATLAB to reduce background noise while preserving important environmental sounds.</p>
-                  </div>
-                </li>
-
-                <li class="index__item">
-                  <a class="index__link" href="./pages/chinese-checkers.html">
-                    <span class="index__head">
-
-                      <img
-                      class="index__thumb"
-                      src="./assets/photos/projects/checker_board.png"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="300"
-                      height="340"
-                    />
-                      <span class="index__title">Chinese<br class="index__brk" /> Checkers</span>
-                      <span class="index__arrow" aria-hidden="true">↗</span>
-                    </span>
-                    <span class="index__meta">Software Design · Game AI</span>
-                    <span class="index__date">Oct 2021 — Nov 2021</span>
-                  </a>
-
-                  <div class="index__peek-wrap">
-                    <p class="index__peek-desc">Developing a Python implementation of Chinese Checkers with AI decision-making, multiplayer support, and an interactive graphical interface.</p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="publications" class="section reveal" style="--i: 4">
-        <div class="container">
-          <div class="section__grid">
-            <div class="section__rail">
-              <h2 class="label"><span class="label__num">(05)</span>publications</h2>
-            </div>
-            <div>
-              <ul class="pub-list">
-                <li class="pub">
-                  <p class="pub__meta label">JCISE — Mar 2026</p>
-                  <h3 class="pub__title">
-                    <a target="_blank" rel="noreferrer" href="https://doi.org/10.1115/1.4071467">
-                      <span class="pub__link-text"
-                        >Aligning Agents With Experts in Material Selection: Prompting, Size, and
-                        Reasoning</span
-                      >
-                      <span aria-hidden="true">↗</span
-                      ><span class="sr-only">(opens in a new tab)</span>
-                    </a>
-                  </h3>
-                  <p class="pub__authors">
-                    <strong>Megan Ying</strong>, Daniele Grandi, Allin Groom, Christopher McComb
-                  </p>
-                </li>
-
-                <li class="pub">
-                  <p class="pub__meta label">ASME IDETC/CIE — Oct 2025</p>
-                  <h3 class="pub__title">
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      href="https://doi.org/10.1115/DETC2025-168873"
-                    >
-                      <span class="pub__link-text"
-                        >Evaluating the Role of Model Size in Agentic AI for Expert-Like Material
-                        Selection</span
-                      >
-                      <span aria-hidden="true">↗</span
-                      ><span class="sr-only">(opens in a new tab)</span>
-                    </a>
-                  </h3>
-                  <p class="pub__authors">
-                    <strong>Megan Ying</strong>, Daniele Grandi, Allin Groom, Christopher McComb
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <section id="publications" class="portfolio-section" aria-labelledby="publications-title">
+        <h2 id="publications-title" class="section-title">Publications</h2>
+        <ul>
+          <li class="publication">
+            <h3><a href="https://doi.org/10.1115/1.4071467" target="_blank" rel="noreferrer">Aligning Agents With Experts in Material Selection: Prompting, Size, and Reasoning&nbsp;<span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></h3>
+            <p class="publication__meta">JCISE · Mar 2026</p>
+            <p class="publication__authors">Megan Ying, Daniele Grandi, Allin Groom, Christopher McComb</p>
+          </li>
+          <li class="publication">
+            <h3><a href="https://doi.org/10.1115/DETC2025-168873" target="_blank" rel="noreferrer">Evaluating the Role of Model Size in Agentic AI for Expert-Like Material Selection&nbsp;<span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></h3>
+            <p class="publication__meta">ASME IDETC/CIE · Oct 2025</p>
+            <p class="publication__authors">Megan Ying, Daniele Grandi, Allin Groom, Christopher McComb</p>
+          </li>
+        </ul>
       </section>
     </main>
-
-    <!-- #footer:start -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <nav class="footer__nav" aria-label="Footer">
-            <a href="./index.html#">Home</a>
-            <a href="./index.html#about">About</a>
-            <a href="./index.html#experiences">Experiences</a>
-            <a href="./index.html#projects">Projects</a>
-            <a href="./index.html#publications">Publications</a>
-          </nav>
-          <div>
-            <div class="footer__social">
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ying-megan/"
-                >LinkedIn ↗</a
-              >
-              <a target="_blank" rel="noreferrer" href="https://github.com/meganying1"
-                >GitHub ↗</a
-              >
-            </div>
-            <p class="footer__meta">
-              © 2026 Megan Ying. Forked from
-              <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
-                >Ram Maheshwari</a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- #footer:end -->
-
-    <script src="./js/main.js" defer></script>
   </body>
 </html>

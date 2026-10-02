@@ -3,9 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      document.documentElement.classList.add("js");
-    </script>
     <title>Trash Compactor — Megan Ying</title>
     <link
       rel="icon"
@@ -32,71 +29,16 @@
     <meta name="twitter:description" content="Designing and building a standalone trash compactor that automatically compresses household waste." />
     <meta name="twitter:image" content="https://www.meganying.com/assets/photos/share-card.png" />
 
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style.css?v=20261002-5" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:opsz,wght@14..32,400..600&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- #header:start -->
-    <header class="site-header">
-      <div class="site-header__inner">
-        <a class="wordmark" href="../index.html">Megan Ying</a>
-        <nav class="nav" aria-label="Primary">
-          <a class="nav__link" href="../index.html">Home</a>
-          <a class="nav__link" href="../index.html#about">About</a>
-          <a class="nav__link" href="../index.html#experiences">Experiences</a>
-          <a class="nav__link" href="../index.html#projects">Projects</a>
-          <a class="nav__link" href="../index.html#publications">Publications</a>
-        </nav>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
-          <span class="nav-toggle__bar" aria-hidden="true"></span>
-          <span class="nav-toggle__bar" aria-hidden="true"></span>
-          <span class="sr-only">Menu</span>
-        </button>
-      </div>
-    </header>
-    <nav class="mobile-nav" id="mobile-nav" data-open="false" aria-label="Mobile">
-      <ul class="mobile-nav__list">
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html">
-            Home
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#about">
-            About
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#experiences">
-            Experiences
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#projects">
-            Projects
-          </a>
-        </li>
-        <li class="mobile-nav__item">
-          <a class="mobile-nav__link" href="../index.html#publications">
-            Publications
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <!-- #header:end -->
-
     <main id="main">
       <section class="cs-hero">
         <div class="container container--narrow">
-          <a class="label cs-hero__back" href="../index.html#projects">← MechE Projects</a>
+          <a class="label cs-hero__back" href="../index.html#projects">← All projects</a>
           <h1 class="cs-hero__title">Trash Compactor</h1>
           <p class="cs-hero__deck">
             Designing and building a standalone trash compactor that automatically compresses 
@@ -111,57 +53,16 @@
           <h2>Overview</h2>
 
           <p>
-            In a team of five, I helped develop a compact trash compactor from early concept 
-            development through engineering analysis, fabrication, assembly, and testing.
+            In a team of five, we built a standalone trash compactor with a linear actuator
+            and scissor linkage that raise a compression plate against the lid. I developed
+            the SolidWorks assembly and designed custom actuator mounts to connect the
+            actuator to the linkage within the enclosure.
           </p>
 
           <p>
-            The final design uses a linear actuator to drive a scissor-lift mechanism that raises 
-            a compression plate through the bin. I developed the assembly CAD and designed the 
-            custom actuator mounts used to integrate the linkage into the surrounding structure.
-          </p>
-
-          <p>
-            The completed prototype was demonstrated at the Carnegie Mellon Mechanical Engineering 
-            Design Expo, where the project received the Best Overall Project Award.
-          </p>
-
-          <h2>Concept Development</h2>
-
-          <p>
-            We began by benchmarking existing trash compactors and identifying limitations in 
-            available products. Built-in models were expensive and required permanent installation, 
-            while lower-cost alternatives relied heavily on manual force. From this research, we 
-            defined the primary design requirements around compaction performance, packaging, ease 
-            of use, safety, manufacturability, and cost.
-          </p>
-
-          <p>
-            We generated several concepts and compared them using weighted design criteria. We 
-            selected a scissor-lift mechanism driven by a linear actuator because it fit within the 
-            available footprint while providing the mechanical advantage needed for compression.
-          </p>
-
-          <p>
-            Throughout concept development, we also considered DFMA, FMEA, and DFE principles to 
-            identify manufacturing, assembly, reliability, and environmental considerations before 
-            fabrication.
-          </p>
-
-          <h2>Mechanical Design</h2>
-
-          <p>
-            The compaction mechanism sits beneath the trash compartment. A linear actuator drives a 
-            scissor linkage that raises a compression plate vertically through the bin. During 
-            operation, the plate compresses the waste against the underside of the lid, holds the load 
-            for approximately ten seconds, then retracts automatically.
-          </p>
-
-          <p>
-            One of the main design challenges was integrating the actuator with the linkage. The actuator 
-            had a fixed hole pattern and limited mounting locations, so the interface had to accommodate 
-            those constraints while positioning the actuator correctly and transferring load into the 
-            mechanism.
+            The working prototype completed an automated compaction cycle and received the
+            Best Overall Project Award at Carnegie Mellon’s Mechanical Engineering Design
+            Expo.
           </p>
 
           <div class="fig-pair">
@@ -175,7 +76,7 @@
                 decoding="async"
               />
               <figcaption>
-                <span class="fig__num">Fig. 2</span>Final prototype of trash compactor system
+                <span class="fig__num">Fig. 1</span>Completed prototype with enclosure and lid
               </figcaption>
             </figure>
 
@@ -188,14 +89,38 @@
                 loading="lazy"
                 decoding="async"
               />
-              <figcaption><span class="fig__num">Fig. 1</span>Linkage system of trash compactor</figcaption>
+              <figcaption><span class="fig__num">Fig. 2</span>Actuator and scissor linkage beneath the compression plate</figcaption>
             </figure>
           </div>
 
+          <h2>Design</h2>
+
           <p>
-            I developed the assembly CAD in SolidWorks and designed custom actuator mounts around the 
-            existing hole locations. The mounts secured the actuator within the available packaging space
-            and created the interface between the actuator and linkage.
+            Benchmarking highlighted a gap between permanently installed compactors and
+            alternatives that require manual force. We focused on a standalone device with
+            powered compression, a compact footprint, and straightforward operation.
+          </p>
+
+          <p>
+            We compared concepts using weighted criteria and selected an actuator-driven
+            scissor linkage that could fit beneath the trash compartment. Its geometry allowed
+            the compression plate to move vertically within the bin.
+          </p>
+
+          <p>
+            The plate rises through the bin, compresses waste against the locked lid, holds
+            for approximately ten seconds, and retracts automatically.
+          </p>
+
+          <p>
+            The actuator’s fixed hole pattern and limited mounting locations constrained its
+            position. I designed custom mounts around those interfaces to connect the actuator
+            to the linkage and transfer load within the available space.
+          </p>
+
+          <p>
+            I used the assembly CAD to integrate the mounts, actuator, linkage, and
+            surrounding structure before fabrication.
           </p>
 
           <figure class="fig">
@@ -207,28 +132,26 @@
               loading="lazy"
               decoding="async"
             />
-            <figcaption><span class="fig__num">Fig. 3</span>CAD model of linkage system</figcaption>
+            <figcaption><span class="fig__num">Fig. 3</span>Assembly CAD integrating the actuator and linkage</figcaption>
           </figure>
 
-          <h2>Engineering Analysis</h2>
+          <h2>Analysis &amp; Validation</h2>
 
           <p>
-            We analyzed the linkage before fabrication to determine whether the selected actuator 
-            could generate sufficient compaction force.
+            We used free-body diagrams to evaluate force transmission through the scissor
+            linkage and compare the required load with the actuator’s capacity.
           </p>
 
           <p>
-            Using free-body diagrams and static force analysis, we evaluated how actuator force 
-            propagated through the scissor mechanism under different loading conditions. The analysis 
-            predicted that the mechanism could support approximately 6.4 to 12.8 lb before the actuator 
-            stalled, depending on the distribution of reaction forces.
+            The calculations indicated that the actuator would limit performance before the
+            aluminum linkage reached its structural capacity. Because force transmission
+            depends on linkage geometry and load distribution, the analysis guided how we
+            interpreted the prototype’s behavior.
           </p>
 
           <p>
-            We also evaluated the structural capacity of the aluminum linkage using factor-of-safety 
-            calculations. The results showed that the linkage could withstand loads well above the 
-            actuator's output, indicating that actuator capacity would limit performance before structural 
-            failure occurred. Physical testing later confirmed this prediction.
+            Testing supported this finding: the linkage remained intact while the actuator
+            stalled under heavier loading.
           </p>
 
           <div class="fig-pair">
@@ -257,42 +180,38 @@
             </figure>
           </div>
 
-          <h2>Fabrication & Testing</h2>
+          <h2>Fabrication &amp; Iteration</h2>
 
           <p>
-            The team shared responsibility for milling, turning, 3D printing, assembly, and testing. 
-            The linkage was fabricated from aluminum bars and rods using manual machining, while the 
-            custom actuator mounts were 3D printed. We assembled the linkage, actuator, compression 
-            plate, enclosure, electronics, hinges, and lid-locking hardware into a complete working
-            prototype.
+            We shared milling, turning, 3D printing, assembly, and testing. The linkage used
+            manually machined aluminum bars and rods, while the custom actuator mounts were 3D
+            printed. We integrated the mechanism with the enclosure, electronics, compression
+            plate, hinges, and lid-locking hardware.
           </p>
 
           <p>
-            Testing showed that the linkage remained structurally intact while the actuator reached 
-            its force limit under heavier loads. This matched the analytical results and identified 
-            a higher-capacity actuator as the clearest improvement for a future iteration.
+            The prototype completed the automated cycle, but heavier loads exceeded the
+            actuator’s capacity. A higher-capacity actuator is the next design change to
+            evaluate, followed by a new assessment of linkage, mount, and lid loads.
           </p>
 
-          <h2>Manufacturing Considerations</h2>
+          <h2>Manufacturing &amp; Cost</h2>
 
           <p>
-            Although the prototype used machining, 3D printing, and a wooden enclosure for rapid 
-            fabrication, we also planned for higher-volume production. I contributed DFM input by
-            selecting manufacturing processes for each component and refining part geometry to 
-            support those methods and simplify assembly.
+            The prototype used manual machining, 3D printing, and a wooden enclosure for rapid
+            fabrication. I contributed to the production proposal by selecting component
+            manufacturing processes and refining geometry for the proposed methods and
+            assembly sequence. These proposals would require supplier review before
+            production.
           </p>
 
           <h2>Results</h2>
 
           <p>
-            The final prototype successfully completed an automated compaction cycle within a 
-            standalone trash-bin form factor. Testing confirmed that actuator capacity, rather 
-            than linkage strength, limited the achievable compression force.
-          </p>
-
-          <p>
-            The project received the Best Overall Project Award at the Carnegie Mellon Mechanical 
-            Engineering Design Expo.
+            We demonstrated automated compaction within a standalone trash-bin enclosure.
+            Testing identified actuator capacity as the performance limit before observed
+            linkage failure, giving the next iteration a specific component and load case to
+            address.
           </p>
 
           <div class="tools">
@@ -313,38 +232,6 @@
       </section>
     </main>
 
-    <!-- #footer:start -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <nav class="footer__nav" aria-label="Footer">
-            <a href="../index.html">Home</a>
-            <a href="../index.html#about">About</a>
-            <a href="../index.html#experiences">Experiences</a>
-            <a href="../index.html#projects">Projects</a>
-            <a href="../index.html#publications">Publications</a>
-          </nav>
-          <div>
-            <div class="footer__social">
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ying-megan/"
-                >LinkedIn ↗</a
-              >
-              <a target="_blank" rel="noreferrer" href="https://github.com/meganying1"
-                >GitHub ↗</a
-              >
-            </div>
-            <p class="footer__meta">
-              © 2026 Megan Ying. Forked from
-              <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
-                >Ram Maheshwari</a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- #footer:end -->
-
-    <script src="../js/main.js" defer></script>
+    <script src="../js/main.js?v=20261002-5" defer></script>
   </body>
 </html>
