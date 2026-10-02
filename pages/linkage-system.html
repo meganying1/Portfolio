@@ -15,21 +15,21 @@
     <link rel="canonical" href="https://www.meganying.com/pages/linkage-system.html" />
     <meta
       name="description"
-      content="Designing and iterating a linkage mechanism to convert rotary motor motion into controlled linear motion and maximize button actuation time."
+      content="Designing and iterating a motor-driven linkage that converts rotary motion into extended linear button actuation."
     />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Megan Ying" />
     <meta property="og:url" content="https://www.meganying.com/pages/linkage-system.html" />
     <meta property="og:title" content="Linkage System — Megan Ying" />
-    <meta property="og:description" content="Designing and iterating a linkage mechanism to convert rotary motor motion into controlled linear motion and maximize button actuation time." />
+    <meta property="og:description" content="Designing and iterating a motor-driven linkage that converts rotary motion into extended linear button actuation." />
     <meta property="og:image" content="https://www.meganying.com/assets/photos/share-card.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Megan Ying" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Linkage System — Megan Ying" />
-    <meta name="twitter:description" content="Designing and iterating a linkage mechanism to convert rotary motor motion into controlled linear motion and maximize button actuation time." />
+    <meta name="twitter:description" content="Designing and iterating a motor-driven linkage that converts rotary motion into extended linear button actuation." />
     <meta name="twitter:image" content="https://www.meganying.com/assets/photos/share-card.png" />
 
     <link rel="stylesheet" href="../css/style.css" />
@@ -99,8 +99,8 @@
           <a class="label cs-hero__back" href="../index.html#projects">← MechE Projects</a>
           <h1 class="cs-hero__title">Linkage System</h1>
           <p class="cs-hero__deck">
-            Designing and iterating a linkage mechanism to convert rotary motor motion into
-            controlled linear motion and maximize button actuation time.
+            Designing and iterating a motor-driven linkage that converts rotary motion into 
+            extended linear button actuation.
           </p>
         </div>
       </section>
@@ -111,10 +111,17 @@
           <h2>Overview</h2>
 
           <p>
-            I worked with a team to design a linkage mechanism that converts the rotary motion of a
-            motor into linear motion for pressing a button. The primary objective was to maximize the
-            amount of time the button remained pressed within a two-minute operating cycle, while
-            satisfying constraints on workspace, geometry, material strength, and motor loading.
+            In a team of three, I helped develop a linkage system that converts continuous motor 
+            rotation into vertical motion for pressing a button. The goal was to maximize the 
+            amount of time the button remained depressed during a two-minute operating cycle while 
+            meeting geometric, structural, and motor-loading constraints.
+          </p>
+
+          <p>
+            We developed the mechanism through concept generation, kinematic analysis, stress 
+            calculations, FEA, fabrication, and physical testing. After the first prototype 
+            performed significantly below prediction, we redesigned the linkage geometry and 
+            increased button press time from 2.96 seconds to 41.17 seconds.
           </p>
 
           <div class="fig-pair">
@@ -146,30 +153,42 @@
           <h2>Concept Development</h2>
 
           <p>
-            We began by exploring several mechanisms inspired by the crank-rocker linkage. We varied
-            link lengths, mounting locations, and slot geometry to control the motion of the output
-            link.
+            We began by exploring several linkage configurations inspired by four-bar and crank-rocker 
+            mechanisms. Our concepts varied the location of slotted joints and the lengths of the 
+            rocker, coupler, and crank to control the motion of the output link.
           </p>
 
           <p>
-            We ultimately selected a slotted-link design because it allowed the mechanism to remain
-            near a vertical position for an extended portion of its motion, increasing the duration
-            for which the button could remain depressed.
-          </p>
-
-          <h2>Design & Analysis</h2>
-
-          <p>
-            We modeled the candidate mechanisms in SolidWorks and used motion simulations to evaluate
-            their kinematic behavior. By comparing the position and velocity of the output link over
-            time, we identified the geometry that provided the longest button actuation period.
+            We focused on slotted designs because the relative motion between the pin and slot could 
+            delay the descent of the rocker and increase the time the mechanism remained near its 
+            maximum height. After comparing three concepts, we selected a single-slot design that 
+            provided the best balance between dwell time and structural loading.
           </p>
 
           <p>
-            We also applied Grashof's criterion to evaluate the range of motion of the linkage and
-            performed hand calculations to determine the loads transmitted through the links.
-            Finite Element Analysis (FEA) was then used to verify that the selected link dimensions
-            could withstand the expected loading.
+            The final architecture used a crank-rocker mechanism with a pin sliding through a slot in 
+            the output link. We also verified that the linkage satisfied the Grashof criterion so the 
+            motor-driven crank could rotate continuously.
+          </p>
+
+          <h2>Mechanical Design</h2>
+
+          <p>
+            The motor drives the shortest link as a crank. The crank transfers motion through the 
+            coupler to the slotted rocker, which drives the button-pressing assembly vertically.
+          </p>
+
+          <p>
+            The slot allows the coupler connection to move relative to the rocker rather than 
+            forcing a fixed rotational relationship. This was intended to keep the rocker near its 
+            upright position for a longer portion of each cycle, increasing the mechanism's dwell 
+            time at the button.
+          </p>
+
+          <p>
+            We selected the linkage lengths and mounting locations to maximize button press 
+            duration while keeping the assembly within the available workspace and avoiding 
+            excessive motor or structural loading.
           </p>
 
           <div class="fig-pair">
@@ -198,38 +217,53 @@
             </figure>
           </div>
 
-          <h2>Iteration & Testing</h2>
+          <h2>Engineering Analysis</h2>
 
           <p>
-            Initial testing confirmed that the mechanism could press the button without stalling the
-            motor, but the slot mechanism caused the assembly to descend much faster than predicted.
-            As a result, the button remained pressed for only 3 seconds during a two-minute test.
+            I calculated the forces and stresses in the mechanism at critical orientations and used 
+            these results to size the acrylic links. The linkage was fabricated from 1/4-inch acrylic,
+            with link widths selected to meet the desired factor of safety while minimizing unnecessary 
+            material.
           </p>
 
           <p>
-            We used the test results to refine the linkage geometry. I helped evaluate how changing
-            the link lengths and mounting position would affect the mechanism's range of motion and
-            dwell time. We elongated two links and repositioned the assembly mounting point while
-            retaining the slotted link to minimize system weight.
+            The team also used FEA to evaluate stress and deflection under the critical loading
+            condition. For the initial design, the simulation predicted a maximum stress of approximately
+            288 psi at the maximum-height configuration.
           </p>
 
           <p>
-            After updating the design, we repeated the motion analysis and physical testing to validate
-            the revised geometry.
+            We combined the structural analysis with motion studies to balance strength, weight, and 
+            button press time. The analysis informed changes to link dimensions and geometry before the 
+            final iteration.
+          </p>
+
+          <h2>Fabrication & Testing</h2>
+
+          <p>
+            We fabricated the linkage components from acrylic using DXF files generated from the CAD 
+            model, then assembled the mechanism onto the test fixture.
+          </p>
+
+          <p>
+            During the first test, the mechanism pressed the button for only 2.96 seconds compared 
+            with a theoretical prediction of 30.66 seconds. It completed the motion without structural 
+            failure or motor stall, but the rocker descended much faster than expected.
+          </p>
+
+          <p>
+            We traced the behavior to the linkage geometry, particularly the coupler length and the 
+            effect of downward loading on the rocker. Based on these observations, we increased the 
+            rocker and coupler lengths, shortened the crank, and changed the rocker mounting position 
+            before repeating the motion and structural analysis.
           </p>
 
           <h2>Results</h2>
 
           <p>
-            The revised mechanism produced a gradual, controlled descent and successfully held the
-            button for over 41 seconds during the same two-minute test. This represented a 38-second
-            improvement over the initial design.
-          </p>
-
-          <p>
-            The project demonstrated the value of combining kinematic analysis, simulation, physical
-            testing, and iterative mechanical design. It also gave me hands-on experience using
-            SolidWorks motion simulation to evaluate mechanism behavior before and after fabrication.
+            The revised mechanism increased button press time from 2.96 seconds to 41.17 seconds 
+            during the two-minute test, an improvement of approximately 38 seconds. The rocker descended 
+            smoothly, and the system completed the test without structural failure or motor stall.
           </p>
 
           <div class="tools">
