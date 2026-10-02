@@ -15,21 +15,21 @@
     <link rel="canonical" href="https://www.meganying.com/pages/mobile-robot.html" />
     <meta
       name="description"
-      content="Programming an autonomous differential-drive robot to follow a curved path and avoid moving obstacles using infrared and ultrasonic sensors."
+      content="Developing an autonomous mobile robot to follow a curved path and avoid moving obstacles using infrared and ultrasonic sensors."
     />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Megan Ying" />
     <meta property="og:url" content="https://www.meganying.com/pages/mobile-robot.html" />
     <meta property="og:title" content="Mobile Robot — Megan Ying" />
-    <meta property="og:description" content="Programming an autonomous differential-drive robot to follow a curved path and avoid moving obstacles using infrared and ultrasonic sensors." />
+    <meta property="og:description" content="Developing an autonomous mobile robot to follow a curved path and avoid moving obstacles using infrared and ultrasonic sensors." />
     <meta property="og:image" content="https://www.meganying.com/assets/photos/share-card.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Megan Ying" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Mobile Robot — Megan Ying" />
-    <meta name="twitter:description" content="Programming an autonomous differential-drive robot to follow a curved path and avoid moving obstacles using infrared and ultrasonic sensors." />
+    <meta name="twitter:description" content="Developing an autonomous mobile robot to follow a curved path and avoid moving obstacles using infrared and ultrasonic sensors." />
     <meta name="twitter:image" content="https://www.meganying.com/assets/photos/share-card.png" />
 
     <link rel="stylesheet" href="../css/style.css" />
@@ -99,8 +99,8 @@
           <a class="label cs-hero__back" href="../index.html#projects">← MechE Projects</a>
           <h1 class="cs-hero__title">Mobile Robot</h1>
           <p class="cs-hero__deck">
-            Programming an autonomous differential-drive robot to follow a curved path and avoid
-            moving obstacles using infrared and ultrasonic sensors.
+            Developing an autonomous mobile robot to follow a curved path and avoid moving obstacles 
+            using infrared and ultrasonic sensors.
           </p>
         </div>
       </section>
@@ -110,52 +110,51 @@
           <h2>Overview</h2>
 
           <p>
-            I worked with a team to develop an Arduino-based mobile robot capable of autonomously
-            navigating an obstacle course. The robot needed to follow a curved line while detecting
-            and avoiding a series of moving walls.
+            In a team of three, I helped develop an Arduino-based differential-drive robot that 
+            autonomously navigated an obstacle course. We integrated infrared and ultrasonic sensing 
+            with motor control to follow a curved line while detecting and stopping for moving 
+            obstacles.
           </p>
 
           <p>
-            We developed a sensor-driven control algorithm that continuously translated infrared and
-            ultrasonic sensor measurements into independent motor commands for the robot's
-            differential-drive system.
+            We developed the control logic through repeated testing and tuning, adjusting sensor 
+            thresholds and motor commands to improve path tracking and recovery when the robot lost 
+            the line.
           </p>
 
           <h2>Sensor Integration</h2>
 
           <p>
-            The robot used three infrared sensors for line detection and an ultrasonic sensor for
-            obstacle detection. We characterized the infrared sensor response and established
-            thresholds for reliably determining when each sensor was positioned over the line.
+            The robot used three infrared sensors to detect its position relative to the line and 
+            an ultrasonic sensor to identify obstacles ahead.
           </p>
 
           <p>
-            The ultrasonic sensor provided a separate obstacle-detection input. When an obstacle
-            was detected within a specified distance, the controller stopped both motors to prevent
-            the robot from colliding with the moving wall.
+            We characterized the infrared sensor response and selected thresholds that reliably
+            distinguished the line from the surrounding surface. The ultrasonic sensor provided a 
+            separate distance measurement that stopped both motors when an obstacle entered the 
+            defined detection range.
           </p>
 
           <h2>Control Algorithm</h2>
 
           <p>
-            The control algorithm adjusted the speed of the left and right motors based on the
-            combination of infrared sensor readings. When the center sensor detected the line,
-            both motors operated at approximately the same speed. When the robot began to deviate
-            from the path, the controller adjusted the relative motor speeds to steer it back toward
-            the line.
+            We controlled the left and right motors independently based on the infrared sensor 
+            readings. When the center sensor detected the line, both motors ran at similar speeds. 
+            When either side sensor detected the line, we adjusted the relative motor speeds to 
+            steer the robot back toward the path, with larger deviations triggering stronger 
+            corrections.
           </p>
 
           <p>
-            The algorithm also tracked which side of the robot had most recently detected the line.
-            This allowed the robot to determine the appropriate direction of correction even when
-            all three sensors temporarily lost the line.
+            The controller also tracked which side had most recently detected the line. If all 
+            three sensors temporarily lost the path, the robot used that previous state to 
+            determine which direction to search.
           </p>
 
           <p>
-            We tuned the magnitude of the motor-speed difference based on the robot's position
-            relative to the line. Small deviations produced gradual corrections, while larger
-            deviations triggered more aggressive turns. This helped balance rapid recovery with
-            smooth path following.
+            We tuned the sensor thresholds and motor-speed differences through repeated testing 
+            on the course, balancing fast recovery from large deviations with stable line following.
           </p>
 
           <figure class="fig">
@@ -170,30 +169,11 @@
             <figcaption><span class="fig__num">Fig. 1</span>Robot navigating obstacle course</figcaption>
           </figure>
 
-          <h2>Testing & Iteration</h2>
-
-          <p>
-            We tested the robot repeatedly on the course to tune sensor thresholds and motor speeds.
-            Testing allowed us to identify how different motor-speed combinations affected turning
-            behavior and line tracking performance.
-          </p>
-
-          <p>
-            We iteratively adjusted the control logic to improve recovery when the robot deviated
-            from the line while maintaining sufficient speed to complete the course efficiently.
-          </p>
-
           <h2>Results</h2>
 
           <p>
-            The final robot successfully followed the course, avoided all moving obstacles, and
-            completed the challenge in 26 seconds, outperforming 75% of competing robots.
-          </p>
-
-          <p>
-            This project gave me hands-on experience developing sensor-driven control logic and
-            integrating sensors, motors, and embedded software into a physical robotic system. It
-            also introduced me to the kinematics and control behavior of differential-drive robots.
+            The final robot successfully followed the curved course and avoided all moving obstacles, 
+            completing the challenge in 26 seconds and outperforming 75% of competing robots.
           </p>
 
           <div class="tools">
