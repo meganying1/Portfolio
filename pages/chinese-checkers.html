@@ -15,21 +15,21 @@
     <link rel="canonical" href="https://www.meganying.com/pages/chinese-checkers.html" />
     <meta
       name="description"
-      content="Building a Chinese Checkers game with AI decision-making, multiplayer support, and an interactive graphical interface."
+      content="Developing a Python implementation of Chinese Checkers with AI decision-making, multiplayer support, and an interactive graphical interface."
     />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Megan Ying" />
     <meta property="og:url" content="https://www.meganying.com/pages/chinese-checkers.html" />
     <meta property="og:title" content="Chinese Checkers — Megan Ying" />
-    <meta property="og:description" content="Building a Chinese Checkers game with AI decision-making, multiplayer support, and an interactive graphical interface." />
+    <meta property="og:description" content="Developing a Python implementation of Chinese Checkers with AI decision-making, multiplayer support, and an interactive graphical interface." />
     <meta property="og:image" content="https://www.meganying.com/assets/photos/share-card.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Megan Ying" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Chinese Checkers — Megan Ying" />
-    <meta name="twitter:description" content="Building a Chinese Checkers game with AI decision-making, multiplayer support, and an interactive graphical interface." />
+    <meta name="twitter:description" content="Developing a Python implementation of Chinese Checkers with AI decision-making, multiplayer support, and an interactive graphical interface." />
     <meta name="twitter:image" content="https://www.meganying.com/assets/photos/share-card.png" />
 
     <link rel="stylesheet" href="../css/style.css" />
@@ -99,8 +99,8 @@
           <a class="label cs-hero__back" href="../index.html#other-projects">← Other Projects</a>
           <h1 class="cs-hero__title">Chinese Checkers</h1>
           <p class="cs-hero__deck">
-            Building a Chinese Checkers game with AI decision-making, multiplayer support, and
-            an interactive graphical interface.
+            Developing a Python implementation of Chinese Checkers with AI decision-making, 
+            multiplayer support, and an interactive graphical interface.
           </p>
         </div>
       </section>
@@ -110,32 +110,30 @@
           <h2>Overview</h2>
 
           <p>
-            As the final project for Carnegie Mellon's introductory computer science course, I
-            developed a complete implementation of Chinese Checkers in Python using Tkinter.
-            The project included local multiplayer gameplay, an AI opponent, move hints,
-            animations, and timed turns, requiring the design of both the game engine and the
-            graphical user interface.
-          </p>
-
-          <p>
-            The project emphasized object-oriented software design, algorithm development, and
-            interactive application programming.
+            I developed a complete implementation of Chinese Checkers in Python using Tkinter, 
+            supporting both local multiplayer and computer-controlled opponents. I built the 
+            underlying game engine and graphical interface, including move validation, turn 
+            management, win detection, Minimax-based AI, move hints, animations, and timed 
+            turns.
           </p>
 
           <h2>Software Design</h2>
 
           <p>
-            I designed the application using an object-oriented architecture to separate the game
-            state, user interface, and gameplay logic. Because the Chinese Checkers board is not a
-            rectangular grid, one of the primary challenges was representing the board and mapping
-            between board coordinates and screen coordinates.
+            I structured the application using an object-oriented architecture that separated
+            game state, user interface, and gameplay logic.
           </p>
 
           <p>
-            I developed coordinate conversion functions that accounted for the offset between
-            alternating rows, enabling accurate rendering, mouse interaction, and move validation.
-            I also implemented the complete game logic, including legal move generation,
-            multi-jump sequences, turn management, win detection, and animated piece movement.
+            Because the Chinese Checkers board does not map to a rectangular grid, I developed 
+            coordinate-conversion functions that accounted for the offset between alternating 
+            rows. These functions supported accurate rendering, mouse interaction, and move 
+            validation.
+          </p>
+
+          <p>
+            I also implemented legal move generation for adjacent moves and multi-jump 
+            sequences, along with turn progression and win detection.
           </p>
 
           <div class="fig-pair">
@@ -164,42 +162,23 @@
             </figure>
           </div>
 
-          <p>
-            To support smooth gameplay, I implemented animated piece movement by continuously
-            updating the position of moving pieces over time, creating a more responsive and
-            intuitive user experience.
-          </p>
-
           <h2>AI & Algorithms</h2>
 
           <p>
-            I implemented a Minimax search algorithm to enable single-player gameplay against an AI
-            opponent. The AI evaluates future game states by recursively exploring possible move
-            sequences and selecting the move with the highest evaluation score.
-          </p>
-
-          <p>
-            The same search framework also powers the game's hint system by identifying strong
-            candidate moves for the player. Implementing the AI required building a tree of game
-            states and efficiently traversing it using recursive search.
-          </p>
-
-          <p>
-            Additional game logic was developed to correctly enforce chained jump sequences,
-            ensuring that players completed all available jumps before ending their turn.
+            I implemented a Minimax search algorithm to support single-player gameplay against
+            an AI opponent. The algorithm recursively evaluates future game states and selects 
+            the move with the highest evaluation score. The same search framework also powers 
+            the game's hint system by identifying strong candidate moves for the player.
           </p>
 
           <h2>Results</h2>
 
           <p>
-            The completed application supports multiplayer gameplay, AI opponents, move hints,
-            animations, and timed turns within a fully interactive graphical interface.
-          </p>
-
-          <p>
-            This project strengthened my understanding of object-oriented programming, recursion,
-            algorithm design, event-driven programming, and GUI development. It also provided
-            experience designing a moderately complex software system from the ground up.
+            The completed application supports full Chinese Checkers gameplay through a single 
+            interactive interface for both human and computer-controlled players. The game 
+            engine correctly handles legal movement, chained jumps, turn progression, and win 
+            detection, while the Minimax framework supports both AI decision-making and player 
+            hints.
           </p>
 
           <div class="tools">
