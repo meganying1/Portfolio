@@ -15,21 +15,21 @@
     <link rel="canonical" href="https://www.meganying.com/pages/tripod-attachment.html" />
     <meta
       name="description"
-      content="Designing and manufacturing an assistive tripod attachment that automates phone mounting and simplifies camera positioning for users with limited wrist strength and dexterity."
+      content="Designing an assistive tripod attachment that automates phone mounting and reduces force and dexterity needed for positioning."
     />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Megan Ying" />
     <meta property="og:url" content="https://www.meganying.com/pages/tripod-attachment.html" />
     <meta property="og:title" content="Tripod Attachment — Megan Ying" />
-    <meta property="og:description" content="Designing and manufacturing an assistive tripod attachment that automates phone mounting and simplifies camera positioning for users with limited wrist strength and dexterity." />
+    <meta property="og:description" content="Designing an assistive tripod attachment that automates phone mounting and reduces force and dexterity needed for positioning." />
     <meta property="og:image" content="https://www.meganying.com/assets/photos/share-card.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Megan Ying" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Tripod Attachment — Megan Ying" />
-    <meta name="twitter:description" content="Designing and manufacturing an assistive tripod attachment that automates phone mounting and simplifies camera positioning for users with limited wrist strength and dexterity." />
+    <meta name="twitter:description" content="Designing an assistive tripod attachment that automates phone mounting and reduces force and dexterity needed for positioning." />
     <meta name="twitter:image" content="https://www.meganying.com/assets/photos/share-card.png" />
 
     <link rel="stylesheet" href="../css/style.css" />
@@ -99,9 +99,8 @@
           <a class="label cs-hero__back" href="../index.html#projects">← MechE Projects</a>
           <h1 class="cs-hero__title">Tripod Attachment</h1>
           <p class="cs-hero__deck">
-            Designing and manufacturing an assistive tripod attachment that automates phone
-            mounting and simplifies camera positioning for users with limited wrist strength and
-            dexterity.
+            Designing an assistive tripod attachment that automates phone mounting and 
+            reduces force and dexterity needed for positioning.
           </p>
         </div>
       </section>
@@ -111,56 +110,56 @@
           <h2>Overview</h2>
 
           <p>
-            Existing tripods often require users to perform small, high-precision movements, such as
-            tightening mounting screws and adjusting knobs. These interactions can be difficult for
-            users with limited wrist strength or dexterity. Our goal was to develop an assistive tripod
-            attachment that simplifies phone mounting and positioning while remaining compatible with
-            standard tripods.
+            In a team of three, I helped develop an assistive tripod attachment for users with 
+            cerebral palsy and wrist tendonitis. We took the design from user research and early 
+            ideation through prototyping, stress analysis, manufacturing planning, and cost 
+            estimation.
           </p>
 
           <p>
-            My team designed and fabricated a functional prototype within a $200 budget, while also
-            considering materials, manufacturing processes, and cost for eventual mass production.
+            The final design uses an IR sensor and servo-driven TPU wings to secure the phone 
+            automatically, along with a rounded toothed interface that allows the phone to rotate 
+            with less force and precision than a standard tripod adjustment mechanism.
           </p>
 
           <h2>User-Centered Design</h2>
 
           <p>
-            We began by conducting user interviews and developing a survey to identify the most
-            challenging interactions with existing tripods. Users identified small components such as
-            mounting screws, wheels, and adjustment levers as significant barriers.
+            We began by identifying the most difficult interactions in existing tripods. User 
+            research highlighted challenges with small mounting screws, adjustment mechanisms, 
+            gripping, and precise positioning.
           </p>
 
           <p>
-            Based on these findings, we established three primary design requirements:
+            From these findings, we focused the design on two primary functions: automatically
+            securing the phone and reducing the effort required to adjust its orientation.
           </p>
 
-          <ul>
-            <li>Secure a phone without requiring the user to tighten a screw or clamp</li>
-            <li>Minimize the force and dexterity required to operate the attachment</li>
-            <li>Allow the phone to be positioned and removed easily</li>
-          </ul>
+          <p>
+            During early ideation, I helped develop the concept of using an IR sensor to detect 
+            the phone and trigger servo-driven gripping wings. We also explored a rotating base 
+            interface that would allow the phone to be repositioned without repeatedly loosening 
+            and tightening a conventional tripod mechanism.
+          </p>
 
           <p>
-            We brainstormed mechanisms for each function and used weighted design criteria to compare
-            concepts. The final design combined an automated phone-gripping mechanism with a
-            low-force tripod positioning interface.
+            As the design developed, we added foam to accommodate different phone sizes, changed
+            the gripping wings to TPU for greater compliance, and refined the rotating interface 
+            with rounded teeth to reduce the force required for adjustment.
           </p>
 
           <h2>Mechanical Design</h2>
 
           <p>
-            The attachment automatically secures a phone when it is inserted into the base. An IR
-            sensor detects the phone and triggers a pair of flexible TPU wings driven by micro servos.
-            The wings open to accommodate the phone and close around it to provide a secure grip,
-            eliminating the need for manual tightening.
+            The phone rests in a padded base between two flexible wings connected to micro 
+            servos. When the IR sensor detects a phone, the servos rotate the wings inward to 
+            secure it without requiring the user to tighten a clamp.
           </p>
 
           <p>
-            We designed the mechanical components in SolidWorks, including the phone slot, gripping
-            wings, servo interfaces, and tripod interface. The base is made from ABS and incorporates
-            foam padding to accommodate phones of different sizes, while the flexible TPU wings provide
-            compliant contact with the phone.
+            We selected TPU for the wings to combine flexibility with enough stiffness to 
+            hold the phone securely. Cutouts along each wing increase compliance and allow the 
+            geometry to accommodate different phone sizes and orientations.
           </p>
 
           <figure class="fig">
@@ -176,15 +175,10 @@
           </figure>
 
           <p>
-            To simplify tripod adjustment, we designed a two-piece interface beneath the attachment.
-            The interface uses rounded gear teeth to provide discrete angular positioning without
-            requiring the user to loosen a knob. The inner component is made from TPU and the outer
-            component from ABS.
-          </p>
-
-          <p>
-            We also incorporated magnets into the interface to allow the two components to snap together
-            securely while remaining easy to separate for assembly and maintenance.
+            Beneath the phone holder, a two-piece toothed interface controls rotational 
+            positioning. The inner interface uses flexible TPU, while the outer component 
+            is rigid plastic. The rounded teeth deform during adjustment, then engage to 
+            hold the selected position.
           </p>
 
           <div class="fig-pair">
@@ -215,10 +209,18 @@
           <h2>Engineering Analysis</h2>
 
           <p>
-            I performed hand calculations and Finite Element Analysis (FEA) on the gripping wings to
-            evaluate structural performance under expected loading. We targeted a high factor of safety
-            to ensure the wings could withstand repeated opening and closing cycles without permanent
-            deformation or failure.
+            I analyzed the TPU gripping wings to verify that they could withstand the 
+            load applied by the servos while securing the phone. Using the servo torque 
+            and wing geometry, I estimated a 2.97 N load on each wing. My hand calculations 
+            predicted a maximum bending stress of approximately 2.45 MPa, corresponding to 
+            a factor of safety of 21.4.
+          </p>
+
+          <p>
+            We then evaluated the wing using FEA under the same loading condition. The 
+            simulation predicted a maximum stress of 10.2 MPa and a factor of safety of 5.1.
+            We attributed the difference between the analytical and FEA results primarily to 
+            stress concentrations and geometric simplifications in the hand calculations.
           </p>
 
           <div class="fig-pair">
@@ -247,34 +249,46 @@
             </figure>
           </div>
 
-          <h2>Manufacturing & Cost</h2>
+          <h2>Fabrication & Testing</h2>
 
           <p>
-            The prototype components were fabricated using 3D printing, allowing us to rapidly iterate
-            on the geometry and test different configurations. For production, we evaluated alternative
-            manufacturing methods based on expected volume, material selection, and unit cost.
+            We fabricated the prototype using 3D-printed components and off-the-shelf electronics, 
+            including micro servos, an IR sensor, magnets, and an Arduino Nano.
           </p>
 
           <p>
-            Using a Protolabs quotation for a sample production quantity of 50 units, we estimated a
-            manufacturing and assembly cost of approximately $58 per unit. Based on this estimate, we
-            established a target selling price of approximately $62. We identified injection molding as
-            the preferred production process due to its potential to reduce per-unit cost and support
-            higher production volumes.
+            The assembled prototype allowed us to evaluate the gripping mechanism, phone fit, and 
+            rotating interface. Testing revealed that the glued connection between the TPU wings and 
+            servo horns was not sufficiently robust, and the foam-lined phone slot was too narrow for 
+            the phone to slide fully into place.
+          </p>
+
+          <p>
+            These results identified clear improvements for the next iteration, including redesigning 
+            the wing-to-servo interface and widening the phone slot.
+          </p>
+
+          <h2>Manufacturing & Cost</h2>
+
+          <p>
+            For higher-volume production, we selected materials and manufacturing methods based on the 
+            functional requirements of each component. We specified TPU for the wings and inner rotating 
+            interface, with rigid plastic for the base and outer interface. Injection molding was 
+            selected for the molded components at production scale.
+          </p>
+
+          <p>
+            Using supplier quotations at a sample quantity of 50 units, we estimated a total production 
+            cost of approximately $58.18 per unit and a proposed selling price of $62.25.
           </p>
 
           <h2>Results</h2>
 
           <p>
-            We successfully fabricated and demonstrated a functional prototype that automatically
-            secured an iPhone and integrated with a standard tripod. The final design reduced the need
-            for fine motor control while maintaining a secure phone grip and adjustable positioning.
-          </p>
-
-          <p>
-            This project gave me experience translating user needs into mechanical requirements and
-            carrying those requirements through CAD, FEA, prototyping, material selection, and
-            manufacturing analysis.
+            The final prototype demonstrated automatic phone gripping and low-force rotational 
+            positioning in a standard tripod attachment. Testing also exposed limitations in the wing
+            attachment and phone slot geometry, providing specific design changes for a future 
+            iteration.
           </p>
 
           <div class="fig-pair">
