@@ -45,6 +45,9 @@
   --section-heading-gap: var(--space-3);
   --row-gap: var(--space-4);
   --row-padding: var(--space-3);
+  --skills-label-width: 12rem;
+  --project-nav-height: var(--space-9);
+  --project-title-space: var(--space-7);
   --prose-measure: 66ch;
   --project-thumb-width: 5.5rem;
   --project-thumb-height: 4.5rem;
@@ -60,7 +63,10 @@
   --focus-offset: 4px;
   --control-height: 2.75rem;
   --duration-feedback: 140ms;
-  --ease-feedback: ease-out;
+  --duration-disclosure: 160ms;
+  --ease-feedback: ease;
+  --ease-motion: cubic-bezier(0.23, 1, 0.32, 1);
+  --layer-nav: 5;
   --layer-skip: 10;
 }
 
@@ -72,6 +78,7 @@
     --layout-gutter: var(--space-5);
     --project-thumb-width: 4.5rem;
     --project-thumb-height: 4rem;
+    --project-title-space: var(--space-6);
   }
 }
 @media (max-width: 25em) {

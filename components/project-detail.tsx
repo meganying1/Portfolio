@@ -9,67 +9,81 @@ export function ProjectDetail({ project }: { project: Project }) {
   const next = projects[index + 1];
 
   return (
-    <main id="main">
-      <section className="cs-hero">
-        <div className="container container--narrow">
+    <>
+      <nav className="project-nav" aria-label="Project navigation">
+        <div className="container">
           <Link
-            className="label cs-hero__back"
+            className="project-nav__back"
             href="/#projects"
             prefetch={false}
           >
-            ← All projects
+            <span>
+              <span aria-hidden="true">←</span> All projects
+            </span>
           </Link>
-          <h1 className="cs-hero__title">{project.title}</h1>
-          <p className="cs-hero__deck">{project.description}</p>
+          <span className="project-nav__title">{project.title}</span>
         </div>
-      </section>
-      <section className="cs-body">
-        <div className="container container--narrow">
-          <Content />
-          {project.files.length > 0 && (
-            <div className="files">
-              <h3 className="label">files</h3>
-              <div className="files__list">
-                {project.files.map((file) => (
-                  <a key={file.href} className="chip" href={file.href} download>
-                    {file.label}
-                  </a>
+      </nav>
+      <main id="main" className="project-page">
+        <section className="cs-hero">
+          <div className="container container--narrow">
+            <h1 className="cs-hero__title">{project.title}</h1>
+            <p className="cs-hero__deck">{project.description}</p>
+          </div>
+        </section>
+        <section className="cs-body">
+          <div className="container container--narrow">
+            <Content />
+            {project.files.length > 0 && (
+              <div className="files">
+                <h3 className="label">files</h3>
+                <div className="files__list">
+                  {project.files.map((file) => (
+                    <a
+                      key={file.href}
+                      className="chip"
+                      href={file.href}
+                      download
+                    >
+                      {file.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+            <div className="tools">
+              <h3 className="label">tools</h3>
+              <div className="tools__list">
+                {project.tools.map((tool) => (
+                  <span className="chip" key={tool}>
+                    {tool}
+                  </span>
                 ))}
               </div>
             </div>
-          )}
-          <div className="tools">
-            <h3 className="label">tools</h3>
-            <div className="tools__list">
-              {project.tools.map((tool) => (
-                <span className="chip" key={tool}>
-                  {tool}
-                </span>
-              ))}
-            </div>
+            <nav className="pager" aria-label="Project">
+              {previous && (
+                <Link
+                  className="pager__link pager__prev"
+                  href={projectHref(previous)}
+                  prefetch={false}
+                >
+                  ← {previous.title}
+                </Link>
+              )}
+              {next && (
+                <Link
+                  className="pager__link pager__next"
+                  href={projectHref(next)}
+                  prefetch={false}
+                >
+                  {next.title} →
+                </Link>
+              )}
+            </nav>
           </div>
-          <nav className="pager" aria-label="Project">
-            {previous && (
-              <Link
-                className="pager__link pager__prev"
-                href={projectHref(previous)}
-                prefetch={false}
-              >
-                ← {previous.title}
-              </Link>
-            )}
-            {next && (
-              <Link
-                className="pager__link pager__next"
-                href={projectHref(next)}
-                prefetch={false}
-              >
-                {next.title} →
-              </Link>
-            )}
-          </nav>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 }

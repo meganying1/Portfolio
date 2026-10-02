@@ -1,8 +1,10 @@
 import profile from "@/data/profile.json";
 import { ExperienceList } from "@/components/experience-list";
+import { Disclosure } from "@/components/disclosure";
 import { ExternalLink } from "@/components/external-link";
 import { ProjectList } from "@/components/project-list";
 import { PublicationList } from "@/components/publication-list";
+import { SkillsList } from "@/components/skills-list";
 import { projects } from "@/lib/projects";
 import { pageMetadata, site } from "@/lib/site";
 
@@ -40,13 +42,14 @@ export default function HomePage() {
           Selected projects
         </h2>
         <ProjectList projects={featured} />
-        <details className="disclosure" id="other-projects">
-          <summary>
-            More projects
-            <span className="disclosure__count">{more.length}</span>
-          </summary>
+        <Disclosure
+          title="More projects"
+          count={more.length}
+          id="other-projects"
+          variant="projects"
+        >
           <ProjectList projects={more} more />
-        </details>
+        </Disclosure>
       </section>
 
       <section
@@ -58,17 +61,7 @@ export default function HomePage() {
           Experience
         </h2>
         <ExperienceList />
-        <details className="disclosure">
-          <summary>Technical skills</summary>
-          <dl className="skills-list">
-            {profile.skills.map((skill) => (
-              <div key={skill.name}>
-                <dt>{skill.name}</dt>
-                <dd>{skill.items}</dd>
-              </div>
-            ))}
-          </dl>
-        </details>
+        <SkillsList />
       </section>
 
       <section

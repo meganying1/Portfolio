@@ -75,23 +75,29 @@
   "skills": [
     {
       "name": "Product design & CAD",
-      "items": "Siemens NX, SolidWorks, GD&T, DFM, PLM"
+      "items": ["Siemens NX", "SolidWorks", "GD&T", "DFM", "PLM"]
     },
     {
       "name": "Analysis & validation",
-      "items": "FEA, ANSYS, tolerance analysis, DOE, failure analysis"
+      "items": ["FEA", "ANSYS", "tolerance analysis", "DOE", "failure analysis"]
     },
     {
       "name": "Manufacturing & prototyping",
-      "items": "Machining, 3D printing, stamping, injection molding, rapid prototyping"
+      "items": [
+        "Machining",
+        "3D printing",
+        "stamping",
+        "injection molding",
+        "rapid prototyping"
+      ]
     },
     {
       "name": "Mechatronics & controls",
-      "items": "Arduino, control systems, sensor integration"
+      "items": ["Arduino", "control systems", "sensor integration"]
     },
     {
       "name": "Engineering software",
-      "items": "Python, MATLAB"
+      "items": ["Python", "MATLAB"]
     }
   ],
   "publications": [

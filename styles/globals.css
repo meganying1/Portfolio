@@ -51,6 +51,15 @@ a {
 a:hover {
   color: var(--color-link);
 }
+.external-link {
+  text-decoration: none;
+}
+.external-link__text {
+  text-decoration: underline;
+  text-decoration-thickness: var(--border-width);
+  text-underline-offset: var(--underline-offset);
+  text-decoration-skip-ink: none;
+}
 a,
 button,
 summary {
@@ -131,7 +140,6 @@ button {
 .contact-links a {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-1);
   min-height: var(--control-height);
 }
 
@@ -183,26 +191,74 @@ button {
 .disclosure {
   margin-top: var(--space-2);
 }
-.disclosure summary {
-  width: fit-content;
+.disclosure > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--row-gap);
+  width: 100%;
+  min-height: var(--control-height);
   padding-block: var(--space-3);
   font-size: var(--text-small);
+  font-weight: var(--weight-heading);
+  list-style: none;
   cursor: pointer;
 }
-.disclosure summary:hover {
+.disclosure > summary:hover {
   color: var(--color-link);
 }
-.disclosure summary::marker {
-  font-size: var(--text-caption);
-  color: var(--color-secondary);
+.disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+.disclosure__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
 }
 .disclosure__count {
-  margin-left: var(--space-2);
   color: var(--color-secondary);
   font-size: var(--text-caption);
+  font-weight: var(--weight-body);
+  font-variant-numeric: tabular-nums;
 }
-.disclosure[open] > summary {
-  margin-bottom: var(--space-2);
+.disclosure__indicator {
+  position: relative;
+  display: inline-block;
+  width: var(--space-4);
+  height: var(--space-4);
+  color: var(--color-secondary);
+}
+.disclosure__indicator::before,
+.disclosure__indicator::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: var(--space-3);
+  height: var(--border-width);
+  background: currentColor;
+}
+.disclosure__indicator::after {
+  transform: rotate(90deg);
+  transition: opacity var(--duration-feedback) var(--ease-feedback);
+}
+.disclosure[open] .disclosure__indicator::after {
+  transform: rotate(0deg);
+  opacity: 0;
+}
+.disclosure[data-motion="instant"] .disclosure__indicator::after {
+  transition: none;
+}
+.disclosure[data-motion="pointer"] .disclosure__content {
+  overflow: hidden;
+  transition: height var(--duration-disclosure) var(--ease-motion);
+}
+.disclosure > summary:hover .disclosure__indicator {
+  color: var(--color-link);
+}
+.disclosure--projects {
+  border-top: var(--border-width) solid var(--color-rule);
 }
 .project-list--more {
   border-top: var(--border-width) solid var(--color-rule);
@@ -255,18 +311,31 @@ button {
   line-height: var(--leading-ui);
 }
 .skills-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-5) var(--space-6);
-  padding-bottom: var(--space-3);
+  border-top: var(--border-width) solid var(--color-rule);
   font-size: var(--text-small);
   line-height: var(--leading-ui);
 }
-.skills-list dt {
-  font-weight: var(--weight-heading);
-  margin-bottom: var(--space-1);
+.skills-list__row {
+  display: grid;
+  grid-template-columns: var(--skills-label-width) minmax(0, 1fr);
+  gap: var(--row-gap);
+  padding-block: var(--row-padding);
 }
-.skills-list dd {
+.skills-list__row + .skills-list__row {
+  border-top: var(--border-width) solid var(--color-rule);
+}
+.skills-list dt {
+  color: var(--color-secondary);
+  font-weight: var(--weight-heading);
+}
+.skills-list__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-2);
+}
+.skills-list__items li:not(:last-child)::after {
+  content: "·";
+  margin-left: var(--space-2);
   color: var(--color-secondary);
 }
 
@@ -281,11 +350,11 @@ button {
   font-size: var(--text-small);
   line-height: var(--leading-ui);
 }
-.publication h3 a {
+.publication .external-link__text {
   text-decoration: none;
 }
-.publication h3 a:hover,
-.publication h3 a:focus-visible {
+.publication a:hover .external-link__text,
+.publication a:focus-visible .external-link__text {
   text-decoration: underline;
 }
 .publication__meta,
@@ -296,22 +365,48 @@ button {
   line-height: var(--leading-ui);
 }
 
-/* Case studies: a single return link and the original project content. */
-.cs-hero {
-  padding-top: var(--layout-top);
-  padding-bottom: var(--space-6);
+/* Case studies: a persistent return link and the original project content. */
+.project-page {
+  scroll-margin-top: var(--project-nav-height);
 }
-.cs-hero__back {
+.project-nav {
+  position: sticky;
+  top: 0;
+  z-index: var(--layer-nav);
+  background: var(--color-page);
+  border-bottom: var(--border-width) solid var(--color-rule);
+}
+.project-nav > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--row-gap);
+  min-height: var(--project-nav-height);
+}
+.project-nav__back {
   display: inline-flex;
   align-items: center;
+  flex-shrink: 0;
   min-height: var(--control-height);
-  margin-bottom: var(--space-5);
-  color: var(--color-secondary);
-  font-weight: var(--weight-body);
+  font-size: var(--text-small);
   text-decoration: none;
 }
-.cs-hero__back:hover {
+.project-nav__back:hover span,
+.project-nav__back:focus-visible span {
   text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+.project-nav__title {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--text-caption);
+  color: var(--color-secondary);
+}
+.cs-hero {
+  padding-top: var(--project-title-space);
+  padding-bottom: var(--space-6);
 }
 .cs-hero__title {
   font-size: var(--text-case-title);
@@ -551,8 +646,9 @@ button {
   .experience-row .date {
     grid-column: 2;
   }
-  .skills-list {
+  .skills-list__row {
     grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-1);
   }
 }
 @media (max-width: 25em) {
@@ -560,10 +656,9 @@ button {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+/* Reading and navigation stay still; only pointer disclosures change height. */
 @media (prefers-reduced-motion: reduce) {
-  a,
-  button,
-  summary {
+  .disclosure[data-motion="pointer"] .disclosure__content {
     transition: none;
   }
 }
@@ -574,7 +669,7 @@ button {
   }
   .skip-link,
   .pager,
-  .cs-hero__back,
+  .project-nav,
   .deck__controls {
     display: none;
   }
@@ -583,5 +678,12 @@ button {
   .publication,
   .fig {
     break-inside: avoid;
+  }
+  .disclosure__content {
+    transition: none !important;
+    height: auto !important;
+  }
+  .disclosure__indicator::after {
+    transition: none !important;
   }
 }
