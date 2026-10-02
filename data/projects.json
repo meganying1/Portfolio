@@ -1,0 +1,155 @@
+[
+  {
+    "slug": "battery-door",
+    "name": "Battery door",
+    "title": "Battery Door",
+    "summary": "A push-button release mechanism, designed for manufacture and evaluated with FEA.",
+    "description": "Designing a one-touch battery door mechanism that releases with a downward button press and automatically re-latches when closed.",
+    "dates": "Nov 2024 – Dec 2024",
+    "featured": true,
+    "thumbnail": {
+      "src": "/assets/photos/projects/battery_exploded.png",
+      "width": 1285,
+      "height": 838
+    },
+    "tools": ["Siemens NX", "ANSYS", "Tolerance Analysis"],
+    "files": [
+      {
+        "href": "/assets/files/Battery_Door_Model.stp",
+        "label": "CAD assembly (STEP) ↗"
+      },
+      {
+        "href": "/assets/files/Battery_Door_Design_Challenge.pdf",
+        "label": "Presentation (PDF) ↗"
+      }
+    ]
+  },
+  {
+    "slug": "trash-compactor",
+    "name": "Trash compactor",
+    "title": "Trash Compactor",
+    "summary": "An automated compaction prototype. Best Overall Project at CMU’s design expo.",
+    "description": "Designing and building a standalone trash compactor that automatically compresses household waste.",
+    "dates": "Sep 2024 – Dec 2024",
+    "featured": true,
+    "thumbnail": {
+      "src": "/assets/photos/projects/compactor_final.jpg",
+      "width": 258,
+      "height": 380
+    },
+    "tools": ["SolidWorks", "Arduino", "Manual Machining", "3D Printing"],
+    "files": []
+  },
+  {
+    "slug": "tripod-attachment",
+    "name": "Tripod attachment",
+    "title": "Tripod Attachment",
+    "summary": "An assistive phone mount that reduces the force and dexterity needed for positioning.",
+    "description": "Designing an assistive tripod attachment that automates phone mounting and reduces force and dexterity needed for positioning.",
+    "dates": "Nov 2022 – Dec 2022",
+    "featured": true,
+    "thumbnail": {
+      "src": "/assets/photos/projects/tripod_phone1.jpg",
+      "width": 458,
+      "height": 345
+    },
+    "tools": ["SolidWorks", "Arduino", "Injection Molding", "3D Printing"],
+    "files": []
+  },
+  {
+    "slug": "linkage-system",
+    "name": "Linkage system",
+    "title": "Linkage System",
+    "summary": "A motor-driven linkage that turns rotary motion into linear button actuation.",
+    "description": "Designing and iterating a motor-driven linkage that converts rotary motion into extended linear button actuation.",
+    "dates": "Oct 2022 – Nov 2022",
+    "featured": false,
+    "thumbnail": {
+      "src": "/assets/photos/projects/final_linkage.png",
+      "width": 424,
+      "height": 409
+    },
+    "tools": ["SolidWorks", "Laser Cutting"],
+    "files": []
+  },
+  {
+    "slug": "well-driller",
+    "name": "Well driller",
+    "title": "Well Driller",
+    "summary": "A pedal-powered drilling system that converts human input into repeated impact.",
+    "description": "Designing a pedal-powered well drilling system that converts human input into repeated impact.",
+    "dates": "Nov 2021 – Dec 2021",
+    "featured": false,
+    "thumbnail": {
+      "src": "/assets/photos/projects/driller_cad.png",
+      "width": 252,
+      "height": 388
+    },
+    "tools": ["SolidWorks"],
+    "files": []
+  },
+  {
+    "slug": "mobile-robot",
+    "name": "Mobile robot",
+    "title": "Mobile Robot",
+    "summary": "An autonomous robot with path following and obstacle avoidance.",
+    "description": "Developing an autonomous mobile robot to follow a curved path and avoid moving obstacles using infrared and ultrasonic sensors.",
+    "dates": "Oct 2021 – Nov 2021",
+    "featured": false,
+    "thumbnail": {
+      "src": "/assets/photos/projects/mobile_robot.jpg",
+      "width": 715,
+      "height": 482
+    },
+    "tools": ["Arduino", "Sensor Integration"],
+    "files": []
+  },
+  {
+    "slug": "truss-structure",
+    "name": "Truss structure",
+    "title": "Truss Structure",
+    "summary": "A lightweight, fabricated truss designed to support a 40-pound load.",
+    "description": "Designing and fabricating a lightweight truss structure to withstand a 40-pound load.",
+    "dates": "Sep 2021 – Oct 2021",
+    "featured": false,
+    "thumbnail": {
+      "src": "/assets/photos/projects/truss_cad.png",
+      "width": 460,
+      "height": 298
+    },
+    "tools": ["SolidWorks", "Laser Cutting"],
+    "files": []
+  },
+  {
+    "slug": "noise-reduction",
+    "name": "Noise reduction",
+    "title": "Noise Reduction",
+    "summary": "Adaptive filtering in MATLAB to reduce unwanted background sound.",
+    "description": "Developing an adaptive noise-reduction algorithm in MATLAB to reduce background noise while preserving important environmental sounds.",
+    "dates": "Feb 2023 – Mar 2023",
+    "featured": false,
+    "thumbnail": {
+      "src": "/assets/photos/projects/noise_signal.png",
+      "width": 780,
+      "height": 700
+    },
+    "tools": ["MATLAB"],
+    "files": []
+  },
+  {
+    "slug": "chinese-checkers",
+    "name": "Chinese Checkers",
+    "title": "Chinese Checkers",
+    "summary": "A Python game with AI decision-making and multiplayer support.",
+    "description": "Developing a Python implementation of Chinese Checkers with AI decision-making, multiplayer support, and an interactive graphical interface.",
+    "dates": "Oct 2021 – Nov 2021",
+    "featured": false,
+    "thumbnail": {
+      "src": "/assets/photos/projects/checker_board.png",
+      "width": 300,
+      "height": 340
+    },
+    "tools": ["Python"],
+    "files": []
+  }
+]

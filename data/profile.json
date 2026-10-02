@@ -1,0 +1,111 @@
+{
+  "name": "Megan Ying",
+  "credential": "Mechanical engineer · Carnegie Mellon ’25",
+  "introduction": [
+    "I design mechanical systems from concept to production hardware, using CAD, simulation, and testing. I’m interested in robotics and physical AI.",
+    "Currently a software engineer at Bloomberg. Previously, I worked on interconnect product design at Apple and hydraulics and controls at Caterpillar."
+  ],
+  "socials": [
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/ying-megan/"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/meganying1"
+    }
+  ],
+  "experiences": [
+    {
+      "organization": "Bloomberg",
+      "role": "Software Engineer",
+      "dates": "Oct 2025 – Present",
+      "logo": {
+        "src": "/assets/photos/experiences/bloomberg.png",
+        "width": 640,
+        "height": 480,
+        "variant": "bloomberg"
+      }
+    },
+    {
+      "organization": "Design Research Collective",
+      "role": "Research Assistant",
+      "dates": "Sep 2024 – Jul 2026",
+      "logo": {
+        "src": "/assets/photos/experiences/research.png",
+        "width": 330,
+        "height": 330,
+        "variant": "research"
+      }
+    },
+    {
+      "organization": "Apple",
+      "role": "Interconnect Product Design Co-op",
+      "dates": "Sep 2023 – Aug 2024",
+      "logo": {
+        "src": "/assets/photos/experiences/apple.jpg",
+        "width": 400,
+        "height": 400,
+        "variant": "apple"
+      }
+    },
+    {
+      "organization": "UBS",
+      "role": "Quantitative Trading Summer Analyst",
+      "dates": "Jun 2023 – Aug 2023",
+      "logo": {
+        "src": "/assets/photos/experiences/ubs.png",
+        "width": 453,
+        "height": 422,
+        "variant": "ubs"
+      }
+    },
+    {
+      "organization": "Caterpillar",
+      "role": "Hydraulics & Controls Engineering Intern",
+      "dates": "May 2022 – Aug 2022",
+      "logo": {
+        "src": "/assets/photos/experiences/cat.jpg",
+        "width": 440,
+        "height": 440,
+        "variant": "cat"
+      }
+    }
+  ],
+  "skills": [
+    {
+      "name": "Product design & CAD",
+      "items": "Siemens NX, SolidWorks, GD&T, DFM, PLM"
+    },
+    {
+      "name": "Analysis & validation",
+      "items": "FEA, ANSYS, tolerance analysis, DOE, failure analysis"
+    },
+    {
+      "name": "Manufacturing & prototyping",
+      "items": "Machining, 3D printing, stamping, injection molding, rapid prototyping"
+    },
+    {
+      "name": "Mechatronics & controls",
+      "items": "Arduino, control systems, sensor integration"
+    },
+    {
+      "name": "Engineering software",
+      "items": "Python, MATLAB"
+    }
+  ],
+  "publications": [
+    {
+      "title": "Aligning Agents With Experts in Material Selection: Prompting, Size, and Reasoning",
+      "href": "https://doi.org/10.1115/1.4071467",
+      "venue": "JCISE · Mar 2026",
+      "authors": "Megan Ying, Daniele Grandi, Allin Groom, Christopher McComb"
+    },
+    {
+      "title": "Evaluating the Role of Model Size in Agentic AI for Expert-Like Material Selection",
+      "href": "https://doi.org/10.1115/DETC2025-168873",
+      "venue": "ASME IDETC/CIE · Oct 2025",
+      "authors": "Megan Ying, Daniele Grandi, Allin Groom, Christopher McComb"
+    }
+  ]
+}

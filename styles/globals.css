@@ -1,0 +1,587 @@
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: var(--space-5);
+}
+body {
+  margin: 0;
+  color: var(--color-text);
+  background: var(--color-page);
+  font: var(--weight-body) var(--text-body)/var(--leading-body) var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+dl,
+dd,
+figure {
+  margin: 0;
+}
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3 {
+  font-size: inherit;
+  font-weight: var(--weight-heading);
+}
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: inherit;
+  text-decoration-thickness: var(--border-width);
+  text-underline-offset: var(--underline-offset);
+}
+a:hover {
+  color: var(--color-link);
+}
+a,
+button,
+summary {
+  transition: color var(--duration-feedback) var(--ease-feedback);
+}
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus);
+  outline-offset: var(--focus-offset);
+}
+::selection {
+  background: var(--color-selection);
+}
+[hidden] {
+  display: none !important;
+}
+
+/* One page measure shared by the index and every case study. */
+.portfolio,
+.container {
+  width: min(var(--layout-width), calc(100% - 2 * var(--layout-gutter)));
+  margin-inline: auto;
+}
+.portfolio {
+  padding-block: var(--layout-top) var(--layout-bottom);
+}
+.portfolio-section {
+  margin-top: var(--section-gap);
+}
+.section-title,
+.label {
+  font-size: var(--text-small);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-ui);
+}
+.section-title {
+  margin-bottom: var(--section-heading-gap);
+}
+.quiet,
+.date {
+  color: var(--color-secondary);
+}
+.date {
+  font-size: var(--text-caption);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Introduction: the name is the only identity treatment on the index. */
+.intro h1 {
+  font-size: var(--text-title);
+  letter-spacing: var(--tracking-title);
+  line-height: var(--leading-tight);
+}
+.intro__credential {
+  margin-top: var(--space-1);
+  font-size: var(--text-small);
+  color: var(--color-secondary);
+}
+.intro__copy {
+  margin-top: var(--space-5);
+  max-width: var(--prose-measure);
+}
+.intro__copy p + p {
+  margin-top: var(--space-3);
+}
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  margin-top: var(--space-3);
+  font-size: var(--text-small);
+}
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: var(--control-height);
+}
+
+/* Project summaries stay visible, with stable row geometry on hover. */
+.project-list > li + li {
+  border-top: var(--border-width) solid var(--color-rule);
+}
+.project-link {
+  display: grid;
+  grid-template-columns: var(--project-thumb-width) minmax(0, 1fr) auto;
+  gap: var(--row-gap);
+  align-items: center;
+  padding-block: var(--row-padding);
+  text-decoration: none;
+}
+.project-link > span:not(.date) {
+  min-width: 0;
+}
+.project-thumb {
+  width: var(--project-thumb-width);
+  height: var(--project-thumb-height);
+  object-fit: contain;
+  padding: var(--space-1);
+  border-radius: var(--radius-image);
+  background: var(--color-surface);
+}
+.project-name {
+  font-size: var(--text-body);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-ui);
+}
+.project-description {
+  display: block;
+  margin-top: var(--space-1);
+  font-size: var(--text-small);
+  line-height: var(--leading-ui);
+  color: var(--color-secondary);
+}
+.project-link .date {
+  align-self: start;
+  padding-top: var(--space-1);
+}
+.project-link:hover .project-name,
+.project-link:focus-visible .project-name {
+  text-decoration: underline;
+}
+
+/* Native details work with a keyboard, touch, and JavaScript disabled. */
+.disclosure {
+  margin-top: var(--space-2);
+}
+.disclosure summary {
+  width: fit-content;
+  padding-block: var(--space-3);
+  font-size: var(--text-small);
+  cursor: pointer;
+}
+.disclosure summary:hover {
+  color: var(--color-link);
+}
+.disclosure summary::marker {
+  font-size: var(--text-caption);
+  color: var(--color-secondary);
+}
+.disclosure__count {
+  margin-left: var(--space-2);
+  color: var(--color-secondary);
+  font-size: var(--text-caption);
+}
+.disclosure[open] > summary {
+  margin-bottom: var(--space-2);
+}
+.project-list--more {
+  border-top: var(--border-width) solid var(--color-rule);
+}
+
+/* Experience: employer and role on the left, dates on the right. */
+.experience-row {
+  display: grid;
+  grid-template-columns: var(--experience-logo-size) minmax(0, 1fr) auto;
+  gap: var(--row-gap);
+  padding-block: var(--row-padding);
+}
+.experience-row + .experience-row {
+  border-top: var(--border-width) solid var(--color-rule);
+}
+.experience-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--experience-logo-size);
+  height: var(--experience-logo-size);
+  overflow: hidden;
+}
+.experience-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(var(--logo-scale-default));
+}
+.experience-logo--apple img {
+  transform: scale(var(--logo-scale-apple));
+}
+.experience-logo--bloomberg {
+  background: var(--color-brand-bloomberg);
+  border-radius: var(--radius-image);
+}
+.experience-logo--bloomberg img {
+  transform: scale(var(--logo-scale-bloomberg));
+}
+.experience-logo--research img {
+  transform: scale(var(--logo-scale-research));
+}
+.experience-row h3 {
+  font-size: var(--text-small);
+  line-height: var(--leading-ui);
+}
+.experience-role {
+  font-size: var(--text-small);
+  color: var(--color-secondary);
+  line-height: var(--leading-ui);
+}
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5) var(--space-6);
+  padding-bottom: var(--space-3);
+  font-size: var(--text-small);
+  line-height: var(--leading-ui);
+}
+.skills-list dt {
+  font-weight: var(--weight-heading);
+  margin-bottom: var(--space-1);
+}
+.skills-list dd {
+  color: var(--color-secondary);
+}
+
+/* Publications retain the full paper titles and attribution. */
+.publication {
+  padding-block: var(--row-padding);
+}
+.publication + .publication {
+  border-top: var(--border-width) solid var(--color-rule);
+}
+.publication h3 {
+  font-size: var(--text-small);
+  line-height: var(--leading-ui);
+}
+.publication h3 a {
+  text-decoration: none;
+}
+.publication h3 a:hover,
+.publication h3 a:focus-visible {
+  text-decoration: underline;
+}
+.publication__meta,
+.publication__authors {
+  margin-top: var(--space-1);
+  color: var(--color-secondary);
+  font-size: var(--text-caption);
+  line-height: var(--leading-ui);
+}
+
+/* Case studies: a single return link and the original project content. */
+.cs-hero {
+  padding-top: var(--layout-top);
+  padding-bottom: var(--space-6);
+}
+.cs-hero__back {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--control-height);
+  margin-bottom: var(--space-5);
+  color: var(--color-secondary);
+  font-weight: var(--weight-body);
+  text-decoration: none;
+}
+.cs-hero__back:hover {
+  text-decoration: underline;
+}
+.cs-hero__title {
+  font-size: var(--text-case-title);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-title);
+}
+.cs-hero__deck {
+  margin-top: var(--space-3);
+  color: var(--color-secondary);
+  max-width: var(--prose-measure);
+}
+.cs-body {
+  padding-bottom: var(--layout-bottom);
+}
+.cs-body h2 {
+  margin-top: var(--space-8);
+  padding-top: var(--space-5);
+  border-top: var(--border-width) solid var(--color-rule);
+  line-height: var(--leading-tight);
+}
+.cs-body h2:first-child {
+  margin-top: 0;
+}
+.cs-body p {
+  margin-top: var(--space-4);
+}
+.cs-body ul {
+  list-style: disc;
+  padding-left: var(--space-5);
+  margin-top: var(--space-4);
+}
+.cs-body li + li {
+  margin-top: var(--space-2);
+}
+.fig {
+  margin-top: var(--space-5);
+  min-width: 0;
+}
+.fig img,
+.fig video {
+  width: 100%;
+  background: var(--color-page);
+  border: var(--border-width) solid var(--color-rule);
+  border-radius: var(--radius-image);
+}
+.fig figcaption {
+  margin-top: var(--space-2);
+  color: var(--color-secondary);
+  font-size: var(--text-caption);
+  line-height: var(--leading-ui);
+}
+.fig__num {
+  margin-right: var(--space-2);
+  font-variant-numeric: tabular-nums;
+}
+.fig-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+.table-scroll {
+  overflow-x: auto;
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-caption);
+  line-height: var(--leading-ui);
+  text-align: left;
+}
+.data-table th,
+.data-table td {
+  padding: var(--space-2);
+  border-bottom: var(--border-width) solid var(--color-rule);
+  vertical-align: top;
+}
+.data-table th {
+  font-weight: var(--weight-heading);
+}
+.data-table tbody th {
+  font-weight: var(--weight-body);
+}
+.data-table .num {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.data-table .is-chosen {
+  background: var(--color-surface);
+}
+.data-table tfoot {
+  font-weight: var(--weight-heading);
+}
+.tools,
+.files,
+.deck {
+  margin-top: var(--space-8);
+  padding-top: var(--space-5);
+  border-top: var(--border-width) solid var(--color-rule);
+}
+.tools__list,
+.files__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  margin-top: var(--space-3);
+}
+.chip {
+  font-size: var(--text-small);
+  color: var(--color-secondary);
+}
+.files__list a {
+  min-height: var(--control-height);
+  display: inline-flex;
+  align-items: center;
+}
+.files + .tools,
+.deck + .files {
+  margin-top: var(--space-5);
+  padding-top: 0;
+  border-top: 0;
+}
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-5);
+  margin-top: var(--space-8);
+  padding-top: var(--space-5);
+  border-top: var(--border-width) solid var(--color-rule);
+  font-size: var(--text-small);
+}
+.pager__link {
+  min-height: var(--control-height);
+  display: inline-flex;
+  align-items: center;
+}
+.pager__next {
+  margin-left: auto;
+  text-align: right;
+}
+
+/* Only the battery-door slide viewer needs JavaScript. */
+.deck__frame {
+  margin-top: var(--space-3);
+  border: var(--border-width) solid var(--color-rule);
+}
+.deck__slide {
+  width: 100%;
+}
+.deck__frame[data-enhanced="true"] .deck__slide {
+  display: none;
+}
+.deck__frame[data-enhanced="true"] .deck__slide.is-active {
+  display: block;
+}
+.deck__controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+.deck__nav {
+  min-width: var(--control-height);
+  min-height: var(--control-height);
+  padding: var(--space-2) var(--space-3);
+  border: var(--border-width) solid var(--color-rule);
+  border-radius: var(--radius-image);
+  background: var(--color-page);
+  font-size: var(--text-small);
+}
+.deck__nav:hover:not(:disabled) {
+  color: var(--color-link);
+  border-color: var(--color-link);
+}
+.deck__nav:disabled {
+  color: var(--color-secondary);
+  cursor: default;
+}
+.deck .deck__count {
+  margin: 0 0 0 var(--space-2);
+  color: var(--color-secondary);
+  font-size: var(--text-caption);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Accessibility */
+.skip-link {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--layout-gutter);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-page);
+  z-index: var(--layer-skip);
+  transform: translateY(calc(-100% - var(--space-3) - var(--focus-offset)));
+}
+.skip-link:focus {
+  transform: none;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Responsive tokens: compact = 40em; narrow = 25em. */
+@media (max-width: 40em) {
+  .project-link {
+    grid-template-columns: var(--project-thumb-width) minmax(0, 1fr);
+    gap: var(--space-1) var(--row-gap);
+  }
+  .project-thumb {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+  .project-link > span:not(.date) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .project-link .date {
+    grid-column: 2;
+    grid-row: 2;
+    padding-top: 0;
+  }
+  .experience-row {
+    grid-template-columns: var(--experience-logo-size) minmax(0, 1fr);
+    gap: var(--space-1) var(--row-gap);
+  }
+  .experience-logo {
+    grid-row: 1 / 3;
+  }
+  .experience-row .date {
+    grid-column: 2;
+  }
+  .skills-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 25em) {
+  .fig-pair {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  a,
+  button,
+  summary {
+    transition: none;
+  }
+}
+@media print {
+  :root {
+    --layout-top: var(--space-4);
+    --layout-bottom: var(--space-4);
+  }
+  .skip-link,
+  .pager,
+  .cs-hero__back,
+  .deck__controls {
+    display: none;
+  }
+  .project-link,
+  .experience-row,
+  .publication,
+  .fig {
+    break-inside: avoid;
+  }
+}
