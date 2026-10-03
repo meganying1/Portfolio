@@ -12,7 +12,7 @@ export default function NoiseReductionContent() {
         environmental sounds distinguishable.
       </p>
 
-      <h2>Algorithm development</h2>
+      <h2>Algorithm Development</h2>
 
       <p>
         We first explored cancellation using an inverted waveform. This
@@ -56,7 +56,7 @@ export default function NoiseReductionContent() {
         </figcaption>
       </figure>
 
-      <h2>MATLAB implementation</h2>
+      <h2>MATLAB Implementation</h2>
 
       <p>
         We converted the recordings to single-channel signals, generated a

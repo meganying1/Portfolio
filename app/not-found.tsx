@@ -6,10 +6,7 @@ export default function NotFound() {
       <h1>Page not found</h1>
       <p className="intro__copy">
         This page doesn’t exist.{" "}
-        <Link href="/" prefetch={false}>
-          Return to Megan’s portfolio
-        </Link>
-        .
+        <Link href="/">Return to Megan’s portfolio</Link>.
       </p>
     </main>
   );

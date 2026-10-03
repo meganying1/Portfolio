@@ -18,7 +18,7 @@ export default function MobileRobotContent() {
         26 seconds.
       </p>
 
-      <h2>Sensor integration</h2>
+      <h2>Sensor Integration</h2>
 
       <p>
         We characterized the infrared sensor responses and selected thresholds
@@ -31,7 +31,7 @@ export default function MobileRobotContent() {
         motors.
       </p>
 
-      <h2>Control algorithm</h2>
+      <h2>Control Algorithm</h2>
 
       <p>
         The controller adjusted the left and right motor speeds from the

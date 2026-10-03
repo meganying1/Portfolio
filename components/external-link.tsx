@@ -8,12 +8,10 @@ export function ExternalLink({
   children: ReactNode;
 }) {
   return (
-    <a className="external-link" href={href} target="_blank" rel="noreferrer">
-      <span className="external-link__text">
-        {children}
-        {"\u00a0"}
-        <span aria-hidden="true">↗</span>
-      </span>
+    <a href={href} target="_blank" rel="noreferrer">
+      {children}
+      {"\u00a0"}
+      <span aria-hidden="true">↗</span>
       <span className="sr-only"> (opens in a new tab)</span>
     </a>
   );

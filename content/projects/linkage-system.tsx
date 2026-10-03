@@ -77,7 +77,7 @@ export default function LinkageSystemContent() {
         geometry rather than the intended sliding dwell.
       </p>
 
-      <h2>Analysis &amp; validation</h2>
+      <h2>Analysis &amp; Validation</h2>
 
       <p>
         I used hand calculations at critical orientations to estimate member
@@ -124,7 +124,7 @@ export default function LinkageSystemContent() {
         </figure>
       </div>
 
-      <h2>Fabrication &amp; iteration</h2>
+      <h2>Fabrication &amp; Iteration</h2>
 
       <p>
         We generated DXF files from the CAD model, fabricated the acrylic links,

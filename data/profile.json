@@ -18,7 +18,7 @@
   "experiences": [
     {
       "organization": "Bloomberg",
-      "role": "Software engineer",
+      "role": "Software Engineer",
       "dates": "Oct 2025 – Present",
       "logo": {
         "src": "/assets/photos/experiences/bloomberg.png",
@@ -29,7 +29,7 @@
     },
     {
       "organization": "Design Research Collective",
-      "role": "Research assistant",
+      "role": "Research Assistant",
       "dates": "Sep 2024 – Jul 2026",
       "logo": {
         "src": "/assets/photos/experiences/research.png",
@@ -40,7 +40,7 @@
     },
     {
       "organization": "Apple",
-      "role": "Interconnect product design co-op",
+      "role": "Interconnect Product Design Co-op",
       "dates": "Sep 2023 – Aug 2024",
       "logo": {
         "src": "/assets/photos/experiences/apple.jpg",
@@ -51,7 +51,7 @@
     },
     {
       "organization": "UBS",
-      "role": "Quantitative trading summer analyst",
+      "role": "Quantitative Trading Summer Analyst",
       "dates": "Jun 2023 – Aug 2023",
       "logo": {
         "src": "/assets/photos/experiences/ubs.png",
@@ -62,7 +62,7 @@
     },
     {
       "organization": "Caterpillar",
-      "role": "Hydraulics & controls engineering intern",
+      "role": "Hydraulics & Controls Engineering Intern",
       "dates": "May 2022 – Aug 2022",
       "logo": {
         "src": "/assets/photos/experiences/cat.jpg",
@@ -75,29 +75,23 @@
   "skills": [
     {
       "name": "Product design & CAD",
-      "items": ["Siemens NX", "SolidWorks", "GD&T", "DFM", "PLM"]
+      "items": "Siemens NX, SolidWorks, GD&T, DFM, PLM"
     },
     {
       "name": "Analysis & validation",
-      "items": ["FEA", "ANSYS", "tolerance analysis", "DOE", "failure analysis"]
+      "items": "FEA, ANSYS, tolerance analysis, DOE, failure analysis"
     },
     {
       "name": "Manufacturing & prototyping",
-      "items": [
-        "Machining",
-        "3D printing",
-        "stamping",
-        "injection molding",
-        "rapid prototyping"
-      ]
+      "items": "Machining, 3D printing, stamping, injection molding, rapid prototyping"
     },
     {
       "name": "Mechatronics & controls",
-      "items": ["Arduino", "control systems", "sensor integration"]
+      "items": "Arduino, control systems, sensor integration"
     },
     {
       "name": "Engineering software",
-      "items": ["Python", "MATLAB"]
+      "items": "Python, MATLAB"
     }
   ],
   "publications": [

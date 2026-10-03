@@ -46,7 +46,7 @@ export default function TrussStructureContent() {
         calculations to select dimensions and estimate weight.
       </p>
 
-      <h2>Analysis &amp; validation</h2>
+      <h2>Analysis &amp; Validation</h2>
 
       <p>
         We used static equilibrium to calculate member forces under the 40-pound
@@ -85,7 +85,7 @@ export default function TrussStructureContent() {
         </figcaption>
       </figure>
 
-      <h2>Fabrication &amp; iteration</h2>
+      <h2>Fabrication &amp; Iteration</h2>
 
       <p>
         We generated DXF files from CAD, prepared them in CorelDRAW, laser-cut

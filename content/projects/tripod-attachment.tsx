@@ -116,7 +116,7 @@ export default function TripodAttachmentContent() {
         </figure>
       </div>
 
-      <h2>Analysis &amp; validation</h2>
+      <h2>Analysis &amp; Validation</h2>
 
       <p>
         I estimated a 2.97 N load on each wing from the servo torque and
@@ -163,7 +163,7 @@ export default function TripodAttachmentContent() {
         </figure>
       </div>
 
-      <h2>Fabrication &amp; iteration</h2>
+      <h2>Fabrication &amp; Iteration</h2>
 
       <p>
         We assembled 3D-printed parts with micro servos, an IR sensor, magnets,
@@ -184,7 +184,7 @@ export default function TripodAttachmentContent() {
         design reduces effort.
       </p>
 
-      <h2>Manufacturing &amp; cost</h2>
+      <h2>Manufacturing &amp; Cost</h2>
 
       <p>
         We proposed molded TPU for the wings and inner rotating interface, with
