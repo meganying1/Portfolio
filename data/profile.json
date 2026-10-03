@@ -18,7 +18,7 @@
   "experiences": [
     {
       "organization": "Bloomberg",
-      "role": "Software Engineer",
+      "role": "Software engineer",
       "dates": "Oct 2025 – Present",
       "logo": {
         "src": "/assets/photos/experiences/bloomberg.png",
@@ -29,7 +29,7 @@
     },
     {
       "organization": "Design Research Collective",
-      "role": "Research Assistant",
+      "role": "Research assistant",
       "dates": "Sep 2024 – Jul 2026",
       "logo": {
         "src": "/assets/photos/experiences/research.png",
@@ -40,7 +40,7 @@
     },
     {
       "organization": "Apple",
-      "role": "Interconnect Product Design Co-op",
+      "role": "Interconnect product design co-op",
       "dates": "Sep 2023 – Aug 2024",
       "logo": {
         "src": "/assets/photos/experiences/apple.jpg",
@@ -51,7 +51,7 @@
     },
     {
       "organization": "UBS",
-      "role": "Quantitative Trading Summer Analyst",
+      "role": "Quantitative trading summer analyst",
       "dates": "Jun 2023 – Aug 2023",
       "logo": {
         "src": "/assets/photos/experiences/ubs.png",
@@ -62,7 +62,7 @@
     },
     {
       "organization": "Caterpillar",
-      "role": "Hydraulics & Controls Engineering Intern",
+      "role": "Hydraulics & controls engineering intern",
       "dates": "May 2022 – Aug 2022",
       "logo": {
         "src": "/assets/photos/experiences/cat.jpg",

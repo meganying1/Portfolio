@@ -36,7 +36,7 @@ export function ProjectDetail({ project }: { project: Project }) {
             <Content />
             {project.files.length > 0 && (
               <div className="files">
-                <h3 className="label">files</h3>
+                <h3 className="label">Files</h3>
                 <div className="files__list">
                   {project.files.map((file) => (
                     <a
@@ -52,7 +52,7 @@ export function ProjectDetail({ project }: { project: Project }) {
               </div>
             )}
             <div className="tools">
-              <h3 className="label">tools</h3>
+              <h3 className="label">Tools</h3>
               <div className="tools__list">
                 {project.tools.map((tool) => (
                   <span className="chip" key={tool}>
