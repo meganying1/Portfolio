@@ -1,8 +1,10 @@
 # [Megan Ying Portfolio](https://www.meganying.com/)
 
-The minimal portfolio, converted to Next.js App Router and TypeScript. It preserves the three featured projects, all nine case studies, original color logos, month/year project ranges, publications, and shared design system.
+Megan Ying’s mechanical engineering portfolio, built with Next.js App Router, React, and TypeScript and deployed to GitHub Pages.
 
-This conversion lives on the separate `codex/nextjs-migration` branch. The original static portfolio checkout is preserved.
+The homepage presents three featured projects, six additional projects, experience, technical skills, and publications. Projects are ordered by relevance to mechanical design roles. All nine case studies share the same compact layout, with curated engineering figures, analysis, fabrication details, and adjacent-project navigation.
+
+The design uses a white background, charcoal system sans-serif type, subtle gray rules, and original project and company images. Technical skills and project tools use middle-dot separators. The link preview and “MY” favicon follow the same visual style. See [DESIGN.md](DESIGN.md) for the shared design rules.
 
 ## Develop
 
@@ -13,7 +15,7 @@ npm ci
 npm run dev
 ```
 
-Open http://127.0.0.1:3000/. Project pages use `/projects/battery-door/` and the same route pattern for all nine projects.
+Open [localhost:3000](http://127.0.0.1:3000/). Project pages use `/projects/battery-door/` and the same route pattern for all nine projects.
 
 Development uses `.next-dev/`; production builds use `.next/` and export to `out/`. The separate directories let validation builds run without overwriting the live development preview’s modules. Restart the development server after changing this configuration.
 
@@ -27,28 +29,50 @@ npm run build
 npm run verify:export
 ```
 
-`npm run build` creates the static site in `out/`. Preview the actual export with `python3 -m http.server 3001 --bind 127.0.0.1 --directory out` and open http://127.0.0.1:3001/.
+`npm run build` creates the static site in `out/`. `npm run verify:export` checks all ten pages, their local assets, canonical URLs, and legacy redirects. Preview the actual export with:
+
+```sh
+python3 -m http.server 3001 --bind 127.0.0.1 --directory out
+```
+
+Then open [localhost:3001](http://127.0.0.1:3001/).
 
 ## Structure
 
-- `app/`: root layout, homepage, generated project routes, metadata, sitemap, robots, and 404 page.
+- `app/`: root layout, homepage, generated project routes, favicon and Apple icon files, sitemap, robots, and 404 page.
 - `components/`: shared project, experience, publication, and case-study components. The presentation controls and disclosure enhancements are small client components; their section headings are defined by the server-rendered page content.
-- `data/projects.json`: project titles, summaries, exact date ranges, thumbnails, tools, and downloadable resources.
+- `data/projects.json`: project order, featured status, titles, summaries, exact date ranges, thumbnail crops, tools, and downloadable resources. The array order also controls previous/next project navigation.
 - `data/profile.json`: introduction, original company logos, experience, skills, and publications.
 - `content/projects/`: editable JSX narratives, figures, tables, and videos for all nine case studies. These render as Server Components; no raw HTML injection is used.
 - `styles/tokens.css`: the design system’s visual tokens.
 - `styles/globals.css`: shared component styles. See [DESIGN.md](DESIGN.md) for the design rules.
-- `public/assets/`: original images, videos, slides, PDF, and STEP model, with their public URLs preserved.
+- `lib/site.ts`: site identity, canonical URLs, and shared Open Graph and Twitter preview metadata.
+- `public/assets/`: project images, videos, slides, PDF, STEP model, and the link preview image.
+- `scripts/`: legacy-link generation, site-asset generation, export finalization, and export verification.
 
 The presentation viewer retains its buttons, arrow-key navigation, live slide count, and full slide fallback when JavaScript is disabled. Project and skill disclosures use native `<details>`.
 
+## Link preview and icons
+
+The 1200 × 630 link preview at `public/assets/photos/portfolio-preview.png` displays only “Megan Ying”, centered in charcoal sans-serif type on white. Every page references it through `lib/site.ts`, with page-specific titles and descriptions.
+
+Next.js adds the browser and home-screen icon metadata from `app/icon.svg`, `app/favicon.ico`, and `app/apple-icon.png`. The ICO includes 16, 32, and 48 px fallbacks; the Apple icon is 180 × 180 px. SVG and Apple icon URLs receive Next.js-generated fingerprints.
+
+After changing the palette or profile name, regenerate the assets:
+
+```sh
+npm run generate:assets
+```
+
+The generator reads the shared design tokens and portfolio data and renders the images with Sharp. Inspect and commit the generated files alongside the source changes. Production builds serve these committed assets.
+
 ## Hosting and old links
 
-[Next.js static export](https://nextjs.org/docs/app/guides/static-exports) keeps this version compatible with GitHub Pages. The existing custom domain, Google verification file, and share image are preserved. Images use `next/image` with `unoptimized: true`, so no image server or external service is required.
+[Next.js static export](https://nextjs.org/docs/app/guides/static-exports) produces the GitHub Pages site. The custom domain and Google verification file are preserved. Images use `next/image` with `unoptimized: true`, so no image server or external service is required.
 
 The predev and prebuild scripts generate small compatibility pages for all nine `/pages/*.html` URLs. They forward to the clean Next.js project routes and include a canonical link and a fallback link. The exported homepage also remains available at `/index.html` on static hosting. Generated compatibility files in `public/pages/` are ignored by Git and regenerated automatically.
 
-The workflow in `.github/workflows/nextjs-pages.yml` validates and builds this migration branch and pull requests. **Only pushes to `main` deploy to the existing GitHub Pages site.** The conversion itself does not publish a new site. When the branch is merged, the workflow deploys `out/` directly; Jekyll is no longer involved.
+The workflow in `.github/workflows/nextjs-pages.yml` validates and builds pushes to `main` and pull requests targeting `main`. **Only pushes to `main` deploy to the live GitHub Pages site.** The workflow deploys `out/` directly, with `.nojekyll` protecting Next.js assets from Jekyll processing.
 
 The committed npm lockfile provides reproducible installs. ESLint is pinned to 9.39.5 because the React plugins bundled with this Next.js release still use ESLint 9 APIs.
 

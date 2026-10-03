@@ -4,6 +4,12 @@ export const site = {
   name: "Megan Ying",
   url: "https://www.meganying.com",
   description: "Megan Ying — Mechanical Engineer, CMU '25",
+  previewImage: {
+    url: "/assets/photos/portfolio-preview.png",
+    width: 1200,
+    height: 630,
+    alt: "Megan Ying in charcoal type on a white background",
+  },
 };
 
 export function pageMetadata(
@@ -22,20 +28,13 @@ export function pageMetadata(
       title: fullTitle,
       description,
       url: path,
-      images: [
-        {
-          url: "/assets/photos/share-card.png",
-          width: 1200,
-          height: 630,
-          alt: site.name,
-        },
-      ],
+      images: [site.previewImage],
     },
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
       description,
-      images: ["/assets/photos/share-card.png"],
+      images: [{ url: site.previewImage.url, alt: site.previewImage.alt }],
     },
   };
 }
