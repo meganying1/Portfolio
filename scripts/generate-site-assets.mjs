@@ -20,7 +20,6 @@ const token = (name) => {
 const colors = {
   page: token("--color-page"),
   text: token("--color-text"),
-  secondary: token("--color-secondary"),
   rule: token("--color-rule"),
 };
 const escape = (value) =>
@@ -31,13 +30,15 @@ const escape = (value) =>
 const font = escape(token("--font-body"));
 const radius = parseFloat(token("--radius-image")) * 16;
 
-const preview = (
-  project,
-) => `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+const preview = (project) => {
+  const title = project ? `${project.title} — ${profile.name}` : profile.name;
+  const fontSize = project ? 64 : 72;
+  const baseline = project ? 112 : 118;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <rect width="1200" height="630" fill="${colors.page}"/>
-  <text x="64" y="118" font-family="${font}" font-size="72" font-weight="600" letter-spacing="-1.8" fill="${colors.text}">${escape(profile.name)}</text>
-  ${project ? `<text x="64" y="184" font-family="${font}" font-size="40" font-weight="400" fill="${colors.secondary}">${escape(project.title)}</text>` : ""}
+  <text x="64" y="${baseline}" font-family="${font}" font-size="${fontSize}" font-weight="600" letter-spacing="${-0.025 * fontSize}" fill="${colors.text}">${escape(title)}</text>
 </svg>\n`;
+};
 
 const icon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
   <rect x="0.5" y="0.5" width="63" height="63" rx="${radius}" fill="${colors.page}" stroke="${colors.rule}"/>

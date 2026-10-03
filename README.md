@@ -54,7 +54,7 @@ The presentation viewer retains its buttons, arrow-key navigation, live slide co
 
 ## Link preview and icons
 
-All link previews are 1200 × 630 px with “Megan Ying” in the upper-left corner, using the site’s charcoal sans-serif type on white. The homepage preview at `public/assets/photos/portfolio-preview.png` displays only the name. Each project has its own preview at `public/assets/photos/previews/<slug>.png`, with its title below the name in muted gray. Open Graph and Twitter metadata reference the corresponding image through `lib/site.ts`.
+All link previews are 1200 × 630 px with a single heading in the upper-left corner, using the site’s charcoal sans-serif type on white. The homepage preview at `public/assets/photos/portfolio-preview.png` displays only “Megan Ying”. Each project has its own preview at `public/assets/photos/previews/<slug>.png`, with the same title as its browser tab, such as “Battery door — Megan Ying”. Browser tab titles, Open Graph and Twitter titles, and preview alt text use the same formatter in `lib/site.ts`.
 
 Next.js adds the browser and home-screen icon metadata from `app/icon.svg`, `app/favicon.ico`, and `app/apple-icon.png`. The ICO includes 16, 32, and 48 px fallbacks; the Apple icon is 180 × 180 px. SVG and Apple icon URLs receive Next.js-generated fingerprints.
 

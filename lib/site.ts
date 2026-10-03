@@ -13,11 +13,15 @@ export const site = {
   },
 };
 
+export function pageTitle(title: string) {
+  return title === site.name ? site.name : `${title} — ${site.name}`;
+}
+
 export function projectPreviewImage(project: Pick<Project, "slug" | "title">) {
   return {
     ...site.previewImage,
     url: `/assets/photos/previews/${project.slug}.png`,
-    alt: `${site.name} — ${project.title}`,
+    alt: pageTitle(project.title),
   };
 }
 
@@ -27,7 +31,7 @@ export function pageMetadata(
   path: string,
   previewImage = site.previewImage,
 ): Metadata {
-  const fullTitle = title === site.name ? site.name : `${title} — ${site.name}`;
+  const fullTitle = pageTitle(title);
   return {
     title: title === site.name ? { absolute: site.name } : title,
     description,
