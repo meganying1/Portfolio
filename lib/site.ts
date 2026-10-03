@@ -14,7 +14,7 @@ export const site = {
 };
 
 export function pageTitle(title: string) {
-  return title === site.name ? site.name : `${title} — ${site.name}`;
+  return title === site.name ? site.name : `${title} - ${site.name}`;
 }
 
 export function projectPreviewImage(project: Pick<Project, "slug" | "title">) {
@@ -33,7 +33,7 @@ export function pageMetadata(
 ): Metadata {
   const fullTitle = pageTitle(title);
   return {
-    title: title === site.name ? { absolute: site.name } : title,
+    title: { absolute: fullTitle },
     description,
     alternates: { canonical: path },
     openGraph: {
