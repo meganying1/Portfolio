@@ -32,8 +32,7 @@ export function SlideDeck() {
   }
 
   return (
-    <div className="deck">
-      <h3 className="label">Presentation</h3>
+    <>
       <div
         className="deck__frame"
         data-deck
@@ -79,6 +78,6 @@ export function SlideDeck() {
           {index + 1} / {slideCount}
         </p>
       </div>
-    </div>
+    </>
   );
 }
