@@ -17,6 +17,7 @@ const escape = (value) =>
 for (const project of projects) {
   const path = `/projects/${project.slug}/`;
   const title = `${project.title} - ${profile.name}`;
+  const previewTitle = title.replace(" - ", " \u2011 ");
   const image = `https://www.meganying.com/assets/photos/previews/${project.slug}.png`;
   await writeFile(
     new URL(`${project.slug}.html`, directory),
@@ -25,7 +26,7 @@ for (const project of projects) {
 <title>${escape(title)}</title>
 <link rel="canonical" href="https://www.meganying.com${path}">
 <meta property="og:type" content="website">
-<meta property="og:title" content="${escape(title)}">
+<meta property="og:title" content="${escape(previewTitle)}">
 <meta property="og:description" content="${escape(project.description)}">
 <meta property="og:url" content="https://www.meganying.com${path}">
 <meta property="og:image" content="${image}">
@@ -33,7 +34,7 @@ for (const project of projects) {
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="${escape(title)}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="${escape(title)}">
+<meta name="twitter:title" content="${escape(previewTitle)}">
 <meta name="twitter:description" content="${escape(project.description)}">
 <meta name="twitter:image" content="${image}">
 <meta name="twitter:image:alt" content="${escape(title)}">

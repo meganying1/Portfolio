@@ -32,6 +32,8 @@ export function pageMetadata(
   previewImage = site.previewImage,
 ): Metadata {
   const fullTitle = pageTitle(title);
+  // Keep Apple link previews from treating the name as a removable site suffix.
+  const previewTitle = fullTitle.replace(" - ", " \u2011 ");
   return {
     title: { absolute: fullTitle },
     description,
@@ -39,14 +41,14 @@ export function pageMetadata(
     openGraph: {
       type: "website",
       siteName: site.name,
-      title: fullTitle,
+      title: previewTitle,
       description,
       url: path,
       images: [previewImage],
     },
     twitter: {
       card: "summary_large_image",
-      title: fullTitle,
+      title: previewTitle,
       description,
       images: [{ url: previewImage.url, alt: previewImage.alt }],
     },
