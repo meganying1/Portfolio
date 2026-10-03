@@ -77,7 +77,7 @@ export default function BatteryDoorContent() {
         </figcaption>
       </figure>
 
-      <h2>Concept Development</h2>
+      <h2>Concept development</h2>
 
       <p>
         I defined requirements for button force and travel, closing force,
@@ -305,7 +305,7 @@ export default function BatteryDoorContent() {
         </figcaption>
       </figure>
 
-      <h2>Analysis &amp; Validation</h2>
+      <h2>Analysis &amp; validation</h2>
 
       <p>
         I worked backward from the latch travel needed to clear the door hook to
@@ -436,7 +436,7 @@ export default function BatteryDoorContent() {
         </figure>
       </div>
 
-      <h2>Manufacturing &amp; Cost</h2>
+      <h2>Manufacturing &amp; cost</h2>
 
       <p>
         I selected proposed materials and processes based on component geometry,

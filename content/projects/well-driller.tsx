@@ -64,7 +64,7 @@ export default function WellDrillerContent() {
         interfaces to evaluate in a prototype.
       </p>
 
-      <h2>Analysis &amp; Validation</h2>
+      <h2>Analysis &amp; validation</h2>
 
       <p>
         I worked backward from the modeled drill load and drivetrain geometry to

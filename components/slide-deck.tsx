@@ -33,7 +33,7 @@ export function SlideDeck() {
 
   return (
     <div className="deck">
-      <h3 className="label">presentation</h3>
+      <h3 className="label">Presentation</h3>
       <div
         className="deck__frame"
         data-deck

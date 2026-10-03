@@ -98,7 +98,7 @@ export default function TrashCompactorContent() {
         </figcaption>
       </figure>
 
-      <h2>Analysis &amp; Validation</h2>
+      <h2>Analysis &amp; validation</h2>
 
       <p>
         We used free-body diagrams to evaluate force transmission through the
@@ -150,7 +150,7 @@ export default function TrashCompactorContent() {
         </figure>
       </div>
 
-      <h2>Fabrication &amp; Iteration</h2>
+      <h2>Fabrication &amp; iteration</h2>
 
       <p>
         We shared milling, turning, 3D printing, assembly, and testing. The
@@ -167,7 +167,7 @@ export default function TrashCompactorContent() {
         lid loads.
       </p>
 
-      <h2>Manufacturing &amp; Cost</h2>
+      <h2>Manufacturing &amp; cost</h2>
 
       <p>
         The prototype used manual machining, 3D printing, and a wooden enclosure

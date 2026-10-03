@@ -12,7 +12,7 @@ export default function ChineseCheckersContent() {
         detection, and Minimax-based AI and hints.
       </p>
 
-      <h2>Software Design</h2>
+      <h2>Software design</h2>
 
       <p>
         I used an object-oriented structure to separate game state, interface
@@ -61,7 +61,7 @@ export default function ChineseCheckersContent() {
         </figure>
       </div>
 
-      <h2>AI &amp; Algorithms</h2>
+      <h2>AI &amp; algorithms</h2>
 
       <p>
         I implemented Minimax to evaluate future game states and choose moves
