@@ -46,19 +46,19 @@ Then open [localhost:3001](http://127.0.0.1:3001/).
 - `content/projects/`: editable JSX narratives, figures, tables, and videos for all nine case studies. These render as Server Components; no raw HTML injection is used.
 - `styles/tokens.css`: the design system’s visual tokens.
 - `styles/globals.css`: shared component styles. See [DESIGN.md](DESIGN.md) for the design rules.
-- `lib/site.ts`: site identity, canonical URLs, and shared Open Graph and Twitter preview metadata.
-- `public/assets/`: project images, videos, slides, PDF, STEP model, and the link preview image.
+- `lib/site.ts`: site identity, canonical URLs, and Open Graph and Twitter preview metadata for the homepage and each project.
+- `public/assets/`: project images, videos, slides, PDF, STEP model, and link preview images.
 - `scripts/`: legacy-link generation, site-asset generation, export finalization, and export verification.
 
 The presentation viewer retains its buttons, arrow-key navigation, live slide count, and full slide fallback when JavaScript is disabled. Project and skill disclosures use native `<details>`.
 
 ## Link preview and icons
 
-The 1200 × 630 link preview at `public/assets/photos/portfolio-preview.png` displays only “Megan Ying”, centered in charcoal sans-serif type on white. Every page references it through `lib/site.ts`, with page-specific titles and descriptions.
+All link previews are 1200 × 630 px with “Megan Ying” in the upper-left corner, using the site’s charcoal sans-serif type on white. The homepage preview at `public/assets/photos/portfolio-preview.png` displays only the name. Each project has its own preview at `public/assets/photos/previews/<slug>.png`, with its title below the name in muted gray. Open Graph and Twitter metadata reference the corresponding image through `lib/site.ts`.
 
 Next.js adds the browser and home-screen icon metadata from `app/icon.svg`, `app/favicon.ico`, and `app/apple-icon.png`. The ICO includes 16, 32, and 48 px fallbacks; the Apple icon is 180 × 180 px. SVG and Apple icon URLs receive Next.js-generated fingerprints.
 
-After changing the palette or profile name, regenerate the assets:
+After changing the palette, profile name, or projects, regenerate the assets:
 
 ```sh
 npm run generate:assets

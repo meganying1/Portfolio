@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { ProjectDetail } from "@/components/project-detail";
 import { getProject, projects, projectHref } from "@/lib/projects";
-import { pageMetadata } from "@/lib/site";
+import { pageMetadata, projectPreviewImage } from "@/lib/site";
 
 export const dynamicParams = false;
 
@@ -15,7 +15,12 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) notFound();
-  return pageMetadata(project.title, project.description, projectHref(project));
+  return pageMetadata(
+    project.title,
+    project.description,
+    projectHref(project),
+    projectPreviewImage(project),
+  );
 }
 
 export default async function ProjectPage({ params }: Props) {

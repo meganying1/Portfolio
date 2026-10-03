@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import sharp from "sharp";
 
 const tokens = await readFile(
@@ -7,6 +7,9 @@ const tokens = await readFile(
 );
 const profile = JSON.parse(
   await readFile(new URL("../data/profile.json", import.meta.url), "utf8"),
+);
+const projects = JSON.parse(
+  await readFile(new URL("../data/projects.json", import.meta.url), "utf8"),
 );
 
 const token = (name) => {
@@ -17,6 +20,7 @@ const token = (name) => {
 const colors = {
   page: token("--color-page"),
   text: token("--color-text"),
+  secondary: token("--color-secondary"),
   rule: token("--color-rule"),
 };
 const escape = (value) =>
@@ -27,9 +31,12 @@ const escape = (value) =>
 const font = escape(token("--font-body"));
 const radius = parseFloat(token("--radius-image")) * 16;
 
-const preview = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+const preview = (
+  project,
+) => `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <rect width="1200" height="630" fill="${colors.page}"/>
-  <text x="600" y="342" font-family="${font}" font-size="88" font-weight="600" letter-spacing="-2.2" text-anchor="middle" fill="${colors.text}">${escape(profile.name)}</text>
+  <text x="64" y="118" font-family="${font}" font-size="72" font-weight="600" letter-spacing="-1.8" fill="${colors.text}">${escape(profile.name)}</text>
+  ${project ? `<text x="64" y="184" font-family="${font}" font-size="40" font-weight="400" fill="${colors.secondary}">${escape(project.title)}</text>` : ""}
 </svg>\n`;
 
 const icon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
@@ -37,12 +44,22 @@ const icon = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" vie
   <text x="32" y="46" font-family="${font}" font-size="42" font-weight="600" letter-spacing="-2" text-anchor="middle" fill="${colors.text}">MY</text>
 </svg>\n`;
 
-await sharp(Buffer.from(preview))
+await sharp(Buffer.from(preview()))
   .png()
   .toFile(
     new URL("../public/assets/photos/portfolio-preview.png", import.meta.url)
       .pathname,
   );
+const projectPreviewDirectory = new URL(
+  "../public/assets/photos/previews/",
+  import.meta.url,
+);
+await mkdir(projectPreviewDirectory, { recursive: true });
+for (const project of projects) {
+  await sharp(Buffer.from(preview(project)))
+    .png()
+    .toFile(new URL(`${project.slug}.png`, projectPreviewDirectory).pathname);
+}
 await writeFile(new URL("../app/icon.svg", import.meta.url), icon);
 await sharp(Buffer.from(icon), { density: 203 })
   .resize(180, 180)
@@ -74,4 +91,6 @@ await writeFile(
   new URL("../app/favicon.ico", import.meta.url),
   Buffer.concat([header, ...images]),
 );
-console.log("Generated the link preview, SVG favicon, ICO, and Apple icon.");
+console.log(
+  `Generated the homepage preview, ${projects.length} project previews, SVG favicon, ICO, and Apple icon.`,
+);
