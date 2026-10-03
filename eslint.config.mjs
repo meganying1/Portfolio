@@ -7,5 +7,11 @@ export default defineConfig([
   ...nextTypescript,
   // Case-study prose retains the author's original apostrophes and quotations.
   { rules: { "react/no-unescaped-entities": "off" } },
-  globalIgnores([".next/**", "out/**", "public/pages/**", "next-env.d.ts"]),
+  globalIgnores([
+    ".next/**",
+    ".next-dev/**",
+    "out/**",
+    "public/pages/**",
+    "next-env.d.ts",
+  ]),
 ]);

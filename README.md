@@ -15,6 +15,8 @@ npm run dev
 
 Open http://127.0.0.1:3000/. Project pages use `/projects/battery-door/` and the same route pattern for all nine projects.
 
+Development uses `.next-dev/`; production builds use `.next/` and export to `out/`. The separate directories let validation builds run without overwriting the live development preview’s modules. Restart the development server after changing this configuration.
+
 ## Validate and build
 
 ```sh
@@ -30,7 +32,7 @@ npm run verify:export
 ## Structure
 
 - `app/`: root layout, homepage, generated project routes, metadata, sitemap, robots, and 404 page.
-- `components/`: shared project, experience, publication, and case-study components. The presentation viewer is the only custom client component.
+- `components/`: shared project, experience, publication, and case-study components. The presentation controls and disclosure enhancements are small client components; their section headings are defined by the server-rendered page content.
 - `data/projects.json`: project titles, summaries, exact date ranges, thumbnails, tools, and downloadable resources.
 - `data/profile.json`: introduction, original company logos, experience, skills, and publications.
 - `content/projects/`: editable JSX narratives, figures, tables, and videos for all nine case studies. These render as Server Components; no raw HTML injection is used.

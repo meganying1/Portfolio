@@ -591,7 +591,10 @@ export default function BatteryDoorContent() {
         force, latch engagement, wear, and cycle durability.
       </p>
 
-      <SlideDeck />
+      <div className="deck">
+        <h3 className="label">Presentation</h3>
+        <SlideDeck />
+      </div>
     </>
   );
 }

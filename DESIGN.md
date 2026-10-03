@@ -56,6 +56,7 @@ CSS custom properties cannot be used in media query conditions. The two breakpoi
 - **Skills disclosure:** a full-width native disclosure with a plus/minus indicator. Five compact rows align muted category labels with individual skill terms separated by middle dots. Terms stay together when wrapping. Preserve every existing skill. Skills are also visible in each relevant case study.
 - **Publication row:** full paper title, venue and date, full author attribution, and original DOI link. Never shorten a paper title to a marketing headline.
 - **Case study:** one sticky navigation bar with an “All projects” return link and a quiet current-project title. Keep the return link visible throughout the narrative and on mobile. It goes directly to the project section of the homepage. Below it: title, description, original narrative and figures, resources, and adjacent-project links. Hide the bar in print. The homepage has no navbar or repeated footer.
+- **Presentation:** keep the capitalized section heading in the server-rendered case-study content, alongside “Files” and “Tools”. The client viewer owns slide state and controls only.
 
 ## Interaction and accessibility
 

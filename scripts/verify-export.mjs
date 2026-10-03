@@ -24,6 +24,20 @@ for (const file of pages) {
     !html.includes('class="site-header"'),
     `${file}: repeated navigation returned`,
   );
+  for (const heading of html.matchAll(/<h[23]\b[^>]*>([^<]+)<\/h[23]>/g)) {
+    assert.match(
+      heading[1],
+      /^[A-Z]/,
+      `${file}: section heading must start with a capital: ${heading[1]}`,
+    );
+  }
+  if (file === "projects/battery-door/index.html") {
+    assert.equal(
+      (html.match(/<h3 class="label">Presentation<\/h3>/g) ?? []).length,
+      1,
+      `${file}: expected one capitalized presentation heading`,
+    );
+  }
   for (const match of html.matchAll(/(?:href|src|poster)="([^"#]+)"/g)) {
     const url = new URL(
       match[1].replaceAll("&amp;", "&"),
