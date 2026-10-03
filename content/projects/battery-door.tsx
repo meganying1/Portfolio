@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { ProjectConcepts } from "@/components/project-concepts";
+import { ProjectFigure, ProjectFigurePair } from "@/components/project-figure";
 import { SlideDeck } from "@/components/slide-deck";
 
 export default function BatteryDoorContent() {
@@ -21,20 +22,14 @@ export default function BatteryDoorContent() {
         volume above 100,000 units per year.
       </p>
 
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/battery_assembly.png"
-          alt="Exploded views of the mechanism and the door subassembly, with an eight-step assembly procedure"
-          width={1920}
-          height={850}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 1</span>Sliding latch components and
-          assembly sequence
-        </figcaption>
-      </figure>
+      <ProjectFigure
+        number={1}
+        src="/assets/photos/projects/battery_exploded.png"
+        alt="Exploded release mechanism and battery door with labeled button, latch, springs, chassis, and hinge components"
+        width={1285}
+        height={838}
+        caption="Exploded Siemens NX view communicates the battery-door assembly layout"
+      />
 
       <h2>Design</h2>
 
@@ -52,7 +47,7 @@ export default function BatteryDoorContent() {
 
       <p>
         When the button is released, the springs return the button and latch.
-        During closing, a ramp on the door hook pushes the latch aside; the
+        During closing, a ramp on the door hook pushes the latch aside, and the
         latch then springs back into engagement. A flat locking surface resists
         release from an upward pull on the door.
       </p>
@@ -62,20 +57,30 @@ export default function BatteryDoorContent() {
         the internal parts while guiding button and latch motion.
       </p>
 
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/battery_section_pressed.png"
-          alt="Cross section through the full device with the button pressed and the springs compressed"
-          width={1660}
-          height={626}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 2</span>Button travel retracts the
-          latch from the door hook
-        </figcaption>
-      </figure>
+      <ProjectFigurePair
+        figures={[
+          {
+            number: 2,
+            src: "/assets/photos/projects/battery_latch_closed.png",
+            alt: "Closed-door cross section with the latch engaged beneath the yellow door hook",
+            width: 1480,
+            height: 542,
+            crop: { x: 130, y: 10, width: 440, height: 510 },
+            caption:
+              "Closed latch engages the door hook’s flat locking surface",
+          },
+          {
+            number: 3,
+            src: "/assets/photos/projects/battery_latch_released.png",
+            alt: "Pressed-button cross section with the latch retracted and the yellow door lifted",
+            width: 1660,
+            height: 626,
+            crop: { x: 75, y: 36, width: 540, height: 546 },
+            caption:
+              "Angled slots convert downward button travel into horizontal latch release",
+          },
+        ]}
+      />
 
       <h2>Concept development</h2>
 
@@ -85,20 +90,6 @@ export default function BatteryDoorContent() {
         button force, 1–3 mm travel, and a closing force below 8 N.
       </p>
 
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/battery_assumptions.png"
-          alt="Two panels listing the design assumptions and the requirements, covering device dimensions, lifespan, production volume, button press force and travel, door closing and opening force, durability, cost, weight, and appearance"
-          width={1920}
-          height={850}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 3</span>Assumptions and requirements
-        </figcaption>
-      </figure>
-
       <p>
         I explored four release architectures and compared their complete
         release and reset sequences. The tradeoffs included tolerance
@@ -106,112 +97,47 @@ export default function BatteryDoorContent() {
         whether the button could remain within the door perimeter.
       </p>
 
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/battery_concept_snapfit.png"
-          alt="Moving snap fit concept alongside its inspiration: battery covers and water bottle lids"
-          width={1920}
-          height={850}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 4</span>Moving snap fit inspiration
-          and concept
-        </figcaption>
-      </figure>
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/battery_concept_pushrelease.png"
-          alt="Push release concept alongside its inspiration: push-to-open cabinets with touch latches"
-          width={1920}
-          height={850}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 5</span>Push release inspiration and
-          concept
-        </figcaption>
-      </figure>
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/battery_concept_rotatingbody.png"
-          alt="Rotating body concept alongside its inspiration: a retractable pen with a rotating cam body"
-          width={1920}
-          height={850}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 6</span>Rotating cam body inspiration
-          and concept
-        </figcaption>
-      </figure>
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/battery_concept_slidinglatch.png"
-          alt="Sliding latch concept alongside its inspiration: a door knob with a strike plate and sliding latch"
-          width={1920}
-          height={850}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 7</span>Sliding latch inspiration and
-          concept
-        </figcaption>
-      </figure>
-
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/battery_comparison.png"
-          alt="Four-column comparison of the moving snap fit, push release, rotating body, and sliding latch concepts, with the moving snap fit highlighted"
-          width={1920}
-          height={850}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 8</span>Comparing the four mechanisms
-        </figcaption>
-      </figure>
+      <ProjectConcepts
+        number={4}
+        caption="Concept sketches explore alternative release mechanisms for concept selection"
+        concepts={[
+          {
+            name: "Moving snap fit",
+            src: "/assets/photos/projects/battery_idea_snapfit.png",
+            width: 924,
+            height: 568,
+            alt: "Angled-slot snap-fit concept with a spring-return button",
+          },
+          {
+            name: "Push release",
+            src: "/assets/photos/projects/battery_idea_pushrelease.png",
+            width: 503,
+            height: 588,
+            alt: "Pivoting triangular release concept actuated through the door",
+          },
+          {
+            name: "Rotating body",
+            src: "/assets/photos/projects/battery_idea_rotatingbody.png",
+            width: 433,
+            height: 638,
+            alt: "Spring-return rotating-body concept with a door-hook interface",
+          },
+          {
+            name: "Sliding latch",
+            src: "/assets/photos/projects/battery_idea_slidinglatch.png",
+            width: 610,
+            height: 466,
+            alt: "Opposed sliding-latch concept with a central button and return springs",
+          },
+        ]}
+      />
 
       <p>
         I developed sliding and rotating implementations of a moving snap fit.
         The sliding version uses angled slots to convert button travel into
-        latch translation; the rotating version pivots the latch out of
+        latch translation. The rotating version pivots the latch out of
         engagement.
       </p>
-
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/battery_sliding_sequence.png"
-          alt="Four cross-section steps showing the sliding snap fit releasing and re-latching the door"
-          width={1920}
-          height={875}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 9</span>Mechanism steps of sliding
-          snap fit design
-        </figcaption>
-      </figure>
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/battery_rotating_sequence.png"
-          alt="Four cross-section steps showing the rotating snap fit releasing and re-latching the door"
-          width={1920}
-          height={875}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 10</span>Mechanism steps of rotating
-          snap fit design
-        </figcaption>
-      </figure>
 
       <p>
         I selected the sliding version using a weighted decision matrix. It
@@ -220,90 +146,80 @@ export default function BatteryDoorContent() {
         estimated cost.
       </p>
 
-      <figure className="fig">
-        <div className="table-scroll">
-          <table className="data-table">
-            <caption className="sr-only">
-              Weighted decision matrix comparing the sliding snap fit and
-              rotating snap fit designs
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">Criterion</th>
-                <th scope="col">Weight</th>
-                <th scope="col">Sliding rating</th>
-                <th scope="col">Sliding score</th>
-                <th scope="col">Rotating rating</th>
-                <th scope="col">Rotating score</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Effectiveness</th>
-                <td className="num">5</td>
-                <td className="num">4</td>
-                <td className="num">20</td>
-                <td className="num">3</td>
-                <td className="num">15</td>
-              </tr>
-              <tr>
-                <th scope="row">User experience</th>
-                <td className="num">4</td>
-                <td className="num">4</td>
-                <td className="num">16</td>
-                <td className="num">3</td>
-                <td className="num">12</td>
-              </tr>
-              <tr>
-                <th scope="row">Manufacturability</th>
-                <td className="num">4</td>
-                <td className="num">3</td>
-                <td className="num">12</td>
-                <td className="num">3</td>
-                <td className="num">12</td>
-              </tr>
-              <tr>
-                <th scope="row">Ease of assembly</th>
-                <td className="num">4</td>
-                <td className="num">3</td>
-                <td className="num">12</td>
-                <td className="num">3</td>
-                <td className="num">12</td>
-              </tr>
-              <tr>
-                <th scope="row">Compactness</th>
-                <td className="num">4</td>
-                <td className="num">3</td>
-                <td className="num">12</td>
-                <td className="num">4</td>
-                <td className="num">16</td>
-              </tr>
-              <tr>
-                <th scope="row">Cost</th>
-                <td className="num">3</td>
-                <td className="num">3</td>
-                <td className="num">9</td>
-                <td className="num">4</td>
-                <td className="num">12</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <th scope="row">Total</th>
-                <td></td>
-                <td></td>
-                <td className="num is-chosen">81</td>
-                <td></td>
-                <td className="num">79</td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-        <figcaption>
-          <span className="fig__num">Fig. 11</span>Decision matrix of the two
-          designs
-        </figcaption>
-      </figure>
+      <div className="table-scroll case-table">
+        <table className="data-table">
+          <caption>
+            <span className="fig__num">Table 1</span> Weighted decision matrix
+            compares the sliding and rotating latch concepts
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Criterion</th>
+              <th scope="col">Weight</th>
+              <th scope="col">Sliding score</th>
+              <th scope="col">Rotating score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Effectiveness</th>
+              <td className="num">5</td>
+
+              <td className="num">20</td>
+
+              <td className="num">15</td>
+            </tr>
+            <tr>
+              <th scope="row">User experience</th>
+              <td className="num">4</td>
+
+              <td className="num">16</td>
+
+              <td className="num">12</td>
+            </tr>
+            <tr>
+              <th scope="row">Manufacturability</th>
+              <td className="num">4</td>
+
+              <td className="num">12</td>
+
+              <td className="num">12</td>
+            </tr>
+            <tr>
+              <th scope="row">Ease of assembly</th>
+              <td className="num">4</td>
+
+              <td className="num">12</td>
+
+              <td className="num">12</td>
+            </tr>
+            <tr>
+              <th scope="row">Compactness</th>
+              <td className="num">4</td>
+
+              <td className="num">12</td>
+
+              <td className="num">16</td>
+            </tr>
+            <tr>
+              <th scope="row">Cost</th>
+              <td className="num">3</td>
+
+              <td className="num">9</td>
+
+              <td className="num">12</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row">Total</th>
+              <td></td>
+              <td className="num is-chosen">81</td>
+              <td className="num">79</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
 
       <h2>Analysis &amp; validation</h2>
 
@@ -314,41 +230,22 @@ export default function BatteryDoorContent() {
         target.
       </p>
 
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/battery_calc_button.jpg"
-          alt="Handwritten calculations for button travel, free body diagrams, and the spring constant bounds"
-          width={1904}
-          height={1960}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 12</span>Button and latch calculations
-        </figcaption>
-      </figure>
+      <ProjectFigure
+        number={5}
+        src="/assets/photos/projects/battery_button_fbd.jpg"
+        width={1904}
+        height={2500}
+        crop={{ x: 60, y: 1125, width: 1065, height: 540 }}
+        alt="Button free-body diagrams with press force, slot reactions, weight, and spring forces"
+        caption="Button free-body diagrams relate press force, slot reactions, and return-spring loading"
+      />
 
       <p>
         I evaluated peg bending and snap-fit stress, strain, and deflection
         under the modeled loads. The door calculation predicted a 6.1 N closing
         force, below the 8 N target. These calculations screened the geometry
-        for the assumed service life; physical cycle testing would be needed to
-        establish durability.
+        for the assumed service life.
       </p>
-
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/battery_calc_door.jpg"
-          alt="Handwritten snap-fit calculations for maximum strain, stress, deflection force, and closing force"
-          width={1904}
-          height={1120}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 13</span>Door and latch calculations
-        </figcaption>
-      </figure>
 
       <p>
         I traced the dimensional chain from the latch tip to the door hook and
@@ -358,83 +255,44 @@ export default function BatteryDoorContent() {
         worst-case tolerance bound.
       </p>
 
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/battery_tolerance.png"
-          alt="Tolerance stack-up diagram and table from latch tip to door tip, with nominal and RSS overlap results"
-          width={1080}
-          height={830}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 14</span>Dimensional chain and RSS
-          estimate of latch overlap
-        </figcaption>
-      </figure>
+      <ProjectFigure
+        number={6}
+        src="/assets/photos/projects/battery_tolerance.png"
+        alt="Two cross sections tracing the dimensional chain between the latch tip and door hook"
+        width={1080}
+        height={830}
+        crop={{ x: 60, y: 55, width: 960, height: 445 }}
+        caption="Cross sections trace the latch-to-hook dimensional chain for tolerance analysis"
+      />
 
       <p>
         I used FEA to examine peg-to-latch contact during release and door-hook
         deflection during closing. The simulations provided stress and
         deformation estimates for comparison with the hand calculations.
-        Material assumptions in the peg analysis still need to be reconciled
-        with the aluminum button specified in the proposed BOM.
       </p>
 
-      <figure className="fig">
-        <video
-          src="/assets/video/battery_fea_latch.mp4"
-          poster="/assets/photos/projects/battery_fea_latch_poster.png"
-          width={854}
-          height={854}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          aria-label="Animated finite element simulation of the button peg sliding the latch"
-        ></video>
-        <figcaption>
-          <span className="fig__num">Fig. 15</span>FEA of button sliding latch
-        </figcaption>
-      </figure>
-      <div className="fig-pair">
-        <figure className="fig">
-          <video
-            src="/assets/video/battery_fea_door_stress.mp4"
-            poster="/assets/photos/projects/battery_fea_door_poster.png"
-            width={386}
-            height={386}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            aria-label="Animated finite element stress simulation of the door hook deflecting past the latch"
-          ></video>
-          <figcaption>
-            <span className="fig__num">Fig. 16</span>FEA stress of door snap fit
-          </figcaption>
-        </figure>
-        <figure className="fig">
-          <video
-            src="/assets/video/battery_fea_door_deformation.mp4"
-            poster="/assets/photos/projects/battery_fea_door_poster.png"
-            width={386}
-            height={386}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            aria-label="Animated finite element deformation simulation of the door hook deflecting past the latch"
-          ></video>
-          <figcaption>
-            <span className="fig__num">Fig. 17</span>FEA deformation of door
-            snap fit
-          </figcaption>
-        </figure>
-      </div>
+      <ProjectFigurePair
+        figures={[
+          {
+            number: 7,
+            src: "/assets/photos/projects/battery_fea_latch.gif",
+            width: 854,
+            height: 854,
+            alt: "Animated finite element contact simulation of the button peg moving the latch",
+            caption:
+              "Contact FEA animation shows peg-to-latch motion during release",
+          },
+          {
+            number: 8,
+            src: "/assets/photos/projects/battery_fea_door_stress.gif",
+            width: 386,
+            height: 386,
+            alt: "Animated door-hook stress distribution during latch engagement",
+            caption:
+              "Door-hook FEA animation shows the stress distribution during closing",
+          },
+        ]}
+      />
 
       <h2>Manufacturing &amp; cost</h2>
 
@@ -444,7 +302,7 @@ export default function BatteryDoorContent() {
       </p>
 
       <p>
-        The chassis, latch, and structural door use injection-molded ABS; the
+        The chassis, latch, and structural door use injection-molded ABS. The
         button and door cover use aluminum. Springs, screws, and spring-loaded
         hinges are purchased hardware. The assembly sequence uses chassis snap
         fits to retain the release mechanism.
@@ -453,128 +311,8 @@ export default function BatteryDoorContent() {
       <p>
         The estimated BOM cost was $3.30 per assembly. This is a preliminary
         component-cost estimate rather than a validated manufacturing quotation
-        or complete production cost. The button alloy and forming process
-        require further review before release.
+        or complete production cost.
       </p>
-
-      <figure className="fig">
-        <div className="table-scroll">
-          <table className="data-table">
-            <caption className="sr-only">
-              Bill of materials for the sliding snap fit mechanism
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">Component</th>
-                <th scope="col">Qty</th>
-                <th scope="col">Material</th>
-                <th scope="col">Manufacturing</th>
-                <th scope="col">Mass (g)</th>
-                <th scope="col">Unit ($)</th>
-                <th scope="col">Total ($)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Top chassis</th>
-                <td className="num">1</td>
-                <td>ABS</td>
-                <td>Injection molding</td>
-                <td className="num">6.9</td>
-                <td className="num">0.35</td>
-                <td className="num">0.35</td>
-              </tr>
-              <tr>
-                <th scope="row">Button</th>
-                <td className="num">1</td>
-                <td>Aluminum 6061-T6</td>
-                <td>Die casting</td>
-                <td className="num">3.6</td>
-                <td className="num">0.10</td>
-                <td className="num">0.10</td>
-              </tr>
-              <tr>
-                <th scope="row">Latch</th>
-                <td className="num">1</td>
-                <td>ABS</td>
-                <td>Injection molding</td>
-                <td className="num">4.6</td>
-                <td className="num">0.25</td>
-                <td className="num">0.25</td>
-              </tr>
-              <tr>
-                <th scope="row">Springs</th>
-                <td className="num">2</td>
-                <td>Purchased</td>
-                <td>Purchased</td>
-                <td className="num">—</td>
-                <td className="num">0.10</td>
-                <td className="num">0.20</td>
-              </tr>
-              <tr>
-                <th scope="row">Screws</th>
-                <td className="num">4</td>
-                <td>Purchased</td>
-                <td>Purchased</td>
-                <td className="num">—</td>
-                <td className="num">0.10</td>
-                <td className="num">0.40</td>
-              </tr>
-              <tr>
-                <th scope="row">Bottom chassis</th>
-                <td className="num">1</td>
-                <td>ABS</td>
-                <td>Injection molding</td>
-                <td className="num">8.6</td>
-                <td className="num">0.45</td>
-                <td className="num">0.45</td>
-              </tr>
-              <tr>
-                <th scope="row">Spring-loaded hinge</th>
-                <td className="num">2</td>
-                <td>Purchased</td>
-                <td>Purchased</td>
-                <td className="num">—</td>
-                <td className="num">0.10</td>
-                <td className="num">0.20</td>
-              </tr>
-              <tr>
-                <th scope="row">Door</th>
-                <td className="num">1</td>
-                <td>ABS</td>
-                <td>Injection molding</td>
-                <td className="num">24.4</td>
-                <td className="num">1.20</td>
-                <td className="num">1.20</td>
-              </tr>
-              <tr>
-                <th scope="row">Door cover</th>
-                <td className="num">1</td>
-                <td>Aluminum 6061-T6</td>
-                <td>Stamping</td>
-                <td className="num">4.7</td>
-                <td className="num">0.15</td>
-                <td className="num">0.15</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <th scope="row">Total</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td className="num">3.30</td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-        <figcaption>
-          <span className="fig__num">Fig. 18</span>Bill of materials for sliding
-          snap fit
-        </figcaption>
-      </figure>
 
       <h2>Results</h2>
 
@@ -582,13 +320,8 @@ export default function BatteryDoorContent() {
         I completed the CAD assembly, release sequence, analysis, and
         manufacturing proposal for the sliding-latch design. Calculations
         predicted button travel and door-closing force within the selected
-        targets, while the RSS stack-up predicted positive latch overlap.
-      </p>
-
-      <p>
-        The design remains an analytical concept. The next steps are to
-        reconcile material assumptions, build a prototype, and measure actuation
-        force, latch engagement, wear, and cycle durability.
+        targets, while the RSS stack-up predicted positive latch overlap. The
+        design remains an analytical concept.
       </p>
 
       <div className="deck">

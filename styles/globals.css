@@ -159,12 +159,26 @@ button {
   min-width: 0;
 }
 .project-thumb {
+  display: grid;
+  place-items: center;
   width: var(--project-thumb-width);
   height: var(--project-thumb-height);
-  object-fit: contain;
   padding: var(--space-1);
   border-radius: var(--radius-image);
   background: var(--color-surface);
+}
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.project-thumb .image-crop {
+  width: min(
+    100%,
+    calc(
+      (var(--project-thumb-height) - 2 * var(--space-1)) * var(--crop-aspect)
+    )
+  );
 }
 .project-name {
   font-size: var(--text-body);
@@ -442,8 +456,60 @@ button {
   margin-top: var(--space-2);
 }
 .fig {
+  --figure-width-limit: var(--case-media-width);
+  --figure-height-limit: var(--case-media-height);
+  width: min(
+    100%,
+    var(--figure-native-width, var(--layout-width)),
+    var(--figure-width-limit),
+    calc(var(--figure-height-limit) * var(--figure-aspect, 2))
+  );
   margin-top: var(--space-5);
+  margin-inline: auto;
   min-width: 0;
+}
+.project-image {
+  display: block;
+}
+.image-crop {
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: var(--crop-ratio);
+}
+.project-image .image-crop img {
+  position: absolute;
+  width: var(--crop-width);
+  max-width: none;
+  height: auto;
+  left: var(--crop-left);
+  top: var(--crop-top);
+}
+.fig .project-image {
+  width: 100%;
+  aspect-ratio: var(--figure-aspect);
+  border: var(--border-width) solid var(--color-rule);
+  border-radius: var(--radius-image);
+  overflow: hidden;
+}
+.fig .project-image img {
+  border: 0;
+  border-radius: 0;
+}
+.fig .project-image > img {
+  height: 100%;
+  object-fit: contain;
+}
+.fig .image-crop {
+  height: 100%;
+}
+.fig--compact {
+  --figure-width-limit: var(--case-media-compact-width);
+}
+.fig--wide {
+  --figure-width-limit: var(--layout-width);
+  --figure-height-limit: var(--case-media-wide-height);
 }
 .fig img,
 .fig video {
@@ -452,20 +518,60 @@ button {
   border: var(--border-width) solid var(--color-rule);
   border-radius: var(--radius-image);
 }
-.fig figcaption {
+.fig figcaption,
+.data-table caption {
   margin-top: var(--space-2);
   color: var(--color-secondary);
   font-size: var(--text-caption);
   line-height: var(--leading-ui);
+  text-align: left;
+  text-wrap: pretty;
+}
+.data-table caption {
+  caption-side: bottom;
+  padding-top: var(--space-2);
 }
 .fig__num {
+  display: inline-block;
   margin-right: var(--space-2);
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 .fig-pair {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  --pair-height: min(var(--case-pair-height), var(--pair-native-height));
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   gap: var(--space-4);
+}
+.fig-pair > .fig {
+  flex: var(--figure-aspect) 1 0;
+  width: 0;
+  max-width: calc(var(--pair-height) * var(--figure-aspect));
+  margin-inline: 0;
+}
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+  padding: var(--space-3);
+  border: var(--border-width) solid var(--color-rule);
+  border-radius: var(--radius-image);
+}
+.concept-grid .project-image {
+  height: 10rem;
+  aspect-ratio: auto;
+  border: 0;
+}
+.cs-body .concept-grid__name {
+  margin-top: var(--space-2);
+  font-size: var(--text-small);
+  line-height: var(--leading-ui);
+  text-align: center;
+  text-wrap: balance;
+}
+.case-table {
+  margin-top: var(--space-5);
 }
 .table-scroll {
   overflow-x: auto;
@@ -492,6 +598,7 @@ button {
 .data-table .num {
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
+  font-weight: var(--weight-body);
 }
 .data-table .is-chosen {
   background: var(--color-surface);
@@ -619,6 +726,9 @@ button {
 
 /* Responsive tokens: compact = 40em; narrow = 25em. */
 @media (max-width: 40em) {
+  .concept-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .project-link {
     grid-template-columns: var(--project-thumb-width) minmax(0, 1fr);
     gap: var(--space-1) var(--row-gap);
@@ -653,7 +763,13 @@ button {
 }
 @media (max-width: 25em) {
   .fig-pair {
-    grid-template-columns: minmax(0, 1fr);
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .fig-pair > .fig {
+    flex: none;
+    width: min(100%, calc(var(--pair-height) * var(--figure-aspect)));
   }
 }
 /* Reading and navigation stay still; only pointer disclosures change height. */

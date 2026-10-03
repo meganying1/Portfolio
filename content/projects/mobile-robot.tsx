@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ProjectFigure } from "@/components/project-figure";
 
 export default function MobileRobotContent() {
   return (
@@ -18,6 +18,16 @@ export default function MobileRobotContent() {
         26 seconds.
       </p>
 
+      <ProjectFigure
+        number={1}
+        src="/assets/photos/projects/mobile_robot.jpg"
+        width={715}
+        height={482}
+        alt="Differential-drive robot following a curved line beneath the moving obstacle walls"
+        caption="Robot combines IR line tracking and ultrasonic obstacle detection for course navigation"
+        crop={{ x: 170, y: 40, width: 470, height: 340 }}
+      />
+
       <h2>Sensor integration</h2>
 
       <p>
@@ -35,9 +45,9 @@ export default function MobileRobotContent() {
 
       <p>
         The controller adjusted the left and right motor speeds from the
-        infrared readings. A centered reading commanded forward motion; side
-        readings commanded differential steering, with stronger corrections for
-        larger deviations.
+        infrared readings. A centered reading commanded forward motion, while
+        side readings commanded differential steering, with stronger corrections
+        for larger deviations.
       </p>
 
       <p>
@@ -49,21 +59,6 @@ export default function MobileRobotContent() {
         We tuned thresholds and motor-speed differences on the course to balance
         recovery from large deviations with stable tracking.
       </p>
-
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/mobile_robot.jpg"
-          alt="Mobile robot navigating an obstacle course with sliding walls"
-          width={715}
-          height={482}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 1</span>Robot navigating obstacle
-          course
-        </figcaption>
-      </figure>
 
       <h2>Results</h2>
 

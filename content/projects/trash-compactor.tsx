@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ProjectFigure, ProjectFigurePair } from "@/components/project-figure";
 
 export default function TrashCompactorContent() {
   return (
@@ -15,40 +15,31 @@ export default function TrashCompactorContent() {
       <p>
         The working prototype completed an automated compaction cycle and
         received the Best Overall Project Award at Carnegie Mellon’s Mechanical
-        Engineering Design Expo.
+        Engineering Design Expo in December 2024.
       </p>
 
-      <div className="fig-pair">
-        <figure className="fig">
-          <Image
-            src="/assets/photos/projects/compactor_final.jpg"
-            alt="Final trash compactor prototype, a wooden bin with the lid closed"
-            width={258}
-            height={380}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>
-            <span className="fig__num">Fig. 1</span>Completed prototype with
-            enclosure and lid
-          </figcaption>
-        </figure>
-
-        <figure className="fig">
-          <Image
-            src="/assets/photos/projects/compactor-linkage.jpg"
-            alt="Linkage system inside the trash compactor prototype"
-            width={1448}
-            height={1848}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>
-            <span className="fig__num">Fig. 2</span>Actuator and scissor linkage
-            beneath the compression plate
-          </figcaption>
-        </figure>
-      </div>
+      <ProjectFigurePair
+        figures={[
+          {
+            number: 1,
+            src: "/assets/photos/projects/compactor_final.jpg",
+            width: 258,
+            height: 380,
+            alt: "Completed wooden trash compactor with lid and viewing window",
+            caption: "Fabricated enclosure houses the powered compactor",
+          },
+          {
+            number: 2,
+            src: "/assets/photos/projects/compactor-linkage.jpg",
+            width: 1448,
+            height: 1848,
+            alt: "Machined scissor links, compression plate, linear actuator, and black actuator mounts",
+            caption:
+              "Machined links and printed mounts connect the actuator to the compression plate",
+            crop: { x: 110, y: 300, width: 1220, height: 1400 },
+          },
+        ]}
+      />
 
       <h2>Design</h2>
 
@@ -83,20 +74,15 @@ export default function TrashCompactorContent() {
         surrounding structure before fabrication.
       </p>
 
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/compactor_cad.png"
-          alt="CAD model of the trash compactor linkage system"
-          width={439}
-          height={512}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 3</span>Assembly CAD integrating the
-          actuator and linkage
-        </figcaption>
-      </figure>
+      <ProjectFigure
+        number={3}
+        src="/assets/photos/projects/compactor_cad.png"
+        width={439}
+        height={512}
+        alt="Scissor linkage assembly with the actuator positioned between two custom mounts"
+        caption="SolidWorks assembly packages the actuator and custom mounts within the scissor linkage"
+        compact
+      />
 
       <h2>Analysis &amp; validation</h2>
 
@@ -105,6 +91,16 @@ export default function TrashCompactorContent() {
         scissor linkage and compare the required load with the actuator’s
         capacity.
       </p>
+
+      <ProjectFigure
+        number={4}
+        src="/assets/photos/projects/compactor_fbd_clean.png"
+        width={1536}
+        height={1024}
+        crop={{ x: 125, y: 230, width: 1385, height: 540 }}
+        alt="Scissor-linkage support and free-body diagrams with actuator forces, support reactions, and plate loading"
+        caption="Scissor-linkage free-body diagrams relate geometry to actuator force"
+      />
 
       <p>
         The calculations indicated that the actuator would limit performance
@@ -117,38 +113,6 @@ export default function TrashCompactorContent() {
         Testing supported this finding: the linkage remained intact while the
         actuator stalled under heavier loading.
       </p>
-
-      <div className="fig-pair">
-        <figure className="fig">
-          <Image
-            src="/assets/photos/projects/compactor_force.jpg"
-            alt="Hand calculations for force transmission through the linkage system"
-            width={473}
-            height={512}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>
-            <span className="fig__num">Fig. 4</span>Force transmission
-            calculations
-          </figcaption>
-        </figure>
-
-        <figure className="fig">
-          <Image
-            src="/assets/photos/projects/compactor_fos.jpg"
-            alt="Hand calculations for factor of safety"
-            width={407}
-            height={512}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>
-            <span className="fig__num">Fig. 5</span>Factor of safety
-            calculations
-          </figcaption>
-        </figure>
-      </div>
 
       <h2>Fabrication &amp; iteration</h2>
 

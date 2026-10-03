@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ProjectFigure, ProjectFigurePair } from "@/components/project-figure";
 
 export default function TripodAttachmentContent() {
   return (
@@ -19,20 +19,16 @@ export default function TripodAttachmentContent() {
         too narrow.
       </p>
 
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/tripod_phone1.jpg"
-          alt="Tripod attachment holding an iPhone"
-          width={458}
-          height={345}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 1</span>Prototype with servo-driven
-          wings holding a phone
-        </figcaption>
-      </figure>
+      <ProjectFigure
+        number={1}
+        src="/assets/photos/projects/tripod_phone1.jpg"
+        width={458}
+        height={345}
+        compact
+        alt="Printed phone holder with padded base and two servo-driven gripping wings"
+        caption="Printed phone-mount prototype combines servo-driven wings with a padded base"
+        crop={{ x: 40, y: 30, width: 380, height: 300 }}
+      />
 
       <h2>Design</h2>
 
@@ -67,54 +63,35 @@ export default function TripodAttachmentContent() {
         loading.
       </p>
 
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/tripod_cad.png"
-          alt="CAD model of the tripod attachment showing internal electronics"
-          width={415}
-          height={458}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 2</span>CAD model of attachment with
-          electronics
-        </figcaption>
-      </figure>
-
       <p>
         The rotating base pairs a flexible TPU inner interface with a rigid
         outer part. Rounded teeth deform as the user turns the holder and
         re-engage to retain its orientation.
       </p>
 
-      <div className="fig-pair">
-        <figure className="fig">
-          <Image
-            src="/assets/photos/projects/interface_cad1.png"
-            alt="CAD model of the interface piece"
-            width={287}
-            height={287}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>
-            <span className="fig__num">Fig. 3</span>Compliant toothed interface
-            for orientation adjustment
-          </figcaption>
-        </figure>
-
-        <figure className="fig">
-          <Image
-            src="/assets/photos/projects/interface_cad2.png"
-            alt="CAD model of the interface piece, opposite view"
-            width={238}
-            height={290}
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
-      </div>
+      <ProjectFigurePair
+        figures={[
+          {
+            number: 2,
+            src: "/assets/photos/projects/tripod_assembly.png",
+            width: 918,
+            height: 1056,
+            alt: "Phone holder CAD showing the wing servos, battery, and electronics within the base",
+            caption:
+              "CAD assembly packages wing servos and electronics within the base",
+          },
+          {
+            number: 3,
+            src: "/assets/photos/projects/tripod_interface.png",
+            width: 971,
+            height: 959,
+            alt: "Rounded teeth between the concentric inner and outer rotating interface parts",
+            caption:
+              "CAD detail shows mating teeth for compliant orientation adjustment",
+            crop: { x: 85, y: 35, width: 800, height: 880 },
+          },
+        ]}
+      />
 
       <h2>Analysis &amp; validation</h2>
 
@@ -124,6 +101,16 @@ export default function TripodAttachmentContent() {
         2.45 MPa and a factor of safety of 21.4.
       </p>
 
+      <ProjectFigure
+        number={4}
+        src="/assets/photos/projects/tripod_calc.png"
+        width={436}
+        height={330}
+        alt="Phone and wing load diagram with phone weight and wing bending dimensions"
+        caption="Wing free-body diagram relates phone weight and geometry to bending loads"
+        compact
+      />
+
       <p>
         FEA under the modeled load predicted a maximum stress of 10.2 MPa and a
         factor of safety of 5.1. Local stress concentrations and simplified
@@ -132,36 +119,16 @@ export default function TripodAttachmentContent() {
         assumptions beyond a simple beam model.
       </p>
 
-      <div className="fig-pair">
-        <figure className="fig">
-          <Image
-            src="/assets/photos/projects/tripod_calc.png"
-            alt="Hand calculations for forces on the subassembly"
-            width={436}
-            height={330}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>
-            <span className="fig__num">Fig. 4</span>Calculating forces on
-            subassembly
-          </figcaption>
-        </figure>
-
-        <figure className="fig">
-          <Image
-            src="/assets/photos/projects/tripod_fea.png"
-            alt="Finite element analysis of the tripod wing"
-            width={241}
-            height={372}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>
-            <span className="fig__num">Fig. 5</span>FEA of wing
-          </figcaption>
-        </figure>
-      </div>
+      <ProjectFigure
+        number={5}
+        src="/assets/photos/projects/tripod_wing_stress.png"
+        width={1324}
+        height={1085}
+        alt="Wing stress plot under servo loading, with the fixed base and stress legend visible"
+        caption="Wing FEA identifies stress concentrations under the modeled servo load"
+        crop={{ x: 580, y: 65, width: 710, height: 970 }}
+        wide
+      />
 
       <h2>Fabrication &amp; iteration</h2>
 
@@ -186,6 +153,16 @@ export default function TripodAttachmentContent() {
 
       <h2>Manufacturing &amp; cost</h2>
 
+      <ProjectFigure
+        number={6}
+        src="/assets/photos/projects/tripod_gdt.png"
+        width={1010}
+        height={828}
+        alt="Proposed wing and base assembly drawing with geometric tolerance callouts"
+        caption="Proposed GD&T annotations communicate alignment of the wings and base"
+        wide
+      />
+
       <p>
         We proposed molded TPU for the wings and inner rotating interface, with
         rigid plastic for the base and outer interface. Injection molding was
@@ -208,19 +185,6 @@ export default function TripodAttachmentContent() {
         evaluation. Reduced adjustment force and reliable retention remain to be
         measured.
       </p>
-
-      <div className="fig-pair">
-        <figure className="fig">
-          <Image
-            src="/assets/photos/projects/tripod_phone2.jpg"
-            alt="Tripod attachment holding an iPhone, alternate angle"
-            width={458}
-            height={345}
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
-      </div>
     </>
   );
 }

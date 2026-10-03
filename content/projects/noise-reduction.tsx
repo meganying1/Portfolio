@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ProjectFigure } from "@/components/project-figure";
 
 export default function NoiseReductionContent() {
   return (
@@ -12,6 +12,16 @@ export default function NoiseReductionContent() {
         environmental sounds distinguishable.
       </p>
 
+      <ProjectFigure
+        number={1}
+        src="/assets/photos/projects/noise_signal.png"
+        width={780}
+        height={700}
+        alt="Original and processed audio waveforms with time axes and separate amplitude scales"
+        caption="MATLAB plots compare the original and processed recording using different amplitude scales"
+        crop={{ x: 25, y: 125, width: 715, height: 565 }}
+      />
+
       <h2>Algorithm development</h2>
 
       <p>
@@ -20,41 +30,21 @@ export default function NoiseReductionContent() {
         track changing background noise.
       </p>
 
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/noise_destructive.png"
-          alt="Two waveforms of equal amplitude and opposite phase canceling each other out"
-          width={936}
-          height={592}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 1</span>Example of destructive
-          interference
-        </figcaption>
-      </figure>
-
       <p>
         We instead implemented an LMS filter that updates its coefficients using
         an error signal. Unlike the initial fixed-waveform approach, the filter
         can adapt its response over time.
       </p>
 
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/noise_lms.png"
-          alt="Plot showing the LMS algorithm&#x27;s output signal converging toward the desired signal"
-          width={630}
-          height={742}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 2</span>Convergence between desired
-          signal and output signal using LMS
-        </figcaption>
-      </figure>
+      <ProjectFigure
+        number={2}
+        src="/assets/photos/projects/noise_lms.png"
+        width={630}
+        height={742}
+        alt="Desired and LMS output curves converging over iterations"
+        caption="LMS filter output converges toward the desired signal over successive iterations"
+        compact
+      />
 
       <h2>MATLAB implementation</h2>
 
@@ -77,6 +67,16 @@ export default function NoiseReductionContent() {
         examine performance across different background sounds.
       </p>
 
+      <ProjectFigure
+        number={3}
+        src="/assets/photos/projects/noise_samples.png"
+        width={936}
+        height={708}
+        alt="Waveform examples from four campus recordings used to evaluate filtering across different environments"
+        caption="MATLAB waveform comparisons evaluate filtering across varied campus recordings"
+        wide
+      />
+
       <p>
         We compared waveform amplitudes and listened to the processed recordings
         to assess whether important sounds remained distinguishable. These
@@ -84,28 +84,13 @@ export default function NoiseReductionContent() {
         of selective noise removal.
       </p>
 
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/noise_samples.png"
-          alt="Original and cleaned audio waveforms from real-world campus noise samples"
-          width={936}
-          height={708}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 3</span>Original and cleaned audio
-          files from real-world audio samples
-        </figcaption>
-      </figure>
-
       <h2>Results</h2>
 
       <p>
         The project reported up to 95% reduction in waveform amplitude, with
         important sounds remaining distinguishable in listening checks.
         Amplitude reduction alone does not establish improved signal-to-noise
-        ratio; a stronger evaluation would define the amplitude metric and
+        ratio. A stronger evaluation would define the amplitude metric and
         compare noise attenuation with distortion of the desired signal.
       </p>
     </>

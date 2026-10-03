@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ProjectFigure, ProjectFigurePair } from "@/components/project-figure";
 
 export default function TrussStructureContent() {
   return (
@@ -18,20 +18,29 @@ export default function TrussStructureContent() {
         exposing a gap between the analytical model and fabricated structure.
       </p>
 
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/truss_structure.jpg"
-          alt="Assembled truss structure viewed from the front on the testing rig"
-          width={531}
-          height={299}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 1</span>Laser-cut acrylic truss
-          assembled on the load fixture
-        </figcaption>
-      </figure>
+      <ProjectFigurePair
+        figures={[
+          {
+            number: 1,
+            src: "/assets/photos/projects/truss_prototype.jpg",
+            width: 2048,
+            height: 946,
+            alt: "Laser-cut acrylic truss members and bolted joints on the center-load fixture",
+            caption:
+              "Laser-cut acrylic members and bolted joints form the truss on its load fixture",
+            crop: { x: 570, y: 540, width: 900, height: 400 },
+          },
+          {
+            number: 2,
+            src: "/assets/photos/projects/truss_assembly.png",
+            width: 1346,
+            height: 745,
+            alt: "Truss CAD showing member geometry, mounting points, and the central load connection",
+            caption: "SolidWorks model defines members and mounting points",
+            crop: { x: 360, y: 325, width: 635, height: 355 },
+          },
+        ]}
+      />
 
       <h2>Design</h2>
 
@@ -55,35 +64,15 @@ export default function TrussStructureContent() {
         to size the members and predict the failure location.
       </p>
 
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/truss_cad.png"
-          alt="CAD model of the truss structure mounted on the testing rig"
-          width={460}
-          height={298}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 2</span>CAD model of truss structure
-          on testing rig
-        </figcaption>
-      </figure>
-
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/truss_calc.jpg"
-          alt="Hand calculations for the force in each truss member"
-          width={740}
-          height={242}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 3</span>Calculating forces in each
-          member
-        </figcaption>
-      </figure>
+      <ProjectFigure
+        number={3}
+        src="/assets/photos/projects/truss_fbd_clean.png"
+        width={1919}
+        height={820}
+        alt="Truss and joint free-body diagrams showing the center design load and member-force directions"
+        caption="Truss and joint free-body diagrams establish forces under the center load"
+        wide
+      />
 
       <h2>Fabrication &amp; iteration</h2>
 
@@ -94,15 +83,15 @@ export default function TrussStructureContent() {
 
       <p>
         The 1/16-inch prototype failed near 20 lb. Increasing thickness to 5/32
-        inch supported more than 50 lb without failure; reducing it to 3/32 inch
+        inch supported more than 50 lb without failure. Reducing it to 3/32 inch
         produced a prototype failure near 42 lb. The final test specimen used
-        3/32-inch members but failed at 32 lb.
+        3/32-inch members but failed at 38 lb.
       </p>
 
       <h2>Results</h2>
 
       <p>
-        The final truss failed at the predicted member location at 32 lb, below
+        The final truss failed at the predicted member location at 38 lb, below
         the 40-pound target. The report identified a change in laser cutter as a
         possible contributor to the difference from the 42-pound prototype
         result. Measuring cut dimensions and testing additional specimens would

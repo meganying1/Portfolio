@@ -51,7 +51,13 @@
     "thumbnail": {
       "src": "/assets/photos/projects/tripod_phone1.jpg",
       "width": 458,
-      "height": 345
+      "height": 345,
+      "crop": {
+        "x": 40,
+        "y": 30,
+        "width": 380,
+        "height": 300
+      }
     },
     "tools": ["SolidWorks", "Arduino", "Injection molding", "3D printing"],
     "files": []
@@ -65,9 +71,15 @@
     "dates": "Oct 2022 – Nov 2022",
     "featured": false,
     "thumbnail": {
-      "src": "/assets/photos/projects/final_linkage.png",
-      "width": 424,
-      "height": 409
+      "src": "/assets/photos/projects/linkage_revised.png",
+      "width": 820,
+      "height": 914,
+      "crop": {
+        "x": 130,
+        "y": 130,
+        "width": 550,
+        "height": 735
+      }
     },
     "tools": ["SolidWorks", "Laser cutting"],
     "files": []
@@ -81,9 +93,15 @@
     "dates": "Nov 2021 – Dec 2021",
     "featured": false,
     "thumbnail": {
-      "src": "/assets/photos/projects/driller_cad.png",
-      "width": 252,
-      "height": 388
+      "src": "/assets/photos/projects/driller_frame.png",
+      "width": 910,
+      "height": 918,
+      "crop": {
+        "x": 150,
+        "y": 50,
+        "width": 560,
+        "height": 830
+      }
     },
     "tools": ["SolidWorks"],
     "files": []
@@ -99,7 +117,13 @@
     "thumbnail": {
       "src": "/assets/photos/projects/mobile_robot.jpg",
       "width": 715,
-      "height": 482
+      "height": 482,
+      "crop": {
+        "x": 170,
+        "y": 40,
+        "width": 470,
+        "height": 340
+      }
     },
     "tools": ["Arduino", "Sensor integration"],
     "files": []
@@ -113,9 +137,15 @@
     "dates": "Sep 2021 – Oct 2021",
     "featured": false,
     "thumbnail": {
-      "src": "/assets/photos/projects/truss_cad.png",
-      "width": 460,
-      "height": 298
+      "src": "/assets/photos/projects/truss_prototype.jpg",
+      "width": 2048,
+      "height": 946,
+      "crop": {
+        "x": 570,
+        "y": 540,
+        "width": 900,
+        "height": 400
+      }
     },
     "tools": ["SolidWorks", "Laser cutting"],
     "files": []
@@ -131,7 +161,13 @@
     "thumbnail": {
       "src": "/assets/photos/projects/noise_signal.png",
       "width": 780,
-      "height": 700
+      "height": 700,
+      "crop": {
+        "x": 25,
+        "y": 125,
+        "width": 715,
+        "height": 565
+      }
     },
     "tools": ["MATLAB"],
     "files": []
@@ -145,9 +181,9 @@
     "dates": "Oct 2021 – Nov 2021",
     "featured": false,
     "thumbnail": {
-      "src": "/assets/photos/projects/checker_board.png",
-      "width": 300,
-      "height": 340
+      "src": "/assets/photos/projects/checker_highlight.png",
+      "width": 302,
+      "height": 370
     },
     "tools": ["Python"],
     "files": []

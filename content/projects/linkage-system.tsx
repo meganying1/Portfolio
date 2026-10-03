@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ProjectFigure, ProjectFigurePair } from "@/components/project-figure";
 
 export default function LinkageSystemContent() {
   return (
@@ -18,37 +18,29 @@ export default function LinkageSystemContent() {
         achieved 41.17 seconds without motor stall or structural failure.
       </p>
 
-      <div className="fig-pair">
-        <figure className="fig">
-          <Image
-            src="/assets/photos/projects/final_linkage.png"
-            alt="CAD model of the final linkage design"
-            width={424}
-            height={409}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>
-            <span className="fig__num">Fig. 1</span>Revised link lengths and
-            mounting geometry
-          </figcaption>
-        </figure>
-
-        <figure className="fig">
-          <Image
-            src="/assets/photos/projects/linkage_system.png"
-            alt="Linkage system assembled in the testing rig"
-            width={464}
-            height={415}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>
-            <span className="fig__num">Fig. 2</span>Revised mechanism assembled
-            on the button test fixture
-          </figcaption>
-        </figure>
-      </div>
+      <ProjectFigurePair
+        figures={[
+          {
+            number: 1,
+            src: "/assets/photos/projects/linkage_revised.png",
+            width: 820,
+            height: 914,
+            alt: "Revised linkage with crank, slotted coupler, rocker, and button fixture",
+            caption: "CAD model defines revised link geometry",
+            crop: { x: 130, y: 130, width: 550, height: 735 },
+          },
+          {
+            number: 2,
+            src: "/assets/photos/projects/linkage_system.png",
+            width: 464,
+            height: 415,
+            alt: "Laser-cut acrylic links assembled on the motor and button fixture",
+            caption:
+              "Laser-cut links form the motor-driven button test mechanism",
+            crop: { x: 70, y: 65, width: 325, height: 335 },
+          },
+        ]}
+      />
 
       <h2>Design</h2>
 
@@ -85,6 +77,17 @@ export default function LinkageSystemContent() {
         parts.
       </p>
 
+      <ProjectFigure
+        number={3}
+        src="/assets/photos/projects/linkage_fbd_clean_v2.png"
+        width={1136}
+        height={1385}
+        crop={{ x: 25, y: 95, width: 1025, height: 1200 }}
+        alt="Linkage and member free-body diagrams showing the button load and joint reactions"
+        caption="Linkage free-body diagrams identify joint reactions at a critical orientation"
+        wide
+      />
+
       <p>
         We used FEA to examine stress and deflection and CAD motion studies to
         predict button contact time. These estimates informed the geometry
@@ -92,37 +95,15 @@ export default function LinkageSystemContent() {
         tests.
       </p>
 
-      <div className="fig-pair">
-        <figure className="fig">
-          <Image
-            src="/assets/photos/projects/initial_linkage.png"
-            alt="CAD model of the initial linkage design"
-            width={184}
-            height={172}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>
-            <span className="fig__num">Fig. 3</span>Initial geometry before
-            physical testing
-          </figcaption>
-        </figure>
-
-        <figure className="fig">
-          <Image
-            src="/assets/photos/projects/linkage_fea.png"
-            alt="Finite element analysis of the linkage system"
-            width={317}
-            height={452}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>
-            <span className="fig__num">Fig. 4</span>Initial-design stress
-            estimate at the critical orientation
-          </figcaption>
-        </figure>
-      </div>
+      <ProjectFigure
+        number={4}
+        src="/assets/photos/projects/linkage_final_stress.png"
+        width={1390}
+        height={916}
+        alt="Final linkage stress plot with the applied load, fixtures, and stress legend in psi"
+        caption="Linkage FEA shows the stress distribution under the applied button load"
+        wide
+      />
 
       <h2>Fabrication &amp; iteration</h2>
 
