@@ -1,4 +1,5 @@
 import projectsData from "@/data/projects.json";
+import type { ImageCrop } from "@/components/project-image";
 
 export type Project = {
   slug: string;
@@ -8,7 +9,7 @@ export type Project = {
   description: string;
   dates: string;
   featured: boolean;
-  thumbnail: { src: string; width: number; height: number };
+  thumbnail: { src: string; width: number; height: number; crop?: ImageCrop };
   tools: string[];
   files: { href: string; label: string }[];
 };

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ProjectImage } from "@/components/project-image";
 import Link from "next/link";
 import { projectHref, type Project } from "@/lib/projects";
 
@@ -18,7 +18,7 @@ export function ProjectList({
             href={projectHref(project)}
             prefetch={false}
           >
-            <Image
+            <ProjectImage
               className="project-thumb"
               {...project.thumbnail}
               alt=""

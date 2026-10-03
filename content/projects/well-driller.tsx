@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ProjectFigure, ProjectFigurePair } from "@/components/project-figure";
 
 export default function WellDrillerContent() {
   return (
@@ -37,25 +37,33 @@ export default function WellDrillerContent() {
         the regional research.
       </p>
 
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/driller_mechanism.png"
-          alt="Sketch of the pile driver mechanism lifting and dropping the driller"
-          width={760}
-          height={453}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 1</span>Sketch of pile driver
-          mechanism
-        </figcaption>
-      </figure>
+      <ProjectFigurePair
+        figures={[
+          {
+            number: 1,
+            src: "/assets/photos/projects/driller_frame.png",
+            width: 910,
+            height: 918,
+            alt: "CAD frame concept showing the pedal location, supports, and mast",
+            caption: "CAD sets the frame layout",
+            crop: { x: 150, y: 50, width: 560, height: 830 },
+          },
+          {
+            number: 2,
+            src: "/assets/photos/projects/driller_mechanism.png",
+            width: 760,
+            height: 453,
+            alt: "Pedal chain drive, partial gear, cable pulley, and hanging drill weight",
+            caption:
+              "Mechanism sketch couples pedal input to a cable lift and partial-gear release",
+          },
+        ]}
+      />
 
       <p>
         Pedal rotation passes through a chain and gear system to a cable pulley
         that lifts the drill. A toothless section of one gear disengages the
-        drive so the drill can fall; re-engagement begins the next lift.
+        drive so the drill can fall. Re-engagement begins the next lift.
       </p>
 
       <p>
@@ -71,6 +79,16 @@ export default function WellDrillerContent() {
         estimate cable tension and pedal force, then calculated frame reactions
         and connection loads.
       </p>
+
+      <ProjectFigure
+        number={3}
+        src="/assets/photos/projects/driller_frame_fbd.jpg"
+        width={1566}
+        height={2048}
+        crop={{ x: 125, y: 550, width: 1270, height: 1200 }}
+        alt="Frame free-body diagram with cable tension, support reactions, weight, and lever arms"
+        caption="Frame free-body diagram identifies cable loading and support reactions for connection sizing"
+      />
 
       <p>
         I used a factor of safety of 4 for the primary structural connection and
@@ -91,48 +109,15 @@ export default function WellDrillerContent() {
         mechanism’s repeated impact or engagement behavior.
       </p>
 
-      <div className="fig-pair">
-        <figure className="fig">
-          <Image
-            src="/assets/photos/projects/driller_cad.png"
-            alt="CAD model of the pedal-powered well driller system"
-            width={252}
-            height={388}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>
-            <span className="fig__num">Fig. 2</span>CAD model of system
-          </figcaption>
-        </figure>
-
-        <figure className="fig">
-          <Image
-            src="/assets/photos/projects/driller_fea.png"
-            alt="Finite element analysis results on the pedal"
-            width={214}
-            height={388}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>
-            <span className="fig__num">Fig. 3</span>FEA of pedal
-          </figcaption>
-        </figure>
-      </div>
-      <figure className="fig">
-        <Image
-          src="/assets/photos/projects/driller_calc.jpg"
-          alt="Hand calculations for reaction forces in the driller structure"
-          width={656}
-          height={620}
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>
-          <span className="fig__num">Fig. 4</span>Calculating reaction forces
-        </figcaption>
-      </figure>
+      <ProjectFigure
+        number={4}
+        src="/assets/photos/projects/driller_pedal_stress.png"
+        width={1456}
+        height={916}
+        alt="Pedal stress analysis with downward loading, a fixed crank end, and the stress legend"
+        caption="Pedal FEA shows the applied load, fixed crank end, and resulting stress distribution"
+        wide
+      />
 
       <h2>Results</h2>
 
@@ -140,12 +125,6 @@ export default function WellDrillerContent() {
         We completed a pedal-powered lift-and-release concept with CAD,
         drivetrain calculations, connection sizing, and pedal FEA. The analysis
         supported further development under the modeled conditions.
-      </p>
-
-      <p>
-        A physical prototype would be needed to evaluate drivetrain losses,
-        release and re-engagement, impact durability, and drilling performance
-        before establishing practical feasibility.
       </p>
     </>
   );

@@ -51,6 +51,11 @@
   --prose-measure: 66ch;
   --project-thumb-width: 5.5rem;
   --project-thumb-height: 4.5rem;
+  --case-media-height: 22rem;
+  --case-media-width: 36rem;
+  --case-media-wide-height: 28rem;
+  --case-media-compact-width: 22rem;
+  --case-pair-height: 24rem;
   --experience-logo-size: 1.75rem;
   --logo-scale-default: 1;
   --logo-scale-apple: 1.3;

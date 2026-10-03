@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ProjectFigure } from "@/components/project-figure";
 
 export default function ChineseCheckersContent() {
   return (
@@ -11,6 +11,16 @@ export default function ChineseCheckersContent() {
         engine, interface, legal move generation, turn management, win
         detection, and Minimax-based AI and hints.
       </p>
+
+      <ProjectFigure
+        number={1}
+        src="/assets/photos/projects/checker_highlight.png"
+        width={302}
+        height={370}
+        alt="Chinese Checkers board with a selected red piece and outlined legal destinations"
+        caption="Python and Tkinter interface highlights legal destinations for a selected piece"
+        compact
+      />
 
       <h2>Software design</h2>
 
@@ -31,42 +41,14 @@ export default function ChineseCheckersContent() {
         supports animations and timed turns.
       </p>
 
-      <div className="fig-pair">
-        <figure className="fig">
-          <Image
-            src="/assets/photos/projects/checker_board.png"
-            alt="Chinese checkers board with the offset grid of pegs"
-            width={300}
-            height={340}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>
-            <span className="fig__num">Fig. 1</span>Chinese checkers board
-          </figcaption>
-        </figure>
-
-        <figure className="fig">
-          <Image
-            src="/assets/photos/projects/checker_highlight.png"
-            alt="Chinese checkers board highlighting a piece&#x27;s possible moves"
-            width={302}
-            height={370}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>
-            <span className="fig__num">Fig. 2</span>Highlighting possible moves
-          </figcaption>
-        </figure>
-      </div>
-
       <h2>AI &amp; algorithms</h2>
 
       <p>
         I implemented Minimax to evaluate future game states and choose moves
-        for computer-controlled opponents. The hint system uses the same search
-        framework to suggest candidate moves to human players.
+        for computer-controlled opponents. Minimax looks ahead at possible moves
+        and opponent responses, then chooses the move with the best outcome
+        assuming the opponent plays optimally. The hint system uses the same
+        search framework to suggest candidate moves to human players.
       </p>
 
       <h2>Results</h2>
