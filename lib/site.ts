@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { Project } from "@/lib/projects";
 
 export const site = {
   name: "Megan Ying",
@@ -12,10 +13,19 @@ export const site = {
   },
 };
 
+export function projectPreviewImage(project: Pick<Project, "slug" | "title">) {
+  return {
+    ...site.previewImage,
+    url: `/assets/photos/previews/${project.slug}.png`,
+    alt: `${site.name} — ${project.title}`,
+  };
+}
+
 export function pageMetadata(
   title: string,
   description: string,
   path: string,
+  previewImage = site.previewImage,
 ): Metadata {
   const fullTitle = title === site.name ? site.name : `${title} — ${site.name}`;
   return {
@@ -28,13 +38,13 @@ export function pageMetadata(
       title: fullTitle,
       description,
       url: path,
-      images: [site.previewImage],
+      images: [previewImage],
     },
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
       description,
-      images: [{ url: site.previewImage.url, alt: site.previewImage.alt }],
+      images: [{ url: previewImage.url, alt: previewImage.alt }],
     },
   };
 }
