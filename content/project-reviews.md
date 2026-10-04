@@ -55,11 +55,12 @@ Record the evidence used and the pruning decisions for each individually committ
 
 ## Mobile robot
 
-- Sources: existing page and original course photograph. CMU documentation and any final-run recording remain pending upload.
+- Sources: existing page and original course photograph. Reviewed the extracted CMU archive's sensor recitation, `SensorRecitation.ino`, and assembly-plan preview. The first two are standalone sensor exercises; the assembly plan belongs to the truss. They do not provide project-specific robot control code, calibration data, or a final-course recording.
 - Analysis/testing coverage: IR response characterization and line-detection thresholds, differential steering magnitude, last-seen-side line recovery, ultrasonic stop logic, and course-based tuning. No unsupported threshold values, calibration curves, control gains, or performance targets are added.
 - Presentation: one actual course figure, no table. No suitable additional sensor diagram or motion clip is currently available. Avoided making media to meet a visual count.
 - Final pruning: consolidated the overview, grouped sensors by their roles, and moved calibration/tuning to Testing & iteration. Kept the 26-second result within the tested-course context. The summary explicitly describes obstacle stops rather than implying an unshown obstacle-routing algorithm.
 - The user confirmed that all Mobile Robot work was team work. Responsibilities remain shared throughout the page.
+- Archive review: retained the concise page and its baseline 26-second course result. Kept lab exercises separate from robot test evidence, added no thresholds or sensor-placement annotations from unrelated work, and retained the user's collective attribution. No suitable supplemental report or final-run GIF was found in this complete archive.
 
 ## Noise reduction
 
