@@ -25,3 +25,10 @@ Record the evidence used and the pruning decisions for each individually committ
 - Presentation: five figures in four primary groups, no table. Kept the distinct hardware, rotating interface, hand-analysis, and FEA evidence. Omitted the proposed GD&T sketch: missing datum definitions and inappropriate datum references on form controls make it unsuitable as a finished manufacturing drawing. Original file is preserved.
 - Final pruning: removed repeated sensor/wing/interface explanations, retained the documented attachment and seating failures, and labeled wider clearance and mechanical retention as proposed changes. The $58.18 estimate retains its 50-unit quotation context and production-cost limitations. No user-effort or retention measurement is claimed.
 - Corrected the shared page description/index summary to describe the prototype and intended functions without asserting a measured reduction in user effort.
+
+## Linkage system
+
+- Sources: existing page, original critical-orientation FBDs, the source-checked redraw, revised CAD/prototype, and original final-design stress plot. CMU documentation remains pending upload.
+- Analysis coverage: critical-orientation geometry and joint equilibrium, member-force/stress calculations and acrylic link sizing, stress/yield screening and deflection FEA, and initial/revised CAD motion-study predictions. Did not add the very low single-case FEA stress as a system-wide validation claim.
+- Presentation: four figures in three primary groups and one contact-time table. The table directly compares documented initial and final predictions with measured cumulative contact over 120 seconds. No source motion clip is available, so no animation is created.
+- Final pruning: consolidated repeated design and iteration paragraphs, preserved the failed slot/dwell behavior and early-descent hypothesis, and avoided asserting an isolated cause of the out-of-plane deflection. The 14× improvement and 78% of prediction are rounded ratios derived from the documented contact times.

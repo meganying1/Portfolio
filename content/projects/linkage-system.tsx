@@ -9,13 +9,9 @@ export default function LinkageSystemContent() {
         In a team of three, we built a motor-driven linkage to maximize
         cumulative button contact during a two-minute test. I calculated forces
         and stresses at critical orientations to size the acrylic links within
-        the fixture and motor constraints.
-      </p>
-
-      <p>
-        After the first prototype achieved only 2.96 seconds of contact, we
-        revised the link lengths and mounting geometry. The final mechanism
-        achieved 41.17 seconds without motor stall or structural failure.
+        the fixture and motor constraints. Revising the link lengths and
+        mounting geometry increased measured contact from 2.96 to 41.17 seconds,
+        with no motor stall or structural failure in the final test.
       </p>
 
       <ProjectFigurePair
@@ -26,7 +22,8 @@ export default function LinkageSystemContent() {
             width: 820,
             height: 914,
             alt: "Revised linkage with crank, slotted coupler, rocker, and button fixture",
-            caption: "CAD model defines revised link geometry",
+            caption:
+              "Revised CAD packages the links around the motor and button fixture",
             crop: { x: 130, y: 130, width: 550, height: 735 },
           },
           {
@@ -47,34 +44,25 @@ export default function LinkageSystemContent() {
       <p>
         We compared linkage concepts with different crank, coupler, and rocker
         lengths and slotted-joint locations. The aim was to keep the output near
-        its maximum height for a larger portion of each revolution.
-      </p>
-
-      <p>
-        We selected a slotted concept because pin motion within the slot was
-        expected to delay rocker descent. Physical testing later showed that the
-        final mechanism did not use this sliding action as intended.
+        its maximum height for more of each revolution. We selected a slotted
+        concept because pin motion within the slot was expected to delay rocker
+        descent.
       </p>
 
       <p>
         The motor drives a crank connected through a coupler to the rocker and
         button-pressing assembly. Link lengths and mounting locations determine
-        the output height and duration of button contact.
-      </p>
-
-      <p>
-        We adjusted this geometry to increase contact time while keeping the
-        mechanism within the fixture and avoiding motor stall. The final design
-        retained the slot, although the observed improvement came with revised
-        geometry rather than the intended sliding dwell.
+        the output height and duration of button contact. The final design
+        retained the slot, but physical testing did not show the intended
+        sliding dwell.
       </p>
 
       <h2>Analysis &amp; validation</h2>
 
       <p>
-        I used hand calculations at critical orientations to estimate member
-        forces and stresses and select link widths for the 1/4-inch acrylic
-        parts.
+        I used geometry and joint equilibrium at critical orientations to
+        estimate member forces and stresses, then select link widths for the
+        1/4-inch acrylic parts.
       </p>
 
       <ProjectFigure
@@ -89,10 +77,9 @@ export default function LinkageSystemContent() {
       />
 
       <p>
-        We used FEA to examine stress and deflection and CAD motion studies to
-        predict button contact time. These estimates informed the geometry
-        before fabrication and provided a baseline for comparison with physical
-        tests.
+        We used FEA to examine stress relative to the modeled yield strength and
+        assess deflection. CAD motion studies predicted cumulative contact time,
+        providing a baseline for the initial and revised tests below.
       </p>
 
       <ProjectFigure
@@ -113,28 +100,50 @@ export default function LinkageSystemContent() {
       </p>
 
       <p>
-        The initial prototype achieved 2.96 seconds of cumulative contact
-        against a 30.66-second prediction. The rocker descended early, although
-        the mechanism completed the test without motor stall or structural
-        failure.
-      </p>
-
-      <p>
-        We identified coupler geometry and downward loading as possible
-        contributors to the early descent. We revised the rocker and coupler
+        The initial prototype’s rocker descended early, with contact time well
+        below the motion-study prediction. We suspected coupler geometry and
+        downward loading as contributors. We revised the rocker and coupler
         lengths and mounting position, then repeated the motion and structural
         analysis before testing.
       </p>
+
+      <div className="table-scroll case-table">
+        <table className="data-table">
+          <caption>
+            <span className="fig__num">Table 1</span> Cumulative button contact
+            during each 120-second test
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Geometry</th>
+              <th scope="col">Motion-study prediction</th>
+              <th scope="col">Measured contact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Initial</th>
+              <td className="num">30.66 s</td>
+              <td className="num">2.96 s</td>
+            </tr>
+            <tr>
+              <th scope="row">Revised</th>
+              <td className="num">52.84 s</td>
+              <td className="num">41.17 s</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2>Results</h2>
 
       <p>
         The revised mechanism achieved 41.17 seconds of cumulative contact
-        during the 120-second test, approximately 14 times the initial result,
-        against a final prediction of 52.84 seconds. It completed the test
+        during the 120-second test, approximately 14 times the initial result
+        and 78% of the final motion-study prediction. It completed the test
         without motor stall or structural failure. The slot did not provide the
-        intended sliding action and contributed to out-of-plane deflection,
-        making a solid-link redesign a candidate for further evaluation.
+        intended sliding action, and observed out-of-plane deflection made a
+        solid-link redesign a candidate for further evaluation.
       </p>
     </>
   );
