@@ -8,7 +8,7 @@ The October 3 fidelity review checked every retained support, member connection,
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | `public/assets/photos/projects/compactor_fbd_clean.png`  | `compactor_force.jpg`                                                                                               |
 | `public/assets/photos/projects/truss_fbd_clean.png`      | `truss_fbd.jpg`, CMU truss report page 2                                                                            |
-| `public/assets/photos/projects/linkage_fbd_clean_v2.png` | `linkage_fbd.png`, CMU linkage report page 21, with equilibrium equations on page 22 used to check force directions |
+| `public/assets/photos/projects/linkage_fbd_clean_v3.png` | `linkage_fbd.png`, CMU linkage report page 21, with equilibrium equations on page 22 used to check force directions |
 
 ## Compactor initial cleanup
 
@@ -42,8 +42,18 @@ Make a targeted engineering correction to Image 1, the cleaned four-panel linkag
 
 ## Linkage coupling-joint correction
 
-The final portfolio asset is `linkage_fbd_clean_v2.png`, saved from the built-in ImageGen result after comparing the reaction application point with the original drawing. The previous cleaned asset remains available for provenance.
+This pass produced `linkage_fbd_clean_v2.png`, saved from the built-in ImageGen result after comparing the reaction application point with the original drawing. It is retained for provenance and superseded by the enclosed-slot correction below.
 
 ```text
 Use case: precise-object-edit. Image 1 is the edit target, a clean four-panel linkage free-body diagram. Image 2 is the original source drawing for engineering fidelity. Correct the coupling-force application point without changing the design or force convention. In the UPPER-RIGHT isolated slotted-member diagram, the red downward F acts at the upper tip/end hole, while the blue upward-left RC coupling reaction acts at the UPPER END OF THE SLOT BELOW that tip, exactly as in the original. Move the existing RC arrow and its label from the F end hole down to that slot-end joint; its arrowhead must point upward-left away from this joint, and it must no longer originate where F acts. Preserve a clearly visible short length of slotted member between the applied F and coupling reaction. In the UPPER-LEFT assembled linkage, move the long coupler's existing upper connection from the upper F end hole to the same upper-slot joint below F, matching the original source: the slotted member extends above this connection to receive F. Retain the short crank, its ground joint C, the coupler-to-crank pin, and the ground joint A with Rx right and Ry up. Preserve all four panels, all existing force labels, downward F directions, upward-left ground RC at C, and the two lower members with collinear compressive RC arrows pointing inward at both ends. Do not add loads or extra joints, remove a member, change connectivity anywhere else, add numerical dimensions or equations, or add text beyond the existing labels. Maintain the neat dark digital-pen outlines, blue reactions, red applied loads, pure white background, and compact portrait layout. Original drawing positions take priority over making the geometry appear symmetrical.
+```
+
+## Linkage enclosed-slot correction, October 4
+
+The built-in ImageGen tool corrected only the upper-right isolated rocker. The final asset is `public/assets/photos/projects/linkage_fbd_clean_v3.png` (1136 × 1385). The earlier generated intermediate remains outside the project at `/Users/mying/.codex/generated_images/01a0fe00-f3cf-7b42-82f3-d861175b8a92/exec-69923118-d94d-4a88-a379-330481bb8fb5.png`. The final pass was visually checked for a continuous outer member, a fully enclosed internal slot, and unchanged force directions and neighboring diagrams.
+
+Final prompt:
+
+```text
+Precise engineering diagram edit. Change ONLY the isolated slotted bar in the UPPER-RIGHT panel. The slot must be a single CLOSED rounded elongated internal hole, completely surrounded by a visibly continuous strip of solid material on BOTH sides and around BOTH ends. The slot must NOT touch or open into the outer edge of the bar. Remove the extra small circular hole/pin/collar currently drawn at the upper end of that slot near the Rc arrow. Remove any contour joining the slot to the outer edge. Draw the bar as ONE continuous member, like the leftmost slotted member in the upper-left assembly. Keep only the existing small round holes at the extreme top tip where red F acts and at the extreme bottom fixed pivot. Between them, put the long rounded slot along the center of the bar below the top round hole, with clearly visible material separating it from the outer perimeter. The blue Rc arrow must still point at the upper end of the internal slot, with NO circular pin or extra member around its tip. Maintain the bar endpoints and orientation and all existing F, Rx, Ry, Rc arrows, their directions and labels. Keep every other panel, force arrow, label, coordinate axis, white background, spacing, and black/red/blue handwritten line style unchanged. Preserve the portrait canvas size and four-panel arrangement.
 ```
