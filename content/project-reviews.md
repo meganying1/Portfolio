@@ -64,10 +64,11 @@ Record the evidence used and the pruning decisions for each individually committ
 
 ## Noise reduction
 
-- Sources: existing page and retained original/processed waveform, LMS-example, and four-recording comparison images. CMU documentation remains pending upload.
-- Analysis/testing coverage: limitations of fixed inverted-waveform cancellation, LMS coefficient/error adaptation, filter-length and step-size exploration for convergence/stability/performance, single-channel preprocessing and representative noise generation, four campus environments, and visual/listening evaluation.
+- Sources: existing page, retained original/processed waveform, LMS-example and four-recording comparison images, and the extracted `Spring 2023/Numerical Methods/Project/half_page_summary.pdf`, `my_fft.m`, and `project_code.m`. The summary is a proposal; the code is a Fourier/band-pass experiment, not the final LMS implementation. No final LMS code, campus recording dataset, or defined 95% metric is present in this archive.
+- Analysis/testing coverage: limitations of fixed inverted-waveform cancellation, recursive FFT/frequency-domain band-pass exploration, LMS coefficient/error adaptation, filter-length and step-size exploration for convergence/stability/performance, single-channel preprocessing and representative noise generation, four campus environments, and visual/listening evaluation.
 - Presentation: three figures, no table. Captions explicitly preserve the different amplitude scales. The desired/array-output plot is framed as an LMS example without claiming it is measured convergence of a specific campus recording or deriving a convergence rate.
 - Final pruning: moved parameter work into Algorithm development and combined implementation/testing, preserving team attribution. Retained the baseline's reported “up to 95%” waveform-amplitude reduction, without assigning an unsupported amplitude metric or equating it with SNR improvement or selective cancellation.
+- Archive review: added one sentence for the documented Fourier/band-pass work. Kept the proposal and exploratory code separate from final-result evidence. The script writes the magnitude spectrum to its output WAV rather than the computed inverse-transform signal, so its saved WAVs are not used to validate the portfolio's LMS result. The proposal and experimental script do not meet the quality bar for supplemental downloads, and no additional plot is needed beyond the three existing figures.
 
 ## Chinese checkers
 

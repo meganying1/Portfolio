@@ -29,7 +29,8 @@ export default function NoiseReductionContent() {
       <p>
         We first explored cancellation using an inverted waveform. This
         illustrated destructive interference, but a fixed waveform would not
-        track changing background noise.
+        track changing background noise. We also explored a recursive FFT and
+        band-pass filtering to inspect and filter frequency content.
       </p>
 
       <p>
