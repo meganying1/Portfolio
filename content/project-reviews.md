@@ -38,10 +38,11 @@ Record the evidence used and the pruning decisions for each individually committ
 
 ## Well driller
 
-- Sources: existing page, retained mechanism sketch and frame CAD, original frame equilibrium diagram/notes, and source pedal stress plot. CMU documentation remains pending upload.
-- Analysis coverage: cable tension and pedal force, frame reactions/connection loads with the explicitly assumed 50 kg operator, primary/pedal pin sizing at FoS 4 and 2, pedal speed/gearing/drill motion and power, and static pedal stress/deformation FEA. The approximately 107 MPa peak and 1,034 MPa yield reference are converted directly from the source plot’s N/m² legend; no material is inferred from the yield value.
+- Sources: existing page, retained mechanism sketch and frame CAD, original frame equilibrium diagram/notes, source pedal stress plot, and the extracted `Fall 2021/Fundamentals of Mechanical Engineering/Project 3 Report.pdf`. Reviewed concept comparison, drivetrain/reaction/pin worksheets, pedal FEA, speed/power assumptions, and conclusions.
+- Analysis coverage: idealized drill weight/frictionless-pulley cable tension (approximately 543 N), pedal force, frame reactions/connection loads with the explicitly assumed 50 kg operator, primary/pedal pin sizing at FoS 4 and 2, pedal speed/gearing/drill motion and power, and static pedal stress/deformation FEA. The approximately 107 MPa peak and 1,034 MPa yield reference are converted directly from the source plot’s N/m² legend. The report explicitly names 3Al–2.5V titanium alloy for the pedal; the material is not inferred from the yield value.
 - Presentation: four sequential figures, no table. Moved overall frame CAD to the overview and the actual lift/release sketch beside the design explanation. No drawings of the other concepts or motion clips are fabricated.
 - Final pruning: separated the documented three-concept selection from mechanism operation, retained individual analysis ownership, and made CAD/analytical status and the unvalidated drilling/impact/engagement behavior explicit. No physical-prototype plan is added to Results.
+- Archive review: the drum dimension in the torque worksheet is labeled in meters but converted as inches, and the speed worksheet's gear-ratio treatment is inconsistent with the torque train. Kept reported pedal-force, speed, and power numbers out of the page and identified their need for reconciliation. Pin minima remain analytical, with practical hardware and repeated-loading allowances unresolved. No efficiency, drilling rate, service life, or safety performance is presented as validated. The full report's technical inconsistencies make it unsuitable as a supplemental download.
 
 ## Truss structure
 

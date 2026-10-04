@@ -66,10 +66,11 @@ export default function WellDrillerContent() {
       <h2>Analysis &amp; validation</h2>
 
       <p>
-        I worked backward from the modeled drill load and drivetrain geometry to
-        estimate cable tension and pedal force, then calculated frame reactions
-        and connection loads. Frame equilibrium included an assumed 50 kg
-        operator and the CAD-derived frame weight.
+        An idealized steel-cylinder drill model and frictionless pulley gave a
+        calculated cable tension of approximately 543 N. I used the drivetrain
+        geometry to estimate pedal force, then calculated frame reactions and
+        connection loads using an assumed 50 kg operator and the CAD-derived
+        frame weight.
       </p>
 
       <ProjectFigure
@@ -90,14 +91,15 @@ export default function WellDrillerContent() {
       </p>
 
       <p>
-        Pedal-speed, gearing, and drill-motion calculations estimated power
-        requirements at the assumed operating point. These estimates depend on
-        the selected drill load and drivetrain geometry.
+        Speed and power were estimated from pedal angular velocity and gearing.
+        Inconsistent drum dimensions and gear-ratio calculations make the
+        reported pedal-force, speed, and power values provisional and require
+        recalculation before hardware sizing.
       </p>
 
       <p>
-        The team used FEA to estimate pedal stress and deformation under the
-        calculated load. The shown static case predicted a peak stress of
+        The team used a reported 3Al–2.5V titanium-alloy pedal model for FEA of
+        stress and deformation. The shown static case predicted a peak stress of
         approximately 107 MPa against the model’s 1,034 MPa yield reference, but
         did not evaluate repeated impact or gear engagement.
       </p>
@@ -117,9 +119,9 @@ export default function WellDrillerContent() {
       <p>
         We completed a pedal-powered lift-and-release concept with CAD,
         drivetrain and power calculations, connection sizing, and pedal FEA. The
-        work evaluated static loading and an assumed operating point. Drilling
-        performance, repeated impact, and release/re-engagement remain
-        physically unvalidated.
+        static evaluation remains preliminary because drivetrain inputs need
+        reconciliation. Drilling performance, repeated impact, and
+        release/re-engagement remain physically unvalidated.
       </p>
     </>
   );
