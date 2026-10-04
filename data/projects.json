@@ -132,8 +132,8 @@
     "slug": "mobile-robot",
     "name": "Mobile robot",
     "title": "Mobile robot",
-    "summary": "An autonomous robot with path following and obstacle avoidance.",
-    "description": "Developing an autonomous mobile robot to follow a curved path and avoid moving obstacles using infrared and ultrasonic sensors.",
+    "summary": "An Arduino robot with infrared line following, ultrasonic obstacle stops, and line-recovery logic.",
+    "description": "Developing a differential-drive robot to follow a curved line and stop for moving obstacles using infrared and ultrasonic sensors.",
     "dates": "Oct 2021 – Nov 2021",
     "featured": false,
     "thumbnail": {

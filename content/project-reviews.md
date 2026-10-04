@@ -47,3 +47,11 @@ Record the evidence used and the pruning decisions for each individually committ
 - Presentation: three figures in two primary groups and one thickness/test-outcome table. The >50 lb result is explicitly a supported load without observed failure, not a failure measurement. No available photo unambiguously shows the final failure, so the prototype photo is not relabeled as failure evidence.
 - Final pruning: moved iteration measurements into the single table, distinguished the 42 lb prototype from the 38 lb final specimen, and preserved the laser-cutter change as a possible contributor rather than a proven cause. The 5% shortfall is derived from 38/40.
 - Aligned the page description with the baseline's target of failure near 40 lb rather than implying demonstrated survival at 40 lb.
+
+## Mobile robot
+
+- Sources: existing page and original course photograph. CMU documentation and any final-run recording remain pending upload.
+- Analysis/testing coverage: IR response characterization and line-detection thresholds, differential steering magnitude, last-seen-side line recovery, ultrasonic stop logic, and course-based tuning. No unsupported threshold values, calibration curves, control gains, or performance targets are added.
+- Presentation: one actual course figure, no table. No suitable additional sensor diagram or motion clip is currently available. Avoided making media to meet a visual count.
+- Final pruning: consolidated the overview, grouped sensors by their roles, and moved calibration/tuning to Testing & iteration. Kept the 26-second result within the tested-course context. The summary explicitly describes obstacle stops rather than implying an unshown obstacle-routing algorithm.
+- The user confirmed that all Mobile Robot work was team work. Responsibilities remain shared throughout the page.

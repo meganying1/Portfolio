@@ -9,13 +9,9 @@ export default function MobileRobotContent() {
         In a team of three, we built an Arduino-based differential-drive robot
         that followed a curved line and stopped for moving obstacles. We
         integrated three infrared sensors for line detection and an ultrasonic
-        sensor for obstacle distance.
-      </p>
-
-      <p>
-        We tuned detection thresholds, steering commands, and line-recovery
-        logic through course testing. The final robot completed the challenge in
-        26 seconds.
+        sensor for obstacle distance, then tuned detection thresholds, steering
+        commands, and line-recovery logic through course testing. The final
+        robot completed the challenge in 26 seconds.
       </p>
 
       <ProjectFigure
@@ -24,21 +20,17 @@ export default function MobileRobotContent() {
         width={715}
         height={482}
         alt="Differential-drive robot following a curved line beneath the moving obstacle walls"
-        caption="Robot combines IR line tracking and ultrasonic obstacle detection for course navigation"
+        caption="Curved-line course tests tracking and recovery beneath moving obstacle walls"
         crop={{ x: 170, y: 40, width: 470, height: 340 }}
       />
 
       <h2>Sensor integration</h2>
 
       <p>
-        We characterized the infrared sensor responses and selected thresholds
-        to distinguish the line from the surrounding surface.
-      </p>
-
-      <p>
-        The ultrasonic sensor provided an independent obstacle check. When an
-        obstacle entered the detection range, the controller stopped both
-        motors.
+        Three infrared sensors distinguish the line from the surrounding
+        surface. The ultrasonic sensor provides an independent obstacle check.
+        When an obstacle entered the detection range, the controller stopped
+        both motors.
       </p>
 
       <h2>Control algorithm</h2>
@@ -55,9 +47,13 @@ export default function MobileRobotContent() {
         all three sensors lost it, that state determined the search direction.
       </p>
 
+      <h2>Testing &amp; iteration</h2>
+
       <p>
-        We tuned thresholds and motor-speed differences on the course to balance
-        recovery from large deviations with stable tracking.
+        We characterized infrared sensor responses and selected line-detection
+        thresholds. Course tests guided adjustments to the thresholds,
+        motor-speed differences, and recovery logic to balance large-deviation
+        recovery with stable tracking.
       </p>
 
       <h2>Results</h2>
