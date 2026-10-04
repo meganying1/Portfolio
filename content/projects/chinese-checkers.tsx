@@ -8,8 +8,9 @@ export default function ChineseCheckersContent() {
       <p>
         I built a Chinese Checkers application in Python and Tkinter with local
         multiplayer and computer-controlled opponents. I implemented the game
-        engine, interface, legal move generation, turn management, win
-        detection, and Minimax-based AI and hints.
+        engine, interface, legal move generation, turn management, and win
+        detection. The completed game integrated Minimax-based opponents and
+        hints alongside human play.
       </p>
 
       <ProjectFigure
@@ -26,29 +27,29 @@ export default function ChineseCheckersContent() {
 
       <p>
         I used an object-oriented structure to separate game state, interface
-        behavior, and gameplay logic.
-      </p>
-
-      <p>
-        The board’s offset rows required coordinate conversions between game
-        positions and screen locations. I used those conversions for rendering,
+        behavior, and gameplay logic. The board’s offset rows required
+        conversions between game coordinates and screen locations for rendering,
         mouse selection, and move validation.
       </p>
 
       <p>
-        I implemented adjacent moves and chained jumps, along with turn
-        progression and win detection. The interface highlights legal moves and
-        supports animations and timed turns.
+        The interface highlights legal destinations and supports animations and
+        timed turns, with turn progression and win detection managed by the game
+        engine.
       </p>
 
       <h2>AI &amp; algorithms</h2>
 
       <p>
-        I implemented Minimax to evaluate future game states and choose moves
-        for computer-controlled opponents. Minimax looks ahead at possible moves
-        and opponent responses, then chooses the move with the best outcome
-        assuming the opponent plays optimally. The hint system uses the same
-        search framework to suggest candidate moves to human players.
+        I implemented legal move generation for both adjacent moves and chained
+        jumps.
+      </p>
+
+      <p>
+        Minimax evaluates future game states and opponent responses to choose
+        computer moves, assuming the opponent chooses its best response. The
+        hint system reuses the same search framework to suggest moves to human
+        players.
       </p>
 
       <h2>Results</h2>

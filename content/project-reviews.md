@@ -62,3 +62,10 @@ Record the evidence used and the pruning decisions for each individually committ
 - Analysis/testing coverage: limitations of fixed inverted-waveform cancellation, LMS coefficient/error adaptation, filter-length and step-size exploration for convergence/stability/performance, single-channel preprocessing and representative noise generation, four campus environments, and visual/listening evaluation.
 - Presentation: three figures, no table. Captions explicitly preserve the different amplitude scales. The desired/array-output plot is framed as an LMS example without claiming it is measured convergence of a specific campus recording or deriving a convergence rate.
 - Final pruning: moved parameter work into Algorithm development and combined implementation/testing, preserving team attribution. Retained the baseline's reported “up to 95%” waveform-amplitude reduction, without assigning an unsupported amplitude metric or equating it with SNR improvement or selective cancellation.
+
+## Chinese checkers
+
+- Sources: existing page and original Tkinter legal-move screenshot. CMU implementation files remain pending upload.
+- Algorithm/design coverage: object-oriented separation of state/interface/logic, offset-row coordinate conversion for rendering/selection/validation, adjacent and chained-jump move generation, turn/win management, Minimax opponent-response search, and the shared search framework for hints.
+- Presentation: one distinct legal-move UI figure, no table. Kept the screenshot that demonstrates selection/valid destinations and omitted the redundant plain board. No implementation-specific search diagram, gameplay GIF, search depth, complexity, pruning scheme, evaluation heuristic, or performance measurement is invented.
+- Final pruning: grouped architecture and coordinate mapping, moved move generation beside Minimax/hints, shortened the generic Minimax explanation, and retained individual ownership and final functionality.
