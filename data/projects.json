@@ -44,8 +44,8 @@
     "slug": "tripod-attachment",
     "name": "Tripod attachment",
     "title": "Tripod attachment",
-    "summary": "An assistive phone mount that reduces the force and dexterity needed for positioning.",
-    "description": "Designing an assistive tripod attachment that automates phone mounting and reduces force and dexterity needed for positioning.",
+    "summary": "An assistive phone-mount prototype with sensor-triggered gripping and compliant orientation adjustment.",
+    "description": "Designing an assistive tripod attachment for sensor-triggered phone gripping and compliant orientation adjustment.",
     "dates": "Nov 2022 – Dec 2022",
     "featured": true,
     "thumbnail": {

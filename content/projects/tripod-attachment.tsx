@@ -9,14 +9,9 @@ export default function TripodAttachmentContent() {
         In a team of three, we developed an assistive tripod attachment for
         users with cerebral palsy and wrist tendonitis. I contributed to the
         sensor-triggered gripping concept and analyzed the compliant TPU wings
-        under servo loading.
-      </p>
-
-      <p>
-        The prototype combined automatic phone gripping with a compliant toothed
-        interface for orientation adjustment. Testing exposed two integration
-        issues: an unreliable glued wing connection and a phone slot that was
-        too narrow.
+        under servo loading. The prototype integrated automatic gripping and a
+        compliant orientation interface, but testing exposed an unreliable glued
+        wing connection and a phone slot that was too narrow.
       </p>
 
       <ProjectFigure
@@ -35,38 +30,21 @@ export default function TripodAttachmentContent() {
       <p>
         User research identified difficulty gripping phones, operating small
         mounting screws, and making precise adjustments. We translated these
-        findings into two functions: securing the phone automatically and
-        adjusting orientation without repeatedly loosening a screw.
-      </p>
-
-      <p>
-        I helped develop the concept of an IR sensor triggering servo-driven
-        wings. We paired this with a manually adjustable rotating base.
-      </p>
-
-      <p>
-        We added foam for phone fit and selected TPU wings with cutouts to
-        accommodate different shapes. Rounded teeth in the rotating interface
-        were intended to deform during adjustment and engage at the selected
-        position.
+        findings into automatic phone gripping and orientation adjustment
+        without repeatedly loosening a screw.
       </p>
 
       <p>
         An IR sensor detects the phone and triggers micro servos to rotate two
         wings inward. The padded base supports the phone, while the wings
-        provide lateral retention.
-      </p>
-
-      <p>
-        TPU and cutouts give the wings compliance. Their geometry must balance
-        accommodation of the phone with sufficient retention under servo
-        loading.
+        provide lateral retention. TPU wings with cutouts were selected to
+        accommodate different phone shapes while retaining the phone.
       </p>
 
       <p>
         The rotating base pairs a flexible TPU inner interface with a rigid
-        outer part. Rounded teeth deform as the user turns the holder and
-        re-engage to retain its orientation.
+        outer part. Rounded teeth were intended to deform during manual
+        adjustment and re-engage at the selected orientation.
       </p>
 
       <ProjectFigurePair
@@ -112,11 +90,11 @@ export default function TripodAttachmentContent() {
       />
 
       <p>
-        FEA under the modeled load predicted a maximum stress of 10.2 MPa and a
-        factor of safety of 5.1. Local stress concentrations and simplified
-        hand-calculation geometry may explain the difference. The comparison
-        highlighted the need to evaluate the wing geometry and material
-        assumptions beyond a simple beam model.
+        FEA examined stress and deformation under the same 2.97 N load,
+        predicting 10.2 MPa maximum stress and a factor of safety of 5.1. The
+        fixed-base model resolved local stress near the attachment, but used
+        natural rubber rather than TPU. These estimates therefore do not
+        validate the printed wings.
       </p>
 
       <ProjectFigure
@@ -140,28 +118,13 @@ export default function TripodAttachmentContent() {
 
       <p>
         The glued wing-to-servo-horn connection was not robust, and the
-        foam-lined slot prevented the phone from seating fully. These issues
-        limited the prototype’s ability to demonstrate the intended interaction.
-      </p>
-
-      <p>
-        The next iteration would widen the phone slot and replace the adhesive
-        wing connection with a mechanically retained interface. Measuring
-        adjustment force and testing with users would establish whether the
-        design reduces effort.
+        foam-lined slot prevented the phone from seating fully. We proposed
+        widening the slot and replacing the adhesive joint with a mechanically
+        retained interface. These changes and reduced adjustment effort remained
+        to be tested.
       </p>
 
       <h2>Manufacturing &amp; cost</h2>
-
-      <ProjectFigure
-        number={6}
-        src="/assets/photos/projects/tripod_gdt.png"
-        width={1010}
-        height={828}
-        alt="Proposed wing and base assembly drawing with geometric tolerance callouts"
-        caption="Proposed GD&T annotations communicate alignment of the wings and base"
-        wide
-      />
 
       <p>
         We proposed molded TPU for the wings and inner rotating interface, with
