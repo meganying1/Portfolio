@@ -46,11 +46,12 @@ Record the evidence used and the pruning decisions for each individually committ
 
 ## Truss structure
 
-- Sources: existing page, original full equilibrium/member-force calculations, source-checked FBD redraw, assembly CAD, and test-fixture prototype photo. CMU documentation remains pending upload. Preserved the baseline/user-corrected final result of 38 lb.
-- Analysis coverage: concept strength-to-weight estimates and member sizing, global equilibrium/support reactions (20 lb each), joint/member forces (approximately 28.3 lb compression in outer diagonals), assumed-material strength screening, and predicted failure location. No undocumented buckling model or stress result is added.
+- Sources: existing page, original full equilibrium/member-force calculations, source-checked FBD redraw, assembly CAD, test-fixture prototype photo, and the extracted `Fall 2021/Fundamentals of Mechanical Engineering/Project 1 Report.pdf`. Preserved the baseline/user-corrected final result of 38 lb; the report's conflicting 32 lb result does not override the user's correction.
+- Analysis coverage: concept strength-to-weight estimates and member sizing, global equilibrium/support reactions (20 lb each), joint/member forces (approximately 28.3 lb compression in outer diagonals), axial stress screening against an assumed 70 MPa strength, predicted failure location, and post-test stress/weight recalculation. The report records 0.0976 lb estimated weight and 0.1165 lb fabricated weight. No undocumented buckling model or stress result is added.
 - Presentation: three figures in two primary groups and one thickness/test-outcome table. The >50 lb result is explicitly a supported load without observed failure, not a failure measurement. No available photo unambiguously shows the final failure, so the prototype photo is not relabeled as failure evidence.
 - Final pruning: moved iteration measurements into the single table, distinguished the 42 lb prototype from the 38 lb final specimen, and preserved the laser-cutter change as a possible contributor rather than a proven cause. The 5% shortfall is derived from 38/40.
 - Aligned the page description with the baseline's target of failure near 40 lb rather than implying demonstrated survival at 40 lb.
+- Archive review: retained the concise thickness table and explicitly limited the sizing method to axial stress. Added the weight-estimate discrepancy to cover the documented post-test analysis without carrying over a strength-to-weight ratio calculated from the report's superseded 32 lb result. The source offers no distinct final-failure photo, and contradictory results make the full report unsuitable as a supplemental download.
 
 ## Mobile robot
 

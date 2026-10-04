@@ -57,8 +57,8 @@ export default function TrussStructureContent() {
         We used static equilibrium to calculate member forces under the 40-pound
         center load, with calculated support reactions of 20 lb each. Joint
         equilibrium gave approximately 28.3 lb compression in the outer
-        diagonals. We compared member loads with the assumed acrylic properties
-        to size the members and predict the failure location.
+        diagonals. Axial stress checks against an assumed 70 MPa strength guided
+        initial dimensions and the predicted failure location.
       </p>
 
       <ProjectFigure
@@ -70,6 +70,13 @@ export default function TrussStructureContent() {
         caption="Joint equilibrium identifies tension and compression under the center design load"
         wide
       />
+
+      <p>
+        The CAD-based weight estimate was 0.0976 lb, below the report’s
+        fabricated weight of 0.1165 lb. We revisited stress and
+        strength-to-weight calculations using the final thickness and recorded
+        weight.
+      </p>
 
       <h2>Fabrication &amp; iteration</h2>
 
