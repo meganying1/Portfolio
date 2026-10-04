@@ -93,10 +93,11 @@ export default function TripodAttachmentContent() {
 
       <p>
         FEA examined stress and deformation under the same 2.97 N load,
-        predicting 10.2 MPa maximum stress and a factor of safety of 5.1. The
-        fixed-base model resolved local stress near the attachment, but used
-        natural rubber rather than TPU. These estimates therefore do not
-        validate the printed wings.
+        predicting 10.2 MPa maximum stress. Applying the report’s assumed TPU
+        strength gave a calculated factor of safety of 5.1. The fixed-base model
+        resolved local stress near the attachment, but used natural rubber
+        rather than TPU. These estimates therefore do not validate the printed
+        wings.
       </p>
 
       <ProjectFigure
