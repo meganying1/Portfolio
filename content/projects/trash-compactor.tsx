@@ -19,12 +19,12 @@ export default function TrashCompactorContent() {
         figures={[
           {
             number: 1,
-            src: "/assets/photos/projects/compactor_final.jpg",
-            width: 258,
-            height: 380,
-            alt: "Completed wooden trash compactor with lid and viewing window",
+            src: "/assets/photos/projects/compactor_retraction.gif",
+            width: 320,
+            height: 452,
+            alt: "Prototype return stroke with the scissor linkage retracting and compression plate lowering beneath paper waste",
             caption:
-              "Standalone enclosure contains the automated compaction mechanism",
+              "Recorded return stroke lowers the plate beneath the paper waste",
           },
           {
             number: 2,

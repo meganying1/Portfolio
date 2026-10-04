@@ -13,9 +13,9 @@ Record the evidence used and the pruning decisions for each individually committ
 
 ## Trash compactor
 
-- Sources: existing page and original `compactor_force.jpg` and `compactor_fos.jpg` calculations, assembly CAD, prototype photographs, and previously source-checked FBD redraw. CMU documentation remains pending upload.
+- Sources: existing page and original `compactor_force.jpg` and `compactor_fos.jpg` calculations, assembly CAD, prototype photographs, previously source-checked FBD redraw, and three user-uploaded prototype recordings. CMU documentation remains pending upload.
 - Analysis coverage: minimum-angle geometry (8.2°), support-reaction/FBD force transmission with the 44 lbf actuator, 6.4–12.8 lbf supported-load estimates, and axial-stress checks at 6.4 and 60 lbf against an assumed 40 ksi yield strength. The 60 lbf case is described only as an analyzed load case; the source's ambiguous “ideal measured” note is not presented as a verified test measurement.
-- Presentation: four numbered figures in three primary groups, no table. Retained enclosure/linkage evidence, CAD interfaces, and the force diagram. No compaction or stall clip is present in the available assets, so no GIF is fabricated.
+- Presentation: four numbered figures in three primary groups, no table. Replaced the enclosure still with a cropped, real-time return-stroke GIF from the clearest user-uploaded recording. Retained the distinct linkage photograph, CAD interfaces, and force diagram. The GIF shows the plate lowering, not a complete compaction cycle or verified stall. Pauses in the footage do not establish a stall or its cause. Original enclosure and source recordings are preserved.
 - Final pruning: consolidated design/overview paragraphs, distinguished individual CAD/mount ownership from team fabrication, qualified insufficient actuator capacity as suspected, and kept the proposed actuator change separate from the demonstrated cycle and award.
 
 ## Tripod attachment

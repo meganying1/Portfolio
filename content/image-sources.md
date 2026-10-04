@@ -38,6 +38,16 @@ Paths below are relative to `/Users/mying/Documents/CMU/`. Page numbers refer to
 
 ## Existing assets
 
+### Trash compactor motion update
+
+`compactor_retraction.gif` replaces the enclosure still on the project page while the homepage keeps its existing still. Source: the user-uploaded `7BAD1706-2F67-403E-B3E2-7192A7AB1F07.mov`, SHA-256 `b443d30d13b839debe9d8d9de485efb6357e7a0e74654f71e7d2d753a6432f19`. The source recording remains unmodified in the uploaded attachments.
+
+The GIF uses 25.0–32.1 seconds of the original recording at its original speed. FFmpeg applies the recording's orientation metadata, then crops the resulting 720 × 1280 frame at x = 90, y = 340 to 460 × 650 pixels. The crop retains the lid, viewing window, linkage, and enclosure base. It is reduced to 320 × 452 pixels at 10 fps with a 96-color palette and loops as a 7.1-second excerpt. No frames are reversed, generated, or retimed. The recording shows a return stroke; its pauses alone do not verify a stall.
+
+Also reviewed the user-uploaded `D7DB4CA4-FF3C-406B-969E-D1E7F80C4D46.mov` and `A3BF2BF5-47CC-40D8-84F6-00DEE6714DDD.mov`. The first offers little distinct motion in a shaky view; the second repeats the return motion from a less clear angle. Both remain unmodified in the attachments and are omitted from the page.
+
+### Original selections
+
 - Trash compactor: retain the enclosure, mechanism photograph, and assembly CAD; crop the mechanism photograph around the linkage, plate, actuator, and custom mounts. Use `compactor_fbd_clean.png`, a white-background digital-pen redraw of the support and crossed-link FBDs, omitting the paper grid, case labels, calculations, and detached notes. The mechanism photo uses a taller viewport so its width is closer to the enclosure photo at the shared height.
 - Tripod: retain one phone-mounted prototype and higher-resolution electronics assembly CAD; replace two interface views with one higher-resolution source figure and replace the unlabelled displacement crop with the source stress plot. Restore the hand-drawn phone/wing loading diagram and add the proposed drawing annotations.
 - Linkage: replace the revised CAD with its higher-resolution report original and retain one test-fixture photograph, cropped around the links and relevant interfaces. Replace the initial-design cropped FEA image with the final-design source plot and its legend. Use `linkage_fbd_clean_v2.png` for the critical-orientation FBDs from page 21, checked against the equilibrium equations on page 22. The coupling reaction and coupler connection act at the upper-slot joint below the applied tip load. Omit the assembly drawing from the narrative as requested; retain its extracted asset.
