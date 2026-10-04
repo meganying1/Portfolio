@@ -32,3 +32,10 @@ Record the evidence used and the pruning decisions for each individually committ
 - Analysis coverage: critical-orientation geometry and joint equilibrium, member-force/stress calculations and acrylic link sizing, stress/yield screening and deflection FEA, and initial/revised CAD motion-study predictions. Did not add the very low single-case FEA stress as a system-wide validation claim.
 - Presentation: four figures in three primary groups and one contact-time table. The table directly compares documented initial and final predictions with measured cumulative contact over 120 seconds. No source motion clip is available, so no animation is created.
 - Final pruning: consolidated repeated design and iteration paragraphs, preserved the failed slot/dwell behavior and early-descent hypothesis, and avoided asserting an isolated cause of the out-of-plane deflection. The 14× improvement and 78% of prediction are rounded ratios derived from the documented contact times.
+
+## Well driller
+
+- Sources: existing page, retained mechanism sketch and frame CAD, original frame equilibrium diagram/notes, and source pedal stress plot. CMU documentation remains pending upload.
+- Analysis coverage: cable tension and pedal force, frame reactions/connection loads with the explicitly assumed 50 kg operator, primary/pedal pin sizing at FoS 4 and 2, pedal speed/gearing/drill motion and power, and static pedal stress/deformation FEA. The approximately 107 MPa peak and 1,034 MPa yield reference are converted directly from the source plot’s N/m² legend; no material is inferred from the yield value.
+- Presentation: four sequential figures, no table. Moved overall frame CAD to the overview and the actual lift/release sketch beside the design explanation. No drawings of the other concepts or motion clips are fabricated.
+- Final pruning: separated the documented three-concept selection from mechanism operation, retained individual analysis ownership, and made CAD/analytical status and the unvalidated drilling/impact/engagement behavior explicit. No physical-prototype plan is added to Results.
