@@ -9,12 +9,9 @@ export default function TrashCompactorContent() {
         In a team of five, we built a standalone trash compactor with a linear
         actuator and scissor linkage that raise a compression plate against the
         lid. I developed the SolidWorks assembly and designed custom actuator
-        mounts to connect the actuator to the linkage within the enclosure.
-      </p>
-
-      <p>
-        The working prototype completed an automated compaction cycle and
-        received the Best Overall Project Award at Carnegie Mellon’s Mechanical
+        mounts to connect the actuator to the linkage within the enclosure. The
+        working prototype completed an automated compaction cycle and received
+        the Best Overall Project Award at Carnegie Mellon’s Mechanical
         Engineering Design Expo in December 2024.
       </p>
 
@@ -26,7 +23,8 @@ export default function TrashCompactorContent() {
             width: 258,
             height: 380,
             alt: "Completed wooden trash compactor with lid and viewing window",
-            caption: "Fabricated enclosure houses the powered compactor",
+            caption:
+              "Standalone enclosure contains the automated compaction mechanism",
           },
           {
             number: 2,
@@ -44,34 +42,18 @@ export default function TrashCompactorContent() {
       <h2>Design</h2>
 
       <p>
-        Benchmarking highlighted a gap between permanently installed compactors
-        and alternatives that require manual force. We focused on a standalone
-        device with powered compression, a compact footprint, and
-        straightforward operation.
-      </p>
-
-      <p>
-        We compared concepts using weighted criteria and selected an
-        actuator-driven scissor linkage that could fit beneath the trash
-        compartment. Its geometry allowed the compression plate to move
-        vertically within the bin.
-      </p>
-
-      <p>
-        The plate rises through the bin, compresses waste against the locked
-        lid, holds for approximately ten seconds, and retracts automatically.
+        Benchmarking and a weighted concept comparison led us to a standalone,
+        actuator-driven scissor linkage beneath the trash compartment. The plate
+        rises vertically, compresses waste against the locked lid, holds for
+        approximately ten seconds, and retracts automatically.
       </p>
 
       <p>
         The actuator’s fixed hole pattern and limited mounting locations
         constrained its position. I designed custom mounts around those
         interfaces to connect the actuator to the linkage and transfer load
-        within the available space.
-      </p>
-
-      <p>
-        I used the assembly CAD to integrate the mounts, actuator, linkage, and
-        surrounding structure before fabrication.
+        within the available space. I used assembly CAD to integrate these
+        interfaces with the surrounding structure before fabrication.
       </p>
 
       <ProjectFigure
@@ -87,9 +69,11 @@ export default function TrashCompactorContent() {
       <h2>Analysis &amp; validation</h2>
 
       <p>
-        We used free-body diagrams to evaluate force transmission through the
-        scissor linkage and compare the required load with the actuator’s
-        capacity.
+        We used free-body diagrams and linkage geometry to evaluate force
+        transmission at the minimum link angle of 8.2°. For a 44 lbf actuator,
+        the initial model predicted 6.4–12.8 lbf of supported vertical load
+        under two support-reaction assumptions, including the linkage, plate,
+        and waste weight.
       </p>
 
       <ProjectFigure
@@ -99,19 +83,15 @@ export default function TrashCompactorContent() {
         height={1024}
         crop={{ x: 125, y: 230, width: 1385, height: 540 }}
         alt="Scissor-linkage support and free-body diagrams with actuator forces, support reactions, and plate loading"
-        caption="Scissor-linkage free-body diagrams relate geometry to actuator force"
+        caption="Support reactions and scissor angle determine the vertical load available from the actuator"
       />
 
       <p>
-        The calculations indicated that the actuator would limit performance
-        before the aluminum linkage reached its structural capacity. Because
-        force transmission depends on linkage geometry and load distribution,
-        the analysis guided how we interpreted the prototype’s behavior.
-      </p>
-
-      <p>
-        Testing supported this finding: the linkage remained intact while the
-        actuator stalled under heavier loading.
+        An axial-stress calculation checked the aluminum links at 6.4 and 60 lbf
+        load cases against an assumed 40 ksi yield strength for 6061 aluminum.
+        Predicted stresses of approximately 35 and 323 psi suggested actuator
+        capacity would limit the system before bar yielding under those modeled
+        loads.
       </p>
 
       <h2>Fabrication &amp; iteration</h2>
@@ -125,10 +105,11 @@ export default function TrashCompactorContent() {
       </p>
 
       <p>
-        The prototype completed the automated cycle, but heavier loads exceeded
-        the actuator’s capacity. A higher-capacity actuator is the next design
-        change to evaluate, followed by a new assessment of linkage, mount, and
-        lid loads.
+        The prototype completed the automated cycle, but the actuator stalled
+        under heavier loads while the linkage remained intact. We suspected
+        insufficient actuator capacity, consistent with the force model. A
+        higher-capacity actuator was proposed, with linkage, mount, and lid
+        loads to be reassessed before that change.
       </p>
 
       <h2>Manufacturing &amp; cost</h2>
@@ -145,9 +126,9 @@ export default function TrashCompactorContent() {
 
       <p>
         We demonstrated automated compaction within a standalone trash-bin
-        enclosure. Testing identified actuator capacity as the performance limit
-        before observed linkage failure, giving the next iteration a specific
-        component and load case to address.
+        enclosure and received the Best Overall Project Award at CMU’s December
+        2024 design expo. Heavier-load stalls remained unresolved, and a
+        higher-capacity actuator was not validated in this prototype.
       </p>
     </>
   );

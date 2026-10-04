@@ -10,3 +10,10 @@ Record the evidence used and the pruning decisions for each individually committ
 - Supplemental PDF reviewed visually and as text: consistent layout, labeled concepts, release sequences, assembly instructions, and a scoped BOM provide useful depth independently. Retained the download, with the initial material-analysis limitation explained in the page. Retained the STEP assembly.
 - Final pruning: consolidated overview/design/concept paragraphs and kept results explicitly analytical. No physical test, drop, temperature, or endurance validation is claimed.
 - Visual review caught reversed state names in the pre-existing cross-section filenames. Matched the views to PDF page 8 and corrected the order, crops, and descriptions without renaming source assets.
+
+## Trash compactor
+
+- Sources: existing page and original `compactor_force.jpg` and `compactor_fos.jpg` calculations, assembly CAD, prototype photographs, and previously source-checked FBD redraw. CMU documentation remains pending upload.
+- Analysis coverage: minimum-angle geometry (8.2°), support-reaction/FBD force transmission with the 44 lbf actuator, 6.4–12.8 lbf supported-load estimates, and axial-stress checks at 6.4 and 60 lbf against an assumed 40 ksi yield strength. The 60 lbf case is described only as an analyzed load case; the source's ambiguous “ideal measured” note is not presented as a verified test measurement.
+- Presentation: four numbered figures in three primary groups, no table. Retained enclosure/linkage evidence, CAD interfaces, and the force diagram. No compaction or stall clip is present in the available assets, so no GIF is fabricated.
+- Final pruning: consolidated design/overview paragraphs, distinguished individual CAD/mount ownership from team fabrication, qualified insufficient actuator capacity as suspected, and kept the proposed actuator change separate from the demonstrated cycle and award.
