@@ -194,8 +194,9 @@ button {
     )
   );
 }
-.project-name {
-  font-size: var(--text-body);
+.project-name,
+.experience-row h3 {
+  font-size: var(--text-small);
   font-weight: var(--weight-heading);
   line-height: var(--leading-ui);
 }
@@ -324,10 +325,6 @@ button {
 }
 .experience-logo--research img {
   transform: scale(var(--logo-scale-research));
-}
-.experience-row h3 {
-  font-size: var(--text-small);
-  line-height: var(--leading-ui);
 }
 .experience-role {
   font-size: var(--text-small);
