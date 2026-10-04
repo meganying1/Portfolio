@@ -6,16 +6,12 @@ export default function TrashCompactorContent() {
       <h2>Overview</h2>
 
       <p>
-        In a team of five, we built a standalone trash compactor with a linear
-        actuator and scissor linkage that raise a compression plate against the
-        lid. I developed the SolidWorks assembly and designed custom actuator
-        mounts to connect the actuator to the linkage within the enclosure.
-      </p>
-
-      <p>
-        The working prototype completed an automated compaction cycle and
-        received the Best Overall Project Award at Carnegie Mellon’s Mechanical
-        Engineering Design Expo in December 2024.
+        Our team built a standalone trash compactor to compress household waste
+        in a powered cycle. I developed the SolidWorks assembly and custom
+        mounts connecting the linear actuator to the scissor linkage. The
+        prototype completed an automated compaction cycle and received the Best
+        Overall Project Award at Carnegie Mellon’s Mechanical Engineering Design
+        Expo.
       </p>
 
       <ProjectFigurePair
@@ -26,7 +22,7 @@ export default function TrashCompactorContent() {
             width: 258,
             height: 380,
             alt: "Completed wooden trash compactor with lid and viewing window",
-            caption: "Fabricated enclosure houses the powered compactor",
+            caption: "Completed compactor prototype",
           },
           {
             number: 2,
@@ -34,8 +30,7 @@ export default function TrashCompactorContent() {
             width: 1448,
             height: 1848,
             alt: "Machined scissor links, compression plate, linear actuator, and black actuator mounts",
-            caption:
-              "Machined links and printed mounts connect the actuator to the compression plate",
+            caption: "Machined linkage with printed actuator mounts",
             crop: { x: 110, y: 300, width: 1220, height: 1400 },
           },
         ]}
@@ -44,34 +39,25 @@ export default function TrashCompactorContent() {
       <h2>Design</h2>
 
       <p>
-        Benchmarking highlighted a gap between permanently installed compactors
-        and alternatives that require manual force. We focused on a standalone
-        device with powered compression, a compact footprint, and
-        straightforward operation.
+        Benchmarking showed a gap between permanently installed compactors and
+        alternatives that require manual force. We compared concepts using
+        weighted criteria and focused on a standalone device with powered
+        compression, a compact footprint, and straightforward operation.
       </p>
 
       <p>
-        We compared concepts using weighted criteria and selected an
-        actuator-driven scissor linkage that could fit beneath the trash
-        compartment. Its geometry allowed the compression plate to move
-        vertically within the bin.
-      </p>
-
-      <p>
-        The plate rises through the bin, compresses waste against the locked
-        lid, holds for approximately ten seconds, and retracts automatically.
+        We selected a scissor linkage to convert a short horizontal actuator
+        stroke into the larger vertical plate travel needed for compaction while
+        keeping the actuator beneath the trash compartment. During a cycle, the
+        plate rises against the locked lid, holds for approximately ten seconds,
+        and retracts.
       </p>
 
       <p>
         The actuator’s fixed hole pattern and limited mounting locations
-        constrained its position. I designed custom mounts around those
-        interfaces to connect the actuator to the linkage and transfer load
-        within the available space.
-      </p>
-
-      <p>
-        I used the assembly CAD to integrate the mounts, actuator, linkage, and
-        surrounding structure before fabrication.
+        constrained the interface. I designed mounts around those holes and
+        positioned the actuator in the assembly CAD to transfer force into the
+        linkage within the available space.
       </p>
 
       <ProjectFigure
@@ -80,16 +66,20 @@ export default function TrashCompactorContent() {
         width={439}
         height={512}
         alt="Scissor linkage assembly with the actuator positioned between two custom mounts"
-        caption="SolidWorks assembly packages the actuator and custom mounts within the scissor linkage"
+        caption="CAD assembly of the linkage and actuator mounts"
         compact
       />
 
       <h2>Analysis &amp; validation</h2>
 
       <p>
-        We used free-body diagrams to evaluate force transmission through the
-        scissor linkage and compare the required load with the actuator’s
-        capacity.
+        We used free-body diagrams to trace actuator force through the scissor
+        linkage and compare the load on the plate with the actuator’s capacity
+        and the strength of the aluminum links. We compared two support cases to
+        estimate how load sharing affected capacity: a worst case with the
+        roller carrying the full load, and a best case with equal load sharing
+        between the pin and roller. These assumptions gave a predicted
+        supported-load range of 6.4–12.8 lb before actuator stall.
       </p>
 
       <ProjectFigure
@@ -99,55 +89,39 @@ export default function TrashCompactorContent() {
         height={1024}
         crop={{ x: 125, y: 230, width: 1385, height: 540 }}
         alt="Scissor-linkage support and free-body diagrams with actuator forces, support reactions, and plate loading"
-        caption="Scissor-linkage free-body diagrams relate geometry to actuator force"
+        caption="Actuator force and support reactions in the scissor linkage"
       />
-
-      <p>
-        The calculations indicated that the actuator would limit performance
-        before the aluminum linkage reached its structural capacity. Because
-        force transmission depends on linkage geometry and load distribution,
-        the analysis guided how we interpreted the prototype’s behavior.
-      </p>
-
-      <p>
-        Testing supported this finding: the linkage remained intact while the
-        actuator stalled under heavier loading.
-      </p>
 
       <h2>Fabrication &amp; iteration</h2>
 
       <p>
-        We shared milling, turning, 3D printing, assembly, and testing. The
-        linkage used manually machined aluminum bars and rods, while the custom
-        actuator mounts were 3D printed. We integrated the mechanism with the
-        enclosure, electronics, compression plate, hinges, and lid-locking
-        hardware.
+        We machined aluminum bars and rods with a manual mill and lathe, then
+        milled L-brackets to connect the links to the compression plate. I
+        designed the actuator interfaces in SolidWorks, and we 3D printed them
+        in PLA. We cut and assembled the wooden enclosure, securing the panels,
+        hinges, and locking hardware with screws. I also used my knowledge of
+        manufacturing processes to help refine part geometry for the production
+        proposal.
       </p>
 
       <p>
-        The prototype completed the automated cycle, but heavier loads exceeded
-        the actuator’s capacity. A higher-capacity actuator is the next design
-        change to evaluate, followed by a new assessment of linkage, mount, and
-        lid loads.
-      </p>
-
-      <h2>Manufacturing &amp; cost</h2>
-
-      <p>
-        The prototype used manual machining, 3D printing, and a wooden enclosure
-        for rapid fabrication. I contributed to the production proposal by
-        selecting component manufacturing processes and refining geometry for
-        the proposed methods and assembly sequence. These proposals would
-        require supplier review before production.
+        We integrated the mechanism with the electronics and tested the full
+        compaction cycle. Under heavier loads, the actuator stalled while the
+        linkage remained intact, identifying actuator capacity as the limit on
+        compression and leading us to recommend a stronger actuator.
       </p>
 
       <h2>Results</h2>
 
       <p>
-        We demonstrated automated compaction within a standalone trash-bin
-        enclosure. Testing identified actuator capacity as the performance limit
-        before observed linkage failure, giving the next iteration a specific
-        component and load case to address.
+        We built a standalone compactor that completed an automated cycle,
+        raising the compression plate against a locked lid, holding, and
+        retracting.
+      </p>
+
+      <p>
+        The project received the Best Overall Project Award at Carnegie Mellon’s
+        Mechanical Engineering Design Expo in December 2024.
       </p>
     </>
   );

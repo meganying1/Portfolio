@@ -9,17 +9,10 @@ export default function BatteryDoorContent() {
 
       <p>
         I designed a push-button battery door for an Apple mechanical design
-        interview challenge. A spring-loaded sliding latch converts a downward
-        button press into horizontal release motion, allowing the door to open
-        and automatically re-latch when closed.
-      </p>
-
-      <p>
-        I developed the assembly in Siemens NX and used hand calculations,
-        tolerance analysis, and FEA to evaluate button travel, closing force,
-        latch engagement, and component loading. I also planned the assembly
-        sequence and selected materials and processes for a proposed production
-        volume above 100,000 units per year.
+        interview challenge. I developed the latch mechanism in Siemens NX and
+        used hand calculations, FEA, and tolerance analysis to check force,
+        motion, and engagement. The final CAD design combines push-button
+        release with automatic re-latching.
       </p>
 
       <ProjectFigure
@@ -28,33 +21,27 @@ export default function BatteryDoorContent() {
         alt="Exploded release mechanism and battery door with labeled button, latch, springs, chassis, and hinge components"
         width={1285}
         height={838}
-        caption="Exploded Siemens NX view communicates the battery-door assembly layout"
+        caption="Exploded view of the battery door and release mechanism"
       />
 
       <h2>Design</h2>
 
       <p>
-        The mechanism combines a vertically guided button, a horizontal latch,
-        return springs, and two chassis parts that locate and retain the moving
-        components.
+        I designed the top chassis to snap onto the bottom chassis, retaining
+        the moving parts without adding fasteners to the release subassembly.
       </p>
 
       <p>
-        Button pegs engage angled slots in the latch. Pressing the button
-        retracts the latch until it clears the door hook, allowing spring-loaded
-        hinges to lift the door.
+        The chassis guides the button vertically and the latch horizontally. As
+        the button moves down, its pegs press against the angled walls of the
+        latch slots. The horizontal component of this contact force pushes the
+        latch away from the door until it clears the hook.
       </p>
 
       <p>
-        When the button is released, the springs return the button and latch.
-        During closing, a ramp on the door hook pushes the latch aside, and the
-        latch then springs back into engagement. A flat locking surface resists
-        release from an upward pull on the door.
-      </p>
-
-      <p>
-        I designed the top chassis to snap onto the bottom chassis, capturing
-        the internal parts while guiding button and latch motion.
+        Return springs reset the button and latch after release. During closing,
+        the door hook’s ramp pushes the latch aside until it springs back
+        beneath a flat locking surface that resists upward opening force.
       </p>
 
       <ProjectFigurePair
@@ -62,22 +49,20 @@ export default function BatteryDoorContent() {
           {
             number: 2,
             src: "/assets/photos/projects/battery_latch_closed.png",
-            alt: "Closed-door cross section with the latch engaged beneath the yellow door hook",
+            alt: "Cross section with the button depressed and the latch clear of the yellow door hook",
             width: 1480,
             height: 542,
             crop: { x: 130, y: 10, width: 440, height: 510 },
-            caption:
-              "Closed latch engages the door hook’s flat locking surface",
+            caption: "Button pressed and latch retracted",
           },
           {
             number: 3,
             src: "/assets/photos/projects/battery_latch_released.png",
-            alt: "Pressed-button cross section with the latch retracted and the yellow door lifted",
+            alt: "Cross section with the door closed and the latch engaged beneath the yellow door hook",
             width: 1660,
             height: 626,
             crop: { x: 75, y: 36, width: 540, height: 546 },
-            caption:
-              "Angled slots convert downward button travel into horizontal latch release",
+            caption: "Door closed and latch engaged",
           },
         ]}
       />
@@ -85,21 +70,15 @@ export default function BatteryDoorContent() {
       <h2>Concept development</h2>
 
       <p>
-        I defined requirements for button force and travel, closing force,
-        package size, and repeated use. The key interaction targets were a 2–5 N
-        button force, 1–3 mm travel, and a closing force below 8 N.
-      </p>
-
-      <p>
-        I explored four release architectures and compared their complete
-        release and reset sequences. The tradeoffs included tolerance
-        sensitivity, jamming, accidental actuation, component complexity, and
-        whether the button could remain within the door perimeter.
+        I compared four architectures against button force and travel,
+        door-closing force, package size, and repeated use. I evaluated each
+        through release and reset, checking for jamming, accidental actuation,
+        and tolerance-sensitive interfaces.
       </p>
 
       <ProjectConcepts
         number={4}
-        caption="Concept sketches explore alternative release mechanisms for concept selection"
+        caption="Four concepts compared for release, reset, and packaging"
         concepts={[
           {
             name: "Moving snap fit",
@@ -133,17 +112,11 @@ export default function BatteryDoorContent() {
       />
 
       <p>
-        I developed sliding and rotating implementations of a moving snap fit.
-        The sliding version uses angled slots to convert button travel into
-        latch translation. The rotating version pivots the latch out of
-        engagement.
-      </p>
-
-      <p>
-        I selected the sliding version using a weighted decision matrix. It
-        scored higher for effectiveness and user experience, which carried more
-        weight than the rotating version’s advantages in compactness and
-        estimated cost.
+        I selected the moving snap fit for its simple components and lower
+        tolerance sensitivity compared with the groove-based release concepts. I
+        developed sliding and rotating versions. Angled slots drive the sliding
+        latch horizontally, while the rotating version pivots the latch clear of
+        the door.
       </p>
 
       <div className="table-scroll case-table">
@@ -221,13 +194,18 @@ export default function BatteryDoorContent() {
         </table>
       </div>
 
+      <p>
+        The sliding version scored 81 versus 79 in the weighted comparison. I
+        selected it because effectiveness and ease of use carried more weight
+        than the rotating version’s smaller package and lower estimated cost.
+      </p>
+
       <h2>Analysis &amp; validation</h2>
 
       <p>
-        I worked backward from the latch travel needed to clear the door hook to
-        size the angled slots, button stroke, and return springs. The
-        calculations predicted 1.39 mm of button travel, within the 1–3 mm
-        target.
+        I worked backward from the latch clearance needed to release the door to
+        size the slots, button stroke, and return springs. The calculated stroke
+        was 1.39 mm, within the 1–3 mm target.
       </p>
 
       <ProjectFigure
@@ -237,22 +215,22 @@ export default function BatteryDoorContent() {
         height={2500}
         crop={{ x: 60, y: 1125, width: 1065, height: 540 }}
         alt="Button free-body diagrams with press force, slot reactions, weight, and spring forces"
-        caption="Button free-body diagrams relate press force, slot reactions, and return-spring loading"
+        caption="Button loads used to size the stroke and return springs"
       />
 
       <p>
-        I evaluated peg bending and snap-fit stress, strain, and deflection
-        under the modeled loads. The door calculation predicted a 6.1 N closing
-        force, below the 8 N target. These calculations screened the geometry
-        for the assumed service life.
+        I checked peg bending and door-hook stress, strain, and deflection
+        against ABS material limits for an assumed service life below 1,000
+        cycles. The calculated hook strain was below the 7% allowable strain,
+        and stress was below the 35 MPa fatigue limit used in the analysis. The
+        predicted closing force was 6.1 N, below the 8 N target.
       </p>
 
       <p>
-        I traced the dimensional chain from the latch tip to the door hook and
-        calculated an RSS tolerance stack-up. The predicted overlap was 0.79 mm
-        nominal, with an RSS range of 0.51–1.09 mm. This estimate supports
-        engagement under the modeled variation, but does not establish a
-        worst-case tolerance bound.
+        I traced the dimensional chain between the latch and door hook. The
+        root-sum-square (RSS) stack-up gave 0.79 mm nominal overlap and a
+        0.51–1.09 mm range. According to the RSS analysis, the latch always
+        maintains positive overlap with the door hook within this range.
       </p>
 
       <ProjectFigure
@@ -262,13 +240,15 @@ export default function BatteryDoorContent() {
         width={1080}
         height={830}
         crop={{ x: 60, y: 55, width: 960, height: 445 }}
-        caption="Cross sections trace the latch-to-hook dimensional chain for tolerance analysis"
+        caption="Dimensional chain used to calculate latch-to-hook overlap"
       />
 
       <p>
-        I used FEA to examine peg-to-latch contact during release and door-hook
-        deflection during closing. The simulations provided stress and
-        deformation estimates for comparison with the hand calculations.
+        I used FEA of the button pegs driving the latch to determine the force
+        needed to press the button, with a target of 2–5 N. A separate FEA model
+        evaluated door-hook stress and deformation during latching. The models
+        showed that button press force and door-hook stress and deformation were
+        within the design targets.
       </p>
 
       <ProjectFigurePair
@@ -278,9 +258,8 @@ export default function BatteryDoorContent() {
             src: "/assets/photos/projects/battery_fea_latch.gif",
             width: 854,
             height: 854,
-            alt: "Animated finite element contact simulation of the button peg moving the latch",
-            caption:
-              "Contact FEA animation shows peg-to-latch motion during release",
+            alt: "Animated FEA showing latch movement as the button pegs move downward",
+            caption: "FEA of latch movement as button pegs move downward",
           },
           {
             number: 8,
@@ -288,8 +267,7 @@ export default function BatteryDoorContent() {
             width: 386,
             height: 386,
             alt: "Animated door-hook stress distribution during latch engagement",
-            caption:
-              "Door-hook FEA animation shows the stress distribution during closing",
+            caption: "FEA of door-hook stress as the door latches closed",
           },
         ]}
       />
@@ -297,31 +275,35 @@ export default function BatteryDoorContent() {
       <h2>Manufacturing &amp; cost</h2>
 
       <p>
-        I selected proposed materials and processes based on component geometry,
-        compliance, production volume, and user-contact surfaces.
+        For a proposed volume above 100,000 units per year, I specified
+        injection-molded ABS for the chassis, latch, and structural door. ABS
+        supports molded guides and the snap-fit deflection needed for assembly
+        and re-latching. I chose aluminum for the exposed button and door cover
+        for rigid, durable surfaces and a clean metallic appearance.
       </p>
 
       <p>
-        The chassis, latch, and structural door use injection-molded ABS. The
-        button and door cover use aluminum. Springs, screws, and spring-loaded
-        hinges are purchased hardware. The assembly sequence uses chassis snap
-        fits to retain the release mechanism.
-      </p>
-
-      <p>
-        The estimated BOM cost was $3.30 per assembly. This is a preliminary
-        component-cost estimate rather than a validated manufacturing quotation
-        or complete production cost.
+        I used purchased springs, screws, and spring-loaded hinges and defined
+        an assembly sequence around the snap-fit chassis. The preliminary BOM
+        estimate was $3.30 per assembly. Tooling and assembly costs were not
+        validated.
       </p>
 
       <h2>Results</h2>
 
       <p>
-        I completed the CAD assembly, release sequence, analysis, and
-        manufacturing proposal for the sliding-latch design. Calculations
-        predicted button travel and door-closing force within the selected
-        targets, while the RSS stack-up predicted positive latch overlap. The
-        design remains an analytical concept.
+        I completed the Siemens NX assembly, assembly sequence, and
+        manufacturing proposal for a battery door with push-button release and
+        automatic re-latching. The snap-fit chassis retains the moving parts
+        without additional fasteners in the release mechanism.
+      </p>
+
+      <p>
+        Hand calculations predicted a 1.39 mm button stroke within the 1–3 mm
+        target and a 6.1 N closing force below the 8 N limit. The RSS stack-up
+        gave 0.79 mm nominal latch overlap and a positive 0.51–1.09 mm range.
+        FEA confirmed button force within the 2–5 N target and door-hook stress
+        and deformation within the design limits.
       </p>
 
       <div className="deck">
