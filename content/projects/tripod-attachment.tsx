@@ -76,7 +76,9 @@ export default function TripodAttachmentContent() {
       <p>
         I estimated a 2.97 N load on each wing from the servo torque and
         geometry. A simplified bending calculation predicted a maximum stress of
-        2.45 MPa and a factor of safety of 21.4.
+        2.45 MPa and a factor of safety of 21.4 under the report’s assumed TPU
+        strength. A shear check predicted approximately 0.025 MPa, so bending
+        governed the simplified analysis.
       </p>
 
       <ProjectFigure
@@ -84,8 +86,8 @@ export default function TripodAttachmentContent() {
         src="/assets/photos/projects/tripod_calc.png"
         width={436}
         height={330}
-        alt="Phone and wing load diagram with phone weight and wing bending dimensions"
-        caption="Wing free-body diagram relates phone weight and geometry to bending loads"
+        alt="Assumed phone and wing geometry with the lever arm between the servo axis and phone contact"
+        caption="Phone and wing geometry set the lever arm used to estimate servo loading"
         compact
       />
 
@@ -119,9 +121,9 @@ export default function TripodAttachmentContent() {
       <p>
         The glued wing-to-servo-horn connection was not robust, and the
         foam-lined slot prevented the phone from seating fully. We proposed
-        widening the slot and replacing the adhesive joint with a mechanically
-        retained interface. These changes and reduced adjustment effort remained
-        to be tested.
+        widening the slot and redesigning the wing-to-servo fit to replace the
+        glued horn connection. These changes and reduced adjustment effort
+        remained to be tested.
       </p>
 
       <h2>Manufacturing &amp; cost</h2>

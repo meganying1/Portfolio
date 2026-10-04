@@ -21,11 +21,12 @@ Record the evidence used and the pruning decisions for each individually committ
 
 ## Tripod attachment
 
-- Sources: existing page, original phone/wing loading sketch, source CAD assembly/interface and fixed-base stress plot, and prototype photographs. CMU documentation remains pending upload.
-- Analysis coverage: servo-torque/geometry loading (2.97 N per wing), simplified bending (2.45 MPa, FoS 21.4), and fixed-base stress/deformation FEA (10.2 MPa, FoS 5.1). The original FEA tree visibly identifies natural rubber, so the page qualifies this model rather than presenting it as validation of printed TPU. No deflection magnitude is inferred from the retained unlabelled displacement crop.
+- Sources: existing page, original phone/wing geometry sketch, source CAD assembly/interface and fixed-base stress plot, prototype photographs, and the extracted `Fall 2022/Design I/Project 2/Project Report.pdf` and earlier `0th report submission.pdf`. Reviewed the final report's analysis, iteration, manufacturing, quotation, and author-role sections.
+- Analysis coverage: servo-torque/geometry loading (2.97 N per wing), simplified bending (2.45 MPa, FoS 21.4), the previously omitted shear check (approximately 0.025 MPa), and fixed-base stress/deformation FEA (10.2 MPa, FoS 5.1). The hand calculation uses an assumed TPU strength of 52.4 MPa. The original FEA tree visibly identifies natural rubber, so the page qualifies this model rather than presenting it as validation of printed TPU. No deflection magnitude is inferred from the retained unlabelled displacement crop.
 - Presentation: five figures in four primary groups, no table. Kept the distinct hardware, rotating interface, hand-analysis, and FEA evidence. Omitted the proposed GD&T sketch: missing datum definitions and inappropriate datum references on form controls make it unsuitable as a finished manufacturing drawing. Original file is preserved.
 - Final pruning: removed repeated sensor/wing/interface explanations, retained the documented attachment and seating failures, and labeled wider clearance and mechanical retention as proposed changes. The $58.18 estimate retains its 50-unit quotation context and production-cost limitations. No user-effort or retention measurement is claimed.
 - Corrected the shared page description/index summary to describe the prototype and intended functions without asserting a measured reduction in user effort.
+- Archive review: corrected the geometry figure's former phone-weight/FBD description to its actual lever-arm content. Generalized the proposed servo joint to the report's wing-to-servo fit redesign rather than specifying an undocumented retention method. The report credits Megan with hand stress analysis and early ideation, while CAD and FEA remain team work in the narrative. Retained only the existing focused figures; material inconsistencies and incomplete GD&T make the full report unsuitable as a supplemental download.
 
 ## Linkage system
 
