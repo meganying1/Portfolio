@@ -7,29 +7,30 @@ export default function ChineseCheckersContent() {
 
       <p>
         I built a Chinese Checkers application in Python and Tkinter with local
-        multiplayer and computer-controlled opponents. I implemented the game
+        multiplayer and a computer-controlled opponent. I implemented the game
         engine, interface, legal move generation, turn management, and win
-        detection. The completed game integrated Minimax-based opponents and
+        detection. The completed game integrated a Minimax-based opponent and
         hints alongside human play.
       </p>
 
       <ProjectFigure
         number={1}
-        src="/assets/photos/projects/checker_highlight.png"
-        width={302}
-        height={370}
-        alt="Chinese Checkers board with a selected red piece and outlined legal destinations"
-        caption="Python and Tkinter interface highlights legal destinations for a selected piece"
+        src="/assets/photos/projects/checkers_gameplay.gif"
+        width={320}
+        height={422}
+        alt="Recorded Chinese Checkers gameplay with a hint button, highlighted moves, and animated red and yellow pieces"
+        caption="Recorded gameplay highlights moves and animates pieces between board positions"
         compact
       />
 
       <h2>Software design</h2>
 
       <p>
-        I used an object-oriented structure to separate game state, interface
-        behavior, and gameplay logic. The board’s offset rows required
-        conversions between game coordinates and screen locations for rendering,
-        mouse selection, and move validation.
+        Piece objects store positions and animation state, while a board grid
+        represents occupancy. Event callbacks handle input and animation, and
+        separate functions validate moves, advance turns, and detect wins. The
+        board’s offset rows required conversions between game coordinates and
+        screen locations for rendering, mouse selection, and move validation.
       </p>
 
       <p>
@@ -41,25 +42,26 @@ export default function ChineseCheckersContent() {
       <h2>AI &amp; algorithms</h2>
 
       <p>
-        I implemented legal move generation for both adjacent moves and chained
-        jumps.
+        Human turns allow adjacent moves and successive jumps. A jump-state flag
+        blocks ordinary steps after a jump and keeps follow-up jumps within the
+        same turn.
       </p>
 
       <p>
-        Minimax evaluates future game states and opponent responses to choose
-        computer moves, assuming the opponent chooses its best response. The
-        hint system reuses the same search framework to suggest moves to human
-        players.
+        I compared candidate moves and opponent responses with a depth-three
+        Minimax search using a simple row-progress score. The same search
+        supplies hints in single-player mode. AI search considers individual
+        steps and jumps rather than complete multi-jump turns.
       </p>
 
       <h2>Results</h2>
 
       <p>
         The completed application integrates human and computer-controlled
-        gameplay in one interface, including legal-move highlighting, chained
-        jumps, turn management, and win detection. Reusing the search framework
-        for both opponents and hints kept the AI behavior within the same game
-        engine.
+        gameplay in one interface, including legal-move highlighting, human jump
+        sequences, turn management, and win detection. Reusing the search
+        framework for the opponent and hints kept the AI behavior within the
+        same game engine.
       </p>
     </>
   );

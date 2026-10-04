@@ -46,6 +46,12 @@ The GIF uses 25.0–32.1 seconds of the original recording at its original speed
 
 Also reviewed the user-uploaded `D7DB4CA4-FF3C-406B-969E-D1E7F80C4D46.mov` and `A3BF2BF5-47CC-40D8-84F6-00DEE6714DDD.mov`. The first offers little distinct motion in a shaky view; the second repeats the return motion from a less clear angle. Both remain unmodified in the attachments and are omitted from the page.
 
+### Chinese Checkers motion update
+
+`checkers_gameplay.gif` replaces the legal-move still on the project page while the homepage keeps its existing screenshot. Source: `CMU/Fall 2021/Fundamentals of Programming and CS/Term Project/TP Demo.mp4` from the extracted reference archive, SHA-256 `45b08e4b47a7d05244d64f42418e42915889211022e1ea36f26487b796b78f2d`. The original recording remains outside the repository in `/tmp/clean_archive`.
+
+The GIF uses 213.0–220.5 seconds at the original speed. A 796 × 1050 crop at x = 0, y = 27 in the 1920 × 1080 source retains the whole game canvas and its controls while omitting the editor. The excerpt is reduced to 320 × 422 pixels at 10 fps with a 96-color palette and loops for 7.5 seconds. It preserves the recorded highlighting, animation, and turn changes. No frames are generated, reversed, or retimed. The larger `112_video.mp4` was checked with metadata and one preview; it was not processed further because the smaller demonstration was sufficient.
+
 ### Original selections
 
 - Trash compactor: retain the enclosure, mechanism photograph, and assembly CAD; crop the mechanism photograph around the linkage, plate, actuator, and custom mounts. Use `compactor_fbd_clean.png`, a white-background digital-pen redraw of the support and crossed-link FBDs, omitting the paper grid, case labels, calculations, and detached notes. The mechanism photo uses a taller viewport so its width is closer to the enclosure photo at the shared height.
