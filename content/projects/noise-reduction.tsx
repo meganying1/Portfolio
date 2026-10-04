@@ -9,7 +9,9 @@ export default function NoiseReductionContent() {
         In a team of four, we implemented a Least Mean Squares (LMS) adaptive
         filter in MATLAB and evaluated it on recordings from Carnegie Mellon’s
         campus. The goal was to reduce background noise while keeping important
-        environmental sounds distinguishable.
+        environmental sounds distinguishable. The project reported up to 95%
+        lower waveform amplitude across its evaluation, but this alone did not
+        establish selective noise removal.
       </p>
 
       <ProjectFigure
@@ -18,7 +20,7 @@ export default function NoiseReductionContent() {
         width={780}
         height={700}
         alt="Original and processed audio waveforms with time axes and separate amplitude scales"
-        caption="MATLAB plots compare the original and processed recording using different amplitude scales"
+        caption="Different amplitude scales must be considered when comparing original and processed audio"
         crop={{ x: 25, y: 125, width: 715, height: 565 }}
       />
 
@@ -36,35 +38,29 @@ export default function NoiseReductionContent() {
         can adapt its response over time.
       </p>
 
-      <ProjectFigure
-        number={2}
-        src="/assets/photos/projects/noise_lms.png"
-        width={630}
-        height={742}
-        alt="Desired and LMS output curves converging over iterations"
-        caption="LMS filter output converges toward the desired signal over successive iterations"
-        compact
-      />
-
-      <h2>MATLAB implementation</h2>
-
-      <p>
-        We converted the recordings to single-channel signals, generated a
-        representative noise signal, and applied the LMS filter to produce
-        processed audio.
-      </p>
-
       <p>
         We varied filter length and step size to explore convergence speed,
         stability, and filtering performance. Plots and audio playback supported
         comparison of the original and processed recordings.
       </p>
 
-      <h2>Testing</h2>
+      <ProjectFigure
+        number={2}
+        src="/assets/photos/projects/noise_lms.png"
+        width={630}
+        height={742}
+        alt="Illustrative LMS desired-signal and array-output curves approaching one another over iterations"
+        caption="LMS example illustrates output approaching the desired signal over iterations"
+        compact
+      />
+
+      <h2>Implementation &amp; testing</h2>
 
       <p>
-        We evaluated recordings from the gym, buses, lawn, and study areas to
-        examine performance across different background sounds.
+        We converted the recordings to single-channel signals, generated a
+        representative noise signal, and applied the LMS filter to produce
+        processed audio. Gym, bus, lawn, and study-area recordings tested the
+        approach across different background sounds.
       </p>
 
       <ProjectFigure
@@ -73,15 +69,15 @@ export default function NoiseReductionContent() {
         width={936}
         height={708}
         alt="Waveform examples from four campus recordings used to evaluate filtering across different environments"
-        caption="MATLAB waveform comparisons evaluate filtering across varied campus recordings"
+        caption="Four recording pairs show varied amplitude changes with different scales on the original and processed axes"
         wide
       />
 
       <p>
         We compared waveform amplitudes and listened to the processed recordings
-        to assess whether important sounds remained distinguishable. These
-        checks provided an initial evaluation rather than a controlled measure
-        of selective noise removal.
+        to assess whether important sounds remained distinguishable. These were
+        visual and listening checks rather than a controlled measure of
+        selective noise removal.
       </p>
 
       <h2>Results</h2>

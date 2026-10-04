@@ -55,3 +55,10 @@ Record the evidence used and the pruning decisions for each individually committ
 - Presentation: one actual course figure, no table. No suitable additional sensor diagram or motion clip is currently available. Avoided making media to meet a visual count.
 - Final pruning: consolidated the overview, grouped sensors by their roles, and moved calibration/tuning to Testing & iteration. Kept the 26-second result within the tested-course context. The summary explicitly describes obstacle stops rather than implying an unshown obstacle-routing algorithm.
 - The user confirmed that all Mobile Robot work was team work. Responsibilities remain shared throughout the page.
+
+## Noise reduction
+
+- Sources: existing page and retained original/processed waveform, LMS-example, and four-recording comparison images. CMU documentation remains pending upload.
+- Analysis/testing coverage: limitations of fixed inverted-waveform cancellation, LMS coefficient/error adaptation, filter-length and step-size exploration for convergence/stability/performance, single-channel preprocessing and representative noise generation, four campus environments, and visual/listening evaluation.
+- Presentation: three figures, no table. Captions explicitly preserve the different amplitude scales. The desired/array-output plot is framed as an LMS example without claiming it is measured convergence of a specific campus recording or deriving a convergence rate.
+- Final pruning: moved parameter work into Algorithm development and combined implementation/testing, preserving team attribution. Retained the baseline's reported “up to 95%” waveform-amplitude reduction, without assigning an unsupported amplitude metric or equating it with SNR improvement or selective cancellation.
