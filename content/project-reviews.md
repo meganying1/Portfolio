@@ -39,3 +39,11 @@ Record the evidence used and the pruning decisions for each individually committ
 - Analysis coverage: cable tension and pedal force, frame reactions/connection loads with the explicitly assumed 50 kg operator, primary/pedal pin sizing at FoS 4 and 2, pedal speed/gearing/drill motion and power, and static pedal stress/deformation FEA. The approximately 107 MPa peak and 1,034 MPa yield reference are converted directly from the source plot’s N/m² legend; no material is inferred from the yield value.
 - Presentation: four sequential figures, no table. Moved overall frame CAD to the overview and the actual lift/release sketch beside the design explanation. No drawings of the other concepts or motion clips are fabricated.
 - Final pruning: separated the documented three-concept selection from mechanism operation, retained individual analysis ownership, and made CAD/analytical status and the unvalidated drilling/impact/engagement behavior explicit. No physical-prototype plan is added to Results.
+
+## Truss structure
+
+- Sources: existing page, original full equilibrium/member-force calculations, source-checked FBD redraw, assembly CAD, and test-fixture prototype photo. CMU documentation remains pending upload. Preserved the baseline/user-corrected final result of 38 lb.
+- Analysis coverage: concept strength-to-weight estimates and member sizing, global equilibrium/support reactions (20 lb each), joint/member forces (approximately 28.3 lb compression in outer diagonals), assumed-material strength screening, and predicted failure location. No undocumented buckling model or stress result is added.
+- Presentation: three figures in two primary groups and one thickness/test-outcome table. The >50 lb result is explicitly a supported load without observed failure, not a failure measurement. No available photo unambiguously shows the final failure, so the prototype photo is not relabeled as failure evidence.
+- Final pruning: moved iteration measurements into the single table, distinguished the 42 lb prototype from the 38 lb final specimen, and preserved the laser-cutter change as a possible contributor rather than a proven cause. The 5% shortfall is derived from 38/40.
+- Aligned the page description with the baseline's target of failure near 40 lb rather than implying demonstrated survival at 40 lb.

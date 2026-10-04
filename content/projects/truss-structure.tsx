@@ -9,13 +9,9 @@ export default function TrussStructureContent() {
         In a team of three, we designed and laser-cut an acrylic truss targeting
         failure near a 40-pound center load. I developed candidate geometries
         and calculated member forces and predicted strength-to-weight
-        performance for my concepts.
-      </p>
-
-      <p>
-        We used destructive testing to adjust member thickness. The final truss
-        failed at the predicted member location but below the target load,
-        exposing a gap between the analytical model and fabricated structure.
+        performance for my concepts. Destructive testing guided thickness
+        revisions, and the final truss failed at the predicted member location
+        at 38 lb, 5% below the target.
       </p>
 
       <ProjectFigurePair
@@ -59,8 +55,9 @@ export default function TrussStructureContent() {
 
       <p>
         We used static equilibrium to calculate member forces under the 40-pound
-        center load. The outer diagonal members carried approximately 28.3 lb in
-        compression. We compared these loads with the assumed acrylic properties
+        center load, with calculated support reactions of 20 lb each. Joint
+        equilibrium gave approximately 28.3 lb compression in the outer
+        diagonals. We compared member loads with the assumed acrylic properties
         to size the members and predict the failure location.
       </p>
 
@@ -70,7 +67,7 @@ export default function TrussStructureContent() {
         width={1919}
         height={820}
         alt="Truss and joint free-body diagrams showing the center design load and member-force directions"
-        caption="Truss and joint free-body diagrams establish forces under the center load"
+        caption="Joint equilibrium identifies tension and compression under the center design load"
         wide
       />
 
@@ -82,20 +79,58 @@ export default function TrussStructureContent() {
       </p>
 
       <p>
-        The 1/16-inch prototype failed near 20 lb. Increasing thickness to 5/32
-        inch supported more than 50 lb without failure. Reducing it to 3/32 inch
-        produced a prototype failure near 42 lb. The final test specimen used
-        3/32-inch members but failed at 38 lb.
+        We increased thickness after the first specimen failed early, then
+        reduced it when the thicker truss exceeded the target without failure.
+        The 3/32-inch prototype approached the target, but the final specimen
+        failed at a lower load despite the same nominal thickness.
       </p>
+
+      <div className="table-scroll case-table">
+        <table className="data-table">
+          <caption>
+            <span className="fig__num">Table 1</span> Thickness iterations
+            against the 40 lb target failure load
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Specimen</th>
+              <th scope="col">Member thickness</th>
+              <th scope="col">Observed test outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Initial</th>
+              <td className="num">1/16 in</td>
+              <td>Failed near 20 lb</td>
+            </tr>
+            <tr>
+              <th scope="row">Thicker</th>
+              <td className="num">5/32 in</td>
+              <td>Supported &gt;50 lb without failure</td>
+            </tr>
+            <tr>
+              <th scope="row">Reduced</th>
+              <td className="num">3/32 in</td>
+              <td>Failed near 42 lb</td>
+            </tr>
+            <tr>
+              <th scope="row">Final</th>
+              <td className="num">3/32 in</td>
+              <td>Failed at 38 lb</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2>Results</h2>
 
       <p>
         The final truss failed at the predicted member location at 38 lb, below
-        the 40-pound target. The report identified a change in laser cutter as a
-        possible contributor to the difference from the 42-pound prototype
-        result. Measuring cut dimensions and testing additional specimens would
-        help separate fabrication variation from modeling error.
+        the 40-pound target. A change in laser cutter was identified as a
+        possible contributor to the difference from the 42-pound prototype.
+        Fabrication variation and modeling error were not isolated by these
+        tests.
       </p>
     </>
   );
