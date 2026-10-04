@@ -92,8 +92,16 @@ button {
 }
 .portfolio-section {
   margin-top: var(--section-gap);
+  padding-top: var(--space-5);
+  border-top: var(--border-width) solid var(--color-rule);
 }
 .section-title,
+.disclosure > summary,
+.cs-body h2 {
+  font-size: var(--text-body);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-tight);
+}
 .label {
   font-size: var(--text-small);
   font-weight: var(--weight-heading);
@@ -113,10 +121,17 @@ button {
 }
 
 /* Introduction: the name is the only identity treatment on the index. */
-.intro h1 {
+.intro h1,
+.cs-hero__title {
   font-size: var(--text-title);
+  font-weight: var(--weight-heading);
   letter-spacing: var(--tracking-title);
   line-height: var(--leading-tight);
+}
+.intro__copy,
+.cs-hero__deck {
+  font: var(--weight-body) var(--text-body)/var(--leading-body) var(--font-body);
+  max-width: var(--prose-measure);
 }
 .intro__credential {
   margin-top: var(--space-1);
@@ -125,7 +140,6 @@ button {
 }
 .intro__copy {
   margin-top: var(--space-5);
-  max-width: var(--prose-measure);
 }
 .intro__copy p + p {
   margin-top: var(--space-3);
@@ -204,6 +218,7 @@ button {
 /* Native details work with a keyboard, touch, and JavaScript disabled. */
 .disclosure {
   margin-top: var(--space-2);
+  border-top: var(--border-width) solid var(--color-rule);
 }
 .disclosure > summary {
   display: flex;
@@ -213,8 +228,6 @@ button {
   width: 100%;
   min-height: var(--control-height);
   padding-block: var(--space-3);
-  font-size: var(--text-small);
-  font-weight: var(--weight-heading);
   list-style: none;
   cursor: pointer;
 }
@@ -270,9 +283,6 @@ button {
 }
 .disclosure > summary:hover .disclosure__indicator {
   color: var(--color-link);
-}
-.disclosure--projects {
-  border-top: var(--border-width) solid var(--color-rule);
 }
 .project-list--more {
   border-top: var(--border-width) solid var(--color-rule);
@@ -423,15 +433,9 @@ button {
   padding-top: var(--project-title-space);
   padding-bottom: var(--space-6);
 }
-.cs-hero__title {
-  font-size: var(--text-case-title);
-  line-height: var(--leading-tight);
-  letter-spacing: var(--tracking-title);
-}
 .cs-hero__deck {
   margin-top: var(--space-3);
   color: var(--color-secondary);
-  max-width: var(--prose-measure);
 }
 .cs-body {
   padding-bottom: var(--layout-bottom);
@@ -440,7 +444,6 @@ button {
   margin-top: var(--space-8);
   padding-top: var(--space-5);
   border-top: var(--border-width) solid var(--color-rule);
-  line-height: var(--leading-tight);
 }
 .cs-body h2:first-child {
   margin-top: 0;
