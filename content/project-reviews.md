@@ -30,10 +30,11 @@ Record the evidence used and the pruning decisions for each individually committ
 
 ## Linkage system
 
-- Sources: existing page, original critical-orientation FBDs, the source-checked redraw, revised CAD/prototype, and original final-design stress plot. CMU documentation remains pending upload.
-- Analysis coverage: critical-orientation geometry and joint equilibrium, member-force/stress calculations and acrylic link sizing, stress/yield screening and deflection FEA, and initial/revised CAD motion-study predictions. Did not add the very low single-case FEA stress as a system-wide validation claim.
+- Sources: existing page, original critical-orientation FBDs, source-checked redraw, revised CAD/prototype, original final-design stress plot, and the extracted `Fall 2022/Design I/Project 1/Group 13 Initial Report.pdf` and `Group 13 Final Report.pdf`. Reviewed analysis worksheets, geometry selection, practice/final outcomes, and improvement notes. Neither presentation contains an embedded motion recording.
+- Analysis coverage: critical-orientation geometry and joint equilibrium, member forces, combined axial/bending and shear checks, hole stress concentrations, yield-based acrylic link sizing, stress/yield screening and deflection FEA, and initial/revised CAD motion-study predictions. The final hand worksheet's governing FoS is approximately 3.1. Its stress estimates differ substantially from the FEA, so no validated strength margin or very low single-case FEA stress is claimed.
 - Presentation: four figures in three primary groups and one contact-time table. The table directly compares documented initial and final predictions with measured cumulative contact over 120 seconds. No source motion clip is available, so no animation is created.
 - Final pruning: consolidated repeated design and iteration paragraphs, preserved the failed slot/dwell behavior and early-descent hypothesis, and avoided asserting an isolated cause of the out-of-plane deflection. The 14× improvement and 78% of prediction are rounded ratios derived from the documented contact times.
+- Archive review: confirmed all four contact-time values in the final report's summary and retained the existing compact comparison. Corrected the revised CAD alt text to identify the slotted rocker. Expanded the analysis only enough to cover the documented stress modes, hole effects, and model disagreement. Retained the focused figures rather than linking rough worksheets or repetitive class presentations.
 
 ## Well driller
 

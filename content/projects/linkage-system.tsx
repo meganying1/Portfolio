@@ -21,7 +21,7 @@ export default function LinkageSystemContent() {
             src: "/assets/photos/projects/linkage_revised.png",
             width: 820,
             height: 914,
-            alt: "Revised linkage with crank, slotted coupler, rocker, and button fixture",
+            alt: "Revised linkage with crank, coupler, slotted rocker, and button fixture",
             caption:
               "Revised CAD packages the links around the motor and button fixture",
             crop: { x: 130, y: 130, width: 550, height: 735 },
@@ -61,8 +61,10 @@ export default function LinkageSystemContent() {
 
       <p>
         I used geometry and joint equilibrium at critical orientations to
-        estimate member forces and stresses, then select link widths for the
-        1/4-inch acrylic parts.
+        estimate member forces, then checked axial, bending, and shear stresses,
+        including stress concentrations at holes. Yield-based safety factors
+        guided link widths for the 1/4-inch acrylic parts, with a governing
+        hand-calculated factor of safety of approximately 3.1.
       </p>
 
       <ProjectFigure
@@ -78,8 +80,10 @@ export default function LinkageSystemContent() {
 
       <p>
         We used FEA to examine stress relative to the modeled yield strength and
-        assess deflection. CAD motion studies predicted cumulative contact time,
-        providing a baseline for the initial and revised tests below.
+        assess deflection. The hand and FEA stress estimates differed
+        substantially, so these models did not establish a validated strength
+        margin. CAD motion studies predicted cumulative contact time, providing
+        a baseline for the initial and revised tests below.
       </p>
 
       <ProjectFigure
