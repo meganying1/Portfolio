@@ -59,7 +59,7 @@
         "height": 300
       }
     },
-    "tools": ["SolidWorks", "Arduino", "Injection molding", "3D printing"],
+    "tools": ["SolidWorks", "Arduino", "3D printing"],
     "files": []
   },
   {
@@ -147,7 +147,7 @@
         "height": 340
       }
     },
-    "tools": ["Arduino", "Sensor integration"],
+    "tools": ["Arduino"],
     "files": []
   },
   {

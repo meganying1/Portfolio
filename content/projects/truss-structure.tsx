@@ -6,11 +6,12 @@ export default function TrussStructureContent() {
       <h2>Overview</h2>
 
       <p>
-        Our team designed and laser-cut an acrylic truss to fail near a
-        specified center load. I developed candidate geometries and compared
-        member forces and strength-to-weight estimates. Load tests guided the
-        final member thickness, and the truss failed close to the target in the
-        predicted member.
+        In a team of three, we designed and laser-cut an acrylic truss targeting
+        failure near a 40-pound center load. I developed candidate geometries
+        and calculated member forces and predicted strength-to-weight
+        performance for my concepts. Destructive testing guided thickness
+        revisions, and the final truss failed at the predicted member location
+        at 38 lb, 5% below the target.
       </p>
 
       <ProjectFigurePair
@@ -39,19 +40,21 @@ export default function TrussStructureContent() {
       <h2>Design</h2>
 
       <p>
-        Each team member developed three concepts. We compared the candidates by
-        predicted strength-to-weight performance, selected the geometry, and
-        modeled the assembly in SolidWorks, using CAD volume to estimate
-        structural weight.
+        Each team member developed three concepts. We compared the strongest
+        candidates and selected the final design for its highest predicted
+        strength-to-weight performance. We modeled the assembly in SolidWorks,
+        used member-force calculations to select dimensions and estimate weight,
+        then fabricated the chosen design in acrylic.
       </p>
 
       <h2>Analysis &amp; validation</h2>
 
       <p>
         We used static equilibrium to calculate member forces under the 40-pound
-        design load. The outer diagonal members carried approximately 28.3 lb in
-        compression. We used the member loads to size the acrylic parts and
-        predict where the truss would fail.
+        center load, with calculated support reactions of 20 lb each. Joint
+        equilibrium gave approximately 28.3 lb compression in the outer
+        diagonals. Axial stress checks against an assumed 70 MPa strength guided
+        initial dimensions and the predicted failure location.
       </p>
 
       <ProjectFigure
@@ -60,47 +63,77 @@ export default function TrussStructureContent() {
         width={1919}
         height={820}
         alt="Truss and joint free-body diagrams showing the center design load and member-force directions"
-        caption="Truss and joint loads under the 40-pound design load"
+        caption="Calculations for truss and joint loads under a 40-pound force"
         wide
       />
+
+      <p>
+        The CAD-based weight estimate was 0.0976 lb, below the report’s
+        fabricated weight of 0.1165 lb. We revisited stress and
+        strength-to-weight calculations using the final thickness and recorded
+        weight.
+      </p>
 
       <h2>Fabrication &amp; iteration</h2>
 
       <p>
-        We exported DXF files from CAD, prepared them in CorelDRAW, laser-cut
-        the acrylic members, and assembled the truss with screws and bolts. We
-        used destructive testing to adjust member thickness toward the 40-pound
-        failure target.
+        We generated DXF files from CAD, prepared them in CorelDRAW, laser-cut
+        the acrylic members, and assembled them with screws and bolts.
       </p>
 
       <p>
-        The 1/16-inch prototype failed near 20 lb, so we increased thickness to
-        5/32 inch. That version supported more than 50 lb without failure,
-        exceeding the target. We then reduced thickness to 3/32 inch, which
-        produced a failure near 42 lb and became the thickness selected for the
-        final specimen.
+        We increased thickness after the first specimen failed early, then
+        reduced it when the thicker truss exceeded the target without failure.
+        The 3/32-inch prototype approached the target, but the final specimen
+        failed at a lower load despite the same nominal thickness.
       </p>
 
-      <p>
-        The final specimen was made on a different laser cutter and failed at 38
-        lb in the predicted member location. The difference from the 42-pound
-        prototype showed why fabrication consistency mattered alongside nominal
-        member sizing when targeting a specific failure load.
-      </p>
+      <div className="table-scroll case-table">
+        <table className="data-table">
+          <caption>
+            <span className="fig__num">Table 1</span> Thickness iterations
+            against the 40 lb target failure load
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Specimen</th>
+              <th scope="col">Member thickness</th>
+              <th scope="col">Observed test outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Initial</th>
+              <td className="num">1/16 in</td>
+              <td>Failed near 20 lb</td>
+            </tr>
+            <tr>
+              <th scope="row">Thicker</th>
+              <td className="num">5/32 in</td>
+              <td>Supported &gt;50 lb without failure</td>
+            </tr>
+            <tr>
+              <th scope="row">Reduced</th>
+              <td className="num">3/32 in</td>
+              <td>Failed near 42 lb</td>
+            </tr>
+            <tr>
+              <th scope="row">Final</th>
+              <td className="num">3/32 in</td>
+              <td>Failed at 38 lb</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2>Results</h2>
 
       <p>
-        We fabricated an acrylic truss that failed at 38 lb, 5% below the
-        40-pound target. Failure occurred in the member location predicted by
-        the structural analysis.
-      </p>
-
-      <p>
-        Calculated member loads guided the initial geometry, and successive load
-        tests narrowed the thickness choice to 3/32 inch. Variation between the
-        prototype and final specimen also highlighted the need to control
-        fabrication when targeting a specific failure load.
+        The final truss failed at the predicted member location at 38 lb, below
+        the 40-pound target. A change in laser cutter was identified as a
+        possible contributor to the difference from the 42-pound prototype.
+        Fabrication variation and modeling error were not isolated by these
+        tests.
       </p>
     </>
   );
