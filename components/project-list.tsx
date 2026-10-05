@@ -28,7 +28,8 @@ export function ProjectList({
             <span>
               <span className="project-name">
                 <span>{project.name}</span>
-                <LinkArrow />
+                {"\u00a0"}
+                <LinkArrow direction="external" />
               </span>
               <span className="project-description">{project.summary}</span>
             </span>

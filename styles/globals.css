@@ -223,14 +223,6 @@ button {
   font-weight: var(--weight-heading);
   line-height: var(--leading-ui);
 }
-.project-name {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-}
-.project-name .link-arrow {
-  color: var(--color-secondary);
-}
 .project-description {
   display: block;
   margin-top: var(--space-1);
