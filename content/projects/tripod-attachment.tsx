@@ -95,7 +95,8 @@ export default function TripodAttachmentContent() {
             width: 436,
             height: 330,
             alt: "Assumed phone and wing geometry with the lever arm between the servo axis and phone contact",
-            caption: "Phone and wing loads used in the bending calculation",
+            caption:
+              "Calculations for determining wing load and maximum stress",
           },
           {
             number: 5,

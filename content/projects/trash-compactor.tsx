@@ -87,7 +87,7 @@ export default function TrashCompactorContent() {
         height={1024}
         crop={{ x: 125, y: 230, width: 1385, height: 540 }}
         alt="Scissor-linkage support and free-body diagrams with actuator forces, support reactions, and plate loading"
-        caption="Actuator force and support reactions in the scissor linkage"
+        caption="Calculations for determining scissor-linkage load capacity and support reactions"
       />
 
       <p>

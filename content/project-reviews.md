@@ -80,4 +80,4 @@ Record the evidence used and the pruning decisions for each individually committ
 
 ## Caption revision
 
-Restored exact current-main captions for matching figures across all nine projects, including the battery concept comparison. New or changed media use captions explicitly accepted by the user. The user subsequently supplied replacement captions for battery-door Figures 5 and 6.
+Restored exact current-main captions for matching figures across all nine projects, including the battery concept comparison. New or changed media use captions explicitly accepted by the user. The user subsequently supplied replacement captions for battery-door Figures 5 and 6 and requested calculation-focused captions for tripod Figure 4, compactor Figure 4, linkage Figure 3, well-driller Figure 3, and truss Figure 3.

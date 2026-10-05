@@ -71,7 +71,7 @@ export default function LinkageSystemContent() {
         height={1385}
         crop={{ x: 25, y: 95, width: 1025, height: 1200 }}
         alt="Linkage and member free-body diagrams showing the button load and joint reactions"
-        caption="Member loads and joint reactions at a critical orientation"
+        caption="Calculations for determining member forces and joint reactions"
         wide
       />
 

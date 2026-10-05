@@ -63,7 +63,7 @@ export default function TrussStructureContent() {
         width={1919}
         height={820}
         alt="Truss and joint free-body diagrams showing the center design load and member-force directions"
-        caption="Truss and joint loads under the 40-pound design load"
+        caption="Calculations for truss and joint loads under a 40-pound force"
         wide
       />
 

@@ -74,7 +74,7 @@ export default function WellDrillerContent() {
         height={2048}
         crop={{ x: 125, y: 550, width: 1270, height: 1200 }}
         alt="Frame free-body diagram with cable tension, support reactions, weight, and lever arms"
-        caption="Cable load and support reactions used for connection sizing"
+        caption="Calculations for determining support reactions and sizing components"
       />
 
       <p>

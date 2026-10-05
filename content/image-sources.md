@@ -52,7 +52,7 @@ Figures 1 and 3 restore the labeled CAD asset `linkage_annotated.svg` and free-b
 
 ### Caption alignment
 
-The user requested current `main` captions for all unchanged figures. Captions follow the matching source image when figures are reordered or renumbered. The user retained the compactor compression and Chinese Checkers gameplay captions. The battery calculation captions were subsequently revised at the user’s request to describe button travel and required spring constant, and door-hook strain, durability, and closing force, without numerical values. The two added well-driller calculation drawings were subsequently removed at the user’s request.
+The user requested current `main` captions for all unchanged figures. Captions follow the matching source image when figures are reordered or renumbered. The user retained the compactor compression and Chinese Checkers gameplay captions. The battery calculation captions were subsequently revised at the user’s request to describe button travel and required spring constant, and door-hook strain, durability, and closing force, without numerical values. The two added well-driller calculation drawings were subsequently removed at the user’s request. The user subsequently requested calculation-focused captions for tripod Figure 4, compactor Figure 4, linkage Figure 3, well-driller Figure 3, and truss Figure 3.
 
 ### Chinese Checkers motion update
 
