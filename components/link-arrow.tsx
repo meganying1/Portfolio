@@ -12,7 +12,7 @@ export function LinkArrow({
 }) {
   return (
     <svg
-      className="link-arrow"
+      className={`link-arrow${direction === "external" ? " link-arrow--diagonal" : ""}`}
       width="16"
       height="16"
       viewBox="0 0 16 16"

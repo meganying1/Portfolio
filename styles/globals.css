@@ -100,6 +100,11 @@ button {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+.link-arrow--diagonal {
+  width: var(--icon-diagonal-size);
+  height: var(--icon-diagonal-size);
+  vertical-align: var(--icon-diagonal-align);
+}
 :is(a, summary, button:enabled):is(:hover, :focus-visible, :active) .link-arrow,
 .disclosure
   > summary:is(:hover, :focus-visible, :active)
@@ -628,7 +633,8 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2) var(--space-4);
-  margin-top: var(--space-3);
+  margin-top: var(--resource-content-gap);
+  line-height: var(--leading-ui);
 }
 .tools__list {
   gap: var(--space-1) var(--space-2);
@@ -640,7 +646,7 @@ button {
 .files__list a {
   min-height: var(--control-height);
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .files + .tools,
 .deck + .files {
@@ -705,7 +711,7 @@ button {
 
 /* Only the battery-door slide viewer needs JavaScript. */
 .deck__frame {
-  margin-top: var(--space-3);
+  margin-top: var(--resource-content-gap);
   border: var(--border-width) solid var(--color-rule);
 }
 .deck__slide {

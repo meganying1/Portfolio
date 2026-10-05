@@ -66,7 +66,10 @@
   --border-width: 1px;
   --radius-image: 0.25rem;
   --icon-size: var(--space-4);
+  --icon-diagonal-size: 0.875em;
+  --icon-diagonal-align: calc((1cap - var(--icon-diagonal-size)) / 2);
   --icon-stroke-width: 1.25;
+  --resource-content-gap: var(--space-3);
   --focus-width: 2px;
   --focus-offset: 4px;
   --control-height: 2.75rem;
