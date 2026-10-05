@@ -45,7 +45,11 @@ export function ProjectDetail({ project }: { project: Project }) {
                       href={file.href}
                       download
                     >
-                      {file.label}
+                      <span>
+                        {file.label}
+                        {"\u00a0"}
+                        <LinkArrow direction="external" />
+                      </span>
                     </a>
                   ))}
                 </div>
