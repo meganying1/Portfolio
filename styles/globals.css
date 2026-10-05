@@ -820,7 +820,6 @@ button {
   }
   .experience-logo {
     grid-row: 1 / 3;
-    align-self: start;
   }
   .experience-row .date {
     grid-column: 2;
