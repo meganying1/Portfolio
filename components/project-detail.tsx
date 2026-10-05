@@ -62,14 +62,18 @@ export function ProjectDetail({ project }: { project: Project }) {
                 ))}
               </div>
             </div>
-            <nav className="pager" aria-label="Project">
+            <nav className="pager" aria-label="Adjacent projects">
               {previous && (
                 <Link
                   className="pager__link pager__prev"
                   href={projectHref(previous)}
                   prefetch={false}
                 >
-                  ← {previous.title}
+                  <span className="pager__label">Previous project</span>
+                  <span className="pager__name">
+                    <LinkArrow direction="left" />
+                    <span>{previous.title}</span>
+                  </span>
                 </Link>
               )}
               {next && (
@@ -78,7 +82,11 @@ export function ProjectDetail({ project }: { project: Project }) {
                   href={projectHref(next)}
                   prefetch={false}
                 >
-                  {next.title} →
+                  <span className="pager__label">Next project</span>
+                  <span className="pager__name">
+                    <span>{next.title}</span>
+                    <LinkArrow />
+                  </span>
                 </Link>
               )}
             </nav>

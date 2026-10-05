@@ -217,6 +217,7 @@ button {
   );
 }
 .project-name,
+.pager__name,
 .experience-row h3 {
   font-size: var(--text-small);
   font-weight: var(--weight-heading);
@@ -664,8 +665,8 @@ button {
   border-top: 0;
 }
 .pager {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-5);
   margin-top: var(--space-8);
   padding-top: var(--space-5);
@@ -674,11 +675,28 @@ button {
 }
 .pager__link {
   min-height: var(--control-height);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+}
+.pager__label {
+  color: var(--color-secondary);
+  font-size: var(--text-caption);
+}
+.pager__name {
   display: inline-flex;
   align-items: center;
+  gap: var(--space-2);
+  max-width: 100%;
+  margin-top: var(--space-1);
+}
+.pager__link:is(:hover, :focus-visible, :active) .pager__name > span {
+  text-decoration: underline;
 }
 .pager__next {
-  margin-left: auto;
+  grid-column: 2;
+  align-items: flex-end;
   text-align: right;
 }
 
