@@ -15,11 +15,11 @@ export function ProjectDetail({ project }: { project: Project }) {
         <div className="container">
           <Link
             className="project-nav__back label-link"
-            href="/#projects"
+            href="/"
             prefetch={false}
           >
             <LinkArrow direction="left" />
-            <span className="link-label">All projects</span>
+            <span className="link-label">Home</span>
           </Link>
           <span className="project-nav__title">{project.title}</span>
         </div>
