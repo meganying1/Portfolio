@@ -634,7 +634,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2) var(--space-4);
-  margin-top: var(--resource-content-gap);
+  margin-top: var(--resource-list-gap);
   line-height: var(--leading-ui);
 }
 .tools__list {
