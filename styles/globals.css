@@ -317,6 +317,7 @@ button {
 .experience-logo {
   display: flex;
   align-items: center;
+  align-self: center;
   justify-content: center;
   width: var(--experience-logo-size);
   height: var(--experience-logo-size);
@@ -819,6 +820,7 @@ button {
   }
   .experience-logo {
     grid-row: 1 / 3;
+    align-self: start;
   }
   .experience-row .date {
     grid-column: 2;
