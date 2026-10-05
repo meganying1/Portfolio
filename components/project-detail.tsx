@@ -69,10 +69,8 @@ export function ProjectDetail({ project }: { project: Project }) {
                   prefetch={false}
                 >
                   <span className="pager__label">Previous project</span>
-                  <span className="pager__name">
-                    <LinkArrow direction="left" />
-                    <span>{previous.title}</span>
-                  </span>
+                  <LinkArrow direction="left" />
+                  <span className="pager__name">{previous.title}</span>
                 </Link>
               )}
               {next && (
@@ -82,10 +80,8 @@ export function ProjectDetail({ project }: { project: Project }) {
                   prefetch={false}
                 >
                   <span className="pager__label">Next project</span>
-                  <span className="pager__name">
-                    <span>{next.title}</span>
-                    <LinkArrow />
-                  </span>
+                  <span className="pager__name">{next.title}</span>
+                  <LinkArrow />
                 </Link>
               )}
             </nav>
