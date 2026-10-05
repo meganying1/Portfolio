@@ -202,8 +202,9 @@ button {
 .project-link > span:not(.date) {
   min-width: 0;
 }
-.project-thumb {
+.project-image.project-thumb {
   display: grid;
+  grid-template: minmax(0, 1fr) / minmax(0, 1fr);
   place-items: center;
   width: var(--project-thumb-width);
   height: var(--project-thumb-height);
