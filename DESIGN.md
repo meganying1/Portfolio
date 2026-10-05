@@ -10,30 +10,30 @@ The portfolio is a compact professional index: identity, selected work, experien
 
 ## Tokens
 
-| Group              | Decision                                                          | Token                                                          |
-| ------------------ | ----------------------------------------------------------------- | -------------------------------------------------------------- |
-| Page               | White, with a subtle gray image surface                           | `--color-page`, `--color-surface`                              |
-| Text               | Charcoal primary; accessible gray secondary                       | `--color-text`, `--color-secondary`                            |
-| Links              | Muted blue for interaction feedback                               | `--color-link`, `--color-focus`                                |
-| Rules              | Light gray, decorative separators only                            | `--color-rule`, `--border-width`                               |
-| Typeface           | Native system sans for fast, consistent rendering                 | `--font-body`                                                  |
-| Type               | 13 / 14 / 16 / 24 px; home and case titles share 24 px            | `--text-caption` through `--text-title`                        |
-| Weight             | 400 body, 600 headings                                            | `--weight-body`, `--weight-heading`                            |
-| Leading            | 1.3 titles, 1.5 lists, 1.65 prose                                 | `--leading-tight`, `--leading-ui`, `--leading-body`            |
-| Spacing            | 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 px                  | `--space-1` through `--space-10`                               |
-| Page measure       | 704 px maximum, with responsive outer gutters                     | `--layout-width`, `--layout-gutter`                            |
-| Page padding       | 80 px above, 64 px below; mobile starts at 48 px                  | `--layout-top`, `--layout-bottom`                              |
-| Sections           | Home: 40 px before rules, 24 px after; 12 px after headings       | `--section-gap`, `--space-5`, `--section-heading-gap`          |
-| Rows               | 12 px vertical padding, 16 px column gap                          | `--row-padding`, `--row-gap`                                   |
-| Skills             | 192 px category column; individual terms wrap together            | `--skills-label-width`, `--row-gap`                            |
-| Project navigation | 64 px sticky bar; 40 px before the project title                  | `--project-nav-height`, `--project-title-space`, `--layer-nav` |
-| Thumbnails         | 88 × 72 px desktop, contain rather than crop                      | `--project-thumb-width`, `--project-thumb-height`              |
-| Experience logos   | 28 px frames, original brand colors, optically normalized artwork | `--experience-logo-size`, `--logo-scale-*`                     |
-| Corners            | 4 px for media and slide controls                                 | `--radius-image`                                               |
-| Controls           | 44 px for standalone contact and slide controls                   | `--control-height`                                             |
-| Focus              | 2 px blue outline with 4 px offset                                | `--focus-width`, `--focus-offset`                              |
-| Feedback           | 140 ms hover color and plus/minus opacity feedback                | `--duration-feedback`, `--ease-feedback`                       |
-| Disclosure         | 160 ms measured-height transition for pointer activation          | `--duration-disclosure`, `--ease-motion`                       |
+| Group              | Decision                                                             | Token                                                          |
+| ------------------ | -------------------------------------------------------------------- | -------------------------------------------------------------- |
+| Page               | White, with a subtle gray image surface                              | `--color-page`, `--color-surface`                              |
+| Text               | Charcoal primary; accessible gray secondary                          | `--color-text`, `--color-secondary`                            |
+| Links              | Muted blue for hover/focus, darker blue for press feedback           | `--color-link`, `--color-link-active`, `--color-focus`         |
+| Rules              | Light gray, decorative separators only                               | `--color-rule`, `--border-width`                               |
+| Typeface           | Native system sans for fast, consistent rendering                    | `--font-body`                                                  |
+| Type               | 13 / 14 / 16 / 24 px; home and case titles share 24 px               | `--text-caption` through `--text-title`                        |
+| Weight             | 400 body, 600 headings                                               | `--weight-body`, `--weight-heading`                            |
+| Leading            | 1.3 titles, 1.5 lists, 1.65 prose                                    | `--leading-tight`, `--leading-ui`, `--leading-body`            |
+| Spacing            | 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 px                     | `--space-1` through `--space-10`                               |
+| Page measure       | 704 px maximum, with responsive outer gutters                        | `--layout-width`, `--layout-gutter`                            |
+| Page padding       | 80 px above, 64 px below; mobile starts at 48 px                     | `--layout-top`, `--layout-bottom`                              |
+| Sections           | Home: 40 px before rules, 24 px after; 12 px after headings          | `--section-gap`, `--space-5`, `--section-heading-gap`          |
+| Rows               | 12 px vertical padding, 16 px column gap                             | `--row-padding`, `--row-gap`                                   |
+| Skills             | 192 px category column; individual terms wrap together               | `--skills-label-width`, `--row-gap`                            |
+| Project navigation | 64 px sticky bar; 40 px before the project title                     | `--project-nav-height`, `--project-title-space`, `--layer-nav` |
+| Thumbnails         | 88 × 72 px desktop, contain rather than crop                         | `--project-thumb-width`, `--project-thumb-height`              |
+| Experience logos   | 28 px frames, original brand colors, optically normalized artwork    | `--experience-logo-size`, `--logo-scale-*`                     |
+| Corners            | 4 px for media and slide controls                                    | `--radius-image`                                               |
+| Controls           | 44 px for standalone contact and slide controls; dim disabled slides | `--control-height`, `--opacity-disabled`                       |
+| Focus              | 2 px blue outline with 4 px offset                                   | `--focus-width`, `--focus-offset`                              |
+| Feedback           | 140 ms hover color and plus/minus opacity feedback                   | `--duration-feedback`, `--ease-feedback`                       |
+| Disclosure         | 160 ms measured-height transition for pointer activation             | `--duration-disclosure`, `--ease-motion`                       |
 
 Pixel values above assume the browser’s default 16 px root size. Typography and layout use rem units to respect user text size.
 
@@ -65,6 +65,8 @@ CSS custom properties cannot be used in media query conditions. The two breakpoi
 ## Interaction and accessibility
 
 Use native links, headings, lists, and details. Preserve the skip link and visible keyboard focus. External links announce their new tab. Keep each external-link label and arrow in one inline text span so the underline is continuous. Publication links use that same joined underline on hover and focus. Secondary text has at least 4.5:1 contrast against white; separator rules do not convey information. Content is fully visible and interactive from the first frame.
+
+Links, disclosures, and enabled controls share muted-blue hover and keyboard-focus feedback, darker-blue press feedback, and a visible focus outline. Arrow and disclosure indicators follow the label color, with the same 140 ms feedback duration. Slide-control borders use that timing too; disabled controls are dimmed and receive no interaction feedback. Downloads retain their resource names, use an explicit “Download” label and downward arrow, and keep the native download behavior. External links use the shared diagonal vector arrow.
 
 The battery-door slide deck stays visible at the bottom of the narrative. It supports buttons and arrow keys, announces slide count, and displays all slides when JavaScript is unavailable. Tables can scroll within their own region on narrow screens.
 

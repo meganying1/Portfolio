@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { LinkArrow } from "@/components/link-arrow";
 
 export function ExternalLink({
   href,
@@ -12,7 +13,7 @@ export function ExternalLink({
       <span className="external-link__text">
         {children}
         {"\u00a0"}
-        <span aria-hidden="true">↗</span>
+        <LinkArrow direction="external" />
       </span>
       <span className="sr-only"> (opens in a new tab)</span>
     </a>

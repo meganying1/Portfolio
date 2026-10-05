@@ -7,6 +7,7 @@
   --color-rule: #e9e9e9;
   --color-surface: #f6f6f6;
   --color-link: #325a78;
+  --color-link-active: #25445b;
   --color-focus: #325a78;
   --color-selection: #e1edf5;
   --color-brand-bloomberg: #000000;
@@ -68,6 +69,7 @@
   --focus-width: 2px;
   --focus-offset: 4px;
   --control-height: 2.75rem;
+  --opacity-disabled: 0.5;
   --duration-feedback: 140ms;
   --duration-disclosure: 160ms;
   --ease-feedback: ease;

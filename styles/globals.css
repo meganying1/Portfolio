@@ -48,8 +48,11 @@ a {
   text-decoration-thickness: var(--border-width);
   text-underline-offset: var(--underline-offset);
 }
-a:hover {
+:is(a, summary, button:enabled):is(:hover, :focus-visible) {
   color: var(--color-link);
+}
+:is(a, summary, button:enabled):active {
+  color: var(--color-link-active);
 }
 .external-link {
   text-decoration: none;
@@ -62,7 +65,9 @@ a:hover {
 }
 a,
 button,
-summary {
+summary,
+.link-arrow,
+.disclosure__indicator {
   transition: color var(--duration-feedback) var(--ease-feedback);
 }
 button {
@@ -90,6 +95,12 @@ button {
   stroke-width: var(--icon-stroke-width);
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+:is(a, summary, button:enabled):is(:hover, :focus-visible, :active) .link-arrow,
+.disclosure
+  > summary:is(:hover, :focus-visible, :active)
+  .disclosure__indicator {
+  color: inherit;
 }
 
 /* One page measure shared by the index and every case study. */
@@ -230,13 +241,8 @@ button {
   align-self: start;
   padding-top: var(--space-1);
 }
-.project-link:hover .project-name > span,
-.project-link:focus-visible .project-name > span {
+.project-link:is(:hover, :focus-visible, :active) .project-name > span {
   text-decoration: underline;
-}
-.project-link:hover .link-arrow,
-.project-link:focus-visible .link-arrow {
-  color: var(--color-link);
 }
 
 /* Native details work with a keyboard, touch, and JavaScript disabled. */
@@ -254,9 +260,6 @@ button {
   padding-block: var(--space-3);
   list-style: none;
   cursor: pointer;
-}
-.disclosure > summary:hover {
-  color: var(--color-link);
 }
 .disclosure > summary::-webkit-details-marker {
   display: none;
@@ -304,9 +307,6 @@ button {
 .disclosure[data-motion="pointer"] .disclosure__content {
   overflow: hidden;
   transition: height var(--duration-disclosure) var(--ease-motion);
-}
-.disclosure > summary:hover .disclosure__indicator {
-  color: var(--color-link);
 }
 .project-list--more {
   border-top: var(--border-width) solid var(--color-rule);
@@ -431,13 +431,13 @@ button {
 .project-nav__back {
   display: inline-flex;
   align-items: center;
+  gap: var(--space-2);
   flex-shrink: 0;
   min-height: var(--control-height);
   font-size: var(--text-small);
   text-decoration: none;
 }
-.project-nav__back:hover span,
-.project-nav__back:focus-visible span {
+.project-nav__back:is(:hover, :focus-visible, :active) > span {
   text-decoration: underline;
   text-decoration-skip-ink: none;
 }
@@ -655,6 +655,7 @@ button {
   min-height: var(--control-height);
   display: inline-flex;
   align-items: center;
+  gap: var(--space-2);
 }
 .files + .tools,
 .deck + .files {
@@ -703,6 +704,9 @@ button {
   margin-top: var(--space-2);
 }
 .deck__nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-width: var(--control-height);
   min-height: var(--control-height);
   padding: var(--space-2) var(--space-3);
@@ -710,13 +714,19 @@ button {
   border-radius: var(--radius-image);
   background: var(--color-page);
   font-size: var(--text-small);
+  transition:
+    color var(--duration-feedback) var(--ease-feedback),
+    border-color var(--duration-feedback) var(--ease-feedback);
 }
-.deck__nav:hover:not(:disabled) {
-  color: var(--color-link);
+.deck__nav:is(:hover, :focus-visible):not(:disabled) {
   border-color: var(--color-link);
+}
+.deck__nav:active:not(:disabled) {
+  border-color: var(--color-link-active);
 }
 .deck__nav:disabled {
   color: var(--color-secondary);
+  opacity: var(--opacity-disabled);
   cursor: default;
 }
 .deck .deck__count {

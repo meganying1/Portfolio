@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LinkArrow } from "@/components/link-arrow";
 import { projectContent } from "@/content/project-content";
 import { projects, projectHref, type Project } from "@/lib/projects";
 
@@ -17,9 +18,8 @@ export function ProjectDetail({ project }: { project: Project }) {
             href="/#projects"
             prefetch={false}
           >
-            <span>
-              <span aria-hidden="true">←</span> All projects
-            </span>
+            <LinkArrow direction="left" />
+            <span>All projects</span>
           </Link>
           <span className="project-nav__title">{project.title}</span>
         </div>
@@ -45,7 +45,8 @@ export function ProjectDetail({ project }: { project: Project }) {
                       href={file.href}
                       download
                     >
-                      {file.label}
+                      <span>Download {file.label}</span>
+                      <LinkArrow direction="down" />
                     </a>
                   ))}
                 </div>
