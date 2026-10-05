@@ -75,10 +75,10 @@
       "width": 820,
       "height": 914,
       "crop": {
-        "x": 130,
-        "y": 130,
-        "width": 550,
-        "height": 735
+        "x": 120,
+        "y": 0,
+        "width": 570,
+        "height": 914
       }
     },
     "tools": ["SolidWorks", "Laser cutting"],

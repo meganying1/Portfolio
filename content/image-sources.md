@@ -45,7 +45,7 @@ Paths below are relative to `/Users/mying/Documents/CMU/`. Page numbers refer to
 - Noise reduction: show one original/processed waveform comparison with all axes retained and a caption noting the different amplitude scales, plus the LMS convergence plot. Restore the four-recording montage as evidence of testing across environments; omit the generic cancellation example.
 - Chinese checkers: retain the legal-move screenshot, which demonstrates interaction and game logic in one image; remove the repeated plain board.
 
-Homepage thumbnails use the same source images as the project pages. The linkage thumbnail retains the unannotated CAD crop, while Figure 1 uses the labeled view with the button visible. Experience logos and the share card are outside the project-photo curation scope.
+Homepage thumbnails use the same source images as the project pages. The linkage thumbnail retains the unannotated CAD with the same full assembly viewport used in Figure 1, including the button and fixture top; Figure 1 adds the labels. Experience logos and the share card are outside the project-photo curation scope.
 
 ## Regenerated diagrams
 

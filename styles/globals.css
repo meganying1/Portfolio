@@ -80,6 +80,17 @@ button {
 [hidden] {
   display: none !important;
 }
+.link-arrow {
+  display: inline-block;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  flex-shrink: 0;
+  vertical-align: middle;
+  stroke: currentColor;
+  stroke-width: var(--icon-stroke-width);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
 /* One page measure shared by the index and every case study. */
 .portfolio,
@@ -200,6 +211,14 @@ button {
   font-weight: var(--weight-heading);
   line-height: var(--leading-ui);
 }
+.project-name {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.project-name .link-arrow {
+  color: var(--color-secondary);
+}
 .project-description {
   display: block;
   margin-top: var(--space-1);
@@ -211,9 +230,13 @@ button {
   align-self: start;
   padding-top: var(--space-1);
 }
-.project-link:hover .project-name,
-.project-link:focus-visible .project-name {
+.project-link:hover .project-name > span,
+.project-link:focus-visible .project-name > span {
   text-decoration: underline;
+}
+.project-link:hover .link-arrow,
+.project-link:focus-visible .link-arrow {
+  color: var(--color-link);
 }
 
 /* Native details work with a keyboard, touch, and JavaScript disabled. */
