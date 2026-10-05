@@ -14,12 +14,12 @@ export function ProjectDetail({ project }: { project: Project }) {
       <nav className="project-nav" aria-label="Project navigation">
         <div className="container">
           <Link
-            className="project-nav__back"
+            className="project-nav__back label-link"
             href="/#projects"
             prefetch={false}
           >
             <LinkArrow direction="left" />
-            <span>All projects</span>
+            <span className="link-label">All projects</span>
           </Link>
           <span className="project-nav__title">{project.title}</span>
         </div>
@@ -41,12 +41,12 @@ export function ProjectDetail({ project }: { project: Project }) {
                   {project.files.map((file) => (
                     <a
                       key={file.href}
-                      className="chip"
+                      className="chip label-link"
                       href={file.href}
                       download
                     >
                       <span>
-                        {file.label}
+                        <span className="link-label">{file.label}</span>
                         {"\u00a0"}
                         <LinkArrow direction="external" />
                       </span>
@@ -68,23 +68,25 @@ export function ProjectDetail({ project }: { project: Project }) {
             <nav className="pager" aria-label="Adjacent projects">
               {previous && (
                 <Link
-                  className="pager__link pager__prev"
+                  className="pager__link pager__prev label-link"
                   href={projectHref(previous)}
                   prefetch={false}
                 >
                   <span className="pager__label">Previous project</span>
                   <LinkArrow direction="left" />
-                  <span className="pager__name">{previous.title}</span>
+                  <span className="pager__name link-label">
+                    {previous.title}
+                  </span>
                 </Link>
               )}
               {next && (
                 <Link
-                  className="pager__link pager__next"
+                  className="pager__link pager__next label-link"
                   href={projectHref(next)}
                   prefetch={false}
                 >
                   <span className="pager__label">Next project</span>
-                  <span className="pager__name">{next.title}</span>
+                  <span className="pager__name link-label">{next.title}</span>
                   <LinkArrow />
                 </Link>
               )}

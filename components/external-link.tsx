@@ -9,9 +9,14 @@ export function ExternalLink({
   children: ReactNode;
 }) {
   return (
-    <a className="external-link" href={href} target="_blank" rel="noreferrer">
+    <a
+      className="external-link label-link"
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+    >
       <span className="external-link__text">
-        {children}
+        <span className="link-label">{children}</span>
         {"\u00a0"}
         <LinkArrow direction="external" />
       </span>

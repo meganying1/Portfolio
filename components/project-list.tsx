@@ -15,7 +15,7 @@ export function ProjectList({
       {projects.map((project) => (
         <li key={project.slug}>
           <Link
-            className="project-link"
+            className="project-link label-link"
             href={projectHref(project)}
             prefetch={false}
           >
@@ -27,7 +27,7 @@ export function ProjectList({
             />
             <span>
               <span className="project-name">
-                <span>{project.name}</span>
+                <span className="link-label">{project.name}</span>
                 {"\u00a0"}
                 <LinkArrow direction="external" />
               </span>

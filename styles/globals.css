@@ -45,23 +45,26 @@ video {
 }
 a {
   color: inherit;
-  text-decoration-thickness: var(--border-width);
+  text-decoration-line: none;
+}
+a,
+.link-label {
+  text-decoration-thickness: var(--underline-thickness);
   text-underline-offset: var(--underline-offset);
+  text-decoration-skip-ink: none;
+}
+a:is(:hover, :focus-visible, :active),
+:is(a, summary):is(:hover, :focus-visible, :active) .link-label {
+  text-decoration-line: underline;
+}
+a.label-link {
+  text-decoration-line: none;
 }
 :is(a, summary, button:enabled):is(:hover, :focus-visible) {
   color: var(--color-link);
 }
 :is(a, summary, button:enabled):active {
   color: var(--color-link-active);
-}
-.external-link {
-  text-decoration: none;
-}
-.external-link__text {
-  text-decoration: underline;
-  text-decoration-thickness: var(--border-width);
-  text-underline-offset: var(--underline-offset);
-  text-decoration-skip-ink: none;
 }
 a,
 button,
@@ -189,7 +192,6 @@ button {
   gap: var(--row-gap);
   align-items: center;
   padding-block: var(--row-padding);
-  text-decoration: none;
 }
 .project-link > span:not(.date) {
   min-width: 0;
@@ -232,9 +234,6 @@ button {
 .project-link .date {
   align-self: start;
   padding-top: var(--space-1);
-}
-.project-link:is(:hover, :focus-visible, :active) .project-name > span {
-  text-decoration: underline;
 }
 
 /* Native details work with a keyboard, touch, and JavaScript disabled. */
@@ -388,13 +387,6 @@ button {
   font-size: var(--text-small);
   line-height: var(--leading-ui);
 }
-.publication .external-link__text {
-  text-decoration: none;
-}
-.publication a:hover .external-link__text,
-.publication a:focus-visible .external-link__text {
-  text-decoration: underline;
-}
 .publication__meta,
 .publication__authors {
   margin-top: var(--space-1);
@@ -428,11 +420,6 @@ button {
   flex-shrink: 0;
   min-height: var(--control-height);
   font-size: var(--text-small);
-  text-decoration: none;
-}
-.project-nav__back:is(:hover, :focus-visible, :active) > span {
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
 }
 .project-nav__title {
   min-width: 0;
@@ -671,7 +658,6 @@ button {
   gap: var(--space-1) var(--space-2);
   align-content: start;
   align-items: center;
-  text-decoration: none;
 }
 .pager__label {
   grid-column: 2;
@@ -696,9 +682,6 @@ button {
   margin-top: calc(
     (var(--text-small) * var(--leading-ui) - var(--icon-size)) / 2
   );
-}
-.pager__link:is(:hover, :focus-visible, :active) .pager__name {
-  text-decoration: underline;
 }
 .pager__next {
   grid-column: 2;

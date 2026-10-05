@@ -33,6 +33,7 @@ The portfolio is a compact professional index: identity, selected work, experien
 | Controls           | 44 px for standalone contact and slide controls; dim disabled slides | `--control-height`, `--opacity-disabled`                       |
 | Focus              | 2 px blue outline with 4 px offset                                   | `--focus-width`, `--focus-offset`                              |
 | Feedback           | 140 ms hover color and plus/minus opacity feedback                   | `--duration-feedback`, `--ease-feedback`                       |
+| Underlines         | 1 px beneath interactive text, offset by 0.2em                       | `--underline-thickness`, `--underline-offset`                  |
 | Disclosure         | 160 ms measured-height transition for pointer activation             | `--duration-disclosure`, `--ease-motion`                       |
 
 Pixel values above assume the browser’s default 16 px root size. Typography and layout use rem units to respect user text size.
@@ -65,7 +66,7 @@ CSS custom properties cannot be used in media query conditions. The two breakpoi
 
 ## Interaction and accessibility
 
-Use native links, headings, lists, and details. Preserve the skip link and visible keyboard focus. External links announce their new tab. Keep each external-link label and arrow in one inline text span so the underline is continuous. Publication links use that same joined underline on hover and focus. Secondary text has at least 4.5:1 contrast against white; separator rules do not convey information. Content is fully visible and interactive from the first frame.
+Use native links, headings, lists, and details. Preserve the skip link and visible keyboard focus. External links announce their new tab. All text links and disclosure labels share one underline treatment: no underline at rest, then a continuous 1 px underline with a 0.2em offset on hover, keyboard focus, and press. Composite links use `label-link` on the anchor and `link-label` on the visible label so only the label is underlined; arrows, project descriptions, dates, and adjacent-project direction labels stay clear. Keep each external-link label and arrow in one inline wrapper to preserve their spacing and wrapping. Secondary text has at least 4.5:1 contrast against white; separator rules do not convey information. Content is fully visible and interactive from the first frame.
 
 Links, disclosures, and enabled controls share muted-blue hover and keyboard-focus feedback, darker-blue press feedback, and a visible focus outline. Arrow and disclosure indicators follow the label color, with the same 140 ms feedback duration. Slide-control borders use that timing too; disabled controls are dimmed and receive no interaction feedback. Downloads retain their original resource labels and native download behavior, with the same diagonal vector arrow and inline spacing as homepage projects and publications. External links use the shared diagonal vector arrow.
 

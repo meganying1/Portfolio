@@ -24,6 +24,7 @@
   --leading-ui: 1.5;
   --leading-body: 1.65;
   --tracking-title: -0.025em;
+  --underline-thickness: var(--border-width);
   --underline-offset: 0.2em;
 
   --space-1: 0.25rem;
