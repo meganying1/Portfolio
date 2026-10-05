@@ -307,10 +307,6 @@ button {
   overflow: hidden;
   transition: height var(--duration-disclosure) var(--ease-motion);
 }
-.project-list--more {
-  border-top: var(--border-width) solid var(--color-rule);
-}
-
 /* Experience: employer and role on the left, dates on the right. */
 .experience-row {
   display: grid;
@@ -359,7 +355,6 @@ button {
   color: var(--color-secondary);
 }
 .skills-list {
-  border-top: var(--border-width) solid var(--color-rule);
   font-size: var(--text-small);
   line-height: var(--leading-ui);
 }
