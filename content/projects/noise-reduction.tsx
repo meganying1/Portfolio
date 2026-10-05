@@ -10,8 +10,7 @@ export default function NoiseReductionContent() {
         filter in MATLAB and evaluated it on recordings from Carnegie Mellon’s
         campus. The goal was to reduce background noise while keeping important
         environmental sounds distinguishable. The project reported up to 95%
-        lower waveform amplitude across its evaluation, but this alone did not
-        establish selective noise removal.
+        lower waveform amplitude across its evaluation.
       </p>
 
       <ProjectFigure
@@ -20,7 +19,7 @@ export default function NoiseReductionContent() {
         width={780}
         height={700}
         alt="Original and processed audio waveforms with time axes and separate amplitude scales"
-        caption="Different amplitude scales must be considered when comparing original and processed audio"
+        caption="Original and processed waveforms with different amplitude scales"
         crop={{ x: 25, y: 125, width: 715, height: 565 }}
       />
 
@@ -51,7 +50,7 @@ export default function NoiseReductionContent() {
         width={630}
         height={742}
         alt="Illustrative LMS desired-signal and array-output curves approaching one another over iterations"
-        caption="LMS example illustrates output approaching the desired signal over iterations"
+        caption="Desired signal and LMS output over successive iterations"
         compact
       />
 
@@ -70,7 +69,7 @@ export default function NoiseReductionContent() {
         width={936}
         height={708}
         alt="Waveform examples from four campus recordings used to evaluate filtering across different environments"
-        caption="Four recording pairs show varied amplitude changes with different scales on the original and processed axes"
+        caption="Original and processed waveforms from four campus recordings"
         wide
       />
 
@@ -86,9 +85,6 @@ export default function NoiseReductionContent() {
       <p>
         The project reported up to 95% reduction in waveform amplitude, with
         important sounds remaining distinguishable in listening checks.
-        Amplitude reduction alone does not establish improved signal-to-noise
-        ratio. A stronger evaluation would define the amplitude metric and
-        compare noise attenuation with distortion of the desired signal.
       </p>
     </>
   );

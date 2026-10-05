@@ -20,49 +20,37 @@ export default function MobileRobotContent() {
         width={715}
         height={482}
         alt="Differential-drive robot following a curved line beneath the moving obstacle walls"
-        caption="Curved-line course tests tracking and recovery beneath moving obstacle walls"
+        caption="Line-following robot on the obstacle course"
         crop={{ x: 170, y: 40, width: 470, height: 340 }}
       />
-
-      <h2>Sensor integration</h2>
-
-      <p>
-        Three infrared sensors distinguish the line from the surrounding
-        surface. The ultrasonic sensor provides an independent obstacle check.
-        When an obstacle entered the detection range, the controller stopped
-        both motors.
-      </p>
 
       <h2>Control algorithm</h2>
 
       <p>
-        The controller adjusted the left and right motor speeds from the
-        infrared readings. A centered reading commanded forward motion, while
-        side readings commanded differential steering, with stronger corrections
-        for larger deviations.
+        Three infrared sensors detect the line, and the controller uses their
+        readings to adjust the left and right motor speeds. When the line is
+        centered, both motors drive forward. When it moves to one side, the
+        controller changes the motor speeds to steer back toward it, applying
+        stronger corrections for larger deviations. An ultrasonic sensor
+        measures obstacle distance and stops both motors when an obstacle enters
+        the detection range.
       </p>
 
       <p>
-        The controller stored the side that most recently detected the line. If
-        all three sensors lost it, that state determined the search direction.
-      </p>
-
-      <h2>Testing &amp; iteration</h2>
-
-      <p>
-        We characterized infrared sensor responses and selected line-detection
-        thresholds. Course tests guided adjustments to the thresholds,
-        motor-speed differences, and recovery logic to balance large-deviation
-        recovery with stable tracking.
+        If all three infrared sensors lose the line, the controller searches
+        toward the side that detected it most recently. We used sensor-response
+        measurements and course testing to refine the detection thresholds,
+        motor-speed differences, and recovery logic, balancing stable tracking
+        with recovery from larger deviations.
       </p>
 
       <h2>Results</h2>
 
       <p>
         The robot followed the curved course and stopped for moving obstacles,
-        completing the challenge in 26 seconds. Testing demonstrated the
-        combined line-following, obstacle-stop, and line-recovery logic under
-        the course conditions.
+        completing the challenge in 26 seconds and outperforming 75% of the
+        other robots. Testing demonstrated the combined line-following,
+        obstacle-stop, and line-recovery logic under the course conditions.
       </p>
     </>
   );

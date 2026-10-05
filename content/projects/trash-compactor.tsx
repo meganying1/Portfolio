@@ -19,12 +19,12 @@ export default function TrashCompactorContent() {
         figures={[
           {
             number: 1,
-            src: "/assets/photos/projects/compactor_retraction.gif",
+            src: "/assets/photos/projects/compactor_compression.gif",
             width: 320,
             height: 452,
-            alt: "Prototype return stroke with the scissor linkage retracting and compression plate lowering beneath paper waste",
+            alt: "Prototype compression stroke with the scissor linkage extending and compression plate rising against paper waste",
             caption:
-              "Recorded return stroke lowers the plate beneath the paper waste",
+              "Scissor linkage raises the compression plate against the paper waste",
           },
           {
             number: 2,
@@ -32,8 +32,7 @@ export default function TrashCompactorContent() {
             width: 1448,
             height: 1848,
             alt: "Machined scissor links, compression plate, linear actuator, and black actuator mounts",
-            caption:
-              "Machined links and printed mounts connect the actuator to the compression plate",
+            caption: "Machined linkage with printed actuator mounts",
             crop: { x: 110, y: 300, width: 1220, height: 1400 },
           },
         ]}
@@ -43,9 +42,12 @@ export default function TrashCompactorContent() {
 
       <p>
         Benchmarking and a weighted concept comparison led us to a standalone,
-        actuator-driven scissor linkage beneath the trash compartment. The plate
-        rises vertically, compresses waste against the locked lid, holds for
-        approximately ten seconds, and retracts automatically.
+        actuator-driven scissor linkage beneath the trash compartment. We chose
+        this mechanism to convert a short horizontal actuator stroke into the
+        larger vertical plate travel needed for compaction while keeping the
+        actuator beneath the waste. The plate rises vertically, compresses waste
+        against the locked lid, holds for approximately ten seconds, and
+        retracts automatically.
       </p>
 
       <p>
@@ -62,7 +64,7 @@ export default function TrashCompactorContent() {
         width={439}
         height={512}
         alt="Scissor linkage assembly with the actuator positioned between two custom mounts"
-        caption="SolidWorks assembly packages the actuator and custom mounts within the scissor linkage"
+        caption="CAD assembly of the linkage and actuator mounts"
         compact
       />
 
@@ -71,9 +73,11 @@ export default function TrashCompactorContent() {
       <p>
         We used free-body diagrams and linkage geometry to evaluate force
         transmission at the minimum link angle of 8.2°. For a 44 lbf actuator,
-        the initial model predicted 6.4–12.8 lbf of supported vertical load
-        under two support-reaction assumptions, including the linkage, plate,
-        and waste weight.
+        we compared two support load cases. In the worst case, the roller
+        carried the full vertical load and the pin carried no vertical reaction,
+        giving a supported-load estimate of 6.4 lbf. In the best case, the pin
+        and roller shared the vertical load equally, increasing the estimate to
+        12.8 lbf. These loads include the linkage, plate, and waste weight.
       </p>
 
       <ProjectFigure
@@ -83,7 +87,7 @@ export default function TrashCompactorContent() {
         height={1024}
         crop={{ x: 125, y: 230, width: 1385, height: 540 }}
         alt="Scissor-linkage support and free-body diagrams with actuator forces, support reactions, and plate loading"
-        caption="Support reactions and scissor angle determine the vertical load available from the actuator"
+        caption="Actuator force and support reactions in the scissor linkage"
       />
 
       <p>
@@ -101,7 +105,9 @@ export default function TrashCompactorContent() {
         linkage used manually machined aluminum bars and rods, while the custom
         actuator mounts were 3D printed. We integrated the mechanism with the
         enclosure, electronics, compression plate, hinges, and lid-locking
-        hardware.
+        hardware. I contributed my knowledge of manufacturing processes to the
+        production proposal, selecting component processes and refining part
+        geometry for the proposed methods and assembly sequence.
       </p>
 
       <p>
@@ -112,23 +118,14 @@ export default function TrashCompactorContent() {
         loads to be reassessed before that change.
       </p>
 
-      <h2>Manufacturing &amp; cost</h2>
-
-      <p>
-        The prototype used manual machining, 3D printing, and a wooden enclosure
-        for rapid fabrication. I contributed to the production proposal by
-        selecting component manufacturing processes and refining geometry for
-        the proposed methods and assembly sequence. These proposals would
-        require supplier review before production.
-      </p>
-
       <h2>Results</h2>
 
       <p>
         We demonstrated automated compaction within a standalone trash-bin
         enclosure and received the Best Overall Project Award at CMU’s December
-        2024 design expo. Heavier-load stalls remained unresolved, and a
-        higher-capacity actuator was not validated in this prototype.
+        2024 design expo. Testing and analysis identified actuator capacity as
+        the limiting factor in compaction performance, guiding our plan to use a
+        higher-capacity actuator in a future prototype.
       </p>
     </>
   );

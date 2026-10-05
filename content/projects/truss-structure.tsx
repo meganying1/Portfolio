@@ -22,8 +22,7 @@ export default function TrussStructureContent() {
             width: 2048,
             height: 946,
             alt: "Laser-cut acrylic truss members and bolted joints on the center-load fixture",
-            caption:
-              "Laser-cut acrylic members and bolted joints form the truss on its load fixture",
+            caption: "Assembled acrylic truss on the load fixture",
             crop: { x: 570, y: 540, width: 900, height: 400 },
           },
           {
@@ -32,7 +31,7 @@ export default function TrussStructureContent() {
             width: 1346,
             height: 745,
             alt: "Truss CAD showing member geometry, mounting points, and the central load connection",
-            caption: "SolidWorks model defines members and mounting points",
+            caption: "Truss CAD model on the load fixture",
             crop: { x: 360, y: 325, width: 635, height: 355 },
           },
         ]}
@@ -42,13 +41,10 @@ export default function TrussStructureContent() {
 
       <p>
         Each team member developed three concepts. We compared the strongest
-        candidates using predicted strength-to-weight performance and selected a
-        geometry for fabrication.
-      </p>
-
-      <p>
-        We modeled the assembly in SolidWorks and used the member-force
-        calculations to select dimensions and estimate weight.
+        candidates and selected the final design for its highest predicted
+        strength-to-weight performance. We modeled the assembly in SolidWorks,
+        used member-force calculations to select dimensions and estimate weight,
+        then fabricated the chosen design in acrylic.
       </p>
 
       <h2>Analysis &amp; validation</h2>
@@ -67,7 +63,7 @@ export default function TrussStructureContent() {
         width={1919}
         height={820}
         alt="Truss and joint free-body diagrams showing the center design load and member-force directions"
-        caption="Joint equilibrium identifies tension and compression under the center design load"
+        caption="Truss and joint loads under the 40-pound design load"
         wide
       />
 

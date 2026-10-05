@@ -18,13 +18,11 @@ export default function LinkageSystemContent() {
         figures={[
           {
             number: 1,
-            src: "/assets/photos/projects/linkage_revised.png",
-            width: 820,
-            height: 914,
-            alt: "Revised linkage with crank, coupler, slotted rocker, and button fixture",
-            caption:
-              "Revised CAD packages the links around the motor and button fixture",
-            crop: { x: 130, y: 130, width: 550, height: 735 },
+            src: "/assets/photos/projects/linkage_annotated.svg",
+            width: 920,
+            height: 1000,
+            alt: "Final linkage CAD with labels for the button, motor-driven crank, connecting coupler, and slotted rocker",
+            caption: "Labeled CAD model of the final linkage",
           },
           {
             number: 2,
@@ -32,8 +30,7 @@ export default function LinkageSystemContent() {
             width: 464,
             height: 415,
             alt: "Laser-cut acrylic links assembled on the motor and button fixture",
-            caption:
-              "Laser-cut links form the motor-driven button test mechanism",
+            caption: "Final linkage assembled on the test fixture",
             crop: { x: 70, y: 65, width: 325, height: 335 },
           },
         ]}
@@ -69,21 +66,19 @@ export default function LinkageSystemContent() {
 
       <ProjectFigure
         number={3}
-        src="/assets/photos/projects/linkage_fbd_clean_v2.png"
+        src="/assets/photos/projects/linkage_fbd_clean_v3.png"
         width={1136}
         height={1385}
         crop={{ x: 25, y: 95, width: 1025, height: 1200 }}
         alt="Linkage and member free-body diagrams showing the button load and joint reactions"
-        caption="Linkage free-body diagrams identify joint reactions at a critical orientation"
+        caption="Member loads and joint reactions at a critical orientation"
         wide
       />
 
       <p>
         We used FEA to examine stress relative to the modeled yield strength and
-        assess deflection. The hand and FEA stress estimates differed
-        substantially, so these models did not establish a validated strength
-        margin. CAD motion studies predicted cumulative contact time, providing
-        a baseline for the initial and revised tests below.
+        assess deflection. CAD motion studies predicted cumulative contact time,
+        providing a baseline for the initial and revised tests below.
       </p>
 
       <ProjectFigure
@@ -92,7 +87,7 @@ export default function LinkageSystemContent() {
         width={1390}
         height={916}
         alt="Final linkage stress plot with the applied load, fixtures, and stress legend in psi"
-        caption="Linkage FEA shows the stress distribution under the applied button load"
+        caption="Simulated linkage stress under the applied button load"
         wide
       />
 
@@ -146,8 +141,7 @@ export default function LinkageSystemContent() {
         during the 120-second test, approximately 14 times the initial result
         and 78% of the final motion-study prediction. It completed the test
         without motor stall or structural failure. The slot did not provide the
-        intended sliding action, and observed out-of-plane deflection made a
-        solid-link redesign a candidate for further evaluation.
+        intended sliding action.
       </p>
     </>
   );

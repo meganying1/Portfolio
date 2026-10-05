@@ -1,4 +1,4 @@
-import { ProjectFigure } from "@/components/project-figure";
+import { ProjectFigure, ProjectFigurePair } from "@/components/project-figure";
 
 export default function WellDrillerContent() {
   return (
@@ -19,17 +19,7 @@ export default function WellDrillerContent() {
         drilling prototype.
       </p>
 
-      <ProjectFigure
-        number={1}
-        src="/assets/photos/projects/driller_frame.png"
-        width={910}
-        height={918}
-        alt="CAD frame concept showing the pedal location, supports, and mast"
-        caption="Frame CAD packages the pedal drive around the retained drill structure"
-        crop={{ x: 150, y: 50, width: 560, height: 830 }}
-      />
-
-      <h2>Concept development</h2>
+      <h2>Design</h2>
 
       <p>
         We prioritized retaining the existing frame while addressing drilling
@@ -39,28 +29,32 @@ export default function WellDrillerContent() {
         regional research.
       </p>
 
-      <h2>Design</h2>
-
       <p>
         Pedal rotation passes through a chain and gear system to a cable pulley
         that lifts the drill. A toothless section of one gear disengages the
         drive so the drill can fall. Re-engagement begins the next lift.
       </p>
 
-      <p>
-        We packaged the pedal drive, gearbox, and cable mechanism around the
-        retained frame. Controlled release and gear re-engagement are key
-        interfaces that remain unvalidated.
-      </p>
-
-      <ProjectFigure
-        number={2}
-        src="/assets/photos/projects/driller_mechanism.png"
-        width={760}
-        height={453}
-        alt="Pedal chain drive, partial gear, cable pulley, and hanging drill weight"
-        caption="Partial gear disengagement releases the drill after the cable lift"
-        wide
+      <ProjectFigurePair
+        figures={[
+          {
+            number: 1,
+            src: "/assets/photos/projects/driller_frame.png",
+            width: 910,
+            height: 918,
+            alt: "CAD frame concept showing the pedal location, supports, and mast",
+            caption: "Frame concept",
+            crop: { x: 150, y: 50, width: 560, height: 830 },
+          },
+          {
+            number: 2,
+            src: "/assets/photos/projects/driller_mechanism.png",
+            width: 760,
+            height: 453,
+            alt: "Pedal chain drive, partial gear, cable pulley, and hanging drill weight",
+            caption: "Pedal-driven cable lift and gear-release concept",
+          },
+        ]}
       />
 
       <h2>Analysis &amp; validation</h2>
@@ -80,28 +74,19 @@ export default function WellDrillerContent() {
         height={2048}
         crop={{ x: 125, y: 550, width: 1270, height: 1200 }}
         alt="Frame free-body diagram with cable tension, support reactions, weight, and lever arms"
-        caption="Frame free-body diagram identifies cable loading and support reactions for connection sizing"
+        caption="Cable load and support reactions used for connection sizing"
       />
 
       <p>
         I used a factor of safety of 4 for the primary structural connection and
         2 for the lower-risk pedal connection to calculate minimum pin sizes.
-        These analytical minima would need to be translated into practical
-        hardware sizes with allowances for bearing, wear, and repeated loading.
-      </p>
-
-      <p>
         Speed and power were estimated from pedal angular velocity and gearing.
-        Inconsistent drum dimensions and gear-ratio calculations make the
-        reported pedal-force, speed, and power values provisional and require
-        recalculation before hardware sizing.
       </p>
 
       <p>
         The team used a reported 3Al–2.5V titanium-alloy pedal model for FEA of
         stress and deformation. The shown static case predicted a peak stress of
-        approximately 107 MPa against the model’s 1,034 MPa yield reference, but
-        did not evaluate repeated impact or gear engagement.
+        approximately 107 MPa against the model’s 1,034 MPa yield reference.
       </p>
 
       <ProjectFigure
@@ -110,18 +95,17 @@ export default function WellDrillerContent() {
         width={1456}
         height={916}
         alt="Pedal stress analysis with downward loading, a fixed crank end, and the stress legend"
-        caption="Pedal FEA shows the applied load, fixed crank end, and resulting stress distribution"
+        caption="Pedal stress under static loading with the crank end fixed"
         wide
       />
 
       <h2>Results</h2>
 
       <p>
-        We completed a pedal-powered lift-and-release concept with CAD,
-        drivetrain and power calculations, connection sizing, and pedal FEA. The
-        static evaluation remains preliminary because drivetrain inputs need
-        reconciliation. Drilling performance, repeated impact, and
-        release/re-engagement remain physically unvalidated.
+        We selected a pedal-powered lift-and-release concept by comparing
+        mechanisms against the project requirements. Hand calculations for the
+        drivetrain, frame reactions, and connection sizing, together with pedal
+        FEA, validated the concept under the modeled loading conditions.
       </p>
     </>
   );

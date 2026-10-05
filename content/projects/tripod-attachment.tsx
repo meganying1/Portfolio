@@ -21,7 +21,7 @@ export default function TripodAttachmentContent() {
         height={345}
         compact
         alt="Printed phone holder with padded base and two servo-driven gripping wings"
-        caption="Printed phone-mount prototype combines servo-driven wings with a padded base"
+        caption="Prototype holding a phone between the gripping wings"
         crop={{ x: 40, y: 30, width: 380, height: 300 }}
       />
 
@@ -55,8 +55,7 @@ export default function TripodAttachmentContent() {
             width: 918,
             height: 1056,
             alt: "Phone holder CAD showing the wing servos, battery, and electronics within the base",
-            caption:
-              "CAD assembly packages wing servos and electronics within the base",
+            caption: "Servos and electronics in the base",
           },
           {
             number: 3,
@@ -64,8 +63,7 @@ export default function TripodAttachmentContent() {
             width: 971,
             height: 959,
             alt: "Rounded teeth between the concentric inner and outer rotating interface parts",
-            caption:
-              "CAD detail shows mating teeth for compliant orientation adjustment",
+            caption: "Rounded teeth in the rotating base",
             crop: { x: 85, y: 35, width: 800, height: 880 },
           },
         ]}
@@ -81,34 +79,34 @@ export default function TripodAttachmentContent() {
         governed the simplified analysis.
       </p>
 
-      <ProjectFigure
-        number={4}
-        src="/assets/photos/projects/tripod_calc.png"
-        width={436}
-        height={330}
-        alt="Assumed phone and wing geometry with the lever arm between the servo axis and phone contact"
-        caption="Phone and wing geometry set the lever arm used to estimate servo loading"
-        compact
-      />
-
       <p>
         FEA examined stress and deformation under the same 2.97 N load,
         predicting 10.2 MPa maximum stress. Applying the report’s assumed TPU
-        strength gave a calculated factor of safety of 5.1. The fixed-base model
-        resolved local stress near the attachment, but used natural rubber
-        rather than TPU. These estimates therefore do not validate the printed
-        wings.
+        strength gave a calculated factor of safety of 5.1. We believe the
+        difference between the hand calculations and FEA is due to the
+        simplified geometry used in the hand analysis.
       </p>
 
-      <ProjectFigure
-        number={5}
-        src="/assets/photos/projects/tripod_wing_stress.png"
-        width={1324}
-        height={1085}
-        alt="Wing stress plot under servo loading, with the fixed base and stress legend visible"
-        caption="Wing FEA identifies stress concentrations under the modeled servo load"
-        crop={{ x: 580, y: 65, width: 710, height: 970 }}
-        wide
+      <ProjectFigurePair
+        figures={[
+          {
+            number: 4,
+            src: "/assets/photos/projects/tripod_calc.png",
+            width: 436,
+            height: 330,
+            alt: "Assumed phone and wing geometry with the lever arm between the servo axis and phone contact",
+            caption: "Phone and wing loads used in the bending calculation",
+          },
+          {
+            number: 5,
+            src: "/assets/photos/projects/tripod_wing_stress.png",
+            width: 1324,
+            height: 1085,
+            alt: "Wing stress plot under servo loading, with the fixed base and stress legend visible",
+            caption: "Wing stress distribution under the modeled servo load",
+            crop: { x: 580, y: 65, width: 710, height: 970 },
+          },
+        ]}
       />
 
       <h2>Fabrication &amp; iteration</h2>
@@ -120,11 +118,10 @@ export default function TripodAttachmentContent() {
       </p>
 
       <p>
-        The glued wing-to-servo-horn connection was not robust, and the
-        foam-lined slot prevented the phone from seating fully. We proposed
-        widening the slot and redesigning the wing-to-servo fit to replace the
-        glued horn connection. These changes and reduced adjustment effort
-        remained to be tested.
+        Through testing, we found that the glued wing-to-servo-horn connection
+        was not robust and the foam-lined slot prevented the phone from seating
+        fully. We proposed widening the slot and redesigning the wing-to-servo
+        fit to replace the glued horn connection.
       </p>
 
       <h2>Manufacturing &amp; cost</h2>
@@ -148,8 +145,7 @@ export default function TripodAttachmentContent() {
         We built a prototype of the sensor-triggered gripping mechanism and
         compliant rotating interface. Testing identified specific changes to
         phone clearance and servo attachment before further functional and user
-        evaluation. Reduced adjustment force and reliable retention remain to be
-        measured.
+        evaluation.
       </p>
     </>
   );

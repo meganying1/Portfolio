@@ -6,11 +6,10 @@ export default function ChineseCheckersContent() {
       <h2>Overview</h2>
 
       <p>
-        I built a Chinese Checkers application in Python and Tkinter with local
-        multiplayer and a computer-controlled opponent. I implemented the game
-        engine, interface, legal move generation, turn management, and win
-        detection. The completed game integrated a Minimax-based opponent and
-        hints alongside human play.
+        I built a Chinese Checkers game in Python with a Tkinter interface,
+        allowing players to compete against each other on one computer or play
+        against a computer opponent. I programmed the board, movement rules,
+        turns, and win detection, along with a computer opponent and move hints.
       </p>
 
       <ProjectFigure
@@ -26,42 +25,41 @@ export default function ChineseCheckersContent() {
       <h2>Software design</h2>
 
       <p>
-        Piece objects store positions and animation state, while a board grid
-        represents occupancy. Event callbacks handle input and animation, and
-        separate functions validate moves, advance turns, and detect wins. The
-        board’s offset rows required conversions between game coordinates and
-        screen locations for rendering, mouse selection, and move validation.
+        I used object-oriented programming to represent each game piece as an
+        object that stores its position and animation state. A board grid tracks
+        which spaces are occupied. Because the board’s rows are staggered, I
+        mapped board positions to screen locations so clicks and movement
+        matched the visible spaces.
       </p>
 
       <p>
-        The interface highlights legal destinations and supports animations and
-        timed turns, with turn progression and win detection managed by the game
-        engine.
+        Clicking a piece highlights where it can move, and the program checks
+        each move before updating the board, advancing the turn, or declaring a
+        winner. Players can move to a neighboring space or jump over other
+        pieces. After a jump, they can continue jumping within the same turn,
+        but cannot switch to an ordinary step. The interface animates pieces
+        between spaces and shows the time remaining in each turn.
       </p>
 
-      <h2>AI &amp; algorithms</h2>
+      <h2>AI and algorithms</h2>
 
       <p>
-        Human turns allow adjacent moves and successive jumps. A jump-state flag
-        blocks ordinary steps after a jump and keeps follow-up jumps within the
-        same turn.
-      </p>
-
-      <p>
-        I compared candidate moves and opponent responses with a depth-three
-        Minimax search using a simple row-progress score. The same search
-        supplies hints in single-player mode. AI search considers individual
-        steps and jumps rather than complete multi-jump turns.
+        The AI component uses Minimax, which looks ahead at possible moves and
+        the opponent’s replies, then chooses the move that gives it the best
+        outcome assuming the opponent also plays well. My implementation looks
+        three moves ahead and scores positions by how far pieces have advanced
+        toward the opposite side. The same approach suggests hints when playing
+        against the computer. It compares individual steps and jumps rather than
+        complete chains of jumps.
       </p>
 
       <h2>Results</h2>
 
       <p>
-        The completed application integrates human and computer-controlled
-        gameplay in one interface, including legal-move highlighting, human jump
-        sequences, turn management, and win detection. Reusing the search
-        framework for the opponent and hints kept the AI behavior within the
-        same game engine.
+        The completed game’s graphical user interface (GUI) supports human and
+        AI opponents, highlighted moves, successive jumps, timed turns, and win
+        detection. The AI component and hints share the same move-selection
+        logic.
       </p>
     </>
   );
