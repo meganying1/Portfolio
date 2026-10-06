@@ -43,6 +43,7 @@
   --layout-top: var(--space-10);
   --layout-bottom: var(--space-9);
   --section-gap: var(--space-7);
+  --rule-heading-gap: var(--space-5);
   --section-heading-gap: var(--space-3);
   --row-gap: var(--space-4);
   --row-padding: var(--space-3);

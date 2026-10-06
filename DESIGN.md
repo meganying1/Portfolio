@@ -10,33 +10,33 @@ The portfolio is a compact professional index: identity, selected work, experien
 
 ## Tokens
 
-| Group              | Decision                                                             | Token                                                          |
-| ------------------ | -------------------------------------------------------------------- | -------------------------------------------------------------- |
-| Page               | White, with a subtle gray image surface                              | `--color-page`, `--color-surface`                              |
-| Text               | Charcoal primary; accessible gray secondary                          | `--color-text`, `--color-secondary`                            |
-| Links              | Muted blue for hover/focus, darker blue for press feedback           | `--color-link`, `--color-link-active`, `--color-focus`         |
-| Rules              | Light gray, decorative separators only                               | `--color-rule`, `--border-width`                               |
-| Typeface           | Native system sans for fast, consistent rendering                    | `--font-body`                                                  |
-| Type               | 13 / 14 / 16 / 24 px; home and case titles share 24 px               | `--text-caption` through `--text-title`                        |
-| Weight             | 400 body, 600 headings                                               | `--weight-body`, `--weight-heading`                            |
-| Leading            | 1.3 titles, 1.5 lists, 1.65 prose                                    | `--leading-tight`, `--leading-ui`, `--leading-body`            |
-| Spacing            | 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 px                     | `--space-1` through `--space-10`                               |
-| Page measure       | 704 px maximum, with responsive outer gutters                        | `--layout-width`, `--layout-gutter`                            |
-| Page padding       | 80 px above, 64 px below; mobile starts at 48 px                     | `--layout-top`, `--layout-bottom`                              |
-| Sections           | Home: 40 px before rules, 24 px after; 12 px after headings          | `--section-gap`, `--space-5`, `--section-heading-gap`          |
-| Rows               | 12 px vertical padding, 16 px column gap                             | `--row-padding`, `--row-gap`                                   |
-| Skills             | 192 px category column; individual terms wrap together               | `--skills-label-width`, `--row-gap`                            |
-| Project navigation | 64 px sticky bar; 40 px before the project title                     | `--project-nav-height`, `--project-title-space`, `--layer-nav` |
-| Thumbnails         | 88 × 72 px desktop, contain rather than crop                         | `--project-thumb-width`, `--project-thumb-height`              |
-| Experience logos   | 28 px frames, original brand colors, optically normalized artwork    | `--experience-logo-size`, `--logo-scale-*`                     |
-| Corners            | 4 px for media and slide controls                                    | `--radius-image`                                               |
-| Controls           | 44 px for standalone contact and slide controls; dim disabled slides | `--control-height`, `--opacity-disabled`                       |
-| Focus              | 2 px blue outline with 4 px offset                                   | `--focus-width`, `--focus-offset`                              |
-| Feedback           | 140 ms hover color and plus/minus opacity feedback                   | `--duration-feedback`, `--ease-feedback`                       |
-| Underlines         | 1 px beneath interactive text, offset by 0.2em                       | `--underline-thickness`, `--underline-offset`                  |
-| Inline arrows      | Diagonal arrows scale to 87.5% of text size, centered on cap height  | `--icon-diagonal-size`, `--icon-diagonal-align`                |
-| Resource spacing   | 12 px beneath Presentation; 8 px beneath Files and Tools             | `--resource-content-gap`, `--resource-list-gap`                |
-| Disclosure         | 160 ms measured-height transition for pointer activation             | `--duration-disclosure`, `--ease-motion`                       |
+| Group              | Decision                                                                               | Token                                                          |
+| ------------------ | -------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| Page               | White, with a subtle gray image surface                                                | `--color-page`, `--color-surface`                              |
+| Text               | Charcoal primary; accessible gray secondary                                            | `--color-text`, `--color-secondary`                            |
+| Links              | Muted blue for hover/focus, darker blue for press feedback                             | `--color-link`, `--color-link-active`, `--color-focus`         |
+| Rules              | Light gray, decorative separators only                                                 | `--color-rule`, `--border-width`                               |
+| Typeface           | Native system sans for fast, consistent rendering                                      | `--font-body`                                                  |
+| Type               | 13 / 14 / 16 / 24 px; home and case titles share 24 px                                 | `--text-caption` through `--text-title`                        |
+| Weight             | 400 body, 600 headings                                                                 | `--weight-body`, `--weight-heading`                            |
+| Leading            | 1.3 titles, 1.5 lists, 1.65 prose                                                      | `--leading-tight`, `--leading-ui`, `--leading-body`            |
+| Spacing            | 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 px                                       | `--space-1` through `--space-10`                               |
+| Page measure       | 704 px maximum, with responsive outer gutters                                          | `--layout-width`, `--layout-gutter`                            |
+| Page padding       | 80 px above, 64 px below; mobile starts at 48 px                                       | `--layout-top`, `--layout-bottom`                              |
+| Sections           | Home: 40 px before section rules; all headings 24 px below rules, 12 px before content | `--section-gap`, `--rule-heading-gap`, `--section-heading-gap` |
+| Rows               | 12 px vertical padding, 16 px column gap                                               | `--row-padding`, `--row-gap`                                   |
+| Skills             | 192 px category column; individual terms wrap together                                 | `--skills-label-width`, `--row-gap`                            |
+| Project navigation | 64 px sticky bar; 40 px before the project title                                       | `--project-nav-height`, `--project-title-space`, `--layer-nav` |
+| Thumbnails         | 88 × 72 px desktop, contain rather than crop                                           | `--project-thumb-width`, `--project-thumb-height`              |
+| Experience logos   | 28 px frames, original brand colors, optically normalized artwork                      | `--experience-logo-size`, `--logo-scale-*`                     |
+| Corners            | 4 px for media and slide controls                                                      | `--radius-image`                                               |
+| Controls           | 44 px for standalone contact and slide controls; dim disabled slides                   | `--control-height`, `--opacity-disabled`                       |
+| Focus              | 2 px blue outline with 4 px offset                                                     | `--focus-width`, `--focus-offset`                              |
+| Feedback           | 140 ms hover color and plus/minus opacity feedback                                     | `--duration-feedback`, `--ease-feedback`                       |
+| Underlines         | 1 px beneath interactive text, offset by 0.2em                                         | `--underline-thickness`, `--underline-offset`                  |
+| Inline arrows      | Diagonal arrows scale to 87.5% of text size, centered on cap height                    | `--icon-diagonal-size`, `--icon-diagonal-align`                |
+| Resource spacing   | 12 px beneath Presentation; 8 px beneath Files and Tools                               | `--resource-content-gap`, `--resource-list-gap`                |
+| Disclosure         | 160 ms measured-height transition for pointer activation                               | `--duration-disclosure`, `--ease-motion`                       |
 
 Pixel values above assume the browser’s default 16 px root size. Typography and layout use rem units to respect user text size.
 
@@ -52,7 +52,7 @@ CSS custom properties cannot be used in media query conditions. The two breakpoi
 - **Introduction:** one name, one credential line, two short paragraphs. Contact links appear once. Keep the current role factual; do not add availability, metrics, or a résumé link without a source.
 - **Capitalization:** use sentence case for project titles, case-study subheadings, experience roles, and interface labels. Capitalize the first word, then use lowercase for ordinary words: “Software engineer”, “Analysis & validation”, “Tools”, “Files”, and “Presentation”. Preserve proper names and technical acronyms such as Carnegie Mellon, SolidWorks, Siemens NX, AI, and MATLAB. Publication titles retain their official published capitalization. Edit the source text; do not use CSS text transforms.
 - **Page title and introduction:** home name and case-study titles share 24 px semibold type. Home introductory prose and case-study descriptions share 16 px regular type with 1.65 line height.
-- **Section title:** sentence case, 16 px semibold with 1.3 line height, shared by home section headings, disclosure labels, and case-study narrative headings. Home sections and both disclosures use the same fine rule as the case-study sections. Resource labels remain 14 px semibold. No numbers, wide tracking, uppercase transforms, or oversized section banners.
+- **Section title:** sentence case, 16 px semibold with 1.3 line height, shared by home section headings, disclosure labels, and case-study narrative headings. Home sections and both disclosures use the same fine rule as the case-study sections, with a shared 24 px gap between the rule and heading. Resource labels remain 14 px semibold. No numbers, wide tracking, uppercase transforms, or oversized section banners.
 - **Project row:** actual project image, sentence-case name, one visible description, and the original month/year date range. Project names share the experience company typography: system sans, 14 px semibold, with 1.5 line height. Center both cropped viewports and uncropped photos horizontally and vertically within the thumbnail frame, using grid alignment on the thumbnail wrapper. Constrain the grid tracks to the frame's inner dimensions so portrait photos cannot expand the cell. A persistent, quiet arrow beside the name makes navigation visible before hover. It uses the same diagonal shape, inline spacing, and inherited text color as publication links. Keep the months on desktop and mobile. The whole row is a link. No hover-only information, expanding images, or moving rows.
 - **Arrows:** shared `LinkArrow` component renders vector arrows with a 1.25 px view-box stroke, using `--icon-size` and `--icon-stroke-width`. Horizontal arrows use 16 px frames. Inline diagonal arrows use `--icon-diagonal-size` at 87.5% of the surrounding text size, with `--icon-diagonal-align` centering the icon against the font's cap height. Apply this same smaller treatment to contact, publication, homepage project, and file links. Icons are decorative and hidden from assistive technology; link labels carry the meaning. Keep icons stable in position and use the same drawing for each direction throughout the site.
 - **Disclosure:** shared `Disclosure` component built with native `<details>`. The whole summary row is clickable and at least 44 px tall. Keep the separator above the summary and between content rows; omit the separator between the summary and its first row. A plus/minus indicator sits at the right; optional counts use quiet caption text. Keep the label stable between states, hide the decorative indicator from screen readers, and retain native keyboard interaction. Pointer activation enhances the panel with a measured-height transition; keyboard activation stays immediate. Native toggling still works without JavaScript. Both projects and skills use this component and the existing control, row, spacing, type, and rule tokens.

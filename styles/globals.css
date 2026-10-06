@@ -123,7 +123,7 @@ button {
 }
 .portfolio-section {
   margin-top: var(--section-gap);
-  padding-top: var(--space-5);
+  padding-top: var(--rule-heading-gap);
   border-top: var(--border-width) solid var(--color-rule);
 }
 .section-title,
@@ -256,7 +256,7 @@ button {
   gap: var(--row-gap);
   width: 100%;
   min-height: var(--control-height);
-  padding-block: var(--space-3);
+  padding-block: var(--rule-heading-gap) var(--space-3);
   list-style: none;
   cursor: pointer;
 }
