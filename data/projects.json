@@ -151,6 +151,38 @@
     "files": []
   },
   {
+    "slug": "design-research-agents",
+    "name": "Optimization & learning for design agents",
+    "title": "Optimization & learning for design agents",
+    "summary": "Simulated annealing and reinforcement learning modules for reproducible engineering design research.",
+    "description": "Simulated annealing and reinforcement learning modules for reproducible engineering design research.",
+    "dates": "Mar 2026 – Jul 2026",
+    "featured": false,
+    "thumbnail": {
+      "src": "/assets/photos/projects/design-research-ecosystem.svg",
+      "width": 1500,
+      "height": 760
+    },
+    "tools": ["Python"],
+    "files": []
+  },
+  {
+    "slug": "ai-material-selection",
+    "name": "AI for material selection",
+    "title": "AI for material selection",
+    "summary": "An evaluation pipeline for benchmarking AI material selection against expert judgment.",
+    "description": "An evaluation pipeline for benchmarking AI material selection against expert judgment.",
+    "dates": "Sep 2024 – Feb 2026",
+    "featured": false,
+    "thumbnail": {
+      "src": "/assets/photos/projects/material-selection-mae.png",
+      "width": 1000,
+      "height": 700
+    },
+    "tools": ["Python", "Hugging Face"],
+    "files": []
+  },
+  {
     "slug": "noise-reduction",
     "name": "Noise reduction",
     "title": "Noise reduction",

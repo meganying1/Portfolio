@@ -642,7 +642,11 @@ button {
   display: inline-flex;
   align-items: flex-start;
 }
-.files + .tools,
+.files + .tools {
+  margin-top: var(--space-2);
+  padding-top: 0;
+  border-top: 0;
+}
 .deck + .files {
   margin-top: var(--space-5);
   padding-top: 0;

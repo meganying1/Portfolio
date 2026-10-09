@@ -8,6 +8,8 @@ import MobileRobotContent from "./projects/mobile-robot";
 import TrussStructureContent from "./projects/truss-structure";
 import NoiseReductionContent from "./projects/noise-reduction";
 import ChineseCheckersContent from "./projects/chinese-checkers";
+import AiMaterialSelectionContent from "./projects/ai-material-selection";
+import DesignResearchAgentsContent from "./projects/design-research-agents";
 
 export const projectContent: Record<string, ComponentType> = {
   "battery-door": BatteryDoorContent,
@@ -19,4 +21,6 @@ export const projectContent: Record<string, ComponentType> = {
   "truss-structure": TrussStructureContent,
   "noise-reduction": NoiseReductionContent,
   "chinese-checkers": ChineseCheckersContent,
+  "ai-material-selection": AiMaterialSelectionContent,
+  "design-research-agents": DesignResearchAgentsContent,
 };

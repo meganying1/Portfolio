@@ -97,7 +97,7 @@
     },
     {
       "name": "Engineering software",
-      "items": ["Python", "MATLAB"]
+      "items": ["Python", "MATLAB", "C"]
     }
   ],
   "publications": [
