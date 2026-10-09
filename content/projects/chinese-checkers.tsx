@@ -101,6 +101,24 @@ export default function ChineseCheckersContent() {
         the game rules, interface highlights, and candidate moves considered by
         the search.
       </p>
+
+      <div className="files">
+        <h3 className="label">Links</h3>
+        <div className="files__list">
+          <a
+            className="chip"
+            href="https://github.com/meganying1/Chinese-Checkers"
+          >
+            GitHub code
+          </a>
+          <a
+            className="chip"
+            href="https://www.youtube.com/watch?v=EQbkK0stQs8&feature=youtu.be"
+          >
+            Project demo
+          </a>
+        </div>
+      </div>
     </>
   );
 }
