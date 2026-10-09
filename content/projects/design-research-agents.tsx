@@ -9,11 +9,10 @@ export default function DesignResearchAgentsContent() {
       <p>
         Design Research Agents is a modular Python framework for studying AI
         agents in engineering design, with common interfaces for model calls,
-        tools, and multistep workflows. At Carnegie Mellon’s Design Research
-        Collective, I implemented a simulated annealing search pattern and
-        developed an episodic reinforcement learning pattern with the team. My
-        work connected these algorithms to the framework’s existing workflows,
-        configuration, and result reporting.
+        tools, and multistep workflows. I implemented a simulated annealing
+        search pattern and developed an episodic reinforcement learning pattern
+        with the team. My work connected these algorithms to the framework’s
+        existing workflows, configuration, and result reporting.
       </p>
 
       <ProjectFigure
@@ -33,7 +32,6 @@ export default function DesignResearchAgentsContent() {
             >
               project documentation
             </a>
-            .
           </>
         }
         wide
@@ -51,32 +49,17 @@ export default function DesignResearchAgentsContent() {
 
       <p>
         I separated the search loop from the design problem so researchers could
-        supply their own objective, constraints, and local changes. I supported
-        complete neighboring designs or lists of modifications, supplied or
-        generated starting states, and optional checks on the design
-        representation. To support both minimization and maximization, I
-        converted objectives to one internal comparison rule that kept the
-        acceptance logic consistent.
+        supply their own objective, constraints, and local changes. The module
+        supports minimizing or maximizing an objective, supplied or generated
+        starting states, and optional checks on the design representation.
       </p>
 
       <p>
-        I extended the cooling interface and implemented an adaptive schedule
-        using objective history. Its fallback behavior retains the current
-        temperature when there is too little history, no variation, or an update
-        would produce a nonpositive temperature.
-      </p>
-
-      <p>
-        In a later API review, I made temperature schedules directly importable
-        and added schedule parameters and objective history to the results. I
-        also fixed the output to preserve the actual starting design when it was
-        generated at runtime, making runs easier to inspect and analyze.
-      </p>
-
-      <p>
-        I added tests for cooling schedules, input validation, generated states,
-        objective direction, and stopping. I also checked the public API,
-        documentation, and runnable example from a library user’s perspective.
+        I added adaptive cooling based on objective history. In a later API
+        review, I made temperature schedules directly importable and added
+        schedule settings and objective history to the results. I also fixed the
+        output to preserve generated starting designs, making runs easier to
+        inspect and analyze.
       </p>
 
       <h2>Reinforcement learning</h2>
@@ -96,11 +79,10 @@ export default function DesignResearchAgentsContent() {
       </p>
 
       <p>
-        I defined a small policy interface for action selection, episode
-        updates, and parameter snapshots, then implemented the bounded workflow
-        and result construction. During iteration, I corrected state capture so
-        an environment modifying its input would not overwrite the recorded
-        pre-transition state.
+        I defined the policy interface and implemented a workflow with episode
+        and step limits, recording actions, rewards, and policy parameters.
+        During iteration, I fixed state capture to preserve the history when an
+        environment modifies a design in place.
       </p>
 
       <p>
@@ -109,22 +91,13 @@ export default function DesignResearchAgentsContent() {
         pair’s first occurrence in an episode updates its estimate.
       </p>
 
-      <p>
-        I added regression tests for repeated visits and deterministic choices
-        when evaluation scores tie, along with a runnable example and public
-        exports. These checks validate software behavior without establishing
-        performance gains on engineering design tasks.
-      </p>
-
       <h2>Results</h2>
 
       <p>
-        My code extends the open-source library with configurable design search
-        and an episodic learning workflow. Shared workflow and result contracts
-        let researchers supply their own objectives, environments, and policies
-        while retaining run records for analysis. The built-in learner targets
-        small discrete problems, with a custom-policy interface for other
-        approaches.
+        My code adds configurable simulated annealing and episodic reinforcement
+        learning to the open-source library. Shared workflow and result
+        contracts let researchers supply their own objectives, environments, and
+        policies while retaining run records for analysis.
       </p>
 
       <div className="files">
