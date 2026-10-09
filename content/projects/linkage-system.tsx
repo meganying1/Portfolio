@@ -6,11 +6,12 @@ export default function LinkageSystemContent() {
       <h2>Overview</h2>
 
       <p>
-        Our team built a motor-driven linkage to maximize contact with a
-        spring-loaded button. I calculated joint reactions and member stresses
-        to size the acrylic links. Changes to link lengths and mounting geometry
-        increased contact time, and the final mechanism completed the test
-        without motor stall or structural failure.
+        In a team of three, we built a motor-driven linkage to maximize
+        cumulative button contact during a two-minute test. I calculated forces
+        and stresses at critical orientations to size the acrylic links within
+        the fixture and motor constraints. Revising the link lengths and
+        mounting geometry increased measured contact from 2.96 to 41.17 seconds,
+        with no motor stall or structural failure in the final test.
       </p>
 
       <ProjectFigurePair
@@ -38,25 +39,29 @@ export default function LinkageSystemContent() {
       <h2>Design</h2>
 
       <p>
-        The motor rotates the crank. The coupler connects the crank to the
-        rocker, which pivots about a fixed mounting point and lifts the
-        button-pressing assembly. We varied link lengths and mounting positions
-        to keep the output near its maximum height while fitting the fixture.
+        We compared linkage concepts with different crank, coupler, and rocker
+        lengths and slotted-joint locations. The aim was to keep the output near
+        its maximum height for more of each revolution. We selected a slotted
+        concept because pin motion within the slot was expected to delay rocker
+        descent.
       </p>
 
       <p>
-        We selected a slot in the rocker to let the coupler pin move downward
-        while still supporting the rocker near its highest position. This
-        relative motion was intended to delay descent and extend button contact.
-        In simulation, the alternative with a second slot increased stress
-        without providing the intended delay.
+        The motor drives a crank connected through a coupler to the rocker and
+        button-pressing assembly. Link lengths and mounting locations determine
+        the output height and duration of button contact. The final design
+        retained the slot, but physical testing did not show the intended
+        sliding dwell.
       </p>
 
       <h2>Analysis &amp; validation</h2>
 
       <p>
-        I calculated joint reactions and member stresses at critical
-        orientations to select link widths for the 1/4-inch acrylic parts.
+        I used geometry and joint equilibrium at critical orientations to
+        estimate member forces, then checked axial, bending, and shear stresses,
+        including stress concentrations at holes. Yield-based safety factors
+        guided link widths for the 1/4-inch acrylic parts, with a governing
+        hand-calculated factor of safety of approximately 3.1.
       </p>
 
       <ProjectFigure
@@ -66,14 +71,14 @@ export default function LinkageSystemContent() {
         height={1385}
         crop={{ x: 25, y: 95, width: 1025, height: 1200 }}
         alt="Linkage and member free-body diagrams showing the button load and joint reactions"
-        caption="Member loads and joint reactions at a critical orientation"
+        caption="Calculations for determining member forces and joint reactions"
         wide
       />
 
       <p>
-        We used CAD motion studies to predict contact time and FEA to examine
-        stress and deflection at maximum extension, where the button-spring
-        force was highest.
+        We used FEA to examine stress relative to the modeled yield strength and
+        assess deflection. CAD motion studies predicted cumulative contact time,
+        providing a baseline for the initial and revised tests below.
       </p>
 
       <ProjectFigure
@@ -89,43 +94,54 @@ export default function LinkageSystemContent() {
       <h2>Fabrication &amp; iteration</h2>
 
       <p>
-        We generated DXF files from CAD, laser-cut the 1/4-inch acrylic links,
-        and assembled them on the motor and button fixture. The first prototype
-        achieved 2.96 seconds of cumulative button contact against a
-        30.66-second prediction. The rocker dropped before the coupler pin could
-        slide down the slot and provide the intended support.
+        We generated DXF files from the CAD model, fabricated the acrylic links,
+        and assembled the mechanism on the test fixture.
       </p>
 
       <p>
-        We compared changes to link length, mounting position, and slot
-        placement in CAD motion studies. We changed the rocker and coupler
-        lengths and moved the mounting pin to reduce early descent, then
-        repeated the force calculations and FEA before fabricating the final
-        design.
+        The initial prototype’s rocker descended early, with contact time well
+        below the motion-study prediction. We suspected coupler geometry and
+        downward loading as contributors. We revised the rocker and coupler
+        lengths and mounting position, then repeated the motion and structural
+        analysis before testing.
       </p>
 
-      <p>
-        In the final test, the coupler pin did not travel along the slot, and
-        the slotted rocker showed the greatest out-of-plane deflection among the
-        links. We suspect that friction between the pin and slot, which our
-        motion model did not account for, resisted sliding. These findings led
-        us to recommend removing the slot and reassessing the joint position to
-        preserve button contact while reducing bending.
-      </p>
+      <div className="table-scroll case-table">
+        <table className="data-table">
+          <caption>
+            <span className="fig__num">Table 1</span> Cumulative button contact
+            during each 120-second test
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Geometry</th>
+              <th scope="col">Motion-study prediction</th>
+              <th scope="col">Measured contact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Initial</th>
+              <td className="num">30.66 s</td>
+              <td className="num">2.96 s</td>
+            </tr>
+            <tr>
+              <th scope="row">Revised</th>
+              <td className="num">52.84 s</td>
+              <td className="num">41.17 s</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2>Results</h2>
 
       <p>
-        The final linkage achieved 41.17 seconds of cumulative button contact
-        during the 120-second test, compared with a 52.84-second prediction. It
-        completed the test without motor stall or structural failure.
-      </p>
-
-      <p>
-        Contact time increased by approximately 14 times from the initial
-        2.96-second result. The improvement followed the changed link lengths
-        and mounting position, while testing showed that the slot did not
-        provide its intended delay.
+        The revised mechanism achieved 41.17 seconds of cumulative contact
+        during the 120-second test, approximately 14 times the initial result
+        and 78% of the final motion-study prediction. It completed the test
+        without motor stall or structural failure. The slot did not provide the
+        intended sliding action.
       </p>
     </>
   );

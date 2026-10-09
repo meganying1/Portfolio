@@ -6,11 +6,11 @@ export default function NoiseReductionContent() {
       <h2>Overview</h2>
 
       <p>
-        Our team developed a Least Mean Squares (LMS) adaptive filter to reduce
-        background noise in campus audio recordings while preserving important
-        sounds. I helped implement and tune the MATLAB filter and compare
-        waveforms and playback. The processed recordings had lower amplitudes
-        while important environmental sounds remained distinguishable.
+        In a team of four, we implemented a Least Mean Squares (LMS) adaptive
+        filter in MATLAB and evaluated it on recordings from Carnegie Mellon’s
+        campus. The goal was to reduce background noise while keeping important
+        environmental sounds distinguishable. The project reported up to 95%
+        lower waveform amplitude across its evaluation.
       </p>
 
       <ProjectFigure
@@ -26,19 +26,22 @@ export default function NoiseReductionContent() {
       <h2>Algorithm development</h2>
 
       <p>
-        We first modeled destructive interference in MATLAB, combining
-        equal-amplitude waveforms with opposite phase to demonstrate
-        cancellation. A fixed inverted waveform was useful for a known signal,
-        but it would not track changing background noise. We chose LMS so the
-        filter response could adapt over time.
+        We first explored cancellation using an inverted waveform. This
+        illustrated destructive interference, but a fixed waveform would not
+        track changing background noise. We also explored a recursive FFT and
+        band-pass filtering to inspect and filter frequency content.
       </p>
 
       <p>
-        The LMS filter forms an output from a weighted combination of recent
-        input samples and compares that output with a desired signal. It then
-        uses the error to update the filter coefficients, reducing the squared
-        error over successive iterations. The step size controls how strongly
-        each update changes the coefficients.
+        We instead implemented an LMS filter that updates its coefficients using
+        an error signal. Unlike the initial fixed-waveform approach, the filter
+        can adapt its response over time.
+      </p>
+
+      <p>
+        We varied filter length and step size to explore convergence speed,
+        stability, and filtering performance. Plots and audio playback supported
+        comparison of the original and processed recordings.
       </p>
 
       <ProjectFigure
@@ -46,43 +49,18 @@ export default function NoiseReductionContent() {
         src="/assets/photos/projects/noise_lms.png"
         width={630}
         height={742}
-        alt="Desired and LMS output curves converging over iterations"
+        alt="Illustrative LMS desired-signal and array-output curves approaching one another over iterations"
         caption="Desired signal and LMS output over successive iterations"
         compact
       />
 
-      <h2>MATLAB implementation</h2>
+      <h2>Implementation &amp; testing</h2>
 
       <p>
-        We converted recordings to single-channel signals, generated a
+        We converted the recordings to single-channel signals, generated a
         representative noise signal, and applied the LMS filter to produce
-        processed audio. Filter length determined how many recent samples
-        contributed to each output, while step size controlled the rate of
-        adaptation. We varied both settings to compare convergence speed,
-        stability, and output quality.
-      </p>
-
-      <p>
-        The MATLAB pipeline plotted original and processed signals and supported
-        playback for listening comparisons.
-      </p>
-
-      <h2>Testing &amp; iteration</h2>
-
-      <p>
-        We processed recordings from the gym, buses, lawn, and study areas to
-        compare performance across different background sounds. For each
-        recording, we compared the original and processed waveforms and listened
-        to the audio to check attenuation and whether important environmental
-        sounds remained distinguishable.
-      </p>
-
-      <p>
-        These comparisons informed the filter settings. We used the convergence
-        plots to compare how quickly the output approached the desired signal,
-        and playback to judge the effect on recognizable sounds. Repeating the
-        comparisons with different filter lengths and step sizes helped balance
-        adaptation speed with stable output.
+        processed audio. Gym, bus, lawn, and study-area recordings tested the
+        approach across different background sounds.
       </p>
 
       <ProjectFigure
@@ -95,20 +73,18 @@ export default function NoiseReductionContent() {
         wide
       />
 
+      <p>
+        We compared waveform amplitudes and listened to the processed recordings
+        to assess whether important sounds remained distinguishable. These were
+        visual and listening checks rather than a controlled measure of
+        selective noise removal.
+      </p>
+
       <h2>Results</h2>
 
       <p>
-        We completed a MATLAB pipeline for loading campus recordings, applying
-        an LMS adaptive filter, and comparing original and processed audio
-        through plots and playback. The implementation allowed filter length and
-        step size to be varied for different recordings.
-      </p>
-
-      <p>
-        Waveform comparisons showed up to 95% amplitude reduction in the tested
-        recordings, while important environmental sounds remained
-        distinguishable in listening checks. Testing across the campus samples
-        connected filter tuning to both the signal plots and the audible result.
+        The project reported up to 95% reduction in waveform amplitude, with
+        important sounds remaining distinguishable in listening checks.
       </p>
     </>
   );

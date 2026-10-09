@@ -107,7 +107,7 @@ export function Disclosure({
       id={id}
     >
       <summary onClick={toggle}>
-        <span>{title}</span>
+        <span className="link-label">{title}</span>
         <span className="disclosure__meta">
           {count !== undefined && (
             <span className="disclosure__count">{count} projects</span>

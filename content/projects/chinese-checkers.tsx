@@ -6,100 +6,60 @@ export default function ChineseCheckersContent() {
       <h2>Overview</h2>
 
       <p>
-        I built a Chinese Checkers application in Python and Tkinter for local
-        multiplayer and play against the computer. I implemented the board, move
-        rules, turn management, and Minimax search. The finished game provides
-        legal-move highlights, animated movement, computer opponents, and player
-        hints.
-      </p>
-
-      <h2>Software design</h2>
-
-      <p>
-        I used a Ball class to store each piece’s board position, owner, color,
-        and animation state. A board array stores occupancy, while separate
-        functions handle drawing, mouse input, and game rules.
-      </p>
-
-      <p>
-        The star-shaped board has offset rows, so a rectangular array alone does
-        not describe valid moves. I used row-specific board boundaries and
-        separate neighbor offsets for odd and even rows. Coordinate-conversion
-        functions map between board positions and screen locations for rendering
-        and mouse selection.
-      </p>
-
-      <h2>Game logic</h2>
-
-      <p>
-        Move validation checks that the selected piece belongs to the current
-        player and that the destination is on the board and unoccupied. A move
-        must reach an adjacent hole or jump over an occupied neighbor into an
-        empty hole. The interface highlights the legal destinations for the
-        selected piece.
+        I built a Chinese Checkers game in Python with a Tkinter interface,
+        allowing players to compete against each other on one computer or play
+        against a computer opponent. I programmed the board, movement rules,
+        turns, and win detection, along with a computer opponent and move hints.
       </p>
 
       <ProjectFigure
         number={1}
-        src="/assets/photos/projects/checker_highlight.png"
-        width={302}
-        height={370}
-        alt="Chinese Checkers board with a selected red piece and outlined legal destinations"
-        caption="Legal destinations highlighted for the selected piece"
+        src="/assets/photos/projects/checkers_gameplay.gif"
+        width={320}
+        height={422}
+        alt="Recorded Chinese Checkers gameplay with a hint button, highlighted moves, and animated red and yellow pieces"
+        caption="Recorded gameplay highlights moves and animates pieces between board positions"
         compact
       />
 
+      <h2>Software design</h2>
+
       <p>
-        An adjacent move advances the turn, while a jump keeps the piece
-        selected so the player can continue a jump sequence. I tracked the
-        active player, a 30-second turn timer, and the occupancy of each target
-        triangle. A player wins when all ten pieces reach the opposite triangle.
+        I used object-oriented programming to represent each game piece as an
+        object that stores its position and animation state. A board grid tracks
+        which spaces are occupied. Because the board’s rows are staggered, I
+        mapped board positions to screen locations so clicks and movement
+        matched the visible spaces.
       </p>
 
       <p>
-        For animated moves, timer callbacks update the piece’s screen position
-        until it reaches its new cell. Separating the board state from the
-        moving piece’s display coordinates lets the rules track the move while
-        the interface shows the transition.
+        Clicking a piece highlights where it can move, and the program checks
+        each move before updating the board, advancing the turn, or declaring a
+        winner. Players can move to a neighboring space or jump over other
+        pieces. After a jump, they can continue jumping within the same turn,
+        but cannot switch to an ordinary step. The interface animates pieces
+        between spaces and shows the time remaining in each turn.
       </p>
 
-      <h2>AI &amp; algorithms</h2>
+      <h2>AI and algorithms</h2>
 
       <p>
-        I implemented a Minimax search three levels deep for single-player
-        games. It generates legal moves, simulates each on a copied board, and
-        recursively alternates between the computer’s move and the human’s
-        response. The search stops at the depth limit or when a player has won.
-      </p>
-
-      <p>
-        The evaluation score uses the pieces’ row positions to measure each
-        side’s progress toward the opposite triangle. The computer chooses the
-        highest score, while the simulated human response chooses the lowest, so
-        a move is judged against an opponent’s strongest reply.
-      </p>
-
-      <p>
-        After evaluating each branch, the search restores the trial board before
-        testing another move. It returns the piece and destination for the
-        selected move. The hint system uses the same search from the human
-        player’s perspective.
+        The AI component uses Minimax, which looks ahead at possible moves and
+        the opponent’s replies, then chooses the move that gives it the best
+        outcome assuming the opponent also plays well. My implementation looks
+        three moves ahead and scores positions by how far pieces have advanced
+        toward the opposite side. The same approach suggests hints when playing
+        against the computer. It compares individual steps and jumps rather than
+        complete chains of jumps.
       </p>
 
       <h2>Results</h2>
 
       <p>
-        I completed a Chinese Checkers application with two-, four-, and
-        six-player local games and a single-player mode against the computer.
-        The interface supports legal-move highlighting, chained jumps, animated
-        movement, timed turns, and win detection.
-      </p>
-
-      <p>
-        The computer opponent and player hints use the same depth-three Minimax
-        search and board evaluation. Shared move-validation functions connect
-        the game rules, interface highlights, and candidate moves considered by
-        the search.
+        The completed game’s graphical user interface (GUI) supports human and
+        AI opponents, highlighted moves, successive jumps, timed turns, and win
+        detection. The AI component and hints share the same move-selection
+        logic.
       </p>
 
       <div className="files">

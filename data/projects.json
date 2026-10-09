@@ -16,11 +16,11 @@
     "files": [
       {
         "href": "/assets/files/Battery_Door_Model.stp",
-        "label": "CAD assembly (STEP) ↗"
+        "label": "CAD assembly (STEP)"
       },
       {
         "href": "/assets/files/Battery_Door_Design_Challenge.pdf",
-        "label": "Presentation (PDF) ↗"
+        "label": "Presentation (PDF)"
       }
     ]
   },
@@ -59,7 +59,7 @@
         "height": 300
       }
     },
-    "tools": ["SolidWorks", "Arduino", "Injection molding", "3D printing"],
+    "tools": ["SolidWorks", "Arduino", "3D printing"],
     "files": []
   },
   {
@@ -75,10 +75,10 @@
       "width": 820,
       "height": 914,
       "crop": {
-        "x": 130,
-        "y": 130,
-        "width": 550,
-        "height": 735
+        "x": 120,
+        "y": 0,
+        "width": 570,
+        "height": 914
       }
     },
     "tools": ["SolidWorks", "Laser cutting"],
@@ -147,7 +147,7 @@
         "height": 340
       }
     },
-    "tools": ["Arduino", "Sensor integration"],
+    "tools": ["Arduino"],
     "files": []
   },
   {

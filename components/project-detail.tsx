@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LinkArrow } from "@/components/link-arrow";
 import { projectContent } from "@/content/project-content";
 import { projects, projectHref, type Project } from "@/lib/projects";
 
@@ -13,13 +14,12 @@ export function ProjectDetail({ project }: { project: Project }) {
       <nav className="project-nav" aria-label="Project navigation">
         <div className="container">
           <Link
-            className="project-nav__back"
-            href="/#projects"
+            className="project-nav__back label-link"
+            href="/"
             prefetch={false}
           >
-            <span>
-              <span aria-hidden="true">←</span> All projects
-            </span>
+            <LinkArrow direction="left" />
+            <span className="link-label">Home</span>
           </Link>
           <span className="project-nav__title">{project.title}</span>
         </div>
@@ -41,11 +41,15 @@ export function ProjectDetail({ project }: { project: Project }) {
                   {project.files.map((file) => (
                     <a
                       key={file.href}
-                      className="chip"
+                      className="chip label-link"
                       href={file.href}
                       download
                     >
-                      {file.label}
+                      <span>
+                        <span className="link-label">{file.label}</span>
+                        {"\u00a0"}
+                        <LinkArrow direction="external" />
+                      </span>
                     </a>
                   ))}
                 </div>
@@ -61,23 +65,29 @@ export function ProjectDetail({ project }: { project: Project }) {
                 ))}
               </div>
             </div>
-            <nav className="pager" aria-label="Project">
+            <nav className="pager" aria-label="Adjacent projects">
               {previous && (
                 <Link
-                  className="pager__link pager__prev"
+                  className="pager__link pager__prev label-link"
                   href={projectHref(previous)}
                   prefetch={false}
                 >
-                  ← {previous.title}
+                  <span className="pager__label">Previous project</span>
+                  <LinkArrow direction="left" />
+                  <span className="pager__name link-label">
+                    {previous.title}
+                  </span>
                 </Link>
               )}
               {next && (
                 <Link
-                  className="pager__link pager__next"
+                  className="pager__link pager__next label-link"
                   href={projectHref(next)}
                   prefetch={false}
                 >
-                  {next.title} →
+                  <span className="pager__label">Next project</span>
+                  <span className="pager__name link-label">{next.title}</span>
+                  <LinkArrow />
                 </Link>
               )}
             </nav>

@@ -6,36 +6,33 @@ export default function WellDrillerContent() {
       <h2>Overview</h2>
 
       <p>
-        Our team developed a pedal-powered concept for the{" "}
+        In a team of three, we developed a pedal-powered redesign of the{" "}
         <a href="https://villagedrill.com" target="_blank" rel="noreferrer">
           Village Drill
         </a>{" "}
-        for Baalbek-Hermel, Lebanon. I brainstormed gear concepts, sketched
-        their integration with the existing frame, and analyzed mechanical
-        loads. The final concept uses a geared cable lift to raise and release
-        the drill for repeated impacts in rocky ground.
+        for Baalbek-Hermel, Lebanon. The concept uses a geared cable drive to
+        lift the drill, then releases it to deliver an impact under its own
+        weight. I researched gear mechanisms that could integrate with the
+        existing drill and performed hand calculations for cable tension, pedal
+        force, frame reactions, pin sizing, and power requirements. The project
+        produced a CAD concept and analytical evaluation rather than a physical
+        drilling prototype.
       </p>
 
       <h2>Design</h2>
 
       <p>
-        I brainstormed gear concepts and drew layouts showing how the pedal
-        input, gears, and drill mechanism could integrate with the existing
-        frame.
+        We prioritized retaining the existing frame while addressing drilling
+        performance, transport, assembly, safety, and power input. I evaluated
+        worm-gear, bevel-gear, and pile-driver concepts. We selected the
+        lift-and-release architecture for the rocky conditions identified in the
+        regional research.
       </p>
 
       <p>
-        We compared worm-gear, bevel-gear, and pile-driver concepts while
-        retaining the existing frame and as many original components as possible
-        to limit cost and assembly changes. We selected the lift-and-release
-        concept because the rocky, calcareous ground in Baalbek-Hermel favored
-        an impact-based approach over the rotational concepts.
-      </p>
-
-      <p>
-        Pedal rotation passes through a chain and gear system to a cable pulley.
-        A toothless gear section disengages the drive to release the drill. The
-        gears then re-engage to start the next lift.
+        Pedal rotation passes through a chain and gear system to a cable pulley
+        that lifts the drill. A toothless section of one gear disengages the
+        drive so the drill can fall. Re-engagement begins the next lift.
       </p>
 
       <ProjectFigurePair
@@ -63,11 +60,11 @@ export default function WellDrillerContent() {
       <h2>Analysis &amp; validation</h2>
 
       <p>
-        I calculated cable tension from the modeled drill load, then used the
-        pulley and gear relationships to estimate the force required at the
-        pedals. I also calculated frame reactions and connection loads to
-        determine minimum pin sizes, checking both the drill-support connection
-        and the pedal connection.
+        An idealized steel-cylinder drill model and frictionless pulley gave a
+        calculated cable tension of approximately 543 N. I used the drivetrain
+        geometry to estimate pedal force, then calculated frame reactions and
+        connection loads using an assumed 50 kg operator and the CAD-derived
+        frame weight.
       </p>
 
       <ProjectFigure
@@ -77,21 +74,19 @@ export default function WellDrillerContent() {
         height={2048}
         crop={{ x: 125, y: 550, width: 1270, height: 1200 }}
         alt="Frame free-body diagram with cable tension, support reactions, weight, and lever arms"
-        caption="Cable load and support reactions used for connection sizing"
+        caption="Calculations for determining support reactions and sizing components"
       />
 
       <p>
-        I applied a factor of safety of 4 to the primary structural connection,
-        where failure could destabilize the frame, and 2 to the lower-risk pedal
-        connection. This gave the frame connection a larger safety margin while
-        allowing the two interfaces to be sized for their different loads and
-        consequences of failure.
+        I used a factor of safety of 4 for the primary structural connection and
+        2 for the lower-risk pedal connection to calculate minimum pin sizes.
+        Speed and power were estimated from pedal angular velocity and gearing.
       </p>
 
       <p>
-        I calculated how pedal speed and gearing affected cable lift speed and
-        power requirements. The team used FEA to estimate pedal stress and
-        deformation under the calculated static load.
+        The team used a reported 3Al–2.5V titanium-alloy pedal model for FEA of
+        stress and deformation. The shown static case predicted a peak stress of
+        approximately 107 MPa against the model’s 1,034 MPa yield reference.
       </p>
 
       <ProjectFigure
@@ -107,17 +102,10 @@ export default function WellDrillerContent() {
       <h2>Results</h2>
 
       <p>
-        We completed a pedal-powered lift-and-release concept with a CAD frame
-        layout, a chain-and-gear mechanism, and a cable pulley that raises and
-        releases the drill. The design retained the existing frame while
-        adapting the power input for repeated impacts in rocky ground.
-      </p>
-
-      <p>
-        My calculations established cable tension, pedal force, frame reactions,
-        minimum connection sizes, and power requirements. The team’s pedal FEA
-        complemented those calculations, giving the concept an initial set of
-        component sizes and load estimates for further design development.
+        We selected a pedal-powered lift-and-release concept by comparing
+        mechanisms against the project requirements. Hand calculations for the
+        drivetrain, frame reactions, and connection sizing, together with pedal
+        FEA, validated the concept under the modeled loading conditions.
       </p>
     </>
   );

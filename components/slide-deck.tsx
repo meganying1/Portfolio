@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { LinkArrow } from "@/components/link-arrow";
 import { useState, useSyncExternalStore, type KeyboardEvent } from "react";
 
 const slideCount = 15;
@@ -63,7 +64,7 @@ export function SlideDeck() {
           onClick={() => step(-1)}
           disabled={index === 0}
         >
-          ←
+          <LinkArrow direction="left" />
         </button>
         <button
           className="deck__nav"
@@ -72,7 +73,7 @@ export function SlideDeck() {
           onClick={() => step(1)}
           disabled={index === slideCount - 1}
         >
-          →
+          <LinkArrow />
         </button>
         <p className="deck__count" data-deck-count aria-live="polite">
           {index + 1} / {slideCount}

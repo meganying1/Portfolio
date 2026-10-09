@@ -1,4 +1,5 @@
 import { ProjectImage } from "@/components/project-image";
+import { LinkArrow } from "@/components/link-arrow";
 import Link from "next/link";
 import { projectHref, type Project } from "@/lib/projects";
 
@@ -14,7 +15,7 @@ export function ProjectList({
       {projects.map((project) => (
         <li key={project.slug}>
           <Link
-            className="project-link"
+            className="project-link label-link"
             href={projectHref(project)}
             prefetch={false}
           >
@@ -25,7 +26,11 @@ export function ProjectList({
               loading={project.featured ? "eager" : "lazy"}
             />
             <span>
-              <span className="project-name">{project.name}</span>
+              <span className="project-name">
+                <span className="link-label">{project.name}</span>
+                {"\u00a0"}
+                <LinkArrow direction="external" />
+              </span>
               <span className="project-description">{project.summary}</span>
             </span>
             <span className="date">{project.dates}</span>

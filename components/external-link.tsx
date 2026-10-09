@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { LinkArrow } from "@/components/link-arrow";
 
 export function ExternalLink({
   href,
@@ -8,11 +9,16 @@ export function ExternalLink({
   children: ReactNode;
 }) {
   return (
-    <a className="external-link" href={href} target="_blank" rel="noreferrer">
+    <a
+      className="external-link label-link"
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+    >
       <span className="external-link__text">
-        {children}
+        <span className="link-label">{children}</span>
         {"\u00a0"}
-        <span aria-hidden="true">↗</span>
+        <LinkArrow direction="external" />
       </span>
       <span className="sr-only"> (opens in a new tab)</span>
     </a>
