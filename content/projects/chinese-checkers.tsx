@@ -1,3 +1,4 @@
+import { LinkArrow } from "@/components/link-arrow";
 import { ProjectFigure } from "@/components/project-figure";
 
 export default function ChineseCheckersContent() {
@@ -61,6 +62,32 @@ export default function ChineseCheckersContent() {
         detection. The AI component and hints share the same move-selection
         logic.
       </p>
+
+      <div className="files">
+        <h3 className="label">Links</h3>
+        <div className="files__list">
+          <a
+            className="chip label-link"
+            href="https://github.com/meganying1/Chinese-Checkers"
+          >
+            <span>
+              <span className="link-label">GitHub code</span>
+              {"\u00a0"}
+              <LinkArrow direction="external" />
+            </span>
+          </a>
+          <a
+            className="chip label-link"
+            href="https://www.youtube.com/watch?v=EQbkK0stQs8&feature=youtu.be"
+          >
+            <span>
+              <span className="link-label">Project demo</span>
+              {"\u00a0"}
+              <LinkArrow direction="external" />
+            </span>
+          </a>
+        </div>
+      </div>
     </>
   );
 }
