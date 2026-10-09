@@ -154,8 +154,8 @@
     "slug": "design-research-agents",
     "name": "Optimization & learning for design agents",
     "title": "Optimization & learning for design agents",
-    "summary": "Search and learning modules for design exploration.",
-    "description": "Search and learning modules for design exploration.",
+    "summary": "Simulated annealing and reinforcement learning modules for reproducible engineering design research.",
+    "description": "Simulated annealing and reinforcement learning modules for reproducible engineering design research.",
     "dates": "Mar 2026 – Jul 2026",
     "featured": false,
     "thumbnail": {
@@ -170,8 +170,8 @@
     "slug": "ai-material-selection",
     "name": "AI for material selection",
     "title": "AI for material selection",
-    "summary": "An AI pipeline comparing model and expert material ratings.",
-    "description": "An AI pipeline comparing model and expert material ratings.",
+    "summary": "An evaluation pipeline for benchmarking AI material selection against expert judgment.",
+    "description": "An evaluation pipeline for benchmarking AI material selection against expert judgment.",
     "dates": "Sep 2024 – Feb 2026",
     "featured": false,
     "thumbnail": {
