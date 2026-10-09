@@ -13,7 +13,24 @@ body {
   color: var(--color-text);
   background: var(--color-page);
   font: var(--weight-body) var(--text-body)/var(--leading-body) var(--font-body);
-  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+  font-synthesis: none;
+  font-variant-ligatures: common-ligatures;
+  hanging-punctuation: first;
+  text-rendering: optimizeLegibility;
+}
+/* Computer Modern is drawn for print: avoid ragged orphans and stranded
+   last lines in prose, and balance short headings. */
+p,
+dd,
+li,
+figcaption {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3 {
+  text-wrap: balance;
 }
 h1,
 h2,
@@ -70,8 +87,7 @@ a,
 button,
 summary,
 .pager__label,
-.link-arrow,
-.disclosure__indicator {
+.link-arrow {
   transition: color var(--duration-feedback) var(--ease-feedback);
 }
 button {
@@ -105,10 +121,8 @@ button {
   height: var(--icon-diagonal-size);
   vertical-align: var(--icon-diagonal-align);
 }
-:is(a, summary, button:enabled):is(:hover, :focus-visible, :active) .link-arrow,
-.disclosure
-  > summary:is(:hover, :focus-visible, :active)
-  .disclosure__indicator {
+:is(a, summary, button:enabled):is(:hover, :focus-visible, :active)
+  .link-arrow {
   color: inherit;
 }
 
@@ -127,7 +141,6 @@ button {
   border-top: var(--border-width) solid var(--color-rule);
 }
 .section-title,
-.disclosure > summary,
 .cs-body h2 {
   font-size: var(--text-body);
   font-weight: var(--weight-heading);
@@ -159,6 +172,13 @@ button {
   letter-spacing: var(--tracking-title);
   line-height: var(--leading-tight);
 }
+.handwritten-name {
+  display: block;
+  font-size: 3rem;
+  font-weight: var(--weight-body);
+  letter-spacing: normal;
+  line-height: 1.1;
+}
 .intro__copy,
 .cs-hero__deck {
   font: var(--weight-body) var(--text-body)/var(--leading-body) var(--font-body);
@@ -172,32 +192,53 @@ button {
 .intro__copy {
   margin-top: var(--space-5);
 }
+.intro__copy strong {
+  font-weight: 700;
+}
 .intro__copy p + p {
   margin-top: var(--space-3);
 }
 .contact-links {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-5);
+  gap: var(--space-3);
   margin-top: var(--space-3);
   font-size: var(--text-small);
+}
+.social-icon {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-brand-linkedin);
+  transition: opacity var(--duration-feedback) var(--ease-feedback);
+}
+.social-icon--resume {
+  color: var(--color-text);
+}
+.external-link--icon:is(:hover, :focus-visible) .social-icon {
+  opacity: 0.8;
 }
 .contact-links a {
   display: inline-flex;
   align-items: center;
   min-height: var(--control-height);
 }
+/* The links' tap target already adds space below them. */
+.intro + .portfolio-section {
+  margin-top: var(--space-3);
+}
 
-/* Project summaries stay visible, with stable row geometry on hover. */
-.project-list > li + li {
-  border-top: var(--border-width) solid var(--color-rule);
+/* Project summaries stay visible as a two-column grid of cards. */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6) var(--space-5);
 }
 .project-link {
-  display: grid;
-  grid-template-columns: var(--project-thumb-width) minmax(0, 1fr) auto;
-  gap: var(--row-gap);
-  align-items: center;
-  padding-block: var(--row-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  height: 100%;
 }
 .project-link > span:not(.date) {
   min-width: 0;
@@ -206,9 +247,9 @@ button {
   display: grid;
   grid-template: minmax(0, 1fr) / minmax(0, 1fr);
   place-items: center;
-  width: var(--project-thumb-width);
+  width: 100%;
   height: var(--project-thumb-height);
-  padding: var(--space-1);
+  padding: var(--space-2);
   border-radius: var(--radius-image);
   background: var(--color-surface);
 }
@@ -221,7 +262,7 @@ button {
   width: min(
     100%,
     calc(
-      (var(--project-thumb-height) - 2 * var(--space-1)) * var(--crop-aspect)
+      (var(--project-thumb-height) - 2 * var(--space-2)) * var(--crop-aspect)
     )
   );
 }
@@ -240,73 +281,9 @@ button {
   color: var(--color-secondary);
 }
 .project-link .date {
-  align-self: start;
-  padding-top: var(--space-1);
+  margin-top: auto;
 }
 
-/* Native details work with a keyboard, touch, and JavaScript disabled. */
-.disclosure {
-  margin-top: var(--space-2);
-  border-top: var(--border-width) solid var(--color-rule);
-}
-.disclosure > summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--row-gap);
-  width: 100%;
-  min-height: var(--control-height);
-  padding-block: var(--rule-heading-gap) var(--space-3);
-  list-style: none;
-  cursor: pointer;
-}
-.disclosure > summary::-webkit-details-marker {
-  display: none;
-}
-.disclosure__meta {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-3);
-  flex-shrink: 0;
-}
-.disclosure__count {
-  color: var(--color-secondary);
-  font-size: var(--text-caption);
-  font-weight: var(--weight-body);
-  font-variant-numeric: tabular-nums;
-}
-.disclosure__indicator {
-  position: relative;
-  display: inline-block;
-  width: var(--space-4);
-  height: var(--space-4);
-  color: var(--color-secondary);
-}
-.disclosure__indicator::before,
-.disclosure__indicator::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: var(--space-3);
-  height: var(--border-width);
-  background: currentColor;
-}
-.disclosure__indicator::after {
-  transform: rotate(90deg);
-  transition: opacity var(--duration-feedback) var(--ease-feedback);
-}
-.disclosure[open] .disclosure__indicator::after {
-  transform: rotate(0deg);
-  opacity: 0;
-}
-.disclosure[data-motion="instant"] .disclosure__indicator::after {
-  transition: none;
-}
-.disclosure[data-motion="pointer"] .disclosure__content {
-  overflow: hidden;
-  transition: height var(--duration-disclosure) var(--ease-motion);
-}
 /* Experience: employer and role on the left, dates on the right. */
 .experience-row {
   display: grid;
@@ -355,26 +332,27 @@ button {
   color: var(--color-secondary);
 }
 .skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
   font-size: var(--text-small);
-  line-height: var(--leading-ui);
+  line-height: 1.3;
 }
 .skills-list__row {
   display: grid;
-  grid-template-columns: var(--skills-label-width) minmax(0, 1fr);
-  gap: var(--row-gap);
-  padding-block: var(--row-padding);
-}
-.skills-list__row + .skills-list__row {
-  border-top: var(--border-width) solid var(--color-rule);
+  align-content: start;
+  gap: var(--space-1);
+  padding: var(--space-4);
+  border-radius: var(--radius-image);
+  background: var(--color-surface);
 }
 .skills-list dt {
-  color: var(--color-secondary);
   font-weight: var(--weight-heading);
 }
 .skills-list__items {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-1) var(--space-2);
+  gap: 0 0.35em;
 }
 .skills-list__items li:not(:last-child)::after,
 .tools__list .chip:not(:last-child)::after,
@@ -382,6 +360,13 @@ button {
   content: "·";
   margin-left: var(--space-2);
   color: var(--color-secondary);
+}
+/* Commas stay attached to the preceding skill when a list wraps; a mid-dot
+   separator would strand at the end of a line. */
+.skills-list__items li:not(:last-child)::after {
+  content: ",";
+  margin-left: 0;
+  color: inherit;
 }
 
 /* Publications retain the full paper titles and attribution. */
@@ -787,23 +772,6 @@ button {
   .concept-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .project-link {
-    grid-template-columns: var(--project-thumb-width) minmax(0, 1fr);
-    gap: var(--space-1) var(--row-gap);
-  }
-  .project-thumb {
-    grid-column: 1;
-    grid-row: 1 / 3;
-  }
-  .project-link > span:not(.date) {
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .project-link .date {
-    grid-column: 2;
-    grid-row: 2;
-    padding-top: 0;
-  }
   .experience-row {
     grid-template-columns: var(--experience-logo-size) minmax(0, 1fr);
     gap: var(--space-1) var(--row-gap);
@@ -814,9 +782,8 @@ button {
   .experience-row .date {
     grid-column: 2;
   }
-  .skills-list__row {
+  .skills-list {
     grid-template-columns: minmax(0, 1fr);
-    gap: var(--space-1);
   }
 }
 @media (max-width: 25em) {
@@ -828,12 +795,6 @@ button {
   .fig-pair > .fig {
     flex: none;
     width: min(100%, calc(var(--pair-height) * var(--figure-aspect)));
-  }
-}
-/* Reading and navigation stay still; only pointer disclosures change height. */
-@media (prefers-reduced-motion: reduce) {
-  .disclosure[data-motion="pointer"] .disclosure__content {
-    transition: none;
   }
 }
 @media print {
@@ -852,12 +813,5 @@ button {
   .publication,
   .fig {
     break-inside: avoid;
-  }
-  .disclosure__content {
-    transition: none !important;
-    height: auto !important;
-  }
-  .disclosure__indicator::after {
-    transition: none !important;
   }
 }

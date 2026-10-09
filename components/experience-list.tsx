@@ -1,5 +1,6 @@
 import Image from "next/image";
 import profile from "@/data/profile.json";
+import { ExternalLink } from "@/components/external-link";
 
 export function ExperienceList() {
   return (
@@ -18,7 +19,11 @@ export function ExperienceList() {
             />
           </span>
           <div>
-            <h3>{experience.organization}</h3>
+            <h3>
+              <ExternalLink href={experience.href}>
+                {experience.organization}
+              </ExternalLink>
+            </h3>
             <p className="experience-role">{experience.role}</p>
           </div>
           <p className="date">{experience.dates}</p>

@@ -3,15 +3,9 @@ import { LinkArrow } from "@/components/link-arrow";
 import Link from "next/link";
 import { projectHref, type Project } from "@/lib/projects";
 
-export function ProjectList({
-  projects,
-  more = false,
-}: {
-  projects: readonly Project[];
-  more?: boolean;
-}) {
+export function ProjectList({ projects }: { projects: readonly Project[] }) {
   return (
-    <ul className={`project-list${more ? " project-list--more" : ""}`}>
+    <ul className="project-list">
       {projects.map((project) => (
         <li key={project.slug}>
           <Link

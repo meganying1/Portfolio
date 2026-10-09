@@ -1,10 +1,14 @@
 {
   "name": "Megan Ying",
-  "credential": "Mechanical engineer · Carnegie Mellon ’25",
+  "credential": "Mechanical & Software Engineer. CMU ’25",
   "introduction": [
-    "I design mechanical systems from concept to production through CAD, analysis, and testing. I’m interested in bringing that experience to robotics and physical AI.",
-    "Previously worked on interconnect product design at Apple and hydraulics and controls at Caterpillar. Currently a software engineer at Bloomberg."
+    "I’m a mechanical and software engineer. I design mechanical systems from concept to production through CAD, analysis, and testing, and I build the software around them. I want to bring both to robotics and physical AI.",
+    "Previously interconnect product design at Apple and hydraulics and controls at Caterpillar. Currently a software engineer at Bloomberg."
   ],
+  "resume": {
+    "label": "Résumé (PDF)",
+    "href": "/assets/files/Megan_Ying_Resume.pdf"
+  },
   "socials": [
     {
       "label": "LinkedIn",
@@ -12,14 +16,16 @@
     },
     {
       "label": "GitHub",
-      "href": "https://github.com/meganying1"
+      "href": "https://github.com/meganying1",
+      "hidden": true
     }
   ],
   "experiences": [
     {
       "organization": "Bloomberg",
-      "role": "Software engineer",
-      "dates": "Oct 2025 – Present",
+      "href": "https://www.bloomberg.com/",
+      "role": "Software Engineer",
+      "dates": "2025 – Present",
       "logo": {
         "src": "/assets/photos/experiences/bloomberg.png",
         "width": 640,
@@ -29,8 +35,9 @@
     },
     {
       "organization": "Design Research Collective",
-      "role": "Research assistant",
-      "dates": "Sep 2024 – Jul 2026",
+      "href": "https://cmudrc.github.io/",
+      "role": "Research Assistant",
+      "dates": "2024 – 2026",
       "logo": {
         "src": "/assets/photos/experiences/research.png",
         "width": 330,
@@ -40,8 +47,9 @@
     },
     {
       "organization": "Apple",
-      "role": "Interconnect product design co-op",
-      "dates": "Sep 2023 – Aug 2024",
+      "href": "https://www.apple.com/",
+      "role": "Interconnect Product Design Co-op",
+      "dates": "2023 – 2024",
       "logo": {
         "src": "/assets/photos/experiences/apple.jpg",
         "width": 400,
@@ -51,8 +59,9 @@
     },
     {
       "organization": "UBS",
-      "role": "Quantitative trading summer analyst",
-      "dates": "Jun 2023 – Aug 2023",
+      "href": "https://www.ubs.com/",
+      "role": "Quantitative Trading Summer Analyst",
+      "dates": "2023",
       "logo": {
         "src": "/assets/photos/experiences/ubs.png",
         "width": 453,
@@ -62,8 +71,9 @@
     },
     {
       "organization": "Caterpillar",
-      "role": "Hydraulics & controls engineering intern",
-      "dates": "May 2022 – Aug 2022",
+      "href": "https://www.caterpillar.com/",
+      "role": "Hydraulics & Controls Engineering Intern",
+      "dates": "2022",
       "logo": {
         "src": "/assets/photos/experiences/cat.jpg",
         "width": 440,
@@ -74,30 +84,28 @@
   ],
   "skills": [
     {
-      "name": "Product design & CAD",
-      "items": ["Siemens NX", "SolidWorks", "GD&T", "DFM", "PLM"]
+      "name": "Product Design & CAD",
+      "items": ["Siemens NX", "SolidWorks", "GD&T"]
     },
     {
-      "name": "Analysis & validation",
-      "items": ["FEA", "ANSYS", "tolerance analysis", "DOE", "failure analysis"]
+      "name": "Analysis & Validation",
+      "items": ["FEA", "ANSYS", "Tolerance Analysis"]
     },
     {
-      "name": "Manufacturing & prototyping",
-      "items": [
-        "Machining",
-        "3D printing",
-        "stamping",
-        "injection molding",
-        "rapid prototyping"
-      ]
+      "name": "Manufacturing & Prototyping",
+      "items": ["Injection Molding", "Machining", "3D Printing"]
     },
     {
-      "name": "Mechatronics & controls",
-      "items": ["Arduino", "control systems", "sensor integration"]
+      "name": "Mechatronics & Controls",
+      "items": ["Arduino", "Control Systems", "Sensor Integration"]
     },
     {
-      "name": "Engineering software",
-      "items": ["Python", "MATLAB"]
+      "name": "Programming",
+      "items": ["Python", "C", "MATLAB"]
+    },
+    {
+      "name": "Software & Data Systems",
+      "items": ["Data Pipelines", "Databases", "AI Agents"]
     }
   ],
   "publications": [

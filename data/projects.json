@@ -5,7 +5,7 @@
     "title": "Battery door",
     "summary": "A push-button battery door that provides one-touch access and automatically re-latches when closed.",
     "description": "A push-button battery door that provides one-touch access and automatically re-latches when closed.",
-    "dates": "Nov 2024 – Dec 2024",
+    "dates": "2024",
     "featured": true,
     "thumbnail": {
       "src": "/assets/photos/projects/battery_exploded.png",
@@ -30,7 +30,7 @@
     "title": "Trash compactor",
     "summary": "A standalone trash compactor that automatically compresses household waste to reduce its volume.",
     "description": "A standalone trash compactor that automatically compresses household waste to reduce its volume.",
-    "dates": "Sep 2024 – Dec 2024",
+    "dates": "2024",
     "featured": true,
     "thumbnail": {
       "src": "/assets/photos/projects/compactor_final.jpg",
@@ -46,7 +46,7 @@
     "title": "Tripod attachment",
     "summary": "An assistive phone mount that reduces the force and dexterity needed for positioning.",
     "description": "An assistive phone mount that reduces the force and dexterity needed for positioning.",
-    "dates": "Nov 2022 – Dec 2022",
+    "dates": "2022",
     "featured": true,
     "thumbnail": {
       "src": "/assets/photos/projects/tripod_phone1.jpg",
@@ -68,7 +68,7 @@
     "title": "Linkage system",
     "summary": "A motor-driven linkage designed to maximize button contact during a two-minute test.",
     "description": "A motor-driven linkage designed to maximize button contact during a two-minute test.",
-    "dates": "Oct 2022 – Nov 2022",
+    "dates": "2022",
     "featured": false,
     "thumbnail": {
       "src": "/assets/photos/projects/linkage_revised.png",
@@ -90,7 +90,7 @@
     "title": "Well driller",
     "summary": "A pedal-powered well-drilling concept designed to break rocky ground through repeated impacts.",
     "description": "A pedal-powered well-drilling concept designed to break rocky ground through repeated impacts.",
-    "dates": "Nov 2021 – Dec 2021",
+    "dates": "2021",
     "featured": false,
     "thumbnail": {
       "src": "/assets/photos/projects/driller_frame.png",
@@ -112,7 +112,7 @@
     "title": "Truss structure",
     "summary": "A lightweight acrylic truss designed to fail near a 40-pound center load.",
     "description": "A lightweight acrylic truss designed to fail near a 40-pound center load.",
-    "dates": "Sep 2021 – Oct 2021",
+    "dates": "2021",
     "featured": false,
     "thumbnail": {
       "src": "/assets/photos/projects/truss_prototype.jpg",
@@ -134,7 +134,7 @@
     "title": "Mobile robot",
     "summary": "An autonomous robot that follows a curved path and stops for moving obstacles.",
     "description": "An autonomous robot that follows a curved path and stops for moving obstacles.",
-    "dates": "Oct 2021 – Nov 2021",
+    "dates": "2021",
     "featured": false,
     "thumbnail": {
       "src": "/assets/photos/projects/mobile_robot.jpg",
@@ -156,7 +156,7 @@
     "title": "Noise reduction",
     "summary": "A MATLAB adaptive filter designed to reduce background noise while preserving important environmental sounds.",
     "description": "A MATLAB adaptive filter designed to reduce background noise while preserving important environmental sounds.",
-    "dates": "Feb 2023 – Mar 2023",
+    "dates": "2023",
     "featured": false,
     "thumbnail": {
       "src": "/assets/photos/projects/noise_signal.png",
@@ -178,7 +178,7 @@
     "title": "Chinese checkers",
     "summary": "A Python Chinese Checkers game that supports multiplayer play, computer opponents, and move hints.",
     "description": "A Python Chinese Checkers game that supports multiplayer play, computer opponents, and move hints.",
-    "dates": "Oct 2021 – Nov 2021",
+    "dates": "2021",
     "featured": false,
     "thumbnail": {
       "src": "/assets/photos/projects/checker_highlight.png",
