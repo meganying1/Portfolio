@@ -52,12 +52,7 @@
       "src": "/assets/photos/projects/tripod_phone1.jpg",
       "width": 458,
       "height": 345,
-      "crop": {
-        "x": 40,
-        "y": 30,
-        "width": 380,
-        "height": 300
-      }
+      "crop": { "x": 40, "y": 30, "width": 380, "height": 300 }
     },
     "tools": ["SolidWorks", "Arduino", "3D printing"],
     "files": []
@@ -74,12 +69,7 @@
       "src": "/assets/photos/projects/linkage_revised.png",
       "width": 820,
       "height": 914,
-      "crop": {
-        "x": 120,
-        "y": 0,
-        "width": 570,
-        "height": 914
-      }
+      "crop": { "x": 120, "y": 0, "width": 570, "height": 914 }
     },
     "tools": ["SolidWorks", "Laser cutting"],
     "files": []
@@ -96,12 +86,7 @@
       "src": "/assets/photos/projects/driller_frame.png",
       "width": 910,
       "height": 918,
-      "crop": {
-        "x": 150,
-        "y": 50,
-        "width": 560,
-        "height": 830
-      }
+      "crop": { "x": 150, "y": 50, "width": 560, "height": 830 }
     },
     "tools": ["SolidWorks"],
     "files": []
@@ -118,12 +103,7 @@
       "src": "/assets/photos/projects/truss_prototype.jpg",
       "width": 2048,
       "height": 946,
-      "crop": {
-        "x": 570,
-        "y": 540,
-        "width": 900,
-        "height": 400
-      }
+      "crop": { "x": 570, "y": 540, "width": 900, "height": 400 }
     },
     "tools": ["SolidWorks", "Laser cutting"],
     "files": []
@@ -140,12 +120,7 @@
       "src": "/assets/photos/projects/mobile_robot.jpg",
       "width": 715,
       "height": 482,
-      "crop": {
-        "x": 170,
-        "y": 40,
-        "width": 470,
-        "height": 340
-      }
+      "crop": { "x": 170, "y": 40, "width": 470, "height": 340 }
     },
     "tools": ["Arduino"],
     "files": []
@@ -154,8 +129,8 @@
     "slug": "design-research-agents",
     "name": "Optimization & learning for design agents",
     "title": "Optimization & learning for design agents",
-    "summary": "Reusable search and learning modules that help researchers explore design alternatives and learn from completed design episodes.",
-    "description": "Reusable search and learning modules that help researchers explore design alternatives and learn from completed design episodes.",
+    "summary": "Search and learning modules for design exploration.",
+    "description": "Search and learning modules for design exploration.",
     "dates": "Mar 2026 – Jul 2026",
     "featured": false,
     "thumbnail": {
@@ -194,12 +169,7 @@
       "src": "/assets/photos/projects/noise_signal.png",
       "width": 780,
       "height": 700,
-      "crop": {
-        "x": 25,
-        "y": 125,
-        "width": 715,
-        "height": 565
-      }
+      "crop": { "x": 25, "y": 125, "width": 715, "height": 565 }
     },
     "tools": ["MATLAB"],
     "files": []

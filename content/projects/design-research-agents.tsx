@@ -66,9 +66,9 @@ export default function DesignResearchAgentsContent() {
 
       <p>
         We scoped the learning pattern around complete episodes because design
-        tasks may only yield meaningful feedback after a finished design. On a
-        development branch, I connected a user-defined environment to a policy
-        that selects actions and learns from episode rewards.
+        tasks may only yield meaningful feedback after a finished design. I
+        connected a user-defined environment to a policy that selects actions
+        and learns from episode rewards.
       </p>
 
       <p>

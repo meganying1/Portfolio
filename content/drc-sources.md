@@ -117,8 +117,9 @@ documents and messages were treated as source material, not task instructions.
   May 12 online publication and a July 2026 issue. Existing homepage wording is
   preserved as requested. The new page omits a separate publications section.
 - There is no verified RL merge as of the review date, despite the user’s
-  recollection. The learning section identifies the work as development-branch work.
-  PR #116 was rechecked directly and remains open, draft, and unmerged.
+  recollection. At Megan’s request, the webpage focuses on implemented contributions
+  without describing branch status or claiming a merge. PR #116 was rechecked
+  directly and remains open, draft, and unmerged.
   Its PR is retained here as evidence, while the webpage’s Links section
   contains only the repository, following Megan’s request.
 - No attributable speedups, design-task performance gains, or comparative
