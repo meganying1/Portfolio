@@ -151,6 +151,22 @@
     "files": []
   },
   {
+    "slug": "design-research-agents",
+    "name": "Optimization & learning for design agents",
+    "title": "Optimization & learning for design agents",
+    "summary": "Reusable search and learning modules that help researchers explore design alternatives and learn from completed design episodes.",
+    "description": "Reusable search and learning modules that help researchers explore design alternatives and learn from completed design episodes.",
+    "dates": "Mar 2026 – Jul 2026",
+    "featured": false,
+    "thumbnail": {
+      "src": "/assets/photos/projects/design-research-ecosystem.svg",
+      "width": 1500,
+      "height": 760
+    },
+    "tools": ["Python"],
+    "files": []
+  },
+  {
     "slug": "ai-material-selection",
     "name": "AI for material selection",
     "title": "AI for material selection",

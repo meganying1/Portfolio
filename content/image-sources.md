@@ -82,6 +82,13 @@ used for its project thumbnail. It compares Qwen3 ratings with expert responses
 using mean absolute error. Code, paper, contribution, and attribution sources
 are documented in [drc-sources.md](drc-sources.md).
 
+`design-research-ecosystem.svg` is the unmodified architecture diagram from the
+[framework documentation](https://cmudrc.github.io/design-research-agents/#integration-with-the-ecosystem).
+It supplies context for the broader team’s framework, not evidence of Megan’s
+individual implementation or performance results. Its MIT license is retained
+alongside the asset as `design-research-docs-LICENSE.txt`. It is the framework
+page’s only figure and is also used for its homepage thumbnail.
+
 ## Regenerated diagrams
 
 `compactor_fbd_clean.png`, `truss_fbd_clean.png`, and `linkage_fbd_clean_v3.png` are ImageGen edits derived from the retained source drawings, not new calculation records. Sources, exact edit prompts, and force-arrow checks are documented in [image-edits.md](image-edits.md).
