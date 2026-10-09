@@ -1,3 +1,4 @@
+import { LinkArrow } from "@/components/link-arrow";
 import { ProjectFigure, ProjectFigurePair } from "@/components/project-figure";
 
 export default function WellDrillerContent() {
@@ -6,12 +7,9 @@ export default function WellDrillerContent() {
       <h2>Overview</h2>
 
       <p>
-        In a team of three, we developed a pedal-powered redesign of the{" "}
-        <a href="https://villagedrill.com" target="_blank" rel="noreferrer">
-          Village Drill
-        </a>{" "}
-        for Baalbek-Hermel, Lebanon. The concept uses a geared cable drive to
-        lift the drill, then releases it to deliver an impact under its own
+        In a team of three, we developed a pedal-powered redesign of the Village
+        Drill for Baalbek-Hermel, Lebanon. The concept uses a geared cable drive
+        to lift the drill, then releases it to deliver an impact under its own
         weight. I researched gear mechanisms that could integrate with the
         existing drill and performed hand calculations for cable tension, pedal
         force, frame reactions, pin sizing, and power requirements. The project
@@ -107,6 +105,24 @@ export default function WellDrillerContent() {
         drivetrain, frame reactions, and connection sizing, together with pedal
         FEA, validated the concept under the modeled loading conditions.
       </p>
+
+      <div className="files">
+        <h3 className="label">Links</h3>
+        <div className="files__list">
+          <a
+            className="chip label-link"
+            href="https://villagedrill.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>
+              <span className="link-label">Village Drill</span>
+              {"\u00a0"}
+              <LinkArrow direction="external" />
+            </span>
+          </a>
+        </div>
+      </div>
     </>
   );
 }
