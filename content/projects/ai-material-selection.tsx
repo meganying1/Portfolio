@@ -25,7 +25,7 @@ export default function AIMaterialSelectionContent() {
         width={1000}
         height={700}
         alt="Heatmap of mean absolute error between expert survey responses and Qwen3 ratings across five model sizes and five prompting methods"
-        caption="Mean absolute error between Qwen3 ratings and expert responses across model sizes and prompting methods, where lower values indicate closer alignment."
+        caption="Mean absolute error between Qwen3 ratings and expert responses across model sizes and prompting methods, where lower values indicate closer alignment"
         wide
       />
 
