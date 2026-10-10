@@ -1,18 +1,40 @@
 import profile from "@/data/profile.json";
-import { ExperienceList } from "@/components/experience-list";
 import { Disclosure } from "@/components/disclosure";
+import { ExperienceList } from "@/components/experience-list";
 import { ExternalLink } from "@/components/external-link";
 import { ProjectList } from "@/components/project-list";
-import { PublicationList } from "@/components/publication-list";
 import { SkillsList } from "@/components/skills-list";
 import { projects } from "@/lib/projects";
 import { pageMetadata, site } from "@/lib/site";
 
 export const metadata = pageMetadata(site.name, site.description, "/");
 
+// Homepage relevance order is independent of the case-study pager order.
+const mechanicalProjectOrder = [
+  "linkage-system",
+  "mobile-robot",
+  "truss-structure",
+  "well-driller",
+];
+const mechanicalOrganizations = ["Apple", "Caterpillar"];
+
 export default function HomePage() {
   const featured = projects.filter((project) => project.featured);
   const more = projects.filter((project) => !project.featured);
+  const mechanicalProjects = mechanicalProjectOrder.flatMap((slug) =>
+    more.filter((project) => project.slug === slug),
+  );
+  const computingProjects = more.filter(
+    (project) => !mechanicalProjectOrder.includes(project.slug),
+  );
+  const mechanicalExperience = mechanicalOrganizations.flatMap((organization) =>
+    profile.experiences.filter(
+      (experience) => experience.organization === organization,
+    ),
+  );
+  const softwareExperience = profile.experiences.filter(
+    (experience) => !mechanicalOrganizations.includes(experience.organization),
+  );
 
   return (
     <main id="main" className="portfolio">
@@ -42,14 +64,6 @@ export default function HomePage() {
           Selected projects
         </h2>
         <ProjectList projects={featured} />
-        <Disclosure
-          title="More projects"
-          count={more.length}
-          id="other-projects"
-          variant="projects"
-        >
-          <ProjectList projects={more} more />
-        </Disclosure>
       </section>
 
       <section
@@ -60,20 +74,40 @@ export default function HomePage() {
         <h2 id="experience-title" className="section-title">
           Experience
         </h2>
-        <ExperienceList />
-        <SkillsList />
+        <div className="portfolio-subgroup">
+          <h3 className="label portfolio-subgroup__title">
+            Mechanical Engineering
+          </h3>
+          <ExperienceList experiences={mechanicalExperience} />
+        </div>
+        <div className="portfolio-subgroup">
+          <h3 className="label portfolio-subgroup__title">
+            Software &amp; Research
+          </h3>
+          <ExperienceList experiences={softwareExperience} />
+        </div>
       </section>
 
-      <section
-        id="publications"
-        className="portfolio-section"
-        aria-labelledby="publications-title"
+      <Disclosure
+        title="Other projects"
+        count={more.length}
+        id="other-projects"
+        variant="projects"
       >
-        <h2 id="publications-title" className="section-title">
-          Publications
-        </h2>
-        <PublicationList />
-      </section>
+        <div className="portfolio-subgroup">
+          <h3 className="label portfolio-subgroup__title">
+            Mechanical Engineering
+          </h3>
+          <ProjectList projects={mechanicalProjects} />
+        </div>
+        <div className="portfolio-subgroup">
+          <h3 className="label portfolio-subgroup__title">
+            Software &amp; Research
+          </h3>
+          <ProjectList projects={computingProjects} />
+        </div>
+      </Disclosure>
+      <SkillsList />
     </main>
   );
 }

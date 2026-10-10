@@ -122,7 +122,8 @@ button {
   padding-block: var(--layout-top) var(--layout-bottom);
 }
 .portfolio-section {
-  margin-top: var(--section-gap);
+  /* Index rows and disclosure summaries already include bottom padding. */
+  margin-top: calc(var(--section-gap) - var(--row-padding));
   padding-top: var(--rule-heading-gap);
   border-top: var(--border-width) solid var(--color-rule);
 }
@@ -140,6 +141,25 @@ button {
 }
 .section-title {
   margin-bottom: var(--section-heading-gap);
+}
+.portfolio-subgroup + .portfolio-subgroup {
+  margin-top: var(--space-4);
+}
+.portfolio-subgroup__title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+  color: var(--color-secondary);
+}
+.portfolio-subgroup__title::after {
+  content: "";
+  flex: 1;
+  height: var(--border-width);
+  background: var(--color-rule);
+}
+.experience-row h4 {
+  margin: 0;
 }
 .quiet,
 .date {
@@ -226,7 +246,7 @@ button {
   );
 }
 .project-name,
-.experience-row h3,
+.experience-row h4,
 .pager__label {
   font-size: var(--text-small);
   font-weight: var(--weight-heading);
@@ -248,6 +268,9 @@ button {
 .disclosure {
   margin-top: var(--space-2);
   border-top: var(--border-width) solid var(--color-rule);
+}
+.portfolio > .disclosure {
+  margin-top: calc(var(--section-gap) - var(--row-padding));
 }
 .disclosure > summary {
   display: flex;
@@ -384,16 +407,17 @@ button {
   color: var(--color-secondary);
 }
 
-/* Publications retain the full paper titles and attribution. */
+/* Publication rows retain the original index hierarchy and attribution. */
 .publication {
   padding-block: var(--row-padding);
 }
-.publication + .publication {
-  border-top: var(--border-width) solid var(--color-rule);
+.publication:last-child {
+  padding-bottom: 0;
 }
-.publication h3 {
+.publication__title {
   font-size: var(--text-small);
-  line-height: var(--leading-ui);
+  font-weight: var(--weight-heading);
+  color: var(--color-text);
 }
 .publication__meta,
 .publication__authors {
@@ -449,8 +473,8 @@ button {
   padding-bottom: var(--layout-bottom);
 }
 .cs-body h2 {
-  margin-top: var(--space-8);
-  padding-top: var(--space-5);
+  margin-top: var(--section-gap);
+  padding-top: var(--rule-heading-gap);
   border-top: var(--border-width) solid var(--color-rule);
 }
 .cs-body h2:first-child {
@@ -466,6 +490,18 @@ button {
 }
 .cs-body li + li {
   margin-top: var(--space-2);
+}
+.cs-body .publication-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: var(--resource-list-gap);
+  line-height: var(--leading-ui);
+}
+.cs-body .publication + .publication {
+  margin-top: 0;
+}
+.cs-body .publication p {
+  margin-top: var(--space-1);
 }
 .fig {
   --figure-width-limit: var(--case-media-width);
@@ -621,8 +657,8 @@ button {
 .tools,
 .files,
 .deck {
-  margin-top: var(--space-8);
-  padding-top: var(--space-5);
+  margin-top: var(--section-gap);
+  padding-top: var(--rule-heading-gap);
   border-top: var(--border-width) solid var(--color-rule);
 }
 .tools__list,
@@ -647,18 +683,13 @@ button {
   padding-top: 0;
   border-top: 0;
 }
-.deck + .files {
-  margin-top: var(--space-5);
-  padding-top: 0;
-  border-top: 0;
-}
 .pager {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: auto auto;
   column-gap: var(--space-5);
-  margin-top: var(--space-8);
-  padding-top: var(--space-5);
+  margin-top: var(--section-gap);
+  padding-top: var(--rule-heading-gap);
   border-top: var(--border-width) solid var(--color-rule);
   font-size: var(--text-small);
 }

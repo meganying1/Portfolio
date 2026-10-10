@@ -3,14 +3,14 @@ import { ExternalLink } from "./external-link";
 
 export function PublicationList() {
   return (
-    <ul>
+    <ul className="publication-list">
       {profile.publications.map((publication) => (
         <li className="publication" key={publication.href}>
-          <h3>
+          <div className="publication__title">
             <ExternalLink href={publication.href}>
               {publication.title}
             </ExternalLink>
-          </h3>
+          </div>
           <p className="publication__meta">{publication.venue}</p>
           <p className="publication__authors">{publication.authors}</p>
         </li>

@@ -42,7 +42,7 @@
   --layout-gutter: var(--space-5);
   --layout-top: var(--space-10);
   --layout-bottom: var(--space-9);
-  --section-gap: var(--space-7);
+  --section-gap: var(--rule-heading-gap);
   --rule-heading-gap: var(--space-5);
   --section-heading-gap: var(--space-3);
   --row-gap: var(--space-4);
@@ -70,7 +70,7 @@
   --icon-diagonal-size: 0.875em;
   --icon-diagonal-align: calc((1cap - var(--icon-diagonal-size)) / 2);
   --icon-stroke-width: 1.25;
-  --resource-content-gap: var(--space-3);
+  --resource-content-gap: var(--space-4);
   --resource-list-gap: var(--space-2);
   --focus-width: 2px;
   --focus-offset: 4px;

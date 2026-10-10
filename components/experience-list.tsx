@@ -1,10 +1,14 @@
 import Image from "next/image";
 import profile from "@/data/profile.json";
 
-export function ExperienceList() {
+export function ExperienceList({
+  experiences,
+}: {
+  experiences: readonly (typeof profile.experiences)[number][];
+}) {
   return (
     <ol>
-      {profile.experiences.map((experience) => (
+      {experiences.map((experience) => (
         <li className="experience-row" key={experience.organization}>
           <span
             className={`experience-logo experience-logo--${experience.logo.variant}`}
@@ -18,7 +22,7 @@ export function ExperienceList() {
             />
           </span>
           <div>
-            <h3>{experience.organization}</h3>
+            <h4>{experience.organization}</h4>
             <p className="experience-role">{experience.role}</p>
           </div>
           <p className="date">{experience.dates}</p>
