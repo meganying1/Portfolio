@@ -122,7 +122,8 @@ button {
   padding-block: var(--layout-top) var(--layout-bottom);
 }
 .portfolio-section {
-  margin-top: var(--section-gap);
+  /* Index rows and disclosure summaries already include bottom padding. */
+  margin-top: calc(var(--section-gap) - var(--row-padding));
   padding-top: var(--rule-heading-gap);
   border-top: var(--border-width) solid var(--color-rule);
 }
@@ -246,11 +247,45 @@ button {
   align-self: start;
   padding-top: var(--space-1);
 }
+.project-list--more .date {
+  /* Reserve the former month-range column to retain the description measure. */
+  width: 8.5rem;
+  text-align: right;
+}
+
+/* Selected work gives existing project imagery more room. */
+.project-list--grid {
+  --project-thumb-height: 11rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+.project-list--grid > li + li {
+  border-top: 0;
+}
+.project-list--grid .project-link {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-3);
+  height: 100%;
+}
+.project-list--grid .project-thumb {
+  width: 100%;
+  padding: var(--space-1);
+}
+.project-list--grid .date {
+  margin-top: auto;
+  padding-top: 0;
+}
 
 /* Native details work with a keyboard, touch, and JavaScript disabled. */
 .disclosure {
   margin-top: var(--space-2);
   border-top: var(--border-width) solid var(--color-rule);
+}
+.portfolio > .disclosure {
+  margin-top: calc(var(--section-gap) - var(--row-padding));
 }
 .disclosure > summary {
   display: flex;
@@ -387,16 +422,17 @@ button {
   color: var(--color-secondary);
 }
 
-/* Publications retain the full paper titles and attribution. */
+/* Publication rows retain the original index hierarchy and attribution. */
 .publication {
   padding-block: var(--row-padding);
 }
-.publication + .publication {
-  border-top: var(--border-width) solid var(--color-rule);
+.publication:last-child {
+  padding-bottom: 0;
 }
-.publication h3 {
+.publication__title {
   font-size: var(--text-small);
-  line-height: var(--leading-ui);
+  font-weight: var(--weight-heading);
+  color: var(--color-text);
 }
 .publication__meta,
 .publication__authors {
@@ -452,8 +488,8 @@ button {
   padding-bottom: var(--layout-bottom);
 }
 .cs-body h2 {
-  margin-top: var(--space-8);
-  padding-top: var(--space-5);
+  margin-top: var(--section-gap);
+  padding-top: var(--rule-heading-gap);
   border-top: var(--border-width) solid var(--color-rule);
 }
 .cs-body h2:first-child {
@@ -469,6 +505,18 @@ button {
 }
 .cs-body li + li {
   margin-top: var(--space-2);
+}
+.cs-body .publication-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: var(--resource-list-gap);
+  line-height: var(--leading-ui);
+}
+.cs-body .publication + .publication {
+  margin-top: 0;
+}
+.cs-body .publication p {
+  margin-top: var(--space-1);
 }
 .fig {
   --figure-width-limit: var(--case-media-width);
@@ -624,8 +672,8 @@ button {
 .tools,
 .files,
 .deck {
-  margin-top: var(--space-8);
-  padding-top: var(--space-5);
+  margin-top: var(--section-gap);
+  padding-top: var(--rule-heading-gap);
   border-top: var(--border-width) solid var(--color-rule);
 }
 .tools__list,
@@ -650,18 +698,13 @@ button {
   padding-top: 0;
   border-top: 0;
 }
-.deck + .files {
-  margin-top: var(--space-5);
-  padding-top: 0;
-  border-top: 0;
-}
 .pager {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: auto auto;
   column-gap: var(--space-5);
-  margin-top: var(--space-8);
-  padding-top: var(--space-5);
+  margin-top: var(--section-gap);
+  padding-top: var(--rule-heading-gap);
   border-top: var(--border-width) solid var(--color-rule);
   font-size: var(--text-small);
 }
@@ -791,6 +834,13 @@ button {
 
 /* Responsive tokens: compact = 40em; narrow = 25em. */
 @media (max-width: 40em) {
+  .project-list--more .date {
+    width: auto;
+    text-align: left;
+  }
+  .project-list--grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
   .concept-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

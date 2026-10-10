@@ -23,14 +23,14 @@ export default function DesignResearchAgentsContent() {
         alt="Framework documentation diagram showing Experiments coordinating Problems, Agents, and Analysis, with agent executions and traces feeding the study artifacts"
         caption={
           <>
-            Agents supplies participants, workflows, tools, and traces within
-            the research ecosystem shown in the{" "}
+            Agents provides workflows, tools, and execution traces for studying
+            AI in engineering design within the{" "}
             <a
               href="https://cmudrc.github.io/design-research-agents/#integration-with-the-ecosystem"
               target="_blank"
               rel="noreferrer"
             >
-              project documentation
+              design research ecosystem
             </a>
           </>
         }

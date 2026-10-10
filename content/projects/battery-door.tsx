@@ -311,7 +311,7 @@ export default function BatteryDoorContent() {
       </p>
 
       <div className="deck">
-        <h3 className="label">Presentation</h3>
+        <h3 className="section-title">Presentation</h3>
         <SlideDeck />
       </div>
     </>

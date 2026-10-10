@@ -1,18 +1,32 @@
 import profile from "@/data/profile.json";
-import { ExperienceList } from "@/components/experience-list";
 import { Disclosure } from "@/components/disclosure";
+import { ExperienceList } from "@/components/experience-list";
 import { ExternalLink } from "@/components/external-link";
 import { ProjectList } from "@/components/project-list";
-import { PublicationList } from "@/components/publication-list";
 import { SkillsList } from "@/components/skills-list";
 import { projects } from "@/lib/projects";
 import { pageMetadata, site } from "@/lib/site";
 
 export const metadata = pageMetadata(site.name, site.description, "/");
 
+// Homepage relevance order is independent of the case-study pager order.
+const otherProjectOrder = [
+  "linkage-system",
+  "mobile-robot",
+  "truss-structure",
+  "well-driller",
+  "design-research-agents",
+  "ai-material-selection",
+  "noise-reduction",
+  "chinese-checkers",
+];
+
 export default function HomePage() {
   const featured = projects.filter((project) => project.featured);
   const more = projects.filter((project) => !project.featured);
+  const otherProjects = otherProjectOrder.flatMap((slug) =>
+    more.filter((project) => project.slug === slug),
+  );
 
   return (
     <main id="main" className="portfolio">
@@ -47,15 +61,7 @@ export default function HomePage() {
         <h2 id="projects-title" className="section-title">
           Selected projects
         </h2>
-        <ProjectList projects={featured} />
-        <Disclosure
-          title="More projects"
-          count={more.length}
-          id="other-projects"
-          variant="projects"
-        >
-          <ProjectList projects={more} more />
-        </Disclosure>
+        <ProjectList projects={featured} layout="grid" />
       </section>
 
       <section
@@ -66,20 +72,18 @@ export default function HomePage() {
         <h2 id="experience-title" className="section-title">
           Experience
         </h2>
-        <ExperienceList />
-        <SkillsList />
+        <ExperienceList experiences={profile.experiences} />
       </section>
 
-      <section
-        id="publications"
-        className="portfolio-section"
-        aria-labelledby="publications-title"
+      <Disclosure
+        title="Other projects"
+        count={more.length}
+        id="other-projects"
+        variant="projects"
       >
-        <h2 id="publications-title" className="section-title">
-          Publications
-        </h2>
-        <PublicationList />
-      </section>
+        <ProjectList projects={otherProjects} more />
+      </Disclosure>
+      <SkillsList />
     </main>
   );
 }
