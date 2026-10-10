@@ -1,14 +1,18 @@
 {
   "name": "Megan Ying",
-  "credential": "Mechanical engineer · Carnegie Mellon ’25",
+  "credential": "Mechanical & Software Engineer · Carnegie Mellon ’25",
   "introduction": [
-    "I design mechanical systems from concept to production through CAD, analysis, and testing. I’m interested in bringing that experience to robotics and physical AI.",
-    "Previously worked on interconnect product design at Apple and hydraulics and controls at Caterpillar. Currently a software engineer at Bloomberg."
+    "I design mechanical systems from concept to production through CAD, analysis, and testing. With experience in software engineering and AI research, I’m interested in bringing these skills together in robotics and physical AI.",
+    "Previously worked in interconnect product design at Apple and hydraulics and controls at Caterpillar. Currently a software engineer at Bloomberg."
   ],
   "socials": [
     {
       "label": "LinkedIn",
       "href": "https://www.linkedin.com/in/ying-megan/"
+    },
+    {
+      "label": "Resume",
+      "href": "/assets/files/Megan_Ying_Resume.pdf"
     }
   ],
   "experiences": [
