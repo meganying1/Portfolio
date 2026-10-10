@@ -95,9 +95,9 @@ const experience = homeSections.find(
   (section) => section[1] === "experiences",
 )[2];
 assert.deepEqual(
-  [...experience.matchAll(/<h4>(.*?)<\/h4>/g)].map((match) => match[1]),
-  ["Apple", "Caterpillar", "Bloomberg", "Design Research Collective", "UBS"],
-  "Mechanical experience must appear before software and research",
+  [...experience.matchAll(/<h3>(.*?)<\/h3>/g)].map((match) => match[1]),
+  ["Bloomberg", "Design Research Collective", "Apple", "UBS", "Caterpillar"],
+  "Experience must appear in reverse chronological order",
 );
 const additional = home.match(
   /<details\b[^>]*id="other-projects"[^>]*>(.*?)<\/details>/s,
@@ -108,16 +108,27 @@ assert.ok(
     home.indexOf('id="other-projects"') < home.indexOf("Technical skills"),
   "Other projects must follow Experience and precede Technical skills",
 );
-for (const [section, headings] of [
-  [experience, ["Mechanical Engineering", "Software &amp; Research"]],
-  [additional, ["Mechanical Engineering", "Software &amp; Research"]],
-]) {
-  assert.deepEqual(
-    [...section.matchAll(/<h3\b[^>]*>(.*?)<\/h3>/gs)].map((match) => match[1]),
-    headings,
-    "Each grouped section must have its two ordered subgroup headings",
-  );
-}
+assert.ok(
+  !home.includes("Mechanical Engineering") &&
+    !home.includes("Software &amp; Research"),
+  "Homepage must not show experience or project subgroup headings",
+);
+assert.deepEqual(
+  [...additional.matchAll(/href="\/projects\/([^/]+)\/"/g)].map(
+    (match) => match[1],
+  ),
+  [
+    "linkage-system",
+    "mobile-robot",
+    "truss-structure",
+    "well-driller",
+    "design-research-agents",
+    "ai-material-selection",
+    "noise-reduction",
+    "chinese-checkers",
+  ],
+  "Other projects must retain their existing relevance order",
+);
 for (const project of projects) {
   assert.equal(
     [...home.matchAll(/href="\/projects\/([^/]+)\/"/g)].filter(
@@ -130,7 +141,7 @@ for (const project of projects) {
 for (const project of projects)
   assert.ok(
     home.includes(project.dates),
-    `Missing month range: ${project.slug}`,
+    `Missing project date: ${project.slug}`,
   );
 await Promise.all(
   [
@@ -143,5 +154,5 @@ await Promise.all(
   ].map((file) => access(path.join(root, file))),
 );
 console.log(
-  `Verified ${pages.length} pages, their local assets, all ${projects.length} legacy links, month ranges, and hosting files.`,
+  `Verified ${pages.length} pages, their local assets, all ${projects.length} legacy links, project dates, and hosting files.`,
 );

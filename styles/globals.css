@@ -142,25 +142,6 @@ button {
 .section-title {
   margin-bottom: var(--section-heading-gap);
 }
-.portfolio-subgroup + .portfolio-subgroup {
-  margin-top: var(--space-4);
-}
-.portfolio-subgroup__title {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  margin-bottom: var(--space-2);
-  color: var(--color-secondary);
-}
-.portfolio-subgroup__title::after {
-  content: "";
-  flex: 1;
-  height: var(--border-width);
-  background: var(--color-rule);
-}
-.experience-row h4 {
-  margin: 0;
-}
 .quiet,
 .date {
   color: var(--color-secondary);
@@ -191,6 +172,9 @@ button {
 }
 .intro__copy {
   margin-top: var(--space-5);
+}
+.intro__copy strong {
+  font-weight: var(--weight-heading);
 }
 .intro__copy p + p {
   margin-top: var(--space-3);
@@ -246,7 +230,7 @@ button {
   );
 }
 .project-name,
-.experience-row h4,
+.experience-row h3,
 .pager__label {
   font-size: var(--text-small);
   font-weight: var(--weight-heading);
@@ -262,6 +246,37 @@ button {
 .project-link .date {
   align-self: start;
   padding-top: var(--space-1);
+}
+.project-list--more .date {
+  /* Reserve the former month-range column to retain the description measure. */
+  width: 8.5rem;
+  text-align: right;
+}
+
+/* Selected work gives existing project imagery more room. */
+.project-list--grid {
+  --project-thumb-height: 11rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+.project-list--grid > li + li {
+  border-top: 0;
+}
+.project-list--grid .project-link {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-3);
+  height: 100%;
+}
+.project-list--grid .project-thumb {
+  width: 100%;
+  padding: var(--space-1);
+}
+.project-list--grid .date {
+  margin-top: auto;
+  padding-top: 0;
 }
 
 /* Native details work with a keyboard, touch, and JavaScript disabled. */
@@ -819,6 +834,13 @@ button {
 
 /* Responsive tokens: compact = 40em; narrow = 25em. */
 @media (max-width: 40em) {
+  .project-list--more .date {
+    width: auto;
+    text-align: left;
+  }
+  .project-list--grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
   .concept-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

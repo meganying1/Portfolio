@@ -22,7 +22,7 @@ export function ExperienceList({
             />
           </span>
           <div>
-            <h4>{experience.organization}</h4>
+            <h3>{experience.organization}</h3>
             <p className="experience-role">{experience.role}</p>
           </div>
           <p className="date">{experience.dates}</p>

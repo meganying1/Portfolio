@@ -6,12 +6,16 @@ import { projectHref, type Project } from "@/lib/projects";
 export function ProjectList({
   projects,
   more = false,
+  layout = "rows",
 }: {
   projects: readonly Project[];
   more?: boolean;
+  layout?: "rows" | "grid";
 }) {
   return (
-    <ul className={`project-list${more ? " project-list--more" : ""}`}>
+    <ul
+      className={`project-list${more ? " project-list--more" : ""}${layout === "grid" ? " project-list--grid" : ""}`}
+    >
       {projects.map((project) => (
         <li key={project.slug}>
           <Link
