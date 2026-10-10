@@ -77,9 +77,15 @@ Homepage thumbnails use the same source images as the project pages. The linkage
 
 `material-selection-mae.png` is an unchanged copy of the user-selected
 `/Users/mying/Documents/Design Research Collective/Figures/mae_heatmap.png`.
-It is the material-selection page’s only figure, placed under Overview and also
-used for its project thumbnail. It compares Qwen3 ratings with expert responses
-using mean absolute error. Code, paper, contribution, and attribution sources
+It remains the homepage project thumbnail. It compares Qwen3 ratings with expert
+responses using mean absolute error. It is Figure 2 on the material-selection
+page, immediately after the “I compared each score” paragraph under Expert comparison.
+
+`material-selection-workflow.png` is an unchanged copy of the user-selected
+`/Users/mying/Documents/Design Research Collective/Figures/workflow.png`.
+It is Figure 1 on the material-selection page, placed under Overview. It shows the Qwen 2.5
+agent’s prompting, Wikipedia search, and scoring workflow.
+Code, paper, contribution, and attribution sources
 are documented in [drc-sources.md](drc-sources.md).
 
 `design-research-ecosystem.svg` is the unmodified architecture diagram from the

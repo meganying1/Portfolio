@@ -574,6 +574,9 @@ button {
   --figure-width-limit: var(--layout-width);
   --figure-height-limit: var(--case-media-wide-height);
 }
+.fig:has(img[src="/assets/photos/projects/material-selection-workflow.png"]) {
+  --figure-height-limit: 39.6rem;
+}
 .fig img,
 .fig video {
   width: 100%;

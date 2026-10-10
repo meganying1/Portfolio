@@ -22,11 +22,11 @@ export default function AIMaterialSelectionContent() {
 
       <ProjectFigure
         number={1}
-        src="/assets/photos/projects/material-selection-mae.png"
-        width={1000}
-        height={700}
-        alt="Heatmap of mean absolute error between expert survey responses and Qwen3 ratings across five model sizes and five prompting methods"
-        caption="Mean absolute error measures how closely Qwen3 material ratings match expert judgment across model sizes and prompting methods"
+        src="/assets/photos/projects/material-selection-workflow.png"
+        width={880}
+        height={1340}
+        alt="Workflow showing system instructions and a material-rating prompt sent to a Qwen 2.5 agent, which uses the Wikipedia API to retrieve summaries before returning a suitability score"
+        caption="The prompt, LLM, tools, and environment interact through iterative reasoning, actions, and observations to produce a final response"
         wide
       />
 
@@ -82,6 +82,16 @@ export default function AIMaterialSelectionContent() {
         interpreted both metrics together. I used regression to examine model
         size, prompting, and their interaction.
       </p>
+
+      <ProjectFigure
+        number={2}
+        src="/assets/photos/projects/material-selection-mae.png"
+        width={1000}
+        height={700}
+        alt="Heatmap of mean absolute error between expert survey responses and Qwen3 ratings across five model sizes and five prompting methods"
+        caption="Mean absolute error measures how closely Qwen3 material ratings match expert judgment"
+        wide
+      />
 
       <p>
         I also compared search-query wording using text embeddings, numerical
