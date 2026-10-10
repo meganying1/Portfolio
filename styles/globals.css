@@ -172,6 +172,9 @@ button {
 .intro__copy {
   margin-top: var(--space-5);
 }
+.intro__copy strong {
+  font-weight: var(--weight-heading);
+}
 .intro__copy p + p {
   margin-top: var(--space-3);
 }
