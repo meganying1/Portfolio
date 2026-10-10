@@ -21,7 +21,13 @@ export default function HomePage() {
         <p className="intro__credential">{profile.credential}</p>
         <div className="intro__copy">
           {profile.introduction.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+            <p key={paragraph}>
+              {paragraph
+                .split(/\b(Apple|Caterpillar|Bloomberg)\b/g)
+                .map((part, index) =>
+                  index % 2 === 1 ? <strong key={index}>{part}</strong> : part,
+                )}
+            </p>
           ))}
         </div>
         <div className="contact-links" aria-label="Find me online">
