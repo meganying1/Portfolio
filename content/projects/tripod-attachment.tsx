@@ -16,30 +16,34 @@ export default function TripodAttachmentContent() {
 
       <ProjectFigure
         number={1}
-        src="/assets/photos/projects/tripod_phone1.jpg"
-        width={458}
-        height={345}
+        src="/assets/photos/projects/tripod-gripping.gif"
+        width={420}
+        height={378}
         compact
-        alt="Printed phone holder with padded base and two servo-driven gripping wings"
+        alt="A phone is placed in the holder, the servo-driven wings close around it, and the phone is removed"
         caption="Prototype holding a phone between the gripping wings"
-        crop={{ x: 40, y: 30, width: 380, height: 300 }}
       />
 
       <h2>Design</h2>
 
       <p>
-        User research identified difficulty gripping phones, operating small
-        mounting screws, and making precise adjustments. We translated these
-        findings into automatic phone gripping and orientation adjustment
-        without repeatedly loosening a screw.
-      </p>
-
-      <p>
-        An IR sensor detects the phone and triggers micro servos to rotate two
-        wings inward. The padded base supports the phone, while the wings
+        When a phone is lowered over our device, an IR sensor detects it and
+        triggers micro servos to rotate two wings inward. The sensor also
+        detects when the phone is removed and signals the servos to reopen the
+        wings. The padded base supports the phone, while the wings
         provide lateral retention. TPU wings with cutouts were selected to
         accommodate different phone shapes while retaining the phone.
       </p>
+
+      <ProjectFigure
+        number={2}
+        src="/assets/photos/projects/tripod-rotating-base-parts.jpg"
+        width={4032}
+        height={3024}
+        crop={{ x: 650, y: 25, width: 2970, height: 2880 }}
+        alt="Printed phone holder with exposed servos and electronics beside the separate toothed outer rotating base"
+        caption="Fabricated holder showing the servos and electronic components, with the rotating base removed."
+      />
 
       <p>
         The rotating base pairs a flexible TPU inner interface with a rigid
@@ -48,25 +52,65 @@ export default function TripodAttachmentContent() {
       </p>
 
       <ProjectFigurePair
+        stackOnMobile
         figures={[
           {
-            number: 2,
+            number: 3,
             src: "/assets/photos/projects/tripod_assembly.png",
             width: 918,
             height: 1056,
             alt: "Phone holder CAD showing the wing servos, battery, and electronics within the base",
-            caption: "Servos and electronics in the base",
+            caption: "CAD view of servos and electronics in the base",
           },
           {
-            number: 3,
+            number: 4,
             src: "/assets/photos/projects/tripod_interface.png",
             width: 971,
             height: 959,
-            alt: "Rounded teeth between the concentric inner and outer rotating interface parts",
-            caption: "Rounded teeth in the rotating base",
             crop: { x: 85, y: 35, width: 800, height: 880 },
+            alt: "Rounded teeth between the concentric inner and outer rotating interface parts",
+            caption: "CAD view of rounded teeth in the rotating base",
           },
         ]}
+      />
+
+      <h2>Concept development</h2>
+
+      <p>
+        Our user study highlighted difficulty gripping phones, operating small
+        mounting screws, and making precise adjustments. These findings led us
+        to brainstorm automatic phone gripping and a toothed rotating interface
+        that could change orientation without repeatedly loosening a screw.
+      </p>
+
+      <ProjectFigure
+        number={5}
+        src="/assets/photos/projects/tripod-development-clean.png"
+        width={1053}
+        height={1493}
+        crop={{ x: 60, y: 170, width: 980, height: 840 }}
+        alt="Exploded development sketch showing separate compliant wings, servo horns, servos, and the base with its phone slot and electronics layout"
+        caption="Drawings from early concept development"
+        wide
+      />
+
+      <p>
+        We also explored spring-supported contact wings and slot padding to
+        accommodate different phone sizes and shapes. We selected cutout TPU
+        wings over the extra wings and springs to balance fit with retention.
+        We replaced triangular interface teeth with rounded TPU teeth for
+        easier rotation while maintaining engagement.
+      </p>
+
+      <ProjectFigure
+        number={6}
+        src="/assets/photos/projects/tripod-spring-wing-concept.png"
+        width={1964}
+        height={801}
+        crop={{ x: 0, y: 170, width: 1964, height: 535 }}
+        alt="Earlier spring-supported wing concept showing primary and secondary contact wings, connecting springs, a servo pivot, and the initial position"
+        caption="Earlier spring-supported wing concept with a separate contact wing"
+        wide
       />
 
       <h2>Analysis &amp; validation</h2>
@@ -90,7 +134,7 @@ export default function TripodAttachmentContent() {
       <ProjectFigurePair
         figures={[
           {
-            number: 4,
+            number: 7,
             src: "/assets/photos/projects/tripod_calc.png",
             width: 436,
             height: 330,
@@ -99,7 +143,7 @@ export default function TripodAttachmentContent() {
               "Calculations for determining wing load and maximum stress",
           },
           {
-            number: 5,
+            number: 8,
             src: "/assets/photos/projects/tripod_wing_stress.png",
             width: 1324,
             height: 1085,

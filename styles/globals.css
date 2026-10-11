@@ -629,6 +629,26 @@ button {
   aspect-ratio: auto;
   border: 0;
 }
+.concept-grid--pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.finalist-comparison {
+  --finalist-drawing-height: 6.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-4);
+}
+.finalist-comparison > .fig {
+  margin-inline: 0;
+}
+.finalist-comparison .concept-grid {
+  aspect-ratio: 1.8;
+  align-items: center;
+}
+.finalist-comparison .concept-grid .project-image {
+  height: var(--finalist-drawing-height);
+}
 .cs-body .concept-grid__name {
   margin-top: var(--space-2);
   font-size: var(--text-small);
@@ -837,6 +857,22 @@ button {
 
 /* Responsive tokens: compact = 40em; narrow = 25em. */
 @media (max-width: 40em) {
+  .fig-pair--stack-mobile {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .fig-pair--stack-mobile > .fig {
+    flex: none;
+    width: min(100%, calc(var(--pair-height) * var(--figure-aspect)));
+  }
+  .finalist-comparison {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .finalist-comparison .concept-grid {
+    aspect-ratio: auto;
+  }
   .project-list--more .date {
     width: auto;
     text-align: left;

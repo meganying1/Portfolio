@@ -32,7 +32,8 @@ export default function TrashCompactorContent() {
             width: 1448,
             height: 1848,
             alt: "Machined scissor links, compression plate, linear actuator, and black actuator mounts",
-            caption: "Machined linkage with printed actuator mounts",
+            caption:
+              "Machined scissor linkage connected to the actuator with 3D-printed mounts",
             crop: { x: 110, y: 300, width: 1220, height: 1400 },
           },
         ]}
@@ -41,14 +42,34 @@ export default function TrashCompactorContent() {
       <h2>Design</h2>
 
       <p>
-        Benchmarking and a weighted concept comparison led us to a standalone,
-        actuator-driven scissor linkage beneath the trash compartment. We chose
-        this mechanism to convert a short horizontal actuator stroke into the
-        larger vertical plate travel needed for compaction while keeping the
-        actuator beneath the waste. The plate rises vertically, compresses waste
-        against the locked lid, holds for approximately ten seconds, and
-        retracts automatically.
+        A linear actuator drives a scissor linkage, converting a short
+        horizontal stroke into the larger vertical
+        plate travel needed for compaction. The plate rises vertically,
+        compresses waste against the locked lid, holds for approximately ten
+        seconds, and retracts automatically.
       </p>
+
+      <ProjectFigurePair
+        figures={[
+          {
+            number: 3,
+            src: "/assets/photos/projects/compactor_cad.png",
+            width: 439,
+            height: 512,
+            alt: "Scissor linkage assembly with the actuator positioned between two custom mounts",
+            caption: "CAD assembly of the linkage and actuator mounts",
+          },
+          {
+            number: 4,
+            src: "/assets/photos/projects/compactor-enclosure-annotated-trimmed.svg",
+            width: 1520,
+            height: 1240,
+            alt: "Full compactor CAD showing the hinged lid, trash housing, compression plate, scissor linkage, and actuator beneath the waste compartment",
+            caption:
+              "CAD layout showing how the scissor linkage integrates with the enclosure and compression plate",
+          },
+        ]}
+      />
 
       <p>
         The actuator’s fixed hole pattern and limited mounting locations
@@ -59,14 +80,43 @@ export default function TrashCompactorContent() {
       </p>
 
       <ProjectFigure
-        number={3}
-        src="/assets/photos/projects/compactor_cad.png"
-        width={439}
-        height={512}
-        alt="Scissor linkage assembly with the actuator positioned between two custom mounts"
-        caption="CAD assembly of the linkage and actuator mounts"
-        compact
+        number={5}
+        src="/assets/photos/projects/actuator-mount-concept.png"
+        width={1859}
+        height={846}
+        crop={{ x: 0, y: 180, width: 1859, height: 510 }}
+        alt="Actuator-mount concept in side, top, and isometric views, with the linkage-pin bore, actuator block, and mounting clearance holes labeled"
+        caption="Actuator-mount concept shown in side, top, and isometric views"
+        wide
       />
+
+      <h2>Concept development</h2>
+
+      <p>
+        Before selecting the actuator-driven design, we benchmarked existing
+        trash compactors and explored manual-lever, hand-crank, and foot-operated
+        scissor alternatives. We used a weighted concept comparison to assess
+        ease of use, effectiveness, durability, cleanability, and fabrication
+        feasibility.
+      </p>
+
+      <ProjectFigure
+        number={6}
+        src="/assets/photos/projects/compactor-concept-alternatives.png"
+        width={1855}
+        height={848}
+        alt="Early manual lever and hand-crank compaction concepts in two operating positions, beside a foot-operated scissor mechanism"
+        caption="Early concepts for trash compaction"
+        wide
+      />
+
+      <p>
+        The linkage concept ranked highest in the weighted comparison. The
+        early scissor concept was foot-operated. The selected design used a
+        linear actuator for powered compaction. Testing a manual competitor
+        also exposed high user effort and trash catching on its prongs,
+        supporting powered compaction with a solid plate.
+      </p>
 
       <h2>Analysis &amp; validation</h2>
 
@@ -80,22 +130,43 @@ export default function TrashCompactorContent() {
         12.8 lbf. These loads include the linkage, plate, and waste weight.
       </p>
 
-      <ProjectFigure
-        number={4}
-        src="/assets/photos/projects/compactor_fbd_clean.png"
-        width={1536}
-        height={1024}
-        crop={{ x: 125, y: 230, width: 1385, height: 540 }}
-        alt="Scissor-linkage support and free-body diagrams with actuator forces, support reactions, and plate loading"
-        caption="Calculations for determining scissor-linkage load capacity and support reactions"
-      />
-
       <p>
         An axial-stress calculation checked the aluminum links at 6.4 and 60 lbf
         load cases against an assumed 40 ksi yield strength for 6061 aluminum.
         Predicted stresses of approximately 35 and 323 psi suggested actuator
         capacity would limit the system before bar yielding under those modeled
         loads.
+      </p>
+
+      <ProjectFigurePair
+        stackOnMobile
+        figures={[
+          {
+            number: 7,
+            src: "/assets/photos/projects/compactor_fbd_clean.png",
+            width: 1536,
+            height: 1024,
+            crop: { x: 125, y: 230, width: 1385, height: 540 },
+            alt: "Scissor-linkage support and free-body diagrams with actuator forces, support reactions, and plate loading",
+            caption:
+              "Calculations for determining scissor-linkage load capacity and support reactions",
+          },
+          {
+            number: 8,
+            src: "/assets/photos/projects/compactor-poster-source.png",
+            width: 1920,
+            height: 1536,
+            crop: { x: 1468, y: 1090, width: 425, height: 375 },
+            alt: "Scissor-linkage FEA model with purple force arrows along the compression plate and green constraints at the lower supports",
+            caption: "FEA setup with plate loads and support constraints",
+          },
+        ]}
+      />
+
+      <p>
+        We also used FEA to examine the scissor-linkage assembly under
+        distributed loading on the compression plate, with constraints applied
+        at the lower supports.
       </p>
 
       <h2>Fabrication &amp; iteration</h2>

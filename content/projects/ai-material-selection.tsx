@@ -20,16 +20,6 @@ export default function AIMaterialSelectionContent() {
         and Christopher McComb.
       </p>
 
-      <ProjectFigure
-        number={1}
-        src="/assets/photos/projects/material-selection-workflow.png"
-        width={880}
-        height={1340}
-        alt="Workflow showing system instructions and a material-rating prompt sent to a Qwen 2.5 agent, which uses the Wikipedia API to retrieve summaries before returning a suitability score"
-        caption="The prompt, LLM, tools, and environment interact through iterative reasoning, actions, and observations to produce a final response"
-        wide
-      />
-
       <h2>Research approach</h2>
 
       <p>
@@ -65,6 +55,16 @@ export default function AIMaterialSelectionContent() {
         search tool and a system prompt with examples outside the survey cases
         so the agent could inspect summaries before scoring.
       </p>
+
+      <ProjectFigure
+        number={1}
+        src="/assets/photos/projects/material-selection-workflow.png"
+        width={880}
+        height={1340}
+        alt="Workflow showing system instructions and a material-rating prompt sent to a Qwen 2.5 agent, which uses the Wikipedia API to retrieve summaries before returning a suitability score"
+        caption="The prompt, LLM, tools, and environment interact through iterative reasoning, actions, and observations to produce a final response"
+        wide
+      />
 
       <p>
         Reviewing execution logs, I added checks for successful final answers,

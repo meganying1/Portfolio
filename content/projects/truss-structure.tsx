@@ -40,11 +40,18 @@ export default function TrussStructureContent() {
       <h2>Design</h2>
 
       <p>
-        Each team member developed three concepts. We compared the strongest
-        candidates and selected the final design for its highest predicted
-        strength-to-weight performance. We modeled the assembly in SolidWorks,
+        Each team member developed three concepts and calculated their predicted
+        strength-to-weight ratios. We compared each member’s strongest concept
+        and selected the design with the highest predicted ratio. We modeled
+        the assembly in SolidWorks,
         used member-force calculations to select dimensions and estimate weight,
         then fabricated the chosen design in acrylic.
+      </p>
+
+      <p>
+        The selected acrylic truss uses three connected triangular sections
+        with bolted joints. The members transfer the central load to the two
+        end supports.
       </p>
 
       <h2>Analysis &amp; validation</h2>

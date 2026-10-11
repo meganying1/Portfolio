@@ -57,3 +57,77 @@ Final prompt:
 ```text
 Precise engineering diagram edit. Change ONLY the isolated slotted bar in the UPPER-RIGHT panel. The slot must be a single CLOSED rounded elongated internal hole, completely surrounded by a visibly continuous strip of solid material on BOTH sides and around BOTH ends. The slot must NOT touch or open into the outer edge of the bar. Remove the extra small circular hole/pin/collar currently drawn at the upper end of that slot near the Rc arrow. Remove any contour joining the slot to the outer edge. Draw the bar as ONE continuous member, like the leftmost slotted member in the upper-left assembly. Keep only the existing small round holes at the extreme top tip where red F acts and at the extreme bottom fixed pivot. Between them, put the long rounded slot along the center of the bar below the top round hole, with clearly visible material separating it from the outer perimeter. The blue Rc arrow must still point at the upper end of the internal slot, with NO circular pin or extra member around its tip. Maintain the bar endpoints and orientation and all existing F, Rx, Ry, Rc arrows, their directions and labels. Keep every other panel, force arrow, label, coordinate axis, white background, spacing, and black/red/blue handwritten line style unchanged. Preserve the portrait canvas size and four-panel arrangement.
 ```
+
+## Tripod development sketch background
+
+`tripod-development-clean.png` was made with the built-in ImageGen tool from the retained original `tripod-development.jpg` (CMU Design I Project 2 report, page 11, embedded image `X112.jpg`). Only the graph-paper background was requested to change. Reviewed the result against the original for the two wings, three-hole horn connections, servo blocks, assembly guides, phone slot, electronics layout, rotating interface, and labels. The website retains all original narrative wording and existing captions.
+
+Exact edit prompt:
+
+```text
+Use case: precise-object-edit. Edit target: the attached original engineering development sketch for a mechanical engineering portfolio. Change ONLY the light gray graph-paper grid into a uniform pure white (#ffffff) background. Remove every horizontal and vertical grid line, including those visible through open areas of the drawings. Preserve the original handwritten drawing and every annotation exactly: the two wings, all screw holes, red dashed assembly lines, blue servo blocks, servo horns, base and phone slot, electronics top view with IR / 9V / nano labels, all yellow / gray / cyan highlighting, and the lower rotating interface / magnets / brass insert sketches and notes. Preserve every original word, number, line, stroke shape, color, relative position, scale, and spacing. Do not redesign or clean up the drawing strokes, do not re-typeset the handwriting, do not add or remove annotations, and do not change the engineering geometry. Keep the entire original portrait composition and aspect ratio, with no cropping or rearrangement. This is strictly background grid removal, not a new diagram or a redraw.
+```
+
+
+## Compactor enclosure annotation cleanup
+
+`compactor-enclosure-clean.png` was produced with the built-in ImageGen tool from the bottom-left CAD view in the retained `compactor-poster-source.png`. It removes the small red labels, leaders, and cursor. The cleaned output was compared with the source for the raised lid, enclosure walls, compression plate, scissor links, actuator, moving block, and base. The original poster remains unchanged.
+
+`compactor-enclosure-annotated.svg` embeds that cleaned image and adds vector callouts for the same six components. Black leaders and dots, white leader under-strokes, black Arial text, and elbow paths follow `linkage_annotated.svg`. The labels were checked for component targets, separation, and readability. The subsequent sibling `compactor-enclosure-annotated-trimmed.svg` reduces only the root SVG viewport height from 1375 to 1240 to remove lower whitespace at the user’s request; all image and annotation coordinates are unchanged.
+
+Exact cleanup prompt:
+
+```text
+Use case: precise-object-edit.
+Asset type: engineering CAD illustration for a mechanical engineering portfolio.
+Input image 1 is the edit target: a project poster. Extract ONLY the CAD illustration at the bottom left (the gray open-lid trash compactor), approximately x=42, y=915, width=453, height=545 in the 1920x1536 source. Exclude all poster text, the neighboring wooden prototype photograph, and every other poster region.
+Primary request: remove all existing tiny red labels and red leader arrows from this CAD illustration, and remove the mouse cursor at the lower right. Return the same complete CAD view with no text, no arrows, and no labels.
+Preserve the CAD geometry and appearance exactly: the hinged raised lid, left and back enclosure walls, right vertical frame, horizontal compression plate, lower scissor links, actuator/motor, sliding block, lower enclosure base and all visible edges, joints and supports. Keep the original isometric perspective, proportions, relative positions, grayscale material colors and shading. Do not redesign, add, remove or simplify any mechanical part. Where a removed red line crosses a face, restore only the original neutral gray face. Place the illustration on clean white with comfortable whitespace, retaining the complete enclosure from lid to base. The output should be the isolated original CAD view in a roughly 453:545 portrait composition, not a redraw or photorealistic rendering. Do not invent engineering details or add any annotations.
+```
+
+October 10 typography update: user requested black text and callouts. Linkage Fig. 1 and compactor Fig. 4 now use black Arial text, black leaders and endpoint dots. Text is scaled to 3.6% of the SVG viewport height in each asset so equal-height figure treatments display consistent label sizes.
+
+
+## Actuator-mount concept
+
+`actuator-mount-concept.png` reuses the user-approved three-view image produced earlier with the built-in ImageGen tool. It is copied without further edits from the mechanical visual audit and added to the trash-compactor page. The source is the actuator-mount concept on page 1 of `Integration Idea.pdf`.
+
+Final source-output path: `/Users/mying/.codex/generated_images/01a125ba-d321-7440-b478-ea773b2ad5d2/exec-ff9aaeab-34d1-45dd-a43a-9a6c6ce35945.png`.
+
+SHA-256: `84030957a51e4af21f855e2999ba54509673e38a4d0883816ecfec198b3d2b51`.
+
+Exact final edit prompt:
+
+```text
+Use case: text-localization. Input 1 is the edit target, a cleaned actuator-mount engineering figure with side, top and isometric views in one horizontal row. Change only typography and callout colors. Make ALL text, component callout leaders and endpoint dots pure black #000000. Use regular Arial consistently throughout (weight 400, no bold). All THREE component labels must use the SAME size, approximately 3.6% of canvas height (about 30px on an 848px-high output). All THREE bottom view identifiers must use the SAME slightly larger size, approximately 4.0% of canvas height (about 34px on an 848px-high output). Thus view names are around 12% larger than component labels, with identical font family and weight. Keep all words correctly spelled and fully inside the frame. Preserve existing three-view row layout, every mechanical line, every screw, hole, dashed hidden line, gray/white surface, exact proportions and positions. No new parts or geometric corrections. Texts verbatim: 'Linkage-pin bore', 'Actuator block', 'Mounting clearance holes', 'Side view', 'Top view · screws omitted', 'Isometric view · screws omitted'. Keep each view identifier centered beneath its corresponding drawing. No main title, subtitle, footer or figure number. True transparent background outside actual drawing and text. No shadows, halos or fake checkerboard. No remaining blue anywhere. Preserve the whole isometric and all callouts without clipping. Mechanical geometry is locked.
+```
+
+
+## Concept development: trash-compactor
+
+`compactor-concept-alternatives.png` is an unchanged copy of the previously approved built-in ImageGen output `compactor-concepts-black.png`. No image was regenerated for the Concept Development section.
+
+Original generated output: `/Users/mying/.codex/generated_images/01a125ba-d321-7440-b478-ea773b2ad5d2/exec-0ae8fd99-a9e8-4f86-a3a5-dec8771b90fb.png`.
+
+SHA-256: `a6e162f07aa93020da46d489a218ca07c6f517f2b165f64ba54c8e33d661f291`.
+
+Exact final edit prompt:
+
+```text
+Use case: text-localization. Input 1 is the edit target: early compaction concept drawings arranged as lever, hand crank, foot-operated scissor. Change only text and annotation styling. ALL text must be pure black #000000 regular Arial (weight 400), consistent across panels. Panel identifiers 'Manual lever', 'Hand crank', 'Foot-operated scissor' use the same size approximately 4% of canvas height. The explanatory text 'Lever pushes plate down', 'Crank advances plate', 'Foot-pedal input' is slightly smaller, about 3.6% of canvas height. All motion arrows, grouping leaders and endpoint dots must be black. Preserve BOTH lever operating states and BOTH crank states, and the complete foot-operated scissor concept with pedal exactly. Preserve source geometry, housing, linkage count, positions and opaque surfaces. No title or footer. True transparent background outside actual artwork and text, no shadows or halos. Do not redesign mechanics or add performance claims.
+```
+
+
+## Concept development: tripod-attachment
+
+`tripod-spring-wing-concept.png` is an unchanged copy of the previously approved built-in ImageGen output `tripod-wings-black.png`. No image was regenerated for the Concept Development section.
+
+Original generated output: `/Users/mying/.codex/generated_images/01a125ba-d321-7440-b478-ea773b2ad5d2/exec-f31a025d-2de0-4d73-88b0-169a42db3d16.png`.
+
+SHA-256: `da16bf723e05568142e947cb72548fc8afb9c8d8945c2d461e2e7831a4907e03`.
+
+Exact final edit prompt:
+
+```text
+Use case: text-localization. Input 1 is the edit target: a cleaned early spring-supported wing concept with two colored diagrams and no title. Change only the typography and annotation styling. All labels use regular Arial weight 400, pure black #000000, one consistent size approximately 3.6% of the total canvas height (about 29px on an 801px-high canvas). All component leaders and endpoint dots must be pure black #000000 too. Preserve exact texts 'Primary wing', 'Secondary contact wing', 'Springs', 'Servo pivot', 'Initial position', and the theta symbol 'θ'. Keep all text readable, outside geometry and fully inside the canvas. Preserve every geometric detail and position of both diagrams: purple primary wings, pink secondary contact wings, three GREEN springs per diagram, blue servo pivot, dashed prior positions and original angle arc. Component color fills must stay original, only callout text/lines/dots become black. Do not change the mechanism, introduce magnets or add parts. Keep theta arc and theta symbol black. No title, heading, subtitle, footer, numbers or new annotations. True transparent alpha outside actual artwork/text, keeping opaque white interiors, no shadows, halos, paper or grid.
+```

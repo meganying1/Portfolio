@@ -22,9 +22,10 @@ export default function WellDrillerContent() {
       <p>
         We prioritized retaining the existing frame while addressing drilling
         performance, transport, assembly, safety, and power input. I evaluated
-        worm-gear, bevel-gear, and pile-driver concepts. We selected the
-        lift-and-release architecture for the rocky conditions identified in the
-        regional research.
+        worm-gear and bevel-gear concepts that drove the drill by rotation,
+        alongside a pile-driver concept that lifted and dropped the drill. We
+        selected the lift-and-release architecture for the rocky conditions
+        identified in the regional research.
       </p>
 
       <p>
