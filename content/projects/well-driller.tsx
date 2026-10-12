@@ -22,35 +22,52 @@ export default function WellDrillerContent() {
       <p>
         We prioritized retaining the existing frame while addressing drilling
         performance, transport, assembly, safety, and power input. I evaluated
-        worm-gear, bevel-gear, and pile-driver concepts. We selected the
-        lift-and-release architecture for the rocky conditions identified in the
-        regional research.
+        worm-gear and bevel-gear concepts that drove the drill by rotation,
+        alongside a pile-driver concept that lifted and dropped the drill. We
+        selected the lift-and-release architecture for the rocky conditions
+        identified in the regional research.
       </p>
 
+      <ProjectFigure
+        number={1}
+        src="/assets/photos/projects/driller-concept-alternatives.svg"
+        width={2840}
+        height={820}
+        alt="Bevel-gear, worm-gear, and selected lift-and-release drilling concepts shown from left to right, retaining their original mechanisms and motion arrows"
+        caption="Drilling concepts: bevel gear, worm gear, and lift-and-release mechanism"
+        wide
+      />
+
       <p>
-        Pedal rotation passes through a chain and gear system to a cable pulley
-        that lifts the drill. A toothless section of one gear disengages the
-        drive so the drill can fall. Re-engagement begins the next lift.
+        Pedal rotation passes through a chain drive and gear train to the cable
+        pulley. The staged reductions increase torque at the pulley, reducing
+        pedal effort at the expense of lifting speed. The selected tooth counts
+        give approximately 15:1 ideal torque multiplication. Meshing gears lift
+        the drill until a toothless section disengages the pulley drive. The
+        pulley then rotates freely, letting the drill fall under its own weight.
+        Re-engagement starts the next lift.
       </p>
 
       <ProjectFigurePair
+        stackOnMobile
         figures={[
           {
-            number: 1,
+            number: 2,
             src: "/assets/photos/projects/driller_frame.png",
             width: 910,
             height: 918,
             alt: "CAD frame concept showing the pedal location, supports, and mast",
-            caption: "Frame concept",
+            caption: "Frame concept CAD",
             crop: { x: 150, y: 50, width: 560, height: 830 },
           },
           {
-            number: 2,
-            src: "/assets/photos/projects/driller_mechanism.png",
-            width: 760,
-            height: 453,
-            alt: "Pedal chain drive, partial gear, cable pulley, and hanging drill weight",
-            caption: "Pedal-driven cable lift and gear-release concept",
+            number: 3,
+            src: "/assets/photos/projects/driller-gear-transmission.png",
+            width: 577,
+            height: 581,
+            alt: "CAD view of the gear transmission with the gears separated to show their arrangement",
+            caption: "Gear transmission CAD",
+            crop: { x: 115, y: 30, width: 345, height: 435 },
           },
         ]}
       />
@@ -66,7 +83,7 @@ export default function WellDrillerContent() {
       </p>
 
       <ProjectFigure
-        number={3}
+        number={4}
         src="/assets/photos/projects/driller_frame_fbd.jpg"
         width={1566}
         height={2048}
@@ -88,7 +105,7 @@ export default function WellDrillerContent() {
       </p>
 
       <ProjectFigure
-        number={4}
+        number={5}
         src="/assets/photos/projects/driller_pedal_stress.png"
         width={1456}
         height={916}

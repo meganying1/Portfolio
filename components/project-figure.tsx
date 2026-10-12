@@ -55,15 +55,17 @@ export function ProjectFigure({
 
 export function ProjectFigurePair({
   figures,
+  stackOnMobile = false,
 }: {
   figures: [ProjectFigureProps, ProjectFigureProps];
+  stackOnMobile?: boolean;
 }) {
   const nativeHeight = Math.min(
     ...figures.map(({ height, crop }) => crop?.height ?? height),
   );
   return (
     <div
-      className="fig-pair"
+      className={`fig-pair${stackOnMobile ? " fig-pair--stack-mobile" : ""}`}
       style={{ "--pair-native-height": `${nativeHeight}px` } as CSSProperties}
     >
       {figures.map((figure) => (
