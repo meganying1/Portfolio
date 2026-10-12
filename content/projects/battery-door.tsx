@@ -77,7 +77,7 @@ export default function BatteryDoorContent() {
 
       <ProjectConcepts
         number={4}
-        caption="Four concepts compared for release, reset, and packaging"
+        caption="Four initial concepts for battery-door release"
         concepts={[
           {
             name: "Moving snap fit",
@@ -111,12 +111,49 @@ export default function BatteryDoorContent() {
       />
 
       <p>
-        After evaluating these tradeoffs, I selected the moving snap fit for its
-        simple components and lower tolerance sensitivity. I developed sliding
-        and rotating implementations as the two finalists. The weighted matrix
-        favored the sliding version’s effectiveness and user experience over the
-        rotating version’s compactness and estimated cost, with totals of 81 and
-        79.
+        I first selected the moving snap-fit architecture for its simple
+        components and lower tolerance sensitivity. Within that architecture, I
+        developed sliding and rotating implementations as finalists.
+      </p>
+
+      <div className="finalist-comparison">
+        <ProjectConcepts
+          number={5}
+          caption="Two different implementations of the moving snap fit"
+          concepts={[
+            {
+              name: "Sliding snap fit",
+              src: "/assets/photos/projects/battery_idea_snapfit.png",
+              width: 924,
+              height: 568,
+              alt: "Sliding snap-fit drawing showing the button peg in an angled latch slot and two return springs",
+            },
+            {
+              name: "Rotating snap fit",
+              src: "/assets/photos/projects/battery_snapfit_rotating_drawing.png",
+              width: 924,
+              height: 568,
+              alt: "Rotating snap-fit drawing showing the button above the latch tail, a return spring, and the latch pivot",
+            },
+          ]}
+        />
+
+        <ProjectFigure
+          number={6}
+          src="/assets/photos/projects/battery_rotating_latch.png"
+          width={1286}
+          height={480}
+          crop={{ x: 130, y: 30, width: 360, height: 400 }}
+          alt="Rotating snap-fit CAD with a pivoting latch, button above the latch tail, return spring, and door hook"
+          caption="CAD model of the rotating snap-fit finalist"
+          compact
+        />
+      </div>
+
+      <p>
+        The weighted matrix favored the sliding version’s effectiveness and user
+        experience over the rotating version’s compactness and estimated cost,
+        with totals of 81 and 79.
       </p>
 
       <div className="table-scroll case-table">
@@ -214,7 +251,7 @@ export default function BatteryDoorContent() {
       <ProjectFigurePair
         figures={[
           {
-            number: 5,
+            number: 7,
             src: "/assets/photos/projects/battery_button_fbd.jpg",
             width: 1904,
             height: 2500,
@@ -224,7 +261,7 @@ export default function BatteryDoorContent() {
               "Calculations for determining button travel and required spring constant",
           },
           {
-            number: 6,
+            number: 8,
             src: "/assets/photos/projects/battery_calc_door.jpg",
             width: 1904,
             height: 1120,
@@ -251,7 +288,7 @@ export default function BatteryDoorContent() {
       </p>
 
       <ProjectFigure
-        number={7}
+        number={9}
         src="/assets/photos/projects/battery_tolerance.png"
         alt="Two cross sections tracing the dimensional chain between the latch tip and door hook"
         width={1080}
@@ -272,7 +309,7 @@ export default function BatteryDoorContent() {
       <ProjectFigurePair
         figures={[
           {
-            number: 8,
+            number: 10,
             src: "/assets/photos/projects/battery_fea_latch.gif",
             width: 854,
             height: 854,
@@ -280,7 +317,7 @@ export default function BatteryDoorContent() {
             caption: "FEA of latch movement as button pegs move downward",
           },
           {
-            number: 9,
+            number: 11,
             src: "/assets/photos/projects/battery_fea_door_stress.gif",
             width: 386,
             height: 386,

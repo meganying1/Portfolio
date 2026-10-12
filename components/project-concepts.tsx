@@ -19,7 +19,9 @@ export function ProjectConcepts({
 }) {
   return (
     <figure className="fig fig--wide">
-      <div className="concept-grid">
+      <div
+        className={`concept-grid${concepts.length === 2 ? " concept-grid--pair" : ""}`}
+      >
         {concepts.map(({ name, ...image }) => (
           <div key={name}>
             <ProjectImage {...image} />
