@@ -144,7 +144,6 @@ The user subsequently requested moving the exploded development sketch out of Fa
 
 At the user's request, Tripod Attachment's Figure 5 caption is now “Drawings from early concept development”, emphasizing the development stage without listing the depicted parts. The image's detailed alt text remains.
 
-
 ### Well Driller concept comparison
 
 At the user's request, the saved mechanical-page revisions from “Review mechanical design narratives” were imported into the separate `codex/project-process-visuals` preview worktree. The approved Well Driller clarification distinguishes rotational bevel/worm concepts from the selected lift-and-release architecture. Pending proposals from that chat were not implemented.
