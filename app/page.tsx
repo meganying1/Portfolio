@@ -81,7 +81,7 @@ export default function HomePage() {
         id="other-projects"
         variant="projects"
       >
-        <ProjectList projects={otherProjects} more />
+        <ProjectList projects={otherProjects} layout="grid" />
       </Disclosure>
       <SkillsList />
     </main>

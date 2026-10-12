@@ -152,8 +152,8 @@
   },
   {
     "slug": "design-research-agents",
-    "name": "Optimization & learning for design agents",
-    "title": "Optimization & learning for design agents",
+    "name": "Engineering design agents",
+    "title": "Engineering design agents",
     "summary": "Simulated annealing and reinforcement learning modules for reproducible engineering design research.",
     "description": "Simulated annealing and reinforcement learning modules for reproducible engineering design research.",
     "dates": "2026",
